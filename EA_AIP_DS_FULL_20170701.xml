@@ -27,7 +27,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 	xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
-	http://www.aixm.aero/schema/5.1.1/event http://www.aixm.aero/schema/5.1.1/event/Event_Features.xsd"	gml:id="M0000001" gml:version="3">
+	http://www.aixm.aero/schema/5.1.1/event http://www.aixm.aero/schema/5.1.1/event/Event_Features.xsd"	gml:id="M0000001">
 	<gml:boundedBy>
 		<gml:Envelope srsName="urn:ogc:def:crs:EPSG::4326">
 			<gml:lowerCorner>-32.0886111111111 -47.0</gml:lowerCorner>
@@ -5651,7 +5651,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:designator>EAMM2</aixm:designator>
 					<aixm:name>MAGNETTO TMA PART 2</aixm:name>
 					<aixm:class>
-						<aixm:AirspaceLayerClass gml:id="acl123123">
+						<aixm:AirspaceLayerClass gml:id="acl1231234">
 							<aixm:classification>C</aixm:classification>
 						</aixm:AirspaceLayerClass>
 					</aixm:class>
