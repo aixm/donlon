@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Andreea PERCA, ASBU For Future GMBH -->
+<!-- Copyright (c) 2018, EUROCONTROL & FAA
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+    xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+    http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
+    gml:id="M00001">
+    <!-- This is a DN for a new area creation - SAA.NEW - Danger Area due to SAR activity-->
+    <message:hasMember>
+        <aixm:Airspace gml:id="uuid.31461327-3237-4809-ada9-391b450ced26">
+            <gml:identifier codeSpace="urn:uuid:">31461327-3237-4809-ada9-391b450ced26</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:AirspaceTimeSlice gml:id="ID_11004">
+                    <gml:validTime>
+                        <gml:TimeInstant>
+                            <gml:timePosition>2017-08-29T17:01:00Z</gml:timePosition>
+                        </gml:TimeInstant>
+                    </gml:validTime>
+                    <aixm:interpretation>PERMDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="ID_0005">
+                            <gml:beginPosition>2017-08-29T17:01:00Z</gml:beginPosition>
+                            <gml:endPosition>2017-08-29T19:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <aixm:type>R</aixm:type>
+                    <aixm:geometryComponent>
+                        <aixm:AirspaceGeometryComponent gml:id="ID_11005">
+                            <aixm:theAirspaceVolume>
+                                <aixm:AirspaceVolume gml:id="ID_11006">
+                                    <aixm:upperLimit uom="FT">500</aixm:upperLimit>
+                                    <aixm:upperLimitReference>MSL</aixm:upperLimitReference>
+                                    <aixm:lowerLimit uom="FT">GND</aixm:lowerLimit>
+                                    <aixm:horizontalProjection>
+                                        <aixm:Surface gml:id="ID_11007" srsName="urn:ogc:def:crs:EPSG::4326">
+                                            <gml:patches>
+                                                <gml:PolygonPatch>
+                                                    <gml:exterior>
+                                                        <gml:Ring>
+                                                            <gml:curveMember>
+                                                                <aixm:Curve gml:id="ID_11008">
+                                                                    <gml:segments>
+                                                                        <gml:CircleByCenterPoint numArc="1">
+                                                                            <gml:pos>53.103333 -40.033055</gml:pos>
+                                                                            <gml:radius uom="NM">3</gml:radius>
+                                                                        </gml:CircleByCenterPoint>
+                                                                    </gml:segments>
+                                                                </aixm:Curve>
+                                                            </gml:curveMember>
+                                                        </gml:Ring>
+                                                    </gml:exterior>
+                                                </gml:PolygonPatch>
+                                            </gml:patches>
+                                        </aixm:Surface>
+                                    </aixm:horizontalProjection>
+                                </aixm:AirspaceVolume>
+                            </aixm:theAirspaceVolume>
+                        </aixm:AirspaceGeometryComponent>
+                    </aixm:geometryComponent>
+                    <aixm:activation>
+                        <aixm:AirspaceActivation gml:id="ID_11009">   
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="ID_11010">
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>17:01</aixm:startTime>
+                                    <aixm:endTime>19:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:annotation>
+                                <aixm:Note gml:id="D_11011">
+                                    <aixm:propertyName>status</aixm:propertyName>
+                                    <aixm:purpose>REMARK</aixm:purpose>
+                                    <aixm:translatedNote>
+                                        <aixm:LinguisticNote gml:id="ID_11012">
+                                            <aixm:note lang="eng">
+                                                To ensure their own safety and to avoid interference with control and SAR activities, 
+                                                pilots are urgently requested not to fly in or near the area without the permission of 
+                                                aeronautical rescue and coordination center emergency controlling authority
+                                                tel 01 309 678377.
+                                            </aixm:note>
+                                        </aixm:LinguisticNote>
+                                    </aixm:translatedNote>
+                                </aixm:Note>
+                            </aixm:annotation>
+                            <aixm:activity>OTHER:SAR</aixm:activity>
+                            <aixm:status>ACTIVE</aixm:status>
+                            <aixm:levels>
+                                <aixm:AirspaceLayer gml:id="ID_11013">
+                                    <aixm:upperLimit uom="OTHER">CEILING</aixm:upperLimit>
+                                    <aixm:lowerLimit uom="OTHER">FLOOR</aixm:lowerLimit>
+                                </aixm:AirspaceLayer>
+                            </aixm:levels>
+                        </aixm:AirspaceActivation>
+                    </aixm:activation>
+                    <aixm:activation>
+                        <aixm:AirspaceActivation gml:id="ID_11014">
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="ID_11015">
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>00:00</aixm:startTime>
+                                    <aixm:endTime>17:01</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="ID_11016">
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>19:00</aixm:startTime>
+                                    <aixm:endTime>24:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:status>INACTIVE</aixm:status>
+                        </aixm:AirspaceActivation>
+                    </aixm:activation>
+                </aixm:AirspaceTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Airspace>
+    </message:hasMember>
+    <message:hasMember>
+        <event:Event gml:id="uuid.2875edef-d6bc-4830-95f4-672072152a93">
+            <gml:identifier codeSpace="urn:uuid">2875edef-d6bc-4830-95f4-672072152a93</gml:identifier>
+            <event:timeSlice>
+                <event:EventTimeSlice gml:id="ID_11001">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_11002">
+                            <gml:beginPosition>2017-08-29T17:01:00Z</gml:beginPosition>
+                            <gml:endPosition>2017-08-29T19:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="ID_110021">
+                            <gml:beginPosition>2017-08-29T17:01:00Z</gml:beginPosition>
+                            <gml:endPosition>2017-08-29T19:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <event:name>RA_20170829</event:name>
+                    <event:encoding>DIGITAL</event:encoding>
+                    <event:scenario>SAA.NEW</event:scenario>
+                    <event:version>2.0</event:version>
+                    <event:revision>2017-08-29T16:55:23Z</event:revision>
+                    <event:textNOTAM>
+                        <event:NOTAM gml:id="ID_11003">
+                            <event:series>A</event:series>
+                            <event:number>0144</event:number>
+                            <event:year>2017</event:year>
+                            <event:type>N</event:type>
+                            <event:affectedFIR>EAAD</event:affectedFIR>
+                            <event:selectionCode>QRRCA</event:selectionCode>
+                            <event:traffic>IV</event:traffic>
+                            <event:purpose>NBO</event:purpose>
+                            <event:scope>W</event:scope>
+                            <event:minimumFL>000</event:minimumFL>
+                            <event:maximumFL>005</event:maximumFL>
+                            <event:coordinates>5306N04002W</event:coordinates>
+                            <event:radius>4</event:radius>
+                            <event:effectiveStart>1708291701</event:effectiveStart>
+                            <event:effectiveEnd>1708291900</event:effectiveEnd>
+                            <event:text>
+                                Restricted Area established for search and rescue within: 
+                                4NM radius centered on 5306N 04002W.
+                                To ensure their own safety and to avoid interference with control and SAR activities, 
+                                pilots are urgently requested not to fly in or near the area without the permission of 
+                                aeronautical rescue and coordination center emergency controlling authority
+                                tel 01 309 678377.
+                            </event:text>
+                            <event:lowerLimit>SFC</event:lowerLimit>
+                            <event:upperLimit>500FT AMSL</event:upperLimit>
+                        </event:NOTAM>
+                    </event:textNOTAM>
+                </event:EventTimeSlice>
+            </event:timeSlice>
+        </event:Event>
+    </message:hasMember>
+</message:AIXMBasicMessage>
+
+    
