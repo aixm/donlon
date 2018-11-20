@@ -7275,7 +7275,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:horizontalAccuracy xsi:nil="true" nilReason="unknown"/>
 						</aixm:ElevatedPoint>
 					</aixm:location>
-					<aixm:runwayDirection xlink:href="urn:uuid:" xlink:title="RDN_EADD_27R"/>
+					<aixm:runwayDirection xlink:href="urn:uuid:b802d439-e9f3-49f9-96e1-0153b837e113" xlink:title="RDN_EADD_27R"/>
 					<aixm:servedAirport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64"
 						xlink:title="AHP_EADD"/>
 				</aixm:NavaidTimeSlice>
