@@ -1,5 +1,5 @@
 # DONLON
-A fictitious set of digital AIS data sets complying with the ICAO Aneex 15, 16th edition and the new PANS-AIM provisions, in AIXM 5.1.1 format
+A fictitious set of digital AIS data sets complying with the ICAO Annex 15, 16th edition and the new PANS-AIM provisions, in AIXM 5.1.1 format
 
 This data is entirely fictitious, located somewhere in the middle of the Atlantic Ocean. It shall NEVER BE USED AS OPERATIONAL DATA. There is no Donlon airport in the middle of the Atlantic!!!
 
