@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Andreea PERCA, ASBU For Future GMBH -->
+<!-- Copyright (c) 2018, EUROCONTROL & FAA
+    
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+    
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+    xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+    http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
+    gml:id="M00001">
+    
+    <!--This is a Digital NOTAM for heliport closure expect for special flights -->
+    
+    <message:hasMember>
+        <aixm:AirportHeliport gml:id="uuid.dd062d88-3e64-4a5d-bebd-89476db9ebea">
+            <gml:identifier codeSpace="urn:uuid:">uuid.dd062d88-3e64-4a5d-bebd-89476db9ebea</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:AirportHeliportTimeSlice gml:id="ID_ACT_11">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_ACT_12">
+                            <gml:beginPosition>2018-05-11T10:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-05-11T18:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:availability>
+                        <aixm:AirportHeliportAvailability gml:id="ID_ACT_13">
+                            <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+                            <aixm:usage>
+                                <aixm:AirportHeliportUsage gml:id="ID_ACT_14">
+                                    <aixm:type>PERMIT</aixm:type>
+                                    <aixm:selection>
+                                        <aixm:ConditionCombination gml:id="ID_ACT_15">
+                                            <aixm:logicalOperator>OR</aixm:logicalOperator>
+                                            <aixm:subCondition>
+                                                <aixm:ConditionCombination gml:id="ID_ACT_16">
+                                                    <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                                                    <aixm:flight>
+                                                        <aixm:FlightCharacteristic gml:id="ID_ACT_17">
+                                                            <aixm:origin>HOME_BASED</aixm:origin>
+                                                        </aixm:FlightCharacteristic>
+                                                    </aixm:flight>
+                                                </aixm:ConditionCombination>
+                                            </aixm:subCondition>
+                                            <aixm:subCondition>
+                                                <aixm:ConditionCombination gml:id="ID_ACT_18">
+                                                    <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                                                    <aixm:flight>
+                                                        <aixm:FlightCharacteristic gml:id="ID_ACT_19">
+                                                            <aixm:status>SAR</aixm:status>
+                                                        </aixm:FlightCharacteristic>
+                                                    </aixm:flight>
+                                                </aixm:ConditionCombination>
+                                            </aixm:subCondition>
+                                            <aixm:subCondition>
+                                                <aixm:ConditionCombination gml:id="ID_ACT_20">
+                                                    <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                                                    <aixm:flight>
+                                                        <aixm:FlightCharacteristic gml:id="ID_ACT_21">
+                                                            <aixm:status>OTHER:MEDEVAC</aixm:status>
+                                                        </aixm:FlightCharacteristic>
+                                                    </aixm:flight>
+                                                </aixm:ConditionCombination>
+                                            </aixm:subCondition>
+                                        </aixm:ConditionCombination>
+                                    </aixm:selection>
+                                </aixm:AirportHeliportUsage>
+                            </aixm:usage>
+                        </aixm:AirportHeliportAvailability>
+                    </aixm:availability>
+                     <aixm:extension>
+                        <event:AirportHeliportExtension gml:id="ID_ACT_211">
+                            <event:theEvent xlink:href="#uuid.1d713318-a022-4f0f-808a-8eea31b3e411" xsi:nil="true"/>
+                        </event:AirportHeliportExtension>
+                    </aixm:extension>
+                </aixm:AirportHeliportTimeSlice>
+            </aixm:timeSlice>
+        </aixm:AirportHeliport>
+    </message:hasMember>
+    
+    <message:hasMember>
+        <event:Event gml:id="uuid.1d713318-a022-4f0f-808a-8eea31b3e411">
+            <gml:identifier codeSpace="urn:uuid:">1d713318-a022-4f0f-808a-8eea31b3e411</gml:identifier>
+            <event:timeSlice>
+                <event:EventTimeSlice gml:id="IDE_ACT_22">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="IDE_ACT_23">
+                            <gml:beginPosition>2018-05-11T10:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-05-11T18:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="IDE_ACT_24">
+                            <gml:beginPosition>2018-05-11T10:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-05-11T18:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <event:name>EADH_20180511</event:name>
+                    <event:encoding>DIGITAL</event:encoding>
+                    <event:scenario>AD.CLS</event:scenario>
+                    <event:version>2.0</event:version>
+                    <event:revision>2018-05-10T09:54:13Z</event:revision>
+                    <event:textNOTAM>
+                        <event:NOTAM gml:id="IDE_ACT_25">
+                            <event:series>B</event:series>
+                            <event:number>0315</event:number>
+                            <event:year>2018</event:year>
+                            <event:type>N</event:type>
+                            <event:issued>2018-05-10T09:54:13Z</event:issued>
+                            <event:affectedFIR>EADH</event:affectedFIR>
+                            <event:selectionCode>QFPLC</event:selectionCode>
+                            <event:traffic>V</event:traffic>
+                            <event:purpose>NBO</event:purpose>
+                            <event:scope>A</event:scope>
+                            <event:minimumFL>000</event:minimumFL>
+                            <event:maximumFL>999</event:maximumFL>
+                            <event:coordinates>5217N03202W</event:coordinates>
+                            <event:radius>005</event:radius>
+                            <event:location>EADD</event:location>
+                            <event:effectiveStart>1805111000</event:effectiveStart>
+                            <event:effectiveEnd>1805111800</event:effectiveEnd>
+                            <event:text>
+                                Heliport closed except home based, SAR and MEDEVAC.
+                            </event:text>
+                        </event:NOTAM>
+                    </event:textNOTAM>
+                </event:EventTimeSlice>
+            </event:timeSlice>
+        </event:Event>
+    </message:hasMember>
+</message:AIXMBasicMessage>
