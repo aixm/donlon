@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Andreea PERCA, ASBU For Future GMBH -->
+<!-- Copyright (c) 2018, EUROCONTROL & FAA
+    
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+    
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+    xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+    http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
+    gml:id="M00001">
+    
+    <!--This is a DN for a Runway complete closure except PPR-->
+    
+    <message:hasMember>
+        <aixm:RunwayDirection gml:id="uuid.c8455a6b-9319-4bb7-b797-08e644342d64">
+            <aixm:timeSlice>
+                <aixm:RunwayDirectionTimeSlice gml:id="ID_RCT_01">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_RCT_02">
+                            <gml:beginPosition>2018-02-10T06:00:00</gml:beginPosition>
+                            <gml:endPosition>2018-02-13T22:00:00</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:availability>
+                        <aixm:ManoeuvringAreaAvailability gml:id="ID_RCT_03">
+                            <aixm:annotation>
+                                <aixm:Note gml:id="ID_RTC_an3">
+                                    <aixm:propertyName>operationalStatus</aixm:propertyName>
+                                    <aixm:purpose>REMARK</aixm:purpose>
+                                    <aixm:translatedNote>
+                                        <aixm:LinguisticNote gml:id="ID_RTC_an4">
+                                            <aixm:note lang="eng">maintenance</aixm:note>
+                                        </aixm:LinguisticNote>
+                                    </aixm:translatedNote>
+                                </aixm:Note>
+                            </aixm:annotation>
+                            <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+                            <aixm:usage>
+                                <aixm:ManoeuvringAreaUsage gml:id="ID_RCT_04">
+                                    <aixm:priorPermission uom="MIN">30</aixm:priorPermission>
+                                    <aixm:operation>ALL</aixm:operation>
+                                </aixm:ManoeuvringAreaUsage>
+                            </aixm:usage>
+                        </aixm:ManoeuvringAreaAvailability>
+                    </aixm:availability>
+                    <aixm:extension>
+                        <event:RunwayDirectionExtension gml:id="ID_RCT_05">
+                            <event:theEvent xlink:href="#uuid.45f91901-7605-4e77-928a-c629419b5790"/>
+                        </event:RunwayDirectionExtension>
+                    </aixm:extension>
+                </aixm:RunwayDirectionTimeSlice>
+            </aixm:timeSlice>
+        </aixm:RunwayDirection>
+    </message:hasMember>
+    <message:hasMember>
+        <aixm:RunwayDirection gml:id="uuid.b802d439-e9f3-49f9-96e1-0153b837e113">
+            <aixm:timeSlice>
+                <aixm:RunwayDirectionTimeSlice gml:id="ID_RCT_06">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_RCT_07">
+                            <gml:beginPosition>2018-02-10T06:00:00</gml:beginPosition>
+                            <gml:endPosition>2018-02-13T22:00:00</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:availability>
+                        <aixm:ManoeuvringAreaAvailability gml:id="ID_RCT_08">
+                            <aixm:annotation>
+                                <aixm:Note gml:id="ID_RTC_an1">
+                                    <aixm:propertyName>operationalStatus</aixm:propertyName>
+                                    <aixm:purpose>REMARK</aixm:purpose>
+                                    <aixm:translatedNote>
+                                        <aixm:LinguisticNote gml:id="ID_RTC_an2">
+                                            <aixm:note lang="eng">maintenance</aixm:note>
+                                        </aixm:LinguisticNote>
+                                    </aixm:translatedNote>
+                                </aixm:Note>
+                            </aixm:annotation>
+                            <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+                            <aixm:usage>
+                                <aixm:ManoeuvringAreaUsage gml:id="ID_RCT_09">
+                                    <aixm:type>PERMIT</aixm:type>
+                                    <aixm:priorPermission uom="MIN">30</aixm:priorPermission>
+                                    <aixm:operation>ALL</aixm:operation>
+                                </aixm:ManoeuvringAreaUsage>
+                            </aixm:usage>
+                        </aixm:ManoeuvringAreaAvailability>
+                    </aixm:availability>
+                    <aixm:extension>
+                        <event:RunwayDirectionExtension gml:id="ID_RCT_010">
+                            <event:theEvent xlink:href="#uuid.45f91901-7605-4e77-928a-c629419b5790"/>
+                        </event:RunwayDirectionExtension>
+                    </aixm:extension>
+                </aixm:RunwayDirectionTimeSlice>
+            </aixm:timeSlice>
+        </aixm:RunwayDirection>
+    </message:hasMember>
+    <message:hasMember>
+        <event:Event gml:id="uuid.45f91901-7605-4e77-928a-c629419b5790">
+            <gml:identifier codeSpace="urn:uuid:">45f91901-7605-4e77-928a-c629419b5790</gml:identifier>
+            <event:timeSlice>
+                <event:EventTimeSlice gml:id="ID_RC_01">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_RC_02">
+                            <gml:beginPosition>2018-02-10T06:00:00</gml:beginPosition>
+                            <gml:endPosition>2018-02-13T22:00:00</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="ID_RC_022">
+                            <gml:beginPosition>2018-02-10T06:00:00</gml:beginPosition>
+                            <gml:endPosition>2018-02-13T22:00:00</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <event:name>09L/27R_20180210</event:name>
+                    <event:encoding>DIGITAL</event:encoding>
+                    <event:scenario>RWY.CLS</event:scenario>
+                    <event:version>2.0</event:version>
+                    <event:revision>2018-02-01T12:33:21</event:revision>
+                    <event:textNOTAM>
+                        <event:NOTAM gml:id="ID_RC_03">
+                            <event:series>A</event:series>
+                            <event:number>441</event:number>
+                            <event:year>2018</event:year>
+                            <event:type>N</event:type>
+                            <event:issued>2018-02-01T12:33:21</event:issued>
+                            <event:affectedFIR>EAAD</event:affectedFIR>
+                            <event:selectionCode>QMRLT</event:selectionCode>
+                            <event:traffic>IV</event:traffic>
+                            <event:purpose>NBO</event:purpose>
+                            <event:scope>A</event:scope>
+                            <event:minimumFL>000</event:minimumFL>
+                            <event:maximumFL>999</event:maximumFL>
+                            <event:coordinates>522236N315658W</event:coordinates>
+                            <event:radius>005</event:radius>
+                            <event:location>EADD</event:location>
+                            <event:effectiveStart>1802100600</event:effectiveStart>
+                            <event:effectiveEnd>1802132200</event:effectiveEnd>
+                            <event:text>RWY 09L/27R closed due to maintenance except for PPR 30 min </event:text>
+                        </event:NOTAM>
+                    </event:textNOTAM>
+                </event:EventTimeSlice>
+            </event:timeSlice>
+        </event:Event>
+    </message:hasMember>
+</message:AIXMBasicMessage>
