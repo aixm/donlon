@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Andreea PERCA, ASBU For Future GMBH -->
+<!-- Copyright (c) 2018, EUROCONTROL & FAA
+    
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+    
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+    xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+    http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
+    gml:id="M00001">
+    
+    <!--This is a Digital NOTAM for Aerodrome closure with schedule. The BASELINE data of the airport is also with schedule. -->
+    
+    <message:hasMember>
+        <aixm:AirportHeliport gml:id="uuid.1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+            <gml:identifier codeSpace="urn:uuid:">uuid.1b54b2d6-a5ff-4e57-94c2-f4047a381c64</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:AirportHeliportTimeSlice gml:id="ID_ACT_55">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_ACT_56">
+                            <gml:beginPosition>2018-02-01T11:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-02-10T13:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <!--The time when the airport is closed-->      
+                    <aixm:availability>
+                        <aixm:AirportHeliportAvailability gml:id="ID_ACT_57">
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="ID_ACT_58">
+                                    <aixm:timeReference>UTC</aixm:timeReference>
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>11:00</aixm:startTime>
+                                    <aixm:endTime>13:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded> 
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+                        </aixm:AirportHeliportAvailability>
+                    </aixm:availability>
+                    <!--time calculated from the Baseline information for the status of the airport outside the time affected by NOTAM-->
+                    <aixm:availability>
+                        <aixm:AirportHeliportAvailability gml:id="ID_ACT_59">
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="ID_ACT_62">
+                                    <aixm:timeReference>UTC</aixm:timeReference>
+                                    <aixm:day>WORK_DAY</aixm:day>
+                                    <aixm:startTime>06:00</aixm:startTime>
+                                    <aixm:endTime>20:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust> <!--the BASELINE data has the value 'yes'. It has been modified here to comply with TSH.EVT-02. The assumption is that the conversion will be done automatically by the system. -->
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="ID_ACT_63">
+                                    <aixm:timeReference>UTC</aixm:timeReference>
+                                    <aixm:day>SAT</aixm:day>
+                                    <aixm:startTime>07:00</aixm:startTime>
+                                    <aixm:endTime>20:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust> <!--the BASELINE data has the value 'yes'. It has been modified here to comply with TSH.EVT-02. The assumption is that the conversion will be done automatically by the system.-->
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="ID_ACT_64">
+                                    <aixm:timeReference>UTC</aixm:timeReference>
+                                    <aixm:day>SUN</aixm:day>
+                                    <aixm:startTime>07:00</aixm:startTime>
+                                    <aixm:endTime>20:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust> <!--the BASELINE data has the value 'yes'. It has been modified here to comply with TSH.EVT-02. The assumption is that the conversion will be done automatically by the system.-->
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <!--The BASELINE data contained a schedule also for HOL. The HOL value is not allowed in a Digital NOTAM. 
+                                It is assume no Holiday is contained within the closure schedule -->
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="ID_ACT_66">
+                                    <aixm:timeReference>UTC</aixm:timeReference>
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>11:00</aixm:startTime>
+                                    <aixm:endTime>13:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>YES</aixm:excluded> 
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:annotation>
+                                <aixm:Note gml:id="ID_ACT_60">
+                                    <aixm:purpose>REMARK</aixm:purpose>
+                                    <aixm:translatedNote>
+                                        <aixm:LinguisticNote gml:id="ID_ACT_61">
+                                            <aixm:note>Baseline data copy. Not included in the NOTAM text generation</aixm:note>
+                                        </aixm:LinguisticNote>
+                                    </aixm:translatedNote>
+                                </aixm:Note>
+                            </aixm:annotation>
+                            <aixm:usage>
+                                <aixm:AirportHeliportUsage gml:id="AHU_EADD_PERMIT">
+                                    <aixm:type>PERMIT</aixm:type>
+                                    <aixm:selection>
+                                        <aixm:ConditionCombination gml:id="cc001">
+                                            <aixm:logicalOperator>OR</aixm:logicalOperator>
+                                            <aixm:flight>
+                                                <aixm:FlightCharacteristic gml:id="fc001">
+                                                    <aixm:rule>IFR</aixm:rule>
+                                                </aixm:FlightCharacteristic>
+                                            </aixm:flight>
+                                            <aixm:flight>
+                                                <aixm:FlightCharacteristic gml:id="fc002">
+                                                    <aixm:rule>VFR</aixm:rule>
+                                                </aixm:FlightCharacteristic>
+                                            </aixm:flight>
+                                        </aixm:ConditionCombination>
+                                    </aixm:selection>
+                                </aixm:AirportHeliportUsage>
+                            </aixm:usage>
+                        </aixm:AirportHeliportAvailability>
+                    </aixm:availability>
+                    <aixm:availability>
+                        <aixm:AirportHeliportAvailability gml:id="AHY_EADD_FORBID_DN">
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="T-e921a1ce">
+                                    <aixm:timeReference>UTC</aixm:timeReference>
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:dayTil>ANY</aixm:dayTil> <!--added to comply with updated rule for end of day-->
+                                    <aixm:startTime>20:00</aixm:startTime>
+                                    <aixm:endTime>00:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust> <!--the BASELINE data has the value 'yes'. It has been modified here to comply with TSH.EVT-02. The assumption is that the conversion will be done automatically by the system.-->
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="T-d9e420be">
+                                    <aixm:timeReference>UTC</aixm:timeReference>
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>00:00</aixm:startTime>
+                                    <aixm:endTime>06:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust> <!--the BASELINE data has the value 'yes'. It has been modified here to comply with TSH.EVT-02. The assumption is that the conversion will be done automatically by the system.-->
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="T-d9e420sfsdbe">
+                                    <aixm:timeReference>UTC</aixm:timeReference>
+                                    <aixm:day>SAT</aixm:day>
+                                    <aixm:startTime>06:00</aixm:startTime>
+                                    <aixm:endTime>07:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust> <!--the BASELINE data has the value 'yes'. It has been modified here to comply with TSH.EVT-02. The assumption is that the conversion will be done automatically by the system.-->
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="T-d9e420sfsdsfsbe">
+                                    <aixm:timeReference>UTC</aixm:timeReference>
+                                    <aixm:day>SUN</aixm:day>
+                                    <aixm:startTime>06:00</aixm:startTime>
+                                    <aixm:endTime>07:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust> <!--the BASELINE data has the value 'yes'. It has been modified here to comply with TSH.EVT-02. The assumption is that the conversion will be done automatically by the system.-->
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <!--The BASELINE data contained a schedule also for HOL. The HOL value is not allowed in a Digital NOTAM. 
+                                It is assume no Holiday is contained within the closure schedule -->
+                            <aixm:annotation>
+                                <aixm:Note gml:id="ID_ACT_602">
+                                    <aixm:purpose>REMARK</aixm:purpose>
+                                    <aixm:translatedNote>
+                                        <aixm:LinguisticNote gml:id="ID_ACT_613">
+                                            <aixm:note>Baseline data copy. Not included in the NOTAM text generation</aixm:note>
+                                        </aixm:LinguisticNote>
+                                    </aixm:translatedNote>
+                                </aixm:Note>
+                            </aixm:annotation>
+                            <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+                            <aixm:usage>
+                                <aixm:AirportHeliportUsage gml:id="A-d38f0d0f">
+                                    <aixm:type>FORBID</aixm:type>
+                                    <aixm:operation>ALL</aixm:operation>
+                                </aixm:AirportHeliportUsage>
+                            </aixm:usage>
+                        </aixm:AirportHeliportAvailability>
+                    </aixm:availability>
+                    <aixm:extension>
+                        <event:AirportHeliportExtension gml:id="ID_ACT_80">
+                            <event:theEvent xlink:href="#uuid.d97038f9-582e-4bed-b7b3-49c25d8fe364" xsi:nil="true"/>
+                        </event:AirportHeliportExtension>
+                    </aixm:extension>
+                </aixm:AirportHeliportTimeSlice>
+            </aixm:timeSlice>
+        </aixm:AirportHeliport>
+    </message:hasMember>
+    
+    <message:hasMember>
+        <event:Event gml:id="uuid.d97038f9-582e-4bed-b7b3-49c25d8fe364">
+            <gml:identifier codeSpace="urn:uuid:">d97038f9-582e-4bed-b7b3-49c25d8fe364</gml:identifier>
+            <event:timeSlice>
+                <event:EventTimeSlice gml:id="IDE_ACT_81">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="IDE_ACT_82">
+                            <gml:beginPosition>2018-02-01T11:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-02-10T13:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="IDE_ACT_83">
+                            <gml:beginPosition>2018-02-01T11:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-02-10T13:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <event:name>EADD_20180201</event:name>
+                    <event:encoding>DIGITAL</event:encoding>
+                    <event:scenario>AD.CLS</event:scenario>
+                    <event:version>2.0</event:version>
+                    <event:revision>2018-01-14T11:23:11Z</event:revision>
+                    <event:textNOTAM>
+                        <event:NOTAM gml:id="IDE_ACT_84">
+                            <event:series>B</event:series>
+                            <event:number>0214</event:number>
+                            <event:year>2018</event:year>
+                            <event:type>N</event:type>
+                            <event:issued>2018-01-14T11:23:11Z</event:issued>
+                            <event:affectedFIR>EAAD</event:affectedFIR>
+                            <event:selectionCode>QFALC</event:selectionCode>
+                            <event:traffic>IV</event:traffic>
+                            <event:purpose>NBO</event:purpose>
+                            <event:scope>A</event:scope>
+                            <event:coordinates>4147N03501W</event:coordinates>
+                            <event:radius>005</event:radius>
+                            <event:location>EADD</event:location>
+                            <event:effectiveStart>1802011100</event:effectiveStart>
+                            <event:effectiveEnd>1802101300</event:effectiveEnd>
+                            <event:schedule>Daily 11:00-13:00</event:schedule>
+                            <event:text>
+                                AD closed.
+                            </event:text>
+                        </event:NOTAM>
+                    </event:textNOTAM>
+                </event:EventTimeSlice>
+            </event:timeSlice>
+        </event:Event>
+    </message:hasMember>
+</message:AIXMBasicMessage>
