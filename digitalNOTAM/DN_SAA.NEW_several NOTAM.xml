@@ -99,6 +99,11 @@ Editorial note: this license is an instance of the BSD license template as provi
                             </aixm:levels>
                         </aixm:AirspaceActivation>
                     </aixm:activation>
+                    <aixm:extension>
+                        <event:AirspaceExtension gml:id="ID_11092">
+                            <event:theEvent xlink:href="urn:uuid:ae2e8bb6-8306-4aa9-8fcb-84cd84eb2c80"/>
+                        </event:AirspaceExtension>
+                    </aixm:extension>
                 </aixm:AirspaceTimeSlice>
             </aixm:timeSlice>
         </aixm:Airspace>
@@ -144,6 +149,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:maximumFL>005</event:maximumFL>
                             <event:coordinates>5306N04002W</event:coordinates>
                             <event:radius>4</event:radius>
+                            <event:location>EAAD</event:location>
                             <event:effectiveStart>1708291701</event:effectiveStart>
                             <event:effectiveEnd>1708291900</event:effectiveEnd>
                             <event:text>
@@ -169,6 +175,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:maximumFL>005</event:maximumFL>
                             <event:coordinates>5306N04002W</event:coordinates>
                             <event:radius>4</event:radius>
+                            <event:location>EADH</event:location>
                             <event:effectiveStart>1708291701</event:effectiveStart>
                             <event:effectiveEnd>1708291900</event:effectiveEnd>
                             <event:text>
