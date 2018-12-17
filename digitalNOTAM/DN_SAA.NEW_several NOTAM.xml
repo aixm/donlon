@@ -31,7 +31,7 @@ Editorial note: this license is an instance of the BSD license template as provi
     http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
     gml:id="M00001">
     
-    <!-- This is a DN for a new area creation - SAA.NEW - Restricted Area. As the area is affecting EADD airport too, two NOTAMs are generated. -->
+    <!-- This is a DN for a new area creation - SAA.NEW - Restricted Area. The area is affecting both EADD and EADH airports, so two NOTAMs are generated. -->
    
     <message:hasMember>
         <aixm:Airspace gml:id="uuid.d2b01592-5f48-4590-b871-60d150533ec1">
@@ -139,7 +139,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:selectionCode>QRRCA</event:selectionCode>
                             <event:traffic>IV</event:traffic>
                             <event:purpose>NBO</event:purpose>
-                            <event:scope>W</event:scope>
+                            <event:scope>AW</event:scope>
                             <event:minimumFL>000</event:minimumFL>
                             <event:maximumFL>005</event:maximumFL>
                             <event:coordinates>5306N04002W</event:coordinates>
