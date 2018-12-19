@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Example created by Andreea PERCA, ASBU For Future GMBH -->
+<!-- Copyright (c) 2018, EUROCONTROL & FAA
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+    
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+    xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+    http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
+    gml:id="M00001">
+    
+    <!-- This is a DN for a new area creation - SAA.NEW - Restricted Area. The area is affecting both EADD and EADH airports, so two NOTAMs are generated. -->
+   
+    <message:hasMember>
+        <aixm:Airspace gml:id="uuid.d2b01592-5f48-4590-b871-60d150533ec1">
+            <gml:identifier codeSpace="urn:uuid:">d2b01592-5f48-4590-b871-60d150533ec1</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:AirspaceTimeSlice gml:id="ID_112d">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID112dd">
+                            <gml:beginPosition>2018-02-05T07:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-02-05T23:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="ID_113d">
+                            <gml:beginPosition>2018-02-05T07:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-02-05T23:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <aixm:type>R</aixm:type>
+                    <aixm:geometryComponent>
+                        <aixm:AirspaceGeometryComponent gml:id="ID_114d">   <!-- Geometry not exact. To be updated -->
+                            <aixm:theAirspaceVolume>
+                                <aixm:AirspaceVolume gml:id="ID_115d">
+                                    <aixm:upperLimit uom="FT">500</aixm:upperLimit>
+                                    <aixm:upperLimitReference>MSL</aixm:upperLimitReference>
+                                    <aixm:lowerLimit uom="FT">GND</aixm:lowerLimit>
+                                    <aixm:horizontalProjection>
+                                        <aixm:Surface gml:id="ID_116d" srsName="urn:ogc:def:crs:EPSG::4326">
+                                            <gml:patches>
+                                                <gml:PolygonPatch>
+                                                    <gml:exterior>
+                                                        <gml:Ring>
+                                                            <gml:curveMember>
+                                                                <aixm:Curve gml:id="ID_118d">
+                                                                    <gml:segments>
+                                                                        <gml:CircleByCenterPoint numArc="1">
+                                                                            <gml:pos>52.103333 -41.033055</gml:pos>
+                                                                            <gml:radius uom="NM">3</gml:radius>
+                                                                        </gml:CircleByCenterPoint>
+                                                                    </gml:segments>
+                                                                </aixm:Curve>
+                                                            </gml:curveMember>
+                                                        </gml:Ring>
+                                                    </gml:exterior>
+                                                </gml:PolygonPatch>
+                                            </gml:patches>
+                                        </aixm:Surface>
+                                    </aixm:horizontalProjection>
+                                </aixm:AirspaceVolume>
+                            </aixm:theAirspaceVolume>
+                        </aixm:AirspaceGeometryComponent>
+                    </aixm:geometryComponent>
+                    <aixm:activation>
+                        <aixm:AirspaceActivation gml:id="ID_119d">   
+                            <aixm:activity>UAV</aixm:activity>
+                            <aixm:status>ACTIVE</aixm:status>
+                            <aixm:levels>
+                                <aixm:AirspaceLayer gml:id="ID_11013d">
+                                    <aixm:upperLimit uom="OTHER">CEILING</aixm:upperLimit>
+                                    <aixm:lowerLimit uom="OTHER">FLOOR</aixm:lowerLimit>
+                                </aixm:AirspaceLayer>
+                            </aixm:levels>
+                        </aixm:AirspaceActivation>
+                    </aixm:activation>
+                    <aixm:extension>
+                        <event:AirspaceExtension gml:id="ID_11092">
+                            <event:theEvent xlink:href="urn:uuid:ae2e8bb6-8306-4aa9-8fcb-84cd84eb2c80"/>
+                        </event:AirspaceExtension>
+                    </aixm:extension>
+                </aixm:AirspaceTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Airspace>
+    </message:hasMember>    
+    
+    <message:hasMember>
+        <event:Event gml:id="uuid.ae2e8bb6-8306-4aa9-8fcb-84cd84eb2c80">
+            <gml:identifier codeSpace="urn:uuid">ae2e8bb6-8306-4aa9-8fcb-84cd84eb2c80</gml:identifier>
+            <event:timeSlice>
+                <event:EventTimeSlice gml:id="ID_1121">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_1122">
+                            <gml:beginPosition>2018-02-05T07:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-02-05T23:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="ID_110021">
+                            <gml:beginPosition>2018-02-05T07:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-02-05T23:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <event:name>RA_20180205</event:name>
+                    <event:encoding>DIGITAL</event:encoding>
+                    <event:scenario>SAA.NEW</event:scenario>
+                    <event:version>2.0</event:version>
+                    <event:revision>2018-02-03T14:53:55Z</event:revision>
+                    <event:textNOTAM>
+                        <event:NOTAM gml:id="ID_11003d">
+                            <event:series>A</event:series>
+                            <event:number>1142</event:number>
+                            <event:year>2018</event:year>
+                            <event:type>N</event:type>
+                            <event:affectedFIR>EAAD</event:affectedFIR>
+                            <event:selectionCode>QRRCA</event:selectionCode>
+                            <event:traffic>IV</event:traffic>
+                            <event:purpose>NBO</event:purpose>
+                            <event:scope>AW</event:scope>
+                            <event:minimumFL>000</event:minimumFL>
+                            <event:maximumFL>005</event:maximumFL>
+                            <event:coordinates>5306N04002W</event:coordinates>
+                            <event:radius>4</event:radius>
+                            <event:location>EAAD</event:location>
+                            <event:effectiveStart>1708291701</event:effectiveStart>
+                            <event:effectiveEnd>1708291900</event:effectiveEnd>
+                            <event:text>
+                                Restricted Area established for unmanned acft system activities within: 
+                                4NM radius centered on 5306N 04002W.
+                            </event:text>
+                            <event:lowerLimit>SFC</event:lowerLimit>
+                            <event:upperLimit>500FT AMSL</event:upperLimit>
+                        </event:NOTAM>
+                    </event:textNOTAM>
+                    <event:textNOTAM>
+                        <event:NOTAM gml:id="ID11021d">
+                            <event:series>A</event:series>
+                            <event:number>1143</event:number>
+                            <event:year>2018</event:year>
+                            <event:type>N</event:type>
+                            <event:affectedFIR>EAAD</event:affectedFIR>
+                            <event:selectionCode>QRRCA</event:selectionCode>
+                            <event:traffic>IV</event:traffic>
+                            <event:purpose>NBO</event:purpose>
+                            <event:scope>A</event:scope>
+                            <event:minimumFL>000</event:minimumFL>
+                            <event:maximumFL>005</event:maximumFL>
+                            <event:coordinates>5306N04002W</event:coordinates>
+                            <event:radius>4</event:radius>
+                            <event:location>EADH</event:location>
+                            <event:effectiveStart>1708291701</event:effectiveStart>
+                            <event:effectiveEnd>1708291900</event:effectiveEnd>
+                            <event:text>
+                                Restricted Area established for unmanned acft system activities within: 
+                                4NM radius centered on 5306N 04002W. From SFC to 500FT AMSL.  
+                            </event:text>
+                        </event:NOTAM>
+                    </event:textNOTAM>
+                </event:EventTimeSlice>
+            </event:timeSlice>
+        </event:Event>
+    </message:hasMember>
+</message:AIXMBasicMessage>
+
+    

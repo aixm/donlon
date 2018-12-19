@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Andreea PERCA, ASBU For Future GMBH -->
+<!-- Copyright (c) 2018, EUROCONTROL & FAA
+    
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+    
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+    xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+    http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
+    gml:id="M00001">
+    
+    <!-- This is a DN for an R area activation with schedule - date range 10-20.05 06:00-15:30 - PASOUND-->
+    
+    <message:hasMember>
+        <aixm:Airspace gml:id="uuid.902e92df-e5cb-48cb-a339-18bc86da4999">
+            <aixm:timeSlice>
+                <aixm:AirspaceTimeSlice gml:id="ID_710">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_711">
+                            <gml:beginPosition>2018-05-10T06:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-05-20T15:30:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>2</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:activation>
+                        <aixm:AirspaceActivation gml:id="ID_712">
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="ID_713">
+                                    <aixm:timeReference>UTC</aixm:timeReference>
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>06:00</aixm:startTime>
+                                    <aixm:endTime>15:30</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:activity>AIR_DROP</aixm:activity>
+                            <aixm:status>ACTIVE</aixm:status>
+                        </aixm:AirspaceActivation>
+                    </aixm:activation>
+                    <aixm:activation>
+                        <aixm:AirspaceActivation gml:id="ID_7113">
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="ID_714">
+                                    <aixm:timeReference>UTC</aixm:timeReference>
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:dayTil>ANY</aixm:dayTil>
+                                    <aixm:startTime>00:00</aixm:startTime>
+                                    <aixm:endTime>00:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="ID_717">
+                                    <aixm:timeReference>UTC</aixm:timeReference>
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:dayTil>ANY</aixm:dayTil>
+                                    <aixm:startTime>06:30</aixm:startTime>
+                                    <aixm:endTime>15:30</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>YES</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:annotation>
+                                <aixm:Note gml:id="ID_718">
+                                    <aixm:purpose>REMARK</aixm:purpose>
+                                    <aixm:translatedNote>
+                                        <aixm:LinguisticNote gml:id="ID_719">
+                                            <aixm:note>Baseline data copy. Not included in the NOTAM text generation</aixm:note>
+                                        </aixm:LinguisticNote>
+                                    </aixm:translatedNote>
+                                </aixm:Note>
+                            </aixm:annotation>
+                            <aixm:status>INACTIVE</aixm:status>
+                        </aixm:AirspaceActivation>
+                    </aixm:activation>
+                    <aixm:extension>
+                        <event:AirspaceExtension gml:id="ID_720">
+                            <event:theEvent xlink:href="urn:uuid:af494838-13fa-44ee-b506-4a95ac0c6fb2"/>
+                        </event:AirspaceExtension>
+                    </aixm:extension>
+                </aixm:AirspaceTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Airspace>
+    </message:hasMember>
+    <message:hasMember>
+        <event:Event gml:id="uuid.af494838-13fa-44ee-b506-4a95ac0c6fb2">
+            <gml:identifier codeSpace="urn:uuid:">af494838-13fa-44ee-b506-4a95ac0c6fb2</gml:identifier>
+            <event:timeSlice>
+                <event:EventTimeSlice gml:id="ID_721">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_722">
+                            <gml:beginPosition>2018-05-10T06:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-05-20T15:30:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="ID_723">
+                            <gml:beginPosition>2018-05-10T06:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-05-20T15:30:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <event:name>EAR2_20180510</event:name>
+                    <event:encoding>DIGITAL</event:encoding>
+                    <event:scenario>SAA.ACT</event:scenario>
+                    <event:version>2.0</event:version>
+                    <event:revision>2018-05-02T20:11:27</event:revision>
+                    <event:textNOTAM>
+                        <event:NOTAM gml:id="ID_724">
+                            <event:series>A</event:series>
+                            <event:number>1233</event:number>
+                            <event:year>2018</event:year>
+                            <event:type>N</event:type>
+                            <event:issued>2018-05-02T20:11:27</event:issued>
+                            <event:affectedFIR>EAAD</event:affectedFIR>
+                            <event:selectionCode>QRRCA</event:selectionCode>
+                            <event:traffic>IV</event:traffic>
+                            <event:purpose>BO</event:purpose>
+                            <event:scope>W</event:scope>
+                            <event:minimumFL>250</event:minimumFL>
+                            <event:maximumFL>350</event:maximumFL>
+                            <event:coordinates>4147N03501W</event:coordinates>
+                            <event:radius>11</event:radius>
+                            <event:location>EAAD</event:location>
+                            <event:effectiveStart>1805100600</event:effectiveStart>
+                            <event:effectiveEnd>1805201530</event:effectiveEnd>
+                            <event:schedule>Daily 0600-1530</event:schedule>
+                            <event:text>Restricted Area EAR2 PASOUND activated, air dropping</event:text>
+                            <event:lowerLimit>FL250</event:lowerLimit>
+                            <event:upperLimit>FL350</event:upperLimit>
+                        </event:NOTAM>
+                    </event:textNOTAM>
+                </event:EventTimeSlice>
+            </event:timeSlice>
+        </event:Event>
+    </message:hasMember>
+</message:AIXMBasicMessage>
+
