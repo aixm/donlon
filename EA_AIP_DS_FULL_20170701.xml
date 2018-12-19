@@ -20,14 +20,20 @@ TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF TH
 Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
 
 <message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
-	xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
-	xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
-	xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
-	xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:gts="http://www.isotc211.org/2005/gts" 
+	xmlns:gco="http://www.isotc211.org/2005/gco"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:gss="http://www.isotc211.org/2005/gss" 
+	xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+	xmlns:gsr="http://www.isotc211.org/2005/gsr" 
+	xmlns:gmd="http://www.isotc211.org/2005/gmd"
+	xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
+	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
-	http://www.aixm.aero/schema/5.1.1/event http://www.aixm.aero/schema/5.1.1/event/Event_Features.xsd"	gml:id="M0000001">
+	http://www.aixm.aero/schema/5.1.1/event http://www.aixm.aero/schema/5.1.1/event/Event_Features.xsd"	
+	gml:id="M0000001">
 	<gml:boundedBy>
 		<gml:Envelope srsName="urn:ogc:def:crs:EPSG::4326">
 			<gml:lowerCorner>-32.0886111111111 -47.0</gml:lowerCorner>
@@ -484,8 +490,6 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:designatorNumber>4</aixm:designatorNumber>
 					<aixm:type>ATS</aixm:type>
 					<aixm:flightRule>IFR</aixm:flightRule>
-					<aixm:internationalUse>BOTH</aixm:internationalUse>
-					<!-- Not required by PANS-AIM for the minimum AIP data set -->
 				</aixm:RouteTimeSlice>
 			</aixm:timeSlice>
 		</aixm:Route>
@@ -1014,7 +1018,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					</aixm:annotation>
 					<aixm:annotation>
 						<aixm:Note gml:id="n003">
-							<aixm:propertyName>ARP</aixm:propertyName>
+							<aixm:propertyName>aRP</aixm:propertyName>
 							<aixm:translatedNote>
 								<aixm:LinguisticNote gml:id="ln003">
 									<aixm:note>Heliport reference point site at heliport: geometric
@@ -1130,6 +1134,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:operationalStatus>NORMAL</aixm:operationalStatus>
 							<!-- all Baseline availability shall have status NORMAL, see the Event Specification assumptions for AD.CLS scenario-->
 							<aixm:usage>
+								<!-- IFR/VFR Traffic: Not required by PANS-AIM for the minimum AIP data set-->
 								<aixm:AirportHeliportUsage gml:id="AHU_EADD_PERMIT">
 									<aixm:type>PERMIT</aixm:type>
 									<aixm:selection>
@@ -1220,7 +1225,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					</aixm:annotation>
 					<aixm:annotation>
 						<aixm:Note gml:id="n005">
-							<aixm:propertyName>ARP</aixm:propertyName>
+							<aixm:propertyName>aRP</aixm:propertyName>
 							<aixm:translatedNote>
 								<aixm:LinguisticNote gml:id="ln005">
 									<aixm:note>ARP site at AD: 258°/1075 M from THR 09L, Direction
@@ -2050,7 +2055,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 						<aixm:AirspaceGeometryComponent gml:id="A-d4933e30">
 							<aixm:theAirspaceVolume>
 								<aixm:AirspaceVolume gml:id="A-a072fe65">
-									<aixm:width uom="M">300000.0</aixm:width>
+									<aixm:width uom="M">30000.0</aixm:width>
 									<aixm:centreline>
 										<aixm:Curve srsName="urn:ogc:def:crs:EPSG::4326"
 											gml:id="CAlertACR001">
@@ -2234,6 +2239,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 												-19.64618581921565 55.0 -19.5</gml:posList>
 												</gml:GeodesicString>
 											</gml:segments>
+											<aixm:horizontalAccuracy xsi:nil="true" nilReason="unknown"></aixm:horizontalAccuracy>
 										</aixm:Curve>
 									</aixm:centreline>
 								</aixm:AirspaceVolume>
@@ -3633,6 +3639,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:declaredValue>
 								<aixm:RunwayDeclaredDistanceValue gml:id="rddv001">
 									<aixm:distance uom="M">2800</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
 								</aixm:RunwayDeclaredDistanceValue>
 							</aixm:declaredValue>
 						</aixm:RunwayDeclaredDistance>
@@ -3643,6 +3650,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:declaredValue>
 								<aixm:RunwayDeclaredDistanceValue gml:id="rddv002">
 									<aixm:distance uom="M">2800</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
 								</aixm:RunwayDeclaredDistanceValue>
 							</aixm:declaredValue>
 						</aixm:RunwayDeclaredDistance>
@@ -3653,6 +3661,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:declaredValue>
 								<aixm:RunwayDeclaredDistanceValue gml:id="rddv003">
 									<aixm:distance uom="M">2800</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
 								</aixm:RunwayDeclaredDistanceValue>
 							</aixm:declaredValue>
 						</aixm:RunwayDeclaredDistance>
@@ -3663,6 +3672,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:declaredValue>
 								<aixm:RunwayDeclaredDistanceValue gml:id="rddv004">
 									<aixm:distance uom="M">2800</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
 								</aixm:RunwayDeclaredDistanceValue>
 							</aixm:declaredValue>
 						</aixm:RunwayDeclaredDistance>
@@ -3705,41 +3715,12 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:onRunway xlink:href="urn:uuid:b802d439-e9f3-49f9-96e1-0153b837e113"
 						xlink:title="RDN_EADD_27R"/>
 					<aixm:associatedDeclaredDistance>
-						<aixm:RunwayDeclaredDistance gml:id="rdd011">
-							<aixm:type>TORA</aixm:type>
-							<aixm:declaredValue>
-								<aixm:RunwayDeclaredDistanceValue gml:id="rddv011">
-									<aixm:distance uom="M">2800</aixm:distance>
-								</aixm:RunwayDeclaredDistanceValue>
-							</aixm:declaredValue>
-						</aixm:RunwayDeclaredDistance>
-					</aixm:associatedDeclaredDistance>
-					<aixm:associatedDeclaredDistance>
-						<aixm:RunwayDeclaredDistance gml:id="rdd012">
-							<aixm:type>TODA</aixm:type>
-							<aixm:declaredValue>
-								<aixm:RunwayDeclaredDistanceValue gml:id="rddv012">
-									<aixm:distance uom="M">2800</aixm:distance>
-								</aixm:RunwayDeclaredDistanceValue>
-							</aixm:declaredValue>
-						</aixm:RunwayDeclaredDistance>
-					</aixm:associatedDeclaredDistance>
-					<aixm:associatedDeclaredDistance>
-						<aixm:RunwayDeclaredDistance gml:id="rdd013">
-							<aixm:type>ASDA</aixm:type>
-							<aixm:declaredValue>
-								<aixm:RunwayDeclaredDistanceValue gml:id="rddv013">
-									<aixm:distance uom="M">2800</aixm:distance>
-								</aixm:RunwayDeclaredDistanceValue>
-							</aixm:declaredValue>
-						</aixm:RunwayDeclaredDistance>
-					</aixm:associatedDeclaredDistance>
-					<aixm:associatedDeclaredDistance>
 						<aixm:RunwayDeclaredDistance gml:id="rdd014">
 							<aixm:type>LDA</aixm:type>
 							<aixm:declaredValue>
 								<aixm:RunwayDeclaredDistanceValue gml:id="rddv014">
 									<aixm:distance uom="M">2500</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
 								</aixm:RunwayDeclaredDistanceValue>
 							</aixm:declaredValue>
 						</aixm:RunwayDeclaredDistance>
@@ -3750,6 +3731,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:declaredValue>
 								<aixm:RunwayDeclaredDistanceValue gml:id="rddv015">
 									<aixm:distance uom="M">300</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
 								</aixm:RunwayDeclaredDistanceValue>
 							</aixm:declaredValue>
 						</aixm:RunwayDeclaredDistance>
@@ -3772,6 +3754,76 @@ Editorial note: this license is an instance of the BSD license template as provi
 								xlink:title="MKR_EADD_OM27R"/>
 						</aixm:NavaidEquipmentDistance>
 					</aixm:navaidEquipment>
+				</aixm:RunwayCentrelinePointTimeSlice>
+			</aixm:timeSlice>
+		</aixm:RunwayCentrelinePoint>
+	</message:hasMember>
+	<message:hasMember>
+		<aixm:RunwayCentrelinePoint gml:id="uuid.6928ccc0-f2d0-4a2c-a72e-aefeb0ed6d8f">
+			<gml:identifier codeSpace="urn:uuid:"
+				>6928ccc0-f2d0-4a2c-a72e-aefeb0ed6d8f</gml:identifier>
+			<aixm:timeSlice>
+				<aixm:RunwayCentrelinePointTimeSlice gml:id="RCP_EADD_27R_START_RUN">
+					<gml:validTime>
+						<gml:TimePeriod gml:id="vtILURU981">
+							<gml:beginPosition>2017-01-07T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</gml:validTime>
+					<aixm:interpretation>BASELINE</aixm:interpretation>
+					<aixm:sequenceNumber>2</aixm:sequenceNumber>
+					<aixm:featureLifetime>
+						<gml:TimePeriod gml:id="ltILURU981">
+							<gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</aixm:featureLifetime>
+					<aixm:role>START_RUN</aixm:role>
+					<aixm:location>
+						<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="RCPP11">
+							<gml:pos>52.378189 -31.921847</gml:pos>
+							<!-- ICAO/EC AIP specimen data of DONLON have altered, a displaced THR has been added. the actul THR psoition is usewd for START_RUN-->
+							<aixm:horizontalAccuracy uom="M">1</aixm:horizontalAccuracy>
+							<aixm:elevation uom="M">16.5</aixm:elevation>
+							<aixm:geoidUndulation uom="M">11.5</aixm:geoidUndulation>
+							<aixm:verticalAccuracy uom="M">0.25</aixm:verticalAccuracy>
+						</aixm:ElevatedPoint>
+					</aixm:location>
+					<aixm:onRunway xlink:href="urn:uuid:b802d439-e9f3-49f9-96e1-0153b837e113"
+						xlink:title="RDN_EADD_27R"/>
+					<aixm:associatedDeclaredDistance>
+						<aixm:RunwayDeclaredDistance gml:id="rdd0111">
+							<aixm:type>TORA</aixm:type>
+							<aixm:declaredValue>
+								<aixm:RunwayDeclaredDistanceValue gml:id="rddv0111">
+									<aixm:distance uom="M">2800</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
+								</aixm:RunwayDeclaredDistanceValue>
+							</aixm:declaredValue>
+						</aixm:RunwayDeclaredDistance>
+					</aixm:associatedDeclaredDistance>
+					<aixm:associatedDeclaredDistance>
+						<aixm:RunwayDeclaredDistance gml:id="rdd0121">
+							<aixm:type>TODA</aixm:type>
+							<aixm:declaredValue>
+								<aixm:RunwayDeclaredDistanceValue gml:id="rddv0121">
+									<aixm:distance uom="M">2800</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
+								</aixm:RunwayDeclaredDistanceValue>
+							</aixm:declaredValue>
+						</aixm:RunwayDeclaredDistance>
+					</aixm:associatedDeclaredDistance>
+					<aixm:associatedDeclaredDistance>
+						<aixm:RunwayDeclaredDistance gml:id="rdd0131">
+							<aixm:type>ASDA</aixm:type>
+							<aixm:declaredValue>
+								<aixm:RunwayDeclaredDistanceValue gml:id="rddv013">
+									<aixm:distance uom="M">2800</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
+								</aixm:RunwayDeclaredDistanceValue>
+							</aixm:declaredValue>
+						</aixm:RunwayDeclaredDistance>
+					</aixm:associatedDeclaredDistance>
 				</aixm:RunwayCentrelinePointTimeSlice>
 			</aixm:timeSlice>
 		</aixm:RunwayCentrelinePoint>
@@ -4201,7 +4253,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 						xlink:title="RWY_EADH_FATO_03_21"/>
 					<aixm:annotation>
 						<aixm:Note gml:id="nTLA001">
-							<aixm:propertyName>Lenght</aixm:propertyName>
+							<aixm:propertyName>lenght</aixm:propertyName>
 							<aixm:purpose>REMARK</aixm:purpose>
 							<aixm:translatedNote>
 								<aixm:LinguisticNote gml:id="lnTLA001">
@@ -4212,7 +4264,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					</aixm:annotation>
 					<aixm:annotation>
 						<aixm:Note gml:id="nTLA002">
-							<aixm:propertyName>Width</aixm:propertyName>
+							<aixm:propertyName>width</aixm:propertyName>
 							<aixm:purpose>REMARK</aixm:purpose>
 							<aixm:translatedNote>
 								<aixm:LinguisticNote gml:id="lnTLA002">
@@ -4263,6 +4315,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:declaredValue>
 								<aixm:RunwayDeclaredDistanceValue gml:id="rddv051">
 									<aixm:distance uom="M">70</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
 								</aixm:RunwayDeclaredDistanceValue>
 							</aixm:declaredValue>
 						</aixm:RunwayDeclaredDistance>
@@ -4273,6 +4326,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:declaredValue>
 								<aixm:RunwayDeclaredDistanceValue gml:id="rddv052">
 									<aixm:distance uom="M">50</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
 								</aixm:RunwayDeclaredDistanceValue>
 							</aixm:declaredValue>
 						</aixm:RunwayDeclaredDistance>
@@ -4283,6 +4337,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:declaredValue>
 								<aixm:RunwayDeclaredDistanceValue gml:id="rddv053">
 									<aixm:distance uom="M">50</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
 								</aixm:RunwayDeclaredDistanceValue>
 							</aixm:declaredValue>
 						</aixm:RunwayDeclaredDistance>
@@ -4402,6 +4457,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:declaredValue>
 								<aixm:RunwayDeclaredDistanceValue gml:id="rddv021">
 									<aixm:distance uom="M">2600</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
 								</aixm:RunwayDeclaredDistanceValue>
 							</aixm:declaredValue>
 						</aixm:RunwayDeclaredDistance>
@@ -4412,6 +4468,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:declaredValue>
 								<aixm:RunwayDeclaredDistanceValue gml:id="rddv022">
 									<aixm:distance uom="M">2600</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
 								</aixm:RunwayDeclaredDistanceValue>
 							</aixm:declaredValue>
 						</aixm:RunwayDeclaredDistance>
@@ -4422,6 +4479,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:declaredValue>
 								<aixm:RunwayDeclaredDistanceValue gml:id="rddv023">
 									<aixm:distance uom="M">2600</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
 								</aixm:RunwayDeclaredDistanceValue>
 							</aixm:declaredValue>
 						</aixm:RunwayDeclaredDistance>
@@ -4432,6 +4490,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:declaredValue>
 								<aixm:RunwayDeclaredDistanceValue gml:id="rddv024">
 									<aixm:distance uom="M">2600</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
 								</aixm:RunwayDeclaredDistanceValue>
 							</aixm:declaredValue>
 						</aixm:RunwayDeclaredDistance>
@@ -4507,6 +4566,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:declaredValue>
 								<aixm:RunwayDeclaredDistanceValue gml:id="rddv041">
 									<aixm:distance uom="M">2600</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
 								</aixm:RunwayDeclaredDistanceValue>
 							</aixm:declaredValue>
 						</aixm:RunwayDeclaredDistance>
@@ -4517,6 +4577,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:declaredValue>
 								<aixm:RunwayDeclaredDistanceValue gml:id="rddv042">
 									<aixm:distance uom="M">3000</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
 								</aixm:RunwayDeclaredDistanceValue>
 							</aixm:declaredValue>
 						</aixm:RunwayDeclaredDistance>
@@ -4527,6 +4588,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:declaredValue>
 								<aixm:RunwayDeclaredDistanceValue gml:id="rddv043">
 									<aixm:distance uom="M">2800</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
 								</aixm:RunwayDeclaredDistanceValue>
 							</aixm:declaredValue>
 						</aixm:RunwayDeclaredDistance>
@@ -4537,6 +4599,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:declaredValue>
 								<aixm:RunwayDeclaredDistanceValue gml:id="rddv044">
 									<aixm:distance uom="M">2600</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
 								</aixm:RunwayDeclaredDistanceValue>
 							</aixm:declaredValue>
 						</aixm:RunwayDeclaredDistance>
@@ -5308,43 +5371,6 @@ Editorial note: this license is an instance of the BSD license template as provi
 		</aixm:Airspace>
 	</message:hasMember>
 	<message:hasMember>
-		<aixm:RadioFrequencyArea gml:id="uuid.f4569050-2c6f-4195-b92a-a92802cb8524">
-			<gml:identifier codeSpace="urn:uuid:"
-				>f4569050-2c6f-4195-b92a-a92802cb8524</gml:identifier>
-			<aixm:timeSlice>
-				<aixm:RadioFrequencyAreaTimeSlice gml:id="rfaFELDMADRFA">
-					<gml:validTime>
-						<gml:TimePeriod gml:id="vtFELDMADRFA">
-							<gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
-							<gml:endPosition indeterminatePosition="unknown"/>
-						</gml:TimePeriod>
-					</gml:validTime>
-					<aixm:interpretation>BASELINE</aixm:interpretation>
-					<aixm:sequenceNumber>1</aixm:sequenceNumber>
-					<aixm:featureLifetime>
-						<gml:TimePeriod gml:id="ltFELDMADRFA">
-							<gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
-							<gml:endPosition indeterminatePosition="unknown"/>
-						</gml:TimePeriod>
-					</aixm:featureLifetime>
-					<aixm:type>T_COV</aixm:type>
-					<aixm:signalType>DISTANCE</aixm:signalType>
-					<aixm:equipment_specialNavigationStation
-						xlink:href="urn:uuid:b9024736-3a25-4c92-9b2f-bfc0e29ae31b"/>
-					<aixm:sector>
-						<aixm:CircleSector gml:id="csFELDMADRFA">
-							<aixm:arcDirection>CCA</aixm:arcDirection>
-							<aixm:fromAngle>000</aixm:fromAngle>
-							<aixm:toAngle>360</aixm:toAngle>
-							<aixm:angleType>TRUE</aixm:angleType>
-							<aixm:innerDistance uom="KM">0</aixm:innerDistance>
-							<aixm:outerDistance uom="KM">500</aixm:outerDistance>
-						</aixm:CircleSector>
-					</aixm:sector>
-				</aixm:RadioFrequencyAreaTimeSlice>
-			</aixm:timeSlice>
-		</aixm:RadioFrequencyArea> </message:hasMember>
-	<message:hasMember>
 		<aixm:AeronauticalGroundLight gml:id="uuid.9481f274-f05b-4c00-9017-eae75d33c45b">
 			<gml:identifier codeSpace="urn:uuid:"
 				>9481f274-f05b-4c00-9017-eae75d33c45b</gml:identifier>
@@ -5454,7 +5480,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					</aixm:featureLifetime>
 					<aixm:type>OTHER:MOA</aixm:type>
 					<aixm:designator>EAMTA01</aixm:designator>
-					<aixm:localType> MILITARY OPERATING AREA</aixm:localType>
+					<aixm:localType>MILITARY OPERATING AREA</aixm:localType>
 					<aixm:name>EAMOA01</aixm:name>
 					<aixm:controlType>MIL</aixm:controlType>
 					<aixm:geometryComponent>
@@ -5526,10 +5552,21 @@ Editorial note: this license is an instance of the BSD license template as provi
 								</aixm:Timesheet>
 							</aixm:timeInterval>
 							<aixm:activity>MILOPS</aixm:activity>
-							<aixm:status>ACTIVE</aixm:status>
+							<aixm:status>AVBL_FOR_ACTIVATION</aixm:status>
 						</aixm:AirspaceActivation>
 					</aixm:activation>
-				</aixm:AirspaceTimeSlice>
+				<aixm:annotation>
+  			      	  	      	<aixm:Note gml:id="n645674">
+  			      	  	      		<aixm:propertyName>activation</aixm:propertyName>
+  			      	  	      		<aixm:purpose>REMARK</aixm:purpose>
+  			      	  	      		  <aixm:translatedNote>
+  			      	  	      		  	<aixm:LinguisticNote gml:id="ln4243442">
+  			      	  	      		  		<aixm:note lang="eng">activation by NOTAM</aixm:note>
+  			      	  	      		  	</aixm:LinguisticNote>
+  			      	  	      		  </aixm:translatedNote>
+  			      	  	      	</aixm:Note>
+  			      	  	      </aixm:annotation>
+  			      	  </aixm:AirspaceTimeSlice>
 			</aixm:timeSlice>
 		</aixm:Airspace>
 	</message:hasMember>
@@ -5656,13 +5693,14 @@ Editorial note: this license is an instance of the BSD license template as provi
 												gml:id="uuid.258c16e0-5f2c-4101-aabb-536f58c38eb5">
 												<gml:segments>
 												<gml:GeodesicString>
-												<gml:posList>51.99333333333333 -6.0005
-												52.45333333333333 -5.869333333333333
-												52.81666666666667 -5.89 53.53333333333333
-												-5.981666666666667 53.89333333333333
-												-5.937833333333333 53.905 -6.0038333333333334
-												53.916666666666664
-												-6.099333333333333</gml:posList>
+												<gml:posList>51.99333333333333 -36.0005
+															52.45333333333333 -35.869333333333333
+															52.81666666666667 -35.89 
+															53.53333333333333 -35.981666666666667 
+															53.89333333333333 -35.937833333333333 
+															53.905 -36.0038333333333334 
+															53.916666666666664 -36.899333333333333
+															51.99333333333333 -36.0005</gml:posList>
 												</gml:GeodesicString>
 												</gml:segments>
 												</gml:Curve>
@@ -5745,16 +5783,17 @@ Editorial note: this license is an instance of the BSD license template as provi
 												gml:id="uuid.84fe3774-a519-4b16-9344-cb311b2c92b5">
 												<gml:segments>
 												<gml:GeodesicString>
-												<gml:posList>53.876666666666665 -5.863333333333333
-												53.89333333333333 -5.937833333333333
-												53.53333333333333 -5.981666666666667
-												52.81666666666667 -5.89 52.45333333333333
-												-5.869333333333333 52.516666666666666
-												-5.850666666666667 52.583333333333336
-												-5.831666666666667 53.3 -5.755 53.7
-												-5.786666666666667 53.718333333333334
-												-5.8083333333333336 53.876666666666665
-												-5.863333333333333</gml:posList>
+												<gml:posList>53.876666666666665 -35.863333333333333
+															53.89333333333333 -35.937833333333333
+															53.53333333333333 -35.981666666666667
+															52.81666666666667 -35.89 
+															52.45333333333333 -35.869333333333333 
+															52.516666666666666 -35.850666666666667 
+															52.583333333333336 -35.831666666666667 
+															53.3 -35.055 
+															53.7 -35.786666666666667 
+															53.718333333333334 -35.8083333333333336 
+															53.876666666666665 -35.863333333333333</gml:posList>
 												</gml:GeodesicString>
 												</gml:segments>
 												</gml:Curve>
@@ -5837,7 +5876,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:operationalStatus>NORMAL</aixm:operationalStatus>
 						</aixm:ServiceOperationalStatus>
 					</aixm:availability>
-					<aixm:clientAirspace xlink:href=" " xlink:title="ASE_AMSWELL_FIR"/>
+					<aixm:clientAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="ASE_AMSWELL_FIR"/>
 					<aixm:clientRoute>
 						<aixm:RoutePortion gml:id="rp001">
 							<aixm:start_fixDesignatedPoint
@@ -6508,8 +6547,8 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:end>
 						<aixm:EnRouteSegmentPoint gml:id="E-c2a122821">
 							<aixm:reportingATC>COMPULSORY</aixm:reportingATC>
-							<aixm:pointChoice_navaidSystem
-								xlink:href="urn:uuid:d2c95dc-cfec-4eae-96ca-dc95fff03757"
+							<aixm:pointChoice_navaidSystem 
+								xlink:href="urn:uuid:2d2c95dc-cfec-4eae-96ca-dc95fff03756" 
 								xlink:title="NAV_ROB"/>
 						</aixm:EnRouteSegmentPoint>
 					</aixm:end>
@@ -6609,8 +6648,8 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:end>
 						<aixm:EnRouteSegmentPoint gml:id="E-c2a1228212">
 							<aixm:reportingATC>COMPULSORY</aixm:reportingATC>
-							<aixm:pointChoice_navaidSystem
-								xlink:href="urn:uuid:d2c95dc-cfec-4eae-96ca-dc95fff03757"
+							<aixm:pointChoice_navaidSystem 
+								xlink:href="urn:uuid:2d2c95dc-cfec-4eae-96ca-dc95fff03756" 
 								xlink:title="NAV_ROB"/>
 						</aixm:EnRouteSegmentPoint>
 					</aixm:end>
@@ -7050,8 +7089,8 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:navaidEquipment>
 						<aixm:NavaidComponent gml:id="N-SCN4">
 							<aixm:collocationGroup>1</aixm:collocationGroup>
-							<aixm:theNavaidEquipment
-								xlink:href="urn:uuid:e921fdb-2853-4fbe-a721-909e93fbe477"
+							<aixm:theNavaidEquipment 
+								xlink:href="urn:uuid:2e921fdb-2853-4fbe-a721-909e93fbe477" 
 								xlink:title="NDB_SCN"/>
 						</aixm:NavaidComponent>
 					</aixm:navaidEquipment>
@@ -7232,8 +7271,8 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:signalPerformance>II</aixm:signalPerformance>
 					<aixm:navaidEquipment>
 						<aixm:NavaidComponent gml:id="N-OXS1">
-							<aixm:theNavaidEquipment
-								xlink:href="urn:uuid:e921fdb-2853-4fbe-a721-909e93fbe477"
+							<aixm:theNavaidEquipment 
+								xlink:href="urn:uuid:2c68a682-1b29-4442-8d18-0488487185f3" 
 								xlink:title="LLZ_OXS"/>
 						</aixm:NavaidComponent>
 					</aixm:navaidEquipment>
@@ -7646,6 +7685,17 @@ Editorial note: this license is an instance of the BSD license template as provi
 												>100.0</aixm:horizontalAccuracy>
 										</aixm:Surface>
 									</aixm:horizontalProjection>
+								<aixm:annotation>
+								    	<aixm:Note gml:id="n434343">
+								    		<aixm:propertyName>lowerLimit</aixm:propertyName>
+								    		<aixm:purpose>REMARK</aixm:purpose>
+								    	      <aixm:translatedNote>
+								    	      	<aixm:LinguisticNote gml:id="ln45454545">
+								    	      		<aixm:note lang="eng">Accuracy for lower limit unknown</aixm:note>
+								    	      	</aixm:LinguisticNote>
+								    	      </aixm:translatedNote>
+								    	</aixm:Note>
+								    </aixm:annotation>
 								</aixm:AirspaceVolume>
 							</aixm:theAirspaceVolume>
 						</aixm:AirspaceGeometryComponent>
@@ -7729,7 +7779,9 @@ Editorial note: this license is an instance of the BSD license template as provi
 						xlink:href="urn:uuid:99c2b65e-a7ac-434d-aae0-0c3a2c62fe61"
 						xlink:title="RCC_DONLON_TWR_117.900MHZ"/>
 					<aixm:type>TWR</aixm:type>
-					<aixm:clientAirspace xlink:href=" " xlink:title="ASE_DONLON_CTR"/>
+					<aixm:clientAirspace 
+						xlink:href="urn:uuid:21a13c9f-a8ff-4fdd-9aaa-5dbfd91514b9" 
+						xlink:title="ASE_DONLON_CTR"/>
 				</aixm:AirTrafficControlServiceTimeSlice>
 			</aixm:timeSlice>
 		</aixm:AirTrafficControlService>
@@ -8028,9 +8080,11 @@ Editorial note: this license is an instance of the BSD license template as provi
 												<aixm:Curve gml:id="C001">
 												<gml:segments>
 												<gml:GeodesicString>
-												<gml:posList>52.18556 5.20833 52.20611 5.2875
-												52.18917 5.29889 52.16917 5.29889 52.18556
-												5.20833</gml:posList>
+												<gml:posList>52.18556 -24.00833 
+															52.90611 -25.2875 
+															52.18917 -25.2875 
+															51.16917 -25.29889 
+															52.18556 -24.00833</gml:posList>
 												</gml:GeodesicString>
 												</gml:segments>
 												</aixm:Curve>
@@ -8066,8 +8120,10 @@ Editorial note: this license is an instance of the BSD license template as provi
 												<aixm:Curve gml:id="C002">
 												<gml:segments>
 												<gml:GeodesicString>
-												<gml:posList>52.20611 5.2875 52.18917 5.29889
-												52.19117 5.3289 52.20611 5.2875</gml:posList>
+												<gml:posList>52.20611 -25.2875 
+															52.18917 -25.29889 
+														    52.19117 -27.4289 
+															52.90611 -25.2875</gml:posList>
 												</gml:GeodesicString>
 												</gml:segments>
 												</aixm:Curve>
@@ -8144,9 +8200,11 @@ Editorial note: this license is an instance of the BSD license template as provi
 												<gml:Curve gml:id="cID_317">
 												<gml:segments>
 												<gml:GeodesicString>
-												<gml:posList>52.18556 5.20833 52.20611 5.2875
-												52.18917 5.29889 52.16917 5.29889 52.18556
-												5.20833</gml:posList>
+												<gml:posList>52.18556 -24.00833 
+															52.90611 -25.2875 
+															52.18917 -25.2875 
+															51.16917 -25.29889 
+															52.18556 -24.00833</gml:posList>
 												</gml:GeodesicString>
 												</gml:segments>
 												</gml:Curve>
@@ -8225,8 +8283,10 @@ Editorial note: this license is an instance of the BSD license template as provi
 												<gml:Curve gml:id="cID_212121">
 												<gml:segments>
 												<gml:GeodesicString>
-												<gml:posList>52.20611 5.2875 52.18917 5.29889
-												52.19117 5.3289 52.20611 5.2875</gml:posList>
+												<gml:posList>52.20611 -25.2875 
+															52.18917 -25.29889 
+															52.19117 -27.4289 
+															52.90611 -25.2875</gml:posList>
 												</gml:GeodesicString>
 												</gml:segments>
 												</gml:Curve>
@@ -8340,9 +8400,9 @@ Editorial note: this license is an instance of the BSD license template as provi
 												<gml:segments>
 												<gml:CircleByCenterPoint numArc="1">
 												<gml:pointProperty
-												xlink:href="#b35409d8-f236-4303-a12d-795e9e9c8751"
+													xlink:href="#p9898"
 												xlink:title="DPN_EADH"/>
-												<gml:radius uom="KM">1.0</gml:radius>
+												<gml:radius uom="KM">10.0</gml:radius>
 												</gml:CircleByCenterPoint>
 												</gml:segments>
 												</gml:Curve>
@@ -8767,7 +8827,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 				<aixm:RunwayCentrelinePointTimeSlice gml:id="RCP_EADD_TWY_B">
 					<!-- RCP for Declared Distances from TWY B RWY 27R -->
 					<gml:validTime>
-						<gml:TimePeriod gml:id="vtILURU981">
+						<gml:TimePeriod gml:id="vtILURU9812">
 							<gml:beginPosition>2017-01-07T00:00:00Z</gml:beginPosition>
 							<gml:endPosition indeterminatePosition="unknown"/>
 						</gml:TimePeriod>
@@ -8775,7 +8835,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:interpretation>BASELINE</aixm:interpretation>
 					<aixm:sequenceNumber>1</aixm:sequenceNumber>
 					<aixm:featureLifetime>
-						<gml:TimePeriod gml:id="ltILURU981">
+						<gml:TimePeriod gml:id="ltILURU9812">
 							<gml:beginPosition>2017-01-01T00:00:00Z</gml:beginPosition>
 							<gml:endPosition indeterminatePosition="unknown"/>
 						</gml:TimePeriod>
@@ -8786,11 +8846,12 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:onRunway xlink:href="urn:uuid:b802d439-e9f3-49f9-96e1-0153b837e113"
 						xlink:title="RDN_EADD_27R"/>
 					<aixm:associatedDeclaredDistance>
-						<aixm:RunwayDeclaredDistance gml:id="rdd0111">
+						<aixm:RunwayDeclaredDistance gml:id="rdd01112">
 							<aixm:type>TORA</aixm:type>
 							<aixm:declaredValue>
-								<aixm:RunwayDeclaredDistanceValue gml:id="rddv0111">
+								<aixm:RunwayDeclaredDistanceValue gml:id="rddv01112">
 									<aixm:distance uom="M">2200</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
 								</aixm:RunwayDeclaredDistanceValue>
 							</aixm:declaredValue>
 						</aixm:RunwayDeclaredDistance>
@@ -8801,6 +8862,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:declaredValue>
 								<aixm:RunwayDeclaredDistanceValue gml:id="rddv0122">
 									<aixm:distance uom="M">2200</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
 								</aixm:RunwayDeclaredDistanceValue>
 							</aixm:declaredValue>
 						</aixm:RunwayDeclaredDistance>
@@ -8811,6 +8873,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:declaredValue>
 								<aixm:RunwayDeclaredDistanceValue gml:id="rddv0132">
 									<aixm:distance uom="M">2200</aixm:distance>
+									<aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
 								</aixm:RunwayDeclaredDistanceValue>
 							</aixm:declaredValue>
 						</aixm:RunwayDeclaredDistance>
