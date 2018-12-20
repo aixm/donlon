@@ -1164,7 +1164,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 									<aixm:timeReference>UTC</aixm:timeReference>
 									<aixm:day>ANY</aixm:day>
 									<aixm:startTime>20:00</aixm:startTime>
-									<aixm:endTime>24:00</aixm:endTime>
+									<aixm:endTime>00:00</aixm:endTime>
 									<aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
 								</aixm:Timesheet>
 							</aixm:timeInterval>
@@ -1336,7 +1336,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 								<aixm:Timesheet gml:id="tdmebor01">
 									<aixm:day>ANY</aixm:day>
 									<aixm:startTime>00:00</aixm:startTime>
-									<aixm:endTime>24:00</aixm:endTime>
+									<aixm:endTime>00:00</aixm:endTime>
 								</aixm:Timesheet>
 							</aixm:timeInterval>
 							<aixm:operationalStatus>OPERATIONAL</aixm:operationalStatus>
@@ -1388,7 +1388,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 								<aixm:Timesheet gml:id="tvorbor01">
 									<aixm:day>ANY</aixm:day>
 									<aixm:startTime>00:00</aixm:startTime>
-									<aixm:endTime>24:00</aixm:endTime>
+									<aixm:endTime>00:00</aixm:endTime>
 								</aixm:Timesheet>
 							</aixm:timeInterval>
 							<aixm:operationalStatus>OPERATIONAL</aixm:operationalStatus>
@@ -4672,7 +4672,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 								<aixm:Timesheet gml:id="ID_243">
 									<aixm:day>ANY</aixm:day>
 									<aixm:startTime>00:00</aixm:startTime>
-									<aixm:endTime>24:00</aixm:endTime>
+									<aixm:endTime>00:00</aixm:endTime>
 								</aixm:Timesheet>
 							</aixm:timeInterval>
 							<aixm:activity>NUCLEAR</aixm:activity>
@@ -4761,7 +4761,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 								<aixm:Timesheet gml:id="ID_252">
 									<aixm:day>ANY</aixm:day>
 									<aixm:startTime>00:00</aixm:startTime>
-									<aixm:endTime>24:00</aixm:endTime>
+									<aixm:endTime>00:00</aixm:endTime>
 								</aixm:Timesheet>
 							</aixm:timeInterval>
 							<aixm:activity>SHOOTING</aixm:activity>
@@ -4838,7 +4838,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 								<aixm:Timesheet gml:id="ID_260">
 									<aixm:day>ANY</aixm:day>
 									<aixm:startTime>00:00</aixm:startTime>
-									<aixm:endTime>24:00</aixm:endTime>
+									<aixm:endTime>00:00</aixm:endTime>
 								</aixm:Timesheet>
 							</aixm:timeInterval>
 							<aixm:activity>AIR_GUN</aixm:activity>
@@ -4958,7 +4958,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 								<aixm:Timesheet gml:id="ID_268">
 									<aixm:day>ANY</aixm:day>
 									<aixm:startTime>00:00</aixm:startTime>
-									<aixm:endTime>24:00</aixm:endTime>
+									<aixm:endTime>00:00</aixm:endTime>
 								</aixm:Timesheet>
 							</aixm:timeInterval>
 							<aixm:activity xsi:nil="true" nilReason="unknown"/>
@@ -5546,7 +5546,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 									<aixm:endDate>31-07</aixm:endDate>
 									<aixm:day>ANY</aixm:day>
 									<aixm:startTime>00:00</aixm:startTime>
-									<aixm:endTime>24:00</aixm:endTime>
+									<aixm:endTime>00:00</aixm:endTime>
 									<aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
 									<aixm:excluded>NO</aixm:excluded>
 								</aixm:Timesheet>
@@ -5870,7 +5870,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 								<aixm:Timesheet gml:id="tsATC_AMSWELL_ACC">
 									<aixm:day>ANY</aixm:day>
 									<aixm:startTime>00:00</aixm:startTime>
-									<aixm:endTime>24:00</aixm:endTime>
+									<aixm:endTime>00:00</aixm:endTime>
 								</aixm:Timesheet>
 							</aixm:timeInterval>
 							<aixm:operationalStatus>NORMAL</aixm:operationalStatus>
@@ -7005,7 +7005,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 								<aixm:Timesheet gml:id="tndbkl01">
 									<aixm:day>ANY</aixm:day>
 									<aixm:startTime>00:00</aixm:startTime>
-									<aixm:endTime>24:00</aixm:endTime>
+									<aixm:endTime>00:00</aixm:endTime>
 								</aixm:Timesheet>
 							</aixm:timeInterval>
 							<aixm:operationalStatus>OPERATIONAL</aixm:operationalStatus>
@@ -7159,7 +7159,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 									<!-- Assumption. Hrs. of op. are not published in DONLON AIP for SCN -->
 									<aixm:day>ANY</aixm:day>
 									<aixm:startTime>00:00</aixm:startTime>
-									<aixm:endTime>24:00</aixm:endTime>
+									<aixm:endTime>00:00</aixm:endTime>
 								</aixm:Timesheet>
 							</aixm:timeInterval>
 							<aixm:operationalStatus>OPERATIONAL</aixm:operationalStatus>
@@ -7225,7 +7225,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 									<!-- Assumption. Hrs. of op. are not published in DONLON AIP for SCN -->
 									<aixm:day>ANY</aixm:day>
 									<aixm:startTime>00:00</aixm:startTime>
-									<aixm:endTime>24:00</aixm:endTime>
+									<aixm:endTime>00:00</aixm:endTime>
 								</aixm:Timesheet>
 							</aixm:timeInterval>
 							<aixm:operationalStatus>OPERATIONAL</aixm:operationalStatus>
@@ -7365,7 +7365,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 								<aixm:Timesheet gml:id="tLLZ_OXS">
 									<aixm:day>ANY</aixm:day>
 									<aixm:startTime>00:00</aixm:startTime>
-									<aixm:endTime>24:00</aixm:endTime>
+									<aixm:endTime>00:00</aixm:endTime>
 								</aixm:Timesheet>
 							</aixm:timeInterval>
 							<aixm:operationalStatus>OPERATIONAL</aixm:operationalStatus>
@@ -7434,7 +7434,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 								<aixm:Timesheet gml:id="tGPT_OXS">
 									<aixm:day>ANY</aixm:day>
 									<aixm:startTime>00:00</aixm:startTime>
-									<aixm:endTime>24:00</aixm:endTime>
+									<aixm:endTime>00:00</aixm:endTime>
 								</aixm:Timesheet>
 							</aixm:timeInterval>
 							<aixm:operationalStatus>OPERATIONAL</aixm:operationalStatus>
@@ -7502,7 +7502,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 								<aixm:Timesheet gml:id="tndbMKR_EADD_OM27R">
 									<aixm:day>ANY</aixm:day>
 									<aixm:startTime>00:00</aixm:startTime>
-									<aixm:endTime>24:00</aixm:endTime>
+									<aixm:endTime>00:00</aixm:endTime>
 								</aixm:Timesheet>
 							</aixm:timeInterval>
 							<aixm:operationalStatus>OPERATIONAL</aixm:operationalStatus>
@@ -7578,7 +7578,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 								<aixm:Timesheet gml:id="tndbMKR_EADD_MM27R">
 									<aixm:day>ANY</aixm:day>
 									<aixm:startTime>00:00</aixm:startTime>
-									<aixm:endTime>24:00</aixm:endTime>
+									<aixm:endTime>00:00</aixm:endTime>
 								</aixm:Timesheet>
 							</aixm:timeInterval>
 							<aixm:operationalStatus>OPERATIONAL</aixm:operationalStatus>
