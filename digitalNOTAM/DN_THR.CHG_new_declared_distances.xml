@@ -46,6 +46,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <aixm:interpretation>TEMPDELTA</aixm:interpretation>
                     <aixm:sequenceNumber>1</aixm:sequenceNumber>
                     <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:role>DISTHR</aixm:role>
                     <aixm:associatedDeclaredDistance>
                         <aixm:RunwayDeclaredDistance gml:id="ID_TC_3">
                             <aixm:type>DTHR</aixm:type>
