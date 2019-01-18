@@ -47,6 +47,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <aixm:sequenceNumber>1</aixm:sequenceNumber>
                     <aixm:correctionNumber>0</aixm:correctionNumber>
                     <aixm:role>DISTHR</aixm:role>
+                    <aixm:location xsi:nil="true" nilReason="unknown"/>
                     <aixm:associatedDeclaredDistance>
                         <aixm:RunwayDeclaredDistance gml:id="ID_TC_3">
                             <aixm:type>DTHR</aixm:type>
@@ -191,7 +192,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:text>
                                 THR RWY 09R displaced 200m inwards.
                                 Declared distances changed: 
-                                RWY: 09R TORA 2600m TODA 2600m ASDA 2600m LDA 2400m
+                                RWY 09R TORA 2600m TODA 2600m ASDA 2600m LDA 2400m.
                             </event:text>
                             <event:lowerLimit/>
                             <event:upperLimit/>
