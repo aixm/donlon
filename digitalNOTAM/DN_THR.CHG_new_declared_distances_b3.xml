@@ -98,7 +98,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <gml:endPosition>2018-08-02T18:00:00Z</gml:endPosition>
                         </gml:TimePeriod>
                     </aixm:featureLifetime>
-                    <event:name>TC_27R_20180801</event:name>
+                    <event:name>EADD_27R_20180801</event:name>
                     <event:encoding>DIGITAL</event:encoding>
                     <event:scenario>THR.CHG</event:scenario>
                     <event:version>2.0</event:version>
