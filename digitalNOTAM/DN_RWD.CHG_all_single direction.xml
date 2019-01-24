@@ -29,6 +29,9 @@ Editorial note: this license is an instance of the BSD license template as provi
     xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
     http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
     gml:id="M00001">
+    
+    <!--This is a Digital NOTAM example of EADD RWY 09L temporary changed runway declared distances.-->
+    
     <message:hasMember>
         <aixm:RunwayCentrelinePoint gml:id="uuid.ebccbb64-c1b3-4b27-8e5a-a32d2763208a">
              <aixm:timeSlice>
