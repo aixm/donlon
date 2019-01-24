@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Andreea PERCA, ASBU For Future GMBH -->
+<!-- Copyright (c) 2018, EUROCONTROL & FAA
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+    
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+    xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+    http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
+    gml:id="M00001">
+    
+    <!--This is a Digital NOTAM example of EADD RWY 09L temporary changed declared distances daily 1030 - 2300-->
+    
+    <message:hasMember>
+        <aixm:RunwayCentrelinePoint gml:id="uuid.ebccbb64-c1b3-4b27-8e5a-a32d2763208a">
+            <gml:identifier codeSpace="urn:uuid:">ebccbb64-c1b3-4b27-8e5a-a32d2763208a</gml:identifier>
+        <aixm:timeSlice>
+            <aixm:RunwayCentrelinePointTimeSlice gml:id="RDW_DN_0011">
+                <gml:validTime>
+                    <gml:TimePeriod gml:id="RWD_DN_0012">
+                        <gml:beginPosition>2018-04-16T12:00:00Z</gml:beginPosition>
+                        <gml:endPosition>2018-04-20T22:00:00Z</gml:endPosition>
+                    </gml:TimePeriod>
+                </gml:validTime>
+                <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                <aixm:correctionNumber>0</aixm:correctionNumber>
+                <aixm:associatedDeclaredDistance>
+                    <aixm:RunwayDeclaredDistance gml:id="RDC_DN_991">
+                        <aixm:type>TORA</aixm:type>
+                        <aixm:declaredValue>
+                            <aixm:RunwayDeclaredDistanceValue gml:id="RDC_DN_995">
+                                <aixm:timeInterval>
+                                    <aixm:Timesheet gml:id="RDC_DN_995b">
+                                        <aixm:timeReference>UTC</aixm:timeReference>
+                                        <aixm:day>ANY</aixm:day>
+                                        <aixm:startTime>10:00</aixm:startTime>
+                                        <aixm:endTime>23:30</aixm:endTime>
+                                        <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    </aixm:Timesheet>
+                                </aixm:timeInterval>
+                                <aixm:distance uom="M">2600</aixm:distance>
+                                <aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
+                            </aixm:RunwayDeclaredDistanceValue>
+                        </aixm:declaredValue>
+                        <aixm:declaredValue>
+                            <aixm:RunwayDeclaredDistanceValue gml:id="RDC_DN_992">
+                                <aixm:timeInterval>
+                                    <aixm:Timesheet gml:id="RDC_DN_992b">
+                                        <aixm:timeReference>UTC</aixm:timeReference>
+                                        <aixm:day>ANY</aixm:day>
+                                        <aixm:startTime>00:00</aixm:startTime>
+                                        <aixm:endTime>10:00</aixm:endTime>
+                                        <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    </aixm:Timesheet>
+                                </aixm:timeInterval>
+                                <aixm:timeInterval>
+                                    <aixm:Timesheet gml:id="RDC_DN_992c">
+                                        <aixm:timeReference>UTC</aixm:timeReference>
+                                        <aixm:day>ANY</aixm:day>
+                                        <aixm:startTime>23:30</aixm:startTime>
+                                        <aixm:endTime>00:00</aixm:endTime>
+                                    </aixm:Timesheet>
+                                </aixm:timeInterval>
+                                <aixm:annotation>
+                                    <aixm:Note gml:id="RDC_DN_993">
+                                        <aixm:purpose>REMARK</aixm:purpose>
+                                        <aixm:translatedNote>
+                                            <aixm:LinguisticNote gml:id="RDC_DN_994">
+                                                <aixm:note>Baseline data copy. Not included in the NOTAM text generation</aixm:note>
+                                            </aixm:LinguisticNote>
+                                        </aixm:translatedNote>
+                                    </aixm:Note>
+                                </aixm:annotation>
+                                <aixm:distance uom="M">2800</aixm:distance>
+                                <aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
+                            </aixm:RunwayDeclaredDistanceValue>
+                        </aixm:declaredValue>
+                    </aixm:RunwayDeclaredDistance>
+                </aixm:associatedDeclaredDistance>
+                <aixm:associatedDeclaredDistance>
+                    <aixm:RunwayDeclaredDistance gml:id="RDC_DN_996">
+                        <aixm:type>TODA</aixm:type>
+                        <aixm:declaredValue>
+                            <aixm:RunwayDeclaredDistanceValue gml:id="RDC_DN_997b">
+                                <aixm:timeInterval>
+                                    <aixm:Timesheet gml:id="RDC_DN_998b">
+                                        <aixm:timeReference>UTC</aixm:timeReference>
+                                        <aixm:day>ANY</aixm:day>
+                                        <aixm:startTime>10:00</aixm:startTime>
+                                        <aixm:endTime>23:30</aixm:endTime>
+                                        <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    </aixm:Timesheet>
+                                </aixm:timeInterval>
+                                <aixm:distance uom="M">2600</aixm:distance>
+                                <aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
+                            </aixm:RunwayDeclaredDistanceValue>
+                        </aixm:declaredValue>
+                        <aixm:declaredValue>
+                            <aixm:RunwayDeclaredDistanceValue gml:id="RDC_DN_999bb">
+                                <aixm:timeInterval>
+                                    <aixm:Timesheet gml:id="RDC_DN_992b1">
+                                        <aixm:timeReference>UTC</aixm:timeReference>
+                                        <aixm:day>ANY</aixm:day>
+                                        <aixm:startTime>00:00</aixm:startTime>
+                                        <aixm:endTime>10:00</aixm:endTime>
+                                        <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    </aixm:Timesheet>
+                                </aixm:timeInterval>
+                                <aixm:timeInterval>
+                                    <aixm:Timesheet gml:id="RDC_DN_992c1">
+                                        <aixm:timeReference>UTC</aixm:timeReference>
+                                        <aixm:day>ANY</aixm:day>
+                                        <aixm:startTime>23:30</aixm:startTime>
+                                        <aixm:endTime>00:00</aixm:endTime>
+                                    </aixm:Timesheet>
+                                </aixm:timeInterval>
+                                <aixm:annotation>
+                                    <aixm:Note gml:id="RDC_DN_993b">
+                                        <aixm:purpose>REMARK</aixm:purpose>
+                                        <aixm:translatedNote>
+                                            <aixm:LinguisticNote gml:id="RDC_DN_994b">
+                                                <aixm:note>Baseline data copy. Not included in the NOTAM text generation</aixm:note>
+                                            </aixm:LinguisticNote>
+                                        </aixm:translatedNote>
+                                    </aixm:Note>
+                                </aixm:annotation>
+                                <aixm:distance uom="M">2800</aixm:distance>
+                                <aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
+                            </aixm:RunwayDeclaredDistanceValue>
+                        </aixm:declaredValue>
+                    </aixm:RunwayDeclaredDistance>
+                </aixm:associatedDeclaredDistance>
+                <aixm:associatedDeclaredDistance>
+                    <aixm:RunwayDeclaredDistance gml:id="RDC_DN_9945">
+                        <aixm:type>ASDA</aixm:type>
+                        <aixm:declaredValue>
+                            <aixm:RunwayDeclaredDistanceValue gml:id="RDC_DN_9946">
+                                <aixm:timeInterval>
+                                    <aixm:Timesheet gml:id="RDC_DN_9947">
+                                        <aixm:timeReference>UTC</aixm:timeReference>
+                                        <aixm:day>ANY</aixm:day>
+                                        <aixm:startTime>10:00</aixm:startTime>
+                                        <aixm:endTime>23:30</aixm:endTime>
+                                        <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    </aixm:Timesheet>
+                                </aixm:timeInterval>
+                                <aixm:distance uom="M">2600</aixm:distance>
+                                <aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
+                            </aixm:RunwayDeclaredDistanceValue>
+                        </aixm:declaredValue>
+                        <aixm:declaredValue>
+                            <aixm:RunwayDeclaredDistanceValue gml:id="RDC_DN_99489">
+                                <aixm:timeInterval>
+                                    <aixm:Timesheet gml:id="RDC_DN_99499">
+                                        <aixm:timeReference>UTC</aixm:timeReference>
+                                        <aixm:day>ANY</aixm:day>
+                                        <aixm:startTime>00:00</aixm:startTime>
+                                        <aixm:endTime>10:00</aixm:endTime>
+                                        <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    </aixm:Timesheet>
+                                </aixm:timeInterval>
+                                <aixm:timeInterval>
+                                    <aixm:Timesheet gml:id="RDC_DN_994991">
+                                        <aixm:timeReference>UTC</aixm:timeReference>
+                                        <aixm:day>ANY</aixm:day>
+                                        <aixm:startTime>23:30</aixm:startTime>
+                                        <aixm:endTime>00:00</aixm:endTime>
+                                    </aixm:Timesheet>
+                                </aixm:timeInterval>
+                                <aixm:annotation>
+                                    <aixm:Note gml:id="RDC_DN_994923">
+                                        <aixm:purpose>REMARK</aixm:purpose>
+                                        <aixm:translatedNote>
+                                            <aixm:LinguisticNote gml:id="RDC_DN_9949922">
+                                                <aixm:note>Baseline data copy. Not included in the NOTAM text generation</aixm:note>
+                                            </aixm:LinguisticNote>
+                                        </aixm:translatedNote>
+                                    </aixm:Note>
+                                </aixm:annotation>
+                                <aixm:distance uom="M">2800</aixm:distance>
+                                <aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
+                            </aixm:RunwayDeclaredDistanceValue>
+                        </aixm:declaredValue>
+                    </aixm:RunwayDeclaredDistance>
+                </aixm:associatedDeclaredDistance>
+                <aixm:associatedDeclaredDistance>
+                    <aixm:RunwayDeclaredDistance gml:id="RDC_DN_994901">
+                        <aixm:type>LDA</aixm:type>
+                        <aixm:declaredValue>
+                            <aixm:RunwayDeclaredDistanceValue gml:id="RDC_DN_99426">
+                                <aixm:timeInterval>
+                                    <aixm:Timesheet gml:id="RDC_DN_99427">
+                                        <aixm:timeReference>UTC</aixm:timeReference>
+                                        <aixm:day>ANY</aixm:day>
+                                        <aixm:startTime>10:00</aixm:startTime>
+                                        <aixm:endTime>23:30</aixm:endTime>
+                                        <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    </aixm:Timesheet>
+                                </aixm:timeInterval>
+                                <aixm:distance uom="M">2600</aixm:distance>
+                                <aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
+                            </aixm:RunwayDeclaredDistanceValue>
+                        </aixm:declaredValue>
+                        <aixm:declaredValue>
+                          <aixm:RunwayDeclaredDistanceValue gml:id="RDC_DN_994902">
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="RDC_DN_9949961">
+                                    <aixm:timeReference>UTC</aixm:timeReference>
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>00:00</aixm:startTime>
+                                    <aixm:endTime>10:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="RDC_DN_9949916">
+                                    <aixm:timeReference>UTC</aixm:timeReference>
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>23:30</aixm:startTime>
+                                    <aixm:endTime>00:00</aixm:endTime>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:annotation>
+                                <aixm:Note gml:id="RDC_DN_9949236">
+                                    <aixm:purpose>REMARK</aixm:purpose>
+                                    <aixm:translatedNote>
+                                        <aixm:LinguisticNote gml:id="RDC_DN_99499226">
+                                            <aixm:note>Baseline data copy. Not included in the NOTAM text generation</aixm:note>
+                                        </aixm:LinguisticNote>
+                                    </aixm:translatedNote>
+                                </aixm:Note>
+                            </aixm:annotation>
+                            <aixm:distance uom="M">2800</aixm:distance>
+                            <aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"></aixm:distanceAccuracy>
+                          </aixm:RunwayDeclaredDistanceValue>
+                        </aixm:declaredValue>
+                    </aixm:RunwayDeclaredDistance>
+                </aixm:associatedDeclaredDistance>
+            </aixm:RunwayCentrelinePointTimeSlice>
+        </aixm:timeSlice>
+        </aixm:RunwayCentrelinePoint>
+    </message:hasMember>
+</message:AIXMBasicMessage>
+    
