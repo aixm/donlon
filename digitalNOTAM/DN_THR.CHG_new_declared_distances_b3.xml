@@ -67,7 +67,6 @@ Editorial note: this license is an instance of the BSD license template as provi
                         </aixm:RunwayDeclaredDistance>
                     </aixm:associatedDeclaredDistance>
                     <aixm:navaidEquipment xsi:nil="true" nilReason="unknown"/>
-                    <aixm:navaidEquipment xsi:nil="true" nilReason="unknown"/>
                     <aixm:extension>
                         <event:RunwayCentrelinePointExtension gml:id="ID_TC3_03">
                             <event:theEvent xlink:href="urn:uuid:b81ff6b3-f3af-4b06-8550-b22b42db93ae"/>
