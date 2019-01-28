@@ -6010,9 +6010,9 @@ Editorial note: this license is an instance of the BSD license template as provi
 		<aixm:DesignatedPoint gml:id="uuid.cd0bd2da-3a82-4fab-9bc1-248b09a8c06d">
 			<gml:identifier codeSpace="urn:uuid:">2fea81e6-023b-4069-b8cd-2ab96da27862</gml:identifier>
 			<aixm:timeSlice>
-				<aixm:DesignatedPointTimeSlice gml:id="DPN_PORSU">
+				<aixm:DesignatedPointTimeSlice gml:id="DPN_TORSU">
 					<gml:validTime>
-						<gml:TimePeriod gml:id="vtDPN_PORSU">
+						<gml:TimePeriod gml:id="vtDPN_TORSU">
 							<gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
 							<gml:endPosition indeterminatePosition="unknown"/>
 						</gml:TimePeriod>
@@ -6020,20 +6020,20 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:interpretation>BASELINE</aixm:interpretation>
 					<aixm:sequenceNumber>1</aixm:sequenceNumber>
 					<aixm:featureLifetime>
-						<gml:TimePeriod gml:id="ltDPN_PORSU">
+						<gml:TimePeriod gml:id="ltDPN_TORSU">
 							<gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
 							<gml:endPosition indeterminatePosition="unknown"/>
 						</gml:TimePeriod>
 					</aixm:featureLifetime>
-					<aixm:designator>PORSU</aixm:designator>
+					<aixm:designator>TORSU</aixm:designator>
 					<aixm:type>OTHER:NAMED_REPORTING_POINT</aixm:type>
 					<!-- type not defined by PANS-AIM -->
-					<aixm:name>POROSNICU</aixm:name>
+					<aixm:name>TORSADA</aixm:name>
 					<aixm:location>
-						<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="pPORSU">
+						<aixm:Point srsName="urn:ogc:def:crs:EPSG::4326" gml:id="pTORSU">
 							<gml:pos>52.0000 -010.0000</gml:pos>
 							<aixm:horizontalAccuracy xsi:nil="true" nilReason="unknown"/>
-						</aixm:ElevatedPoint>
+						</aixm:Point>
 					</aixm:location>
 				</aixm:DesignatedPointTimeSlice>
 			</aixm:timeSlice>
