@@ -4692,7 +4692,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 									<aixm:lowerLimit uom="FL">230</aixm:lowerLimit>
 									<aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
 									<aixm:horizontalProjection>
-										<aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326"
+										<aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326"
 											gml:id="ID_258">
 											<gml:patches>
 												<gml:PolygonPatch>
@@ -4714,7 +4714,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 												</gml:exterior>
 												</gml:PolygonPatch>
 											</gml:patches>
-										</aixm:ElevatedSurface>
+										</aixm:Surface>
 									</aixm:horizontalProjection>
 								</aixm:AirspaceVolume>
 							</aixm:theAirspaceVolume>
