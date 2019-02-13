@@ -133,13 +133,13 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:affectedFIR>EAAD</event:affectedFIR>
                             <event:selectionCode>QMDCH</event:selectionCode>
                             <event:traffic>IV</event:traffic>
-                            <event:purpose>BO</event:purpose>
-                            <event:scope>W</event:scope>
+                            <event:purpose>NBO</event:purpose>
+                            <event:scope>A</event:scope>
                             <event:minimumFL>000</event:minimumFL>
                             <event:maximumFL>999</event:maximumFL>
                             <event:coordinates>4147N03501W</event:coordinates>
                             <event:radius>005</event:radius>
-                            <event:location>EAAD</event:location>
+                            <event:location>EADD</event:location>
                             <event:effectiveStart>1803211100</event:effectiveStart>
                             <event:effectiveEnd>1803241300</event:effectiveEnd>
                             <event:text>Declared distance changed: 
