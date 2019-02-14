@@ -27,7 +27,7 @@ Editorial note: this license is an instance of the BSD license template as provi
     http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
     gml:id="M00001">
     
-    <!--This is a Digital NOTAM example of EADD RWY 27R displaced threshold with changed declared distances-->
+    <!--This is a Digital NOTAM example of EADD RWY 27R displaced threshold and LDA change. The take-off distances are encoded in another RunwayCentrelinePoint and are not affected by the Event.-->
     
     <message:hasMember>
         <aixm:RunwayCentrelinePoint gml:id="uuid.e9240179-b707-4133-b49f-39725663e736">
@@ -131,8 +131,5 @@ Editorial note: this license is an instance of the BSD license template as provi
                 </event:EventTimeSlice>
             </event:timeSlice>
         </event:Event>
-        
     </message:hasMember>   
-    
-    
 </message:AIXMBasicMessage>
