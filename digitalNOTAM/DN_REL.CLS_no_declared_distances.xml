@@ -77,6 +77,12 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <aixm:interpretation>BASELINE</aixm:interpretation>
                     <aixm:sequenceNumber>1</aixm:sequenceNumber>
                     <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="DN_REL_E02b">
+                            <gml:beginPosition>2018-09-03T09:00:00</gml:beginPosition>
+                            <gml:endPosition>2018-09-07T22:00:00</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
                     <event:encoding>DIGITAL</event:encoding>
                     <event:scenario>REL.CLS</event:scenario>
                     <event:version>2.0</event:version>
