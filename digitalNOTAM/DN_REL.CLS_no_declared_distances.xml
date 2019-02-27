@@ -53,6 +53,11 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <aixm:type>OTHER:FIRST</aixm:type>
                     <aixm:length uom="M">300</aixm:length>
                     <aixm:associatedRunway xlink:href="urn:uuid:c8455a6b-9319-4bb7-b797-08e644342d64"/> <!--the gml identifier of RWY 09L-->
+                    <aixm:availability>
+                        <aixm:ManoeuvringAreaAvailability gml:id="DN_REL_u03">
+                            <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+                        </aixm:ManoeuvringAreaAvailability>
+                    </aixm:availability>
                     <aixm:extension>
                         <event:RunwayElementExtension gml:id="DN_REL_04">
                             <event:theEvent xlink:href="urn:uuid:effc819c-0db4-45b3-8598-31fa00771ba5"/>
