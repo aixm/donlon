@@ -37,8 +37,8 @@ Editorial note: this license is an instance of the BSD license template as provi
                 <aixm:RunwayElementTimeSlice gml:id="DN_REL_01">
                     <gml:validTime>
                         <gml:TimePeriod gml:id="DN_REL_02">
-                            <gml:beginPosition>2018-09-03T09:00:00</gml:beginPosition>
-                            <gml:endPosition>2018-09-07T22:00:00</gml:endPosition>
+                            <gml:beginPosition>2018-09-03T09:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-09-07T22:00:00Z</gml:endPosition>
                         </gml:TimePeriod>
                     </gml:validTime>
                     <aixm:interpretation>BASELINE</aixm:interpretation>
@@ -46,8 +46,8 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <aixm:correctionNumber>0</aixm:correctionNumber>
                     <aixm:featureLifetime>
                         <gml:TimePeriod gml:id="DN_REL_03">
-                            <gml:beginPosition>2018-09-03T09:00:00</gml:beginPosition>
-                            <gml:endPosition>2018-09-07T22:00:00</gml:endPosition>
+                            <gml:beginPosition>2018-09-03T09:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-09-07T22:00:00Z</gml:endPosition>
                         </gml:TimePeriod>
                     </aixm:featureLifetime>
                     <aixm:type>OTHER:FIRST</aixm:type>
@@ -70,8 +70,8 @@ Editorial note: this license is an instance of the BSD license template as provi
                 <event:EventTimeSlice gml:id="DN_REL_E01">
                     <gml:validTime>
                         <gml:TimePeriod gml:id="DN_REL_E02">
-                            <gml:beginPosition>2018-09-03T09:00:00</gml:beginPosition>
-                            <gml:endPosition>2018-09-07T22:00:00</gml:endPosition>
+                            <gml:beginPosition>2018-09-03T09:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-09-07T22:00:00Z</gml:endPosition>
                         </gml:TimePeriod>
                     </gml:validTime>
                     <aixm:interpretation>BASELINE</aixm:interpretation>
@@ -79,8 +79,8 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <aixm:correctionNumber>0</aixm:correctionNumber>
                     <aixm:featureLifetime>
                         <gml:TimePeriod gml:id="DN_REL_E02b">
-                            <gml:beginPosition>2018-09-03T09:00:00</gml:beginPosition>
-                            <gml:endPosition>2018-09-07T22:00:00</gml:endPosition>
+                            <gml:beginPosition>2018-09-03T09:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-09-07T22:00:00Z</gml:endPosition>
                         </gml:TimePeriod>
                     </aixm:featureLifetime>
                     <event:name>RWY09L_20180903</event:name>
@@ -94,7 +94,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:number>454</event:number>
                             <event:year>2018</event:year>
                             <event:type>N</event:type>
-                            <event:issued>2018-09-01T13:54:20</event:issued>
+                            <event:issued>2018-09-01T13:54:20Z</event:issued>
                             <event:affectedFIR>EAAD</event:affectedFIR>
                             <event:selectionCode>QMRLT</event:selectionCode>
                             <event:traffic>IV</event:traffic>
