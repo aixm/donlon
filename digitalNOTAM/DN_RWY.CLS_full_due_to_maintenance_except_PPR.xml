@@ -30,7 +30,7 @@ Editorial note: this license is an instance of the BSD license template as provi
     http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
     gml:id="M00001">
     
-    <!--This is a DN for EADD RWY 09L complete closure except PPR 30 min-->
+    <!--This is a DN for EADD RWY 09L/27R complete closure except PPR 30 min-->
     
     <message:hasMember>
         <aixm:RunwayDirection gml:id="uuid.c8455a6b-9319-4bb7-b797-08e644342d64">
