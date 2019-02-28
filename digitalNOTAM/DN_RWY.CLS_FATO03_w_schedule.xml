@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Example created by Andreea PERCA, ASBU For Future GMBH -->
+<!-- Copyright (c) 2018, EUROCONTROL & FAA
+    
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+    
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+    xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+    http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
+    gml:id="M00001">
+    
+    <!--This is a DN for EADH FATO 03 closure with schedule-->
+    
+    <message:hasMember>
+        <aixm:RunwayDirection gml:id="uuid.921966d2-bae8-4b4b-bc8a-8012faf991be">
+            <gml:identifier codeSpace="urn:uuid:">921966d2-bae8-4b4b-bc8a-8012faf991be</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:RunwayDirectionTimeSlice gml:id="DN_RCF_01">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="DN_RCF_02">
+                            <gml:beginPosition>2018-03-22T04:45:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-03-26T09:15:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:availability>
+                        <aixm:ManoeuvringAreaAvailability gml:id="DN_RCF_03">
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="DN_RCF_04">
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>04:45</aixm:startTime>
+                                    <aixm:endTime>09:15</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+                        </aixm:ManoeuvringAreaAvailability>
+                    </aixm:availability>
+                    <aixm:availability>
+                        <aixm:ManoeuvringAreaAvailability gml:id="DN_RCF_05">
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="DN_RCF_06">
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:dayTil>ANY</aixm:dayTil>
+                                    <aixm:startTime>00:00</aixm:startTime>
+                                    <aixm:endTime>00:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="DN_RCF_07">
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>04:45</aixm:startTime>
+                                    <aixm:endTime>09:15</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>YES</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+                        </aixm:ManoeuvringAreaAvailability>
+                    </aixm:availability>
+                </aixm:RunwayDirectionTimeSlice>
+            </aixm:timeSlice>
+        </aixm:RunwayDirection>
+    </message:hasMember>
+    
+    <message:hasMember>
+        <event:Event gml:id="uuid.164411d7-b724-4bf5-be62-5c47249c9b17">
+            <gml:identifier codeSpace="urn:uuid:">164411d7-b724-4bf5-be62-5c47249c9b17</gml:identifier>
+            <event:timeSlice>
+                <event:EventTimeSlice gml:id="DN_RCF_e01">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="DN_RCF_e02">
+                            <gml:beginPosition>2018-03-22T04:45:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-03-26T09:15:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="DN_RCF_e03">
+                            <gml:beginPosition>2018-03-22T04:45:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-03-26T09:15:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <event:name>EADH_03_20180322</event:name>
+                    <event:encoding>DIGITAL</event:encoding>
+                    <event:scenario>RWY.CLS</event:scenario>
+                    <event:version>2.0</event:version>
+                    <event:revision>2018-03-20T22:45:00Z</event:revision>
+                    <event:textNOTAM>
+                        <event:NOTAM gml:id="DN_RCF_e04">
+                            <event:series>A</event:series>
+                            <event:number>441</event:number>
+                            <event:year>2018</event:year>
+                            <event:type>N</event:type>
+                            <event:issued>2018-02-01T12:33:21</event:issued>
+                            <event:affectedFIR>EAAD</event:affectedFIR>
+                            <event:selectionCode>QFPLC</event:selectionCode>
+                            <event:traffic>IV</event:traffic>
+                            <event:purpose>B</event:purpose>
+                            <event:scope>A</event:scope>
+                            <event:minimumFL>000</event:minimumFL>
+                            <event:maximumFL>999</event:maximumFL>
+                            <event:coordinates>5217N03202W</event:coordinates>
+                            <event:radius>005</event:radius>
+                            <event:location>EADH</event:location>
+                            <event:effectiveStart>1803220445</event:effectiveStart>
+                            <event:effectiveEnd>1803260915</event:effectiveEnd>
+                            <event:schedule>Daily 04:45-09:15</event:schedule>
+                            <event:text>
+                                FATO 03 closed.
+                            </event:text>
+                        </event:NOTAM>
+                    </event:textNOTAM>
+                </event:EventTimeSlice>
+            </event:timeSlice>
+        </event:Event>
+    </message:hasMember>
+</message:AIXMBasicMessage>
