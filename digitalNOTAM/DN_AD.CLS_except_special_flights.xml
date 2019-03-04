@@ -133,7 +133,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:year>2018</event:year>
                             <event:type>N</event:type>
                             <event:issued>2018-05-10T09:54:13Z</event:issued>
-                            <event:affectedFIR>EADH</event:affectedFIR>
+                            <event:affectedFIR>EAAD</event:affectedFIR>
                             <event:selectionCode>QFPLC</event:selectionCode>
                             <event:traffic>V</event:traffic>
                             <event:purpose>NBO</event:purpose>
@@ -142,7 +142,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:maximumFL>999</event:maximumFL>
                             <event:coordinates>5217N03202W</event:coordinates>
                             <event:radius>005</event:radius>
-                            <event:location>EADD</event:location>
+                            <event:location>EADH</event:location>
                             <event:effectiveStart>1805111000</event:effectiveStart>
                             <event:effectiveEnd>1805111800</event:effectiveEnd>
                             <event:text>
