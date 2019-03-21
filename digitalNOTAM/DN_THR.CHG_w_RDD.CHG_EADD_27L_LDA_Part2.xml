@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Andreea PERCA, ASBU For Future GMBH -->
+<!-- Copyright (c) 2018, EUROCONTROL & FAA
+    
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+    
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+    xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+    http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
+    gml:id="M00001">
+
+    <!--This is a Digital NOTAM example of EADD RWY 27L displaced threshold and changed LDA. Take-off distances remain the same. (THR.CHG triggering RDD.CHG)-->
+    <!--See DN_THR.CHG_w_RDD.CHG_EADD_27L_LDA_Part1 for the trigger THR.CHG-->
+
+    <!--Encoding of the RDD.CHG:-->
+
+    <message:hasMember>
+        <event:Event gml:id="uuid.b683b738-2994-45bf-b5b8-13b0177af569">
+            <gml:identifier codeSpace="urn:uuid:">b683b738-2994-45bf-b5b8-13b0177af569</gml:identifier>
+            <event:timeSlice>
+                <event:EventTimeSlice gml:id="ID_TC1O_f01">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_TC1O_f02">
+                            <gml:beginPosition>2018-05-01T10:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-05-03T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="ID_TC1O_f03">
+                            <gml:beginPosition>2018-05-01T10:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-05-03T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <event:name>EADD_27L_DD_20180501</event:name>
+                    <event:encoding>DIGITAL</event:encoding>
+                    <event:scenario>RDD.CHG</event:scenario>
+                    <event:version>2.0</event:version>
+                    <event:revision>2018-05-01T16:33:51Z</event:revision>
+                    <event:causeEvent xlink:href="urn:uuid:9b7b52b2-1738-480d-82b2-35768b0c036c"/> <!--this Event is a consequence of a THR.CHG Event-->
+                    <event:textNOTAM>
+                        <event:NOTAM gml:id="ID_TC1O_f04">
+                            <event:series>A</event:series>
+                            <event:number>0122</event:number>
+                            <event:year>2018</event:year>
+                            <event:type>N</event:type>
+                            <event:issued>2018-07-02T18:53:21Z</event:issued>
+                            <event:affectedFIR>EAAD</event:affectedFIR>
+                            <event:selectionCode>QMDCH</event:selectionCode>
+                            <event:traffic>IV</event:traffic>
+                            <event:purpose>NBO</event:purpose>
+                            <event:scope>A</event:scope>
+                            <event:minimumFL>000</event:minimumFL>
+                            <event:maximumFL>999</event:maximumFL>
+                            <event:coordinates>522236N315658W</event:coordinates>
+                            <event:radius>005</event:radius>
+                            <event:location>EADD</event:location>
+                            <event:effectiveStart>1805011000</event:effectiveStart>
+                            <event:effectiveEnd>1805031200</event:effectiveEnd>
+                            <event:text>
+                            Declared distances changed:
+                            RWY 27L LDA 2450m. 
+                            Other declared distances unchanged.
+                        </event:text>
+                            <event:lowerLimit/>
+                            <event:upperLimit/>
+                        </event:NOTAM>
+                    </event:textNOTAM>
+                </event:EventTimeSlice>
+            </event:timeSlice>
+        </event:Event>
+    </message:hasMember>
+
+    <message:hasMember>
+        <aixm:RunwayCentrelinePoint gml:id="uuid.6e7b7beb-4bd2-447c-bd1d-52202ddd37d4">
+            <gml:identifier codeSpace="urn:uuid">6e7b7beb-4bd2-447c-bd1d-52202ddd37d4</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:RunwayCentrelinePointTimeSlice gml:id="ID_TC1O_d101">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_TC1O_d102">
+                            <gml:beginPosition>2018-05-01T10:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-05-03T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>6</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:associatedDeclaredDistance>
+                        <aixm:RunwayDeclaredDistance gml:id="ID_TC1O_d106">
+                            <aixm:type>LDA</aixm:type>
+                            <aixm:declaredValue>
+                                <aixm:RunwayDeclaredDistanceValue gml:id="ID_TC1O_d107">
+                                    <aixm:distance uom="M">2450</aixm:distance>
+                                    <aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"/>
+                                </aixm:RunwayDeclaredDistanceValue>
+                            </aixm:declaredValue>
+                        </aixm:RunwayDeclaredDistance>
+                    </aixm:associatedDeclaredDistance>
+                    <aixm:extension>
+                        <event:RunwayCentrelinePointExtension gml:id="ID_TC1O_d108">
+                            <event:theEvent xlink:href="#uuid.9b7b52b2-1738-480d-82b2-35768b0c036c" xsi:nil="true"/>
+                        </event:RunwayCentrelinePointExtension>
+                    </aixm:extension>
+                </aixm:RunwayCentrelinePointTimeSlice>
+            </aixm:timeSlice>
+        </aixm:RunwayCentrelinePoint>
+    </message:hasMember>
+    
+    <message:hasMember>
+        <aixm:RunwayCentrelinePoint gml:id="uuid.7f259302-7541-44ba-b938-a66899efca98"> <!--New RunwayCentrelinePoint BASELINE created for TORA, TODA, ASDA-->
+            <gml:identifier codeSpace="urn:uuid:">7f259302-7541-44ba-b938-a66899efca98</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:RunwayCentrelinePointTimeSlice gml:id="ID_TC1O_f109">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_TC1O_f1010">
+                            <gml:beginPosition>2018-05-01T10:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-05-03T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="ID_TC1O_f1011">
+                            <gml:beginPosition>2018-05-01T10:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-05-03T12:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <aixm:onRunway xlink:href="urn:uuid:ee6019d6-29f7-404d-8cee-b6819f325aed" xlink:title="RDN_EADD_27L"/>
+                    <aixm:associatedDeclaredDistance>
+                        <aixm:RunwayDeclaredDistance gml:id="ID_TC1O_1012">
+                            <aixm:type>TORA</aixm:type>
+                            <aixm:declaredValue>
+                                <aixm:RunwayDeclaredDistanceValue gml:id="ID_TC1O_1013">
+                                    <aixm:distance uom="M">2600</aixm:distance>
+                                    <aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"/>
+                                </aixm:RunwayDeclaredDistanceValue>
+                            </aixm:declaredValue>
+                            <aixm:annotation>
+                                <aixm:Note gml:id="ID_TC1O_10131">
+                                    <aixm:purpose>REMARK</aixm:purpose>
+                                    <aixm:translatedNote>
+                                        <aixm:LinguisticNote gml:id="ID_TC1O_101311">
+                                            <aixm:note>Baseline data copy. Not included in the NOTAM text generation</aixm:note>
+                                        </aixm:LinguisticNote>
+                                    </aixm:translatedNote>
+                                </aixm:Note>
+                            </aixm:annotation>
+                        </aixm:RunwayDeclaredDistance>
+                    </aixm:associatedDeclaredDistance>
+                    <aixm:associatedDeclaredDistance>
+                        <aixm:RunwayDeclaredDistance gml:id="ID_TC1O_1014">
+                            <aixm:type>TODA</aixm:type>
+                            <aixm:declaredValue>
+                                <aixm:RunwayDeclaredDistanceValue gml:id="ID_TC1O_1015">
+                                    <aixm:distance uom="M">3000</aixm:distance>
+                                    <aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"/>
+                                </aixm:RunwayDeclaredDistanceValue>
+                            </aixm:declaredValue>
+                            <aixm:annotation>
+                                <aixm:Note gml:id="ID_TC1O_101312">
+                                    <aixm:purpose>REMARK</aixm:purpose>
+                                    <aixm:translatedNote>
+                                        <aixm:LinguisticNote gml:id="ID_TC1O_1013112">
+                                            <aixm:note>Baseline data copy. Not included in the NOTAM text generation</aixm:note>
+                                        </aixm:LinguisticNote>
+                                    </aixm:translatedNote>
+                                </aixm:Note>
+                            </aixm:annotation>
+                        </aixm:RunwayDeclaredDistance>
+                    </aixm:associatedDeclaredDistance>
+                    <aixm:associatedDeclaredDistance>
+                        <aixm:RunwayDeclaredDistance gml:id="ID_TC1O_1016">
+                            <aixm:type>ASDA</aixm:type>
+                            <aixm:declaredValue>
+                                <aixm:RunwayDeclaredDistanceValue gml:id="ID_TC1O_1017">
+                                    <aixm:distance uom="M">2800</aixm:distance>
+                                    <aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"/>
+                                </aixm:RunwayDeclaredDistanceValue>
+                            </aixm:declaredValue>
+                            <aixm:annotation>
+                                <aixm:Note gml:id="ID_TC1O_101313">
+                                    <aixm:purpose>REMARK</aixm:purpose>
+                                    <aixm:translatedNote>
+                                        <aixm:LinguisticNote gml:id="ID_TC1O_10131133">
+                                            <aixm:note>Baseline data copy. Not included in the NOTAM text generation</aixm:note>
+                                        </aixm:LinguisticNote>
+                                    </aixm:translatedNote>
+                                </aixm:Note>
+                            </aixm:annotation>
+                        </aixm:RunwayDeclaredDistance>
+                    </aixm:associatedDeclaredDistance>
+                    <aixm:extension>
+                        <event:RunwayCentrelinePointExtension gml:id="ID_TC1O_107b">
+                            <event:theEvent xlink:href="#uuid.9b7b52b2-1738-480d-82b2-35768b0c036c"
+                                xsi:nil="true"/>
+                        </event:RunwayCentrelinePointExtension>
+                    </aixm:extension>
+                </aixm:RunwayCentrelinePointTimeSlice>
+            </aixm:timeSlice>
+        </aixm:RunwayCentrelinePoint>
+    </message:hasMember>
+</message:AIXMBasicMessage>
