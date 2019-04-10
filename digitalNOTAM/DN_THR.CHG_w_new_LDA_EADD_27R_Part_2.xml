@@ -90,6 +90,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <event:scenario>THR.CHG</event:scenario>
                     <event:version>2.0</event:version>
                     <event:revision>2018-07-31T18:53:55Z</event:revision>
+                    <event:causeEvent xlink:href="urn:uuid:b81ff6b3-f3af-4b06-8550-b22b42db93ae"/> <!--this Event is a consequence of the THR.CHG Event in Part 1-->
                     <event:textNOTAM>
                         <event:NOTAM gml:id="ID_707">
                             <event:series>A</event:series>
