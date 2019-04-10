@@ -90,7 +90,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     </aixm:featureLifetime>
                     <event:name>RWY09L_20180903</event:name>
                     <event:encoding>DIGITAL</event:encoding>
-                    <event:scenario>REL.CLS</event:scenario>
+                    <event:scenario>RWE.CLS</event:scenario>
                     <event:version>2.0</event:version>
                     <event:revision>2018-09-01T13:54:20</event:revision>
                     <event:textNOTAM>
