@@ -55,17 +55,17 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <aixm:verticalAccuracy xsi:nil="true" nilReason="unknown"/>
                         </aixm:ElevatedPoint>
                     </aixm:location> <!--location data approximated. Needs further check to assure accuracy-->
-                    <aixm:associatedDeclaredDistance>
-                        <aixm:RunwayDeclaredDistance gml:id="ID_TC1O_104">
-                            <aixm:type>DTHR</aixm:type>
-                            <aixm:declaredValue>
-                                <aixm:RunwayDeclaredDistanceValue gml:id="ID_TC1O_105">
-                                    <aixm:distance uom="M">150</aixm:distance>
-                                    <aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"/>
-                                </aixm:RunwayDeclaredDistanceValue>
-                            </aixm:declaredValue>
-                        </aixm:RunwayDeclaredDistance>
-                    </aixm:associatedDeclaredDistance> 
+                    <aixm:annotation>
+                        <aixm:Note gml:id="ID_TC1O_104">
+                            <aixm:propertyName>distance</aixm:propertyName>
+                            <aixm:purpose>DESCRIPTION</aixm:purpose>
+                            <aixm:translatedNote>
+                                <aixm:LinguisticNote gml:id="ID_TC1O_105">
+                                    <aixm:note>150m</aixm:note>
+                                </aixm:LinguisticNote>
+                            </aixm:translatedNote>
+                        </aixm:Note>
+                    </aixm:annotation>
                     <aixm:extension>
                         <event:RunwayCentrelinePointExtension gml:id="ID_TC1O_108">
                             <event:theEvent xlink:href="#uuid.38fd3b7b-1670-4af1-aa40-7de4ea805751" xsi:nil="true"/>
