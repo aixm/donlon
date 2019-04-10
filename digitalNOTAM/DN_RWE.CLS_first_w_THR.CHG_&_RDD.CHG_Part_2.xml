@@ -163,7 +163,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <event:textNOTAM>
                         <event:NOTAM gml:id="DN_REL_THR04">
                             <event:series>A</event:series>
-                            <event:number>455</event:number> 
+                            <event:number>456</event:number> 
                             <event:year>2018</event:year>
                             <event:type>N</event:type>
                             <event:issued>2018-10-01T13:54:20Z</event:issued>
