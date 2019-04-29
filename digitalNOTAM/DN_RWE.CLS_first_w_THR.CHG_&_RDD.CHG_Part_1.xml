@@ -28,48 +28,10 @@ Editorial note: this license is an instance of the BSD license template as provi
     http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
     gml:id="M00001">
     
-    <!-- This is a DN for a temporary closure of first 300m portion of EADD RWY 09L including changes to declared distances (REL.CLS triggering THR.CHG and THR.CHG triggering RDD.CHG) -->
-    
-    <!--Part 1-->
+    <!-- This is a DN for a temporary closure of first 300m of EADD RWY 09L including changes to declared distances 
+        (RWE.CLS triggers THR.CHG and THR.CHG triggers RDD.CHG) -->
     
     <!--RWE.CLS-->
-    <message:hasMember>
-        <aixm:RunwayElement gml:id="uuid.b2ad9f40-042f-4f2c-8e3b-9bd10f7b6347">
-            <gml:identifier codeSpace="urn:uuid:">b2ad9f40-042f-4f2c-8e3b-9bd10f7b6347</gml:identifier>
-            <aixm:timeSlice>
-                <aixm:RunwayElementTimeSlice gml:id="DN_REL_01">
-                    <gml:validTime>
-                        <gml:TimePeriod gml:id="DN_REL_02">
-                            <gml:beginPosition>2018-10-03T09:00:00Z</gml:beginPosition>
-                            <gml:endPosition>2018-10-07T22:00:00Z</gml:endPosition>
-                        </gml:TimePeriod>
-                    </gml:validTime>
-                    <aixm:interpretation>BASELINE</aixm:interpretation>
-                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
-                    <aixm:correctionNumber>0</aixm:correctionNumber>
-                    <aixm:featureLifetime>
-                        <gml:TimePeriod gml:id="DN_REL_03">
-                            <gml:beginPosition>2018-10-03T09:00:00Z</gml:beginPosition>
-                            <gml:endPosition>2018-10-07T22:00:00Z</gml:endPosition>
-                        </gml:TimePeriod>
-                    </aixm:featureLifetime>
-                    <aixm:type>OTHER:FIRST</aixm:type>
-                    <aixm:length uom="M">300</aixm:length>
-                    <aixm:associatedRunway xlink:href="urn:uuid:c8455a6b-9319-4bb7-b797-08e644342d64"/> <!--the gml identifier of RWY 09L-->
-                    <aixm:availability>
-                        <aixm:ManoeuvringAreaAvailability gml:id="DN_REL_u03">
-                            <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
-                        </aixm:ManoeuvringAreaAvailability>
-                    </aixm:availability>
-                    <aixm:extension>
-                        <event:RunwayElementExtension gml:id="DN_REL_04">
-                            <event:theEvent xlink:href="urn:uuid:effc819c-0db4-45b3-8598-31fa00771ba5"/>
-                        </event:RunwayElementExtension>
-                    </aixm:extension>
-                </aixm:RunwayElementTimeSlice>
-            </aixm:timeSlice>
-        </aixm:RunwayElement>
-    </message:hasMember>
     <message:hasMember>
         <event:Event gml:id="uuid.effc819c-0db4-45b3-8598-31fa00771ba5">
             <gml:identifier codeSpace="urn:uuid:">effc819c-0db4-45b3-8598-31fa00771ba5</gml:identifier>
@@ -121,44 +83,46 @@ Editorial note: this license is an instance of the BSD license template as provi
             </event:timeSlice>
         </event:Event>
     </message:hasMember>
-    
-    <!--THR.CHG-->
     <message:hasMember>
-        <aixm:RunwayCentrelinePoint gml:id="uuid.ebccbb64-c1b3-4b27-8e5a-a32d2763208a">
-            <gml:identifier codeSpace="urn:uuid:">ebccbb64-c1b3-4b27-8e5a-a32d2763208a</gml:identifier>
+        <aixm:RunwayElement gml:id="uuid.b2ad9f40-042f-4f2c-8e3b-9bd10f7b6347">
+            <gml:identifier codeSpace="urn:uuid:">b2ad9f40-042f-4f2c-8e3b-9bd10f7b6347</gml:identifier>
             <aixm:timeSlice>
-                <aixm:RunwayCentrelinePointTimeSlice gml:id="DN_REL_0THR01">
+                <aixm:RunwayElementTimeSlice gml:id="DN_REL_01">
                     <gml:validTime>
-                        <gml:TimePeriod gml:id="DN_REL_1THR01">
+                        <gml:TimePeriod gml:id="DN_REL_02">
                             <gml:beginPosition>2018-10-03T09:00:00Z</gml:beginPosition>
                             <gml:endPosition>2018-10-07T22:00:00Z</gml:endPosition>
                         </gml:TimePeriod>
                     </gml:validTime>
-                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
-                    <aixm:sequenceNumber>7</aixm:sequenceNumber>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
                     <aixm:correctionNumber>0</aixm:correctionNumber>
-                    <aixm:role>DISTHR</aixm:role>
-                    <aixm:location xsi:nil="true" nilReason="unknown"/>
-                    <aixm:annotation>
-                        <aixm:Note gml:id="DN_REL_2THR01">
-                            <aixm:propertyName>distance</aixm:propertyName>
-                            <aixm:purpose>DESCRIPTION</aixm:purpose>
-                            <aixm:translatedNote>
-                                <aixm:LinguisticNote gml:id="DN_REL_3THR01">
-                                    <aixm:note>300m</aixm:note> <!--the distance is equal to the length of the runway portion closed-->
-                                </aixm:LinguisticNote>
-                            </aixm:translatedNote>
-                        </aixm:Note>
-                    </aixm:annotation>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="DN_REL_03">
+                            <gml:beginPosition>2018-10-03T09:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-10-07T22:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <aixm:type>OTHER:FIRST</aixm:type>
+                    <aixm:length uom="M">300</aixm:length>
+                    <aixm:associatedRunway xlink:href="urn:uuid:c8455a6b-9319-4bb7-b797-08e644342d64"/> <!--the gml identifier of RWY 09L-->
+                    <aixm:availability>
+                        <aixm:ManoeuvringAreaAvailability gml:id="DN_REL_u03">
+                            <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+                        </aixm:ManoeuvringAreaAvailability>
+                    </aixm:availability>
                     <aixm:extension>
-                        <event:RunwayCentrelinePointExtension gml:id="DN_REL_e5THR01">
-                            <event:theEvent xlink:href="urn:uuid:cc93cba1-fd5e-40ca-8584-7570b7f8df0c"/>
-                        </event:RunwayCentrelinePointExtension>
+                        <event:RunwayElementExtension gml:id="DN_REL_04">
+                            <event:theEvent xlink:href="urn:uuid:effc819c-0db4-45b3-8598-31fa00771ba5"/>
+                        </event:RunwayElementExtension>
                     </aixm:extension>
-                </aixm:RunwayCentrelinePointTimeSlice>
+                </aixm:RunwayElementTimeSlice>
             </aixm:timeSlice>
-        </aixm:RunwayCentrelinePoint>
+        </aixm:RunwayElement>
     </message:hasMember>
+    
+    
+    <!--THR.CHG-->
     <message:hasMember>
         <event:Event gml:id="uuid.cc93cba1-fd5e-40ca-8584-7570b7f8df0c">
             <gml:identifier codeSpace="urn:uuid:">cc93cba1-fd5e-40ca-8584-7570b7f8df0c</gml:identifier>
@@ -184,7 +148,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <event:scenario>THR.CHG</event:scenario>
                     <event:version>2.0</event:version>
                     <event:revision>2018-10-01T13:54:20</event:revision>
-                    <event:causeEvent xlink:href="urn:uuid:effc819c-0db4-45b3-8598-31fa00771ba5"/> <!--this Event is a consequence of the REL.CLS Event above-->
+                    <event:causeEvent xlink:href="urn:uuid:effc819c-0db4-45b3-8598-31fa00771ba5"/> <!--this Event is a consequence of the RWE.CLS Event above-->
                     <event:textNOTAM>
                         <event:NOTAM gml:id="DN_REL_THR04">
                             <event:series>A</event:series>
@@ -205,7 +169,234 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:effectiveStart>1810030900</event:effectiveStart>
                             <event:effectiveEnd>1810072200</event:effectiveEnd>
                             <event:text>
-                                THR RWY 09L displaced 300m inwards.
+                                THR and Start of tkof run RWY 09L displaced 300m inwards.
+                            </event:text>
+                        </event:NOTAM>
+                    </event:textNOTAM>
+                </event:EventTimeSlice>
+            </event:timeSlice>
+        </event:Event>
+    </message:hasMember>
+    <message:hasMember>
+        <aixm:RunwayCentrelinePoint gml:id="uuid.ebccbb64-c1b3-4b27-8e5a-a32d2763208a"> <!--legacy case - THR has double role of THR and Start of tkof run-->
+            <gml:identifier codeSpace="urn:uuid:">ebccbb64-c1b3-4b27-8e5a-a32d2763208a</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:RunwayCentrelinePointTimeSlice gml:id="DN_REL_0THR01">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="DN_REL_1THR01">
+                            <gml:beginPosition>2018-10-03T09:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-10-07T22:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>7</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:role>DISTHR</aixm:role>
+                    <aixm:location> <!--location approximated, exact coordinates to be calculated-->
+                        <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="RCPP0">
+                            <gml:pos>52.32322225 -31.763666667</gml:pos>
+                            <aixm:horizontalAccuracy uom="M">1</aixm:horizontalAccuracy>
+                            <aixm:elevation uom="M">30.0</aixm:elevation>
+                            <aixm:geoidUndulation uom="M">11.5</aixm:geoidUndulation>
+                            <aixm:verticalAccuracy uom="M">0.25</aixm:verticalAccuracy>
+                        </aixm:ElevatedPoint>
+                    </aixm:location> 
+                    <aixm:annotation>
+                        <aixm:Note gml:id="DN_REL_2THR01">
+                            <aixm:propertyName>distance</aixm:propertyName>
+                            <aixm:purpose>DESCRIPTION</aixm:purpose>
+                            <aixm:translatedNote>
+                                <aixm:LinguisticNote gml:id="DN_REL_3THR01">
+                                    <aixm:note>300m</aixm:note> <!--the distance is equal to the length of the runway portion closed-->
+                                </aixm:LinguisticNote>
+                            </aixm:translatedNote>
+                        </aixm:Note>
+                    </aixm:annotation>
+                    <aixm:extension>
+                        <event:RunwayCentrelinePointExtension gml:id="DN_REL_e5THR01">
+                            <event:theEvent xlink:href="urn:uuid:cc93cba1-fd5e-40ca-8584-7570b7f8df0c"/>
+                        </event:RunwayCentrelinePointExtension>
+                    </aixm:extension>
+                </aixm:RunwayCentrelinePointTimeSlice>
+            </aixm:timeSlice>
+            <aixm:timeSlice> <!--Timeslice part of the RDD.CHG-->
+                <aixm:RunwayCentrelinePointTimeSlice gml:id="DN_REL_0THR012">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="DN_REL_1THR012">
+                            <gml:beginPosition>2018-10-03T09:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-10-07T22:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>8</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:associatedDeclaredDistance>
+                        <aixm:RunwayDeclaredDistance gml:id="DN_REL_4THR012">
+                            <aixm:type>LDA</aixm:type>
+                            <aixm:declaredValue>
+                                <aixm:RunwayDeclaredDistanceValue gml:id="DN_REL_5THR012">
+                                    <aixm:distance uom="M">2500</aixm:distance>
+                                    <aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"/> <!--LDA has been reduced with the length of the runway portion closed-->
+                                </aixm:RunwayDeclaredDistanceValue>
+                            </aixm:declaredValue>
+                        </aixm:RunwayDeclaredDistance>
+                    </aixm:associatedDeclaredDistance>
+                    <aixm:extension>
+                        <event:RunwayCentrelinePointExtension gml:id="DN_REL_e5THR012">
+                            <event:theEvent xlink:href="urn:uuid:950f63bd-1acf-4c27-970f-426566e8824d"/>
+                        </event:RunwayCentrelinePointExtension>
+                    </aixm:extension>
+                </aixm:RunwayCentrelinePointTimeSlice>
+            </aixm:timeSlice>
+        </aixm:RunwayCentrelinePoint>
+    </message:hasMember>
+    <message:hasMember> <!--New RunwayCentrelinePoint to encode the start of tkof run point-->
+        <aixm:RunwayCentrelinePoint gml:id="uuid.ca5a5188-50b9-4d4c-9711-d2f4afd250cb">
+            <gml:identifier codeSpace="urn:uuid:">ca5a5188-50b9-4d4c-9711-d2f4afd250cb</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:RunwayCentrelinePointTimeSlice gml:id="DN_RWE_6THR01">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="DN_REL_7THR01">
+                            <gml:beginPosition>2018-10-03T09:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-10-07T22:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="DN_REL_8THR01">
+                            <gml:beginPosition>2018-10-03T09:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-10-07T22:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <aixm:role>START_RUN</aixm:role>
+                    <aixm:location> <!--location approximated, exact coordinates to be calculated. The start of tkof run is also displaced-->
+                        <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="RCPP011">
+                            <gml:pos>52.32322225 -31.763666667</gml:pos>
+                            <aixm:horizontalAccuracy uom="M">1</aixm:horizontalAccuracy>
+                            <aixm:elevation uom="M">30.0</aixm:elevation>
+                            <aixm:geoidUndulation uom="M">11.5</aixm:geoidUndulation>
+                            <aixm:verticalAccuracy uom="M">0.25</aixm:verticalAccuracy>
+                        </aixm:ElevatedPoint>
+                    </aixm:location> 
+                    <aixm:onRunway xlink:href="urn:uuid:c8455a6b-9319-4bb7-b797-08e644342d64" xlink:title="RDN_EADD_09L"/>
+                    <aixm:extension>
+                        <event:RunwayCentrelinePointExtension gml:id="DN_REL_e14THR01">
+                            <event:theEvent xlink:href="urn:uuid:cc93cba1-fd5e-40ca-8584-7570b7f8df0c"/>
+                        </event:RunwayCentrelinePointExtension>
+                    </aixm:extension>
+                </aixm:RunwayCentrelinePointTimeSlice>
+            </aixm:timeSlice>
+            <aixm:timeSlice>
+                <aixm:RunwayCentrelinePointTimeSlice gml:id="DN_RWE2_6THR01">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="DN_REL_7THR01f">
+                            <gml:beginPosition>2018-10-03T09:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-10-07T22:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>2</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="DN_REL_8THR01nn">
+                            <gml:beginPosition>2018-10-03T09:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-10-07T22:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <aixm:associatedDeclaredDistance>
+                        <aixm:RunwayDeclaredDistance gml:id="DN_REL_9THR01">
+                            <aixm:type>TORA</aixm:type>
+                            <aixm:declaredValue>
+                                <aixm:RunwayDeclaredDistanceValue gml:id="DN_REL_10THR01">
+                                    <aixm:distance uom="M">2500</aixm:distance>
+                                    <aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"/> <!--TORA has been reduced with the length of the runway portion closed-->
+                                </aixm:RunwayDeclaredDistanceValue>
+                            </aixm:declaredValue>
+                        </aixm:RunwayDeclaredDistance>
+                    </aixm:associatedDeclaredDistance>
+                    <aixm:associatedDeclaredDistance>
+                        <aixm:RunwayDeclaredDistance gml:id="DN_REL_11THR01">
+                            <aixm:type>TODA</aixm:type>
+                            <aixm:declaredValue>
+                                <aixm:RunwayDeclaredDistanceValue gml:id="DN_REL_12THR01">
+                                    <aixm:distance uom="M">2500</aixm:distance>
+                                    <aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"/> <!--TODA has been reduced with the length of the runway portion closed-->
+                                </aixm:RunwayDeclaredDistanceValue>
+                            </aixm:declaredValue>
+                        </aixm:RunwayDeclaredDistance>
+                    </aixm:associatedDeclaredDistance>
+                    <aixm:associatedDeclaredDistance>
+                        <aixm:RunwayDeclaredDistance gml:id="DN_REL_13THR01">
+                            <aixm:type>ASDA</aixm:type>
+                            <aixm:declaredValue>
+                                <aixm:RunwayDeclaredDistanceValue gml:id="DN_REL_14THR01">
+                                    <aixm:distance uom="M">2500</aixm:distance>
+                                    <aixm:distanceAccuracy xsi:nil="true" nilReason="unknown"/> <!--ASDA has been reduced with the length of the runway portion closed-->
+                                </aixm:RunwayDeclaredDistanceValue>
+                            </aixm:declaredValue>
+                        </aixm:RunwayDeclaredDistance>
+                    </aixm:associatedDeclaredDistance>
+                    <aixm:extension>
+                        <event:RunwayCentrelinePointExtension gml:id="DN_REL_e14THR01b">
+                            <event:theEvent xlink:href="urn:uuid:950f63bd-1acf-4c27-970f-426566e8824d"/>
+                        </event:RunwayCentrelinePointExtension>
+                    </aixm:extension>
+                </aixm:RunwayCentrelinePointTimeSlice>
+            </aixm:timeSlice>
+        </aixm:RunwayCentrelinePoint>
+    </message:hasMember>
+    
+    <!--RDD.CHG-->
+    <message:hasMember>
+        <event:Event gml:id="uuid.950f63bd-1acf-4c27-970f-426566e8824d">
+            <gml:identifier codeSpace="urn:uuid:">950f63bd-1acf-4c27-970f-426566e8824d</gml:identifier>
+            <event:timeSlice>
+                <event:EventTimeSlice gml:id="DN_REL_THR012">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="DN_REL_THR022">
+                            <gml:beginPosition>2018-10-03T09:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-10-07T22:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="DN_REL_THR032">
+                            <gml:beginPosition>2018-10-03T09:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-10-07T22:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <event:name>RWY09L_RDD_20181003</event:name>
+                    <event:encoding>DIGITAL</event:encoding>
+                    <event:scenario>RDD.CHG</event:scenario>
+                    <event:version>2.0</event:version>
+                    <event:revision>2018-10-01T13:54:20</event:revision>
+                    <event:causeEvent xlink:href="urn:uuid:cc93cba1-fd5e-40ca-8584-7570b7f8df0c"/> <!--this Event is a consequence of the THR.CHG Event above-->
+                    <event:textNOTAM>
+                        <event:NOTAM gml:id="DN_REL_THR04nw">
+                            <event:series>A</event:series>
+                            <event:number>456</event:number> 
+                            <event:year>2018</event:year>
+                            <event:type>N</event:type>
+                            <event:issued>2018-10-01T13:54:20Z</event:issued>
+                            <event:affectedFIR>EAAD</event:affectedFIR>
+                            <event:selectionCode>QMDCH</event:selectionCode> 
+                            <event:traffic>IV</event:traffic>
+                            <event:purpose>NBO</event:purpose>
+                            <event:scope>A</event:scope>
+                            <event:minimumFL>000</event:minimumFL>
+                            <event:maximumFL>999</event:maximumFL>
+                            <event:coordinates>522236N315658W</event:coordinates>
+                            <event:radius>005</event:radius>
+                            <event:location>EADD</event:location>
+                            <event:effectiveStart>1810030900</event:effectiveStart>
+                            <event:effectiveEnd>1810072200</event:effectiveEnd>
+                            <event:text>
+                                Declared distances changed:
+                                RWY 09L TORA 2500m TODA 2500m ASDA 2500m LDA 2500m.
                             </event:text>
                         </event:NOTAM>
                     </event:textNOTAM>
@@ -214,6 +405,7 @@ Editorial note: this license is an instance of the BSD license template as provi
         </event:Event>
     </message:hasMember>
 </message:AIXMBasicMessage>
+
 
 
 
