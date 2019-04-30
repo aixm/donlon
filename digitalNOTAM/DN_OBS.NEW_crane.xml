@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Andreea PERCA, ASBU For Future GMBH -->
+<!-- Copyright (c) 2018, EUROCONTROL & FAA
+    
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+    
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+    xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+    http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
+    gml:id="M00001">
+    
+    <!--This is a test Digital NOTAM example of a new obstacle in the vicinity of BOORSPIJK VOR, no AirportHeliport is affected.-->
+    
+    <message:hasMember>
+        <event:Event gml:id="uuid.82317546-118a-4e54-96c9-0526037d69a3">
+            <gml:identifier codeSpace="urn:uuid:">82317546-118a-4e54-96c9-0526037d69a3</gml:identifier>
+            <event:timeSlice>
+                <event:EventTimeSlice gml:id="ID_011">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_012">
+                            <gml:beginPosition>2018-10-12T08:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-10-30T18:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="ID_013">
+                            <gml:beginPosition>2018-10-12T08:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-10-30T18:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <event:name>EAAD_OBSNEW_201810_1</event:name> 
+                    <event:encoding>DIGITAL</event:encoding>
+                    <event:scenario>OBS.NEW</event:scenario>
+                    <event:version>2.0</event:version>
+                    <event:revision>2018-10-10T15:22:18Z</event:revision>
+                    <event:textNOTAM>
+                        <event:NOTAM gml:id="ID_707">
+                            <event:series>A</event:series>
+                            <event:number>1423</event:number>
+                            <event:year>2018</event:year>
+                            <event:type>N</event:type>
+                            <event:issued>2018-10-10T15:22:18Z</event:issued>
+                            <event:affectedFIR>EAAD</event:affectedFIR>
+                            <event:selectionCode>QOBCE</event:selectionCode>
+                            <event:traffic>IV</event:traffic>
+                            <event:purpose>M</event:purpose>
+                            <event:scope>E</event:scope>
+                            <event:minimumFL>000</event:minimumFL> <!--to be checked-->
+                            <event:maximumFL>999</event:maximumFL> <!--to be checked-->
+                            <event:coordinates>522114N322420W</event:coordinates>
+                            <event:radius>005</event:radius>
+                            <event:location>EAAD</event:location>
+                            <event:effectiveStart>1810120800</event:effectiveStart>
+                            <event:effectiveEnd>1810301800</event:effectiveEnd>
+                            <event:text>Temporary crane located at Boorspijk. 522114N 322420W elevation 352.98FT (height 340FT). Lighted.         
+                            </event:text>
+                        </event:NOTAM>
+                    </event:textNOTAM> 
+                </event:EventTimeSlice>
+            </event:timeSlice>
+        </event:Event>
+    </message:hasMember> 
+    <message:hasMember>
+        <aixm:VerticalStructure gml:id="uuid.3f66afbe-65ac-4fad-9c7b-2f5403a506f7">
+            <gml:identifier codeSpace="urn:uuid:">3f66afbe-65ac-4fad-9c7b-2f5403a506f7</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:VerticalStructureTimeSlice gml:id="ID_909">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_9091">
+                            <gml:beginPosition>2018-10-12T08:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-10-30T18:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="ID_9092">
+                            <gml:beginPosition>2018-10-12T08:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-10-30T18:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <aixm:name>BOORSPIJK</aixm:name>
+                    <aixm:type>CRANE</aixm:type>
+                    <aixm:lighted>YES</aixm:lighted>
+                    <aixm:part>
+                        <aixm:VerticalStructurePart gml:id="ID_0898">
+                            <aixm:verticalExtent uom="FT">340</aixm:verticalExtent>
+                            <aixm:verticalExtentAccuracy uom="FT">1</aixm:verticalExtentAccuracy>
+                            <aixm:type>CRANE</aixm:type>
+                            <aixm:horizontalProjection_location>
+                                <aixm:ElevatedPoint gml:id="ID_9876">
+                                    <gml:pos>52.354423333 -32.405666666</gml:pos> <!--coodinates approximated, exact values to be calculated-->
+                                    <aixm:elevation uom="FT">352.98</aixm:elevation>
+                                </aixm:ElevatedPoint>
+                            </aixm:horizontalProjection_location>
+                        </aixm:VerticalStructurePart>
+                    </aixm:part>
+                    <aixm:extension>
+                        <event:VerticalStructureExtension gml:id="ID_0901">
+                            <event:theEvent xlink:href="#uuid.82317546-118a-4e54-96c9-0526037d69a3" xsi:nil="true"/>
+                        </event:VerticalStructureExtension>
+                    </aixm:extension>
+                </aixm:VerticalStructureTimeSlice>
+            </aixm:timeSlice>
+        </aixm:VerticalStructure>
+    </message:hasMember>
+</message:AIXMBasicMessage>
