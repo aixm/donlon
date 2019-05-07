@@ -47,7 +47,15 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <aixm:sequenceNumber>3</aixm:sequenceNumber>
                     <aixm:correctionNumber>0</aixm:correctionNumber>
                     <aixm:role>OTHER:DISPLACED_START_RUN</aixm:role>
-                    <aixm:location xsi:nil="true" nilReason="unknown"/>
+                    <aixm:location> <!--location approximated. Exact coordinates to be calculated-->
+                        <aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="RCPP11">
+                            <gml:pos>52.378189 -31.921847</gml:pos> 
+                            <aixm:horizontalAccuracy uom="M">1</aixm:horizontalAccuracy>
+                            <aixm:elevation uom="M">16.5</aixm:elevation>
+                            <aixm:geoidUndulation uom="M">11.5</aixm:geoidUndulation>
+                            <aixm:verticalAccuracy uom="M">0.25</aixm:verticalAccuracy>
+                        </aixm:ElevatedPoint>
+                    </aixm:location>
                     <aixm:annotation>
                         <aixm:Note gml:id="DN_TC_003">
                             <aixm:propertyName>distance</aixm:propertyName>
@@ -89,7 +97,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                         </gml:TimePeriod>
                     </aixm:featureLifetime>
                     <event:encoding>DIGITAL</event:encoding>
-                    <event:scenario>THR.CHG</event:scenario>
+                    <event:scenario>RCP.CHG</event:scenario>
                     <event:version>2.0</event:version>
                     <event:textNOTAM>
                         <event:NOTAM gml:id="DN_TC_009">
