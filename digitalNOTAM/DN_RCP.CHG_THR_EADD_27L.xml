@@ -55,7 +55,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     </aixm:featureLifetime>
                     <event:name>EADD_27L_20180322</event:name>
                     <event:encoding>DIGITAL</event:encoding>
-                    <event:scenario>THR.CHG</event:scenario>
+                    <event:scenario>RCP.CHG</event:scenario>
                     <event:version>2.0</event:version>
                     <event:revision>2018-03-21T23:43:22Z</event:revision>
                     <event:textNOTAM>
