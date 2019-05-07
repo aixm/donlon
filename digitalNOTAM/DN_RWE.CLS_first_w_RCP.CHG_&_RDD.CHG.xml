@@ -122,7 +122,7 @@ Editorial note: this license is an instance of the BSD license template as provi
     </message:hasMember>
     
     
-    <!--THR.CHG-->
+    <!--RCP.CHG-->
     <message:hasMember>
         <event:Event gml:id="uuid.cc93cba1-fd5e-40ca-8584-7570b7f8df0c">
             <gml:identifier codeSpace="urn:uuid:">cc93cba1-fd5e-40ca-8584-7570b7f8df0c</gml:identifier>
@@ -145,7 +145,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     </aixm:featureLifetime>
                     <event:name>RWY09L_THR_20181003</event:name>
                     <event:encoding>DIGITAL</event:encoding>
-                    <event:scenario>THR.CHG</event:scenario>
+                    <event:scenario>RCP.CHG</event:scenario>
                     <event:version>2.0</event:version>
                     <event:revision>2018-10-01T13:54:20</event:revision>
                     <event:causeEvent xlink:href="urn:uuid:effc819c-0db4-45b3-8598-31fa00771ba5"/> <!--this Event is a consequence of the RWE.CLS Event above-->
@@ -374,7 +374,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <event:scenario>RDD.CHG</event:scenario>
                     <event:version>2.0</event:version>
                     <event:revision>2018-10-01T13:54:20</event:revision>
-                    <event:causeEvent xlink:href="urn:uuid:cc93cba1-fd5e-40ca-8584-7570b7f8df0c"/> <!--this Event is a consequence of the THR.CHG Event above-->
+                    <event:causeEvent xlink:href="urn:uuid:cc93cba1-fd5e-40ca-8584-7570b7f8df0c"/> <!--this Event is a consequence of the RCP.CHG Event above-->
                     <event:textNOTAM>
                         <event:NOTAM gml:id="DN_REL_THR04nw">
                             <event:series>A</event:series>
