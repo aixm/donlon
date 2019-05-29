@@ -27,7 +27,7 @@ Editorial note: this license is an instance of the BSD license template as provi
     http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
     gml:id="M00001">
     
-    <!--This is a test Digital NOTAM example of a new obstacle in the vicinity of BOORSPIJK VOR, no AirportHeliport is affected.-->
+    <!--This is a Digital NOTAM example of a new obstacle in the vicinity of BOORSPIJK VOR, no AirportHeliport is affected.-->
     
     <message:hasMember>
         <event:Event gml:id="uuid.82317546-118a-4e54-96c9-0526037d69a3">
