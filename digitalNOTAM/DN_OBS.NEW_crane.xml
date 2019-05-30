@@ -68,7 +68,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:scope>E</event:scope>
                             <event:minimumFL>000</event:minimumFL> <!--to be checked-->
                             <event:maximumFL>999</event:maximumFL> <!--to be checked-->
-                            <event:coordinates>522114N322420W</event:coordinates>
+                            <event:coordinates>5221N03224W</event:coordinates>
                             <event:radius>005</event:radius>
                             <event:location>EAAD</event:location>
                             <event:effectiveStart>1810120800</event:effectiveStart>
