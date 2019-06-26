@@ -31,7 +31,7 @@ Editorial note: this license is an instance of the BSD license template as provi
     http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
     gml:id="M00001">
     
-    <!-- This is a DN for a new area creation - SAA.NEW - Danger Area due to SAR activity-->
+    <!-- This is a DN for a new area creation - SAA.NEW - Restricted Area due to SAR activity-->
    
     <message:hasMember>
         <aixm:Airspace gml:id="uuid.31461327-3237-4809-ada9-391b450ced26">
@@ -43,7 +43,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <gml:timePosition>2017-08-29T17:01:00Z</gml:timePosition>
                         </gml:TimeInstant>
                     </gml:validTime>
-                    <aixm:interpretation>PERMDELTA</aixm:interpretation>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
                     <aixm:sequenceNumber>1</aixm:sequenceNumber>
                     <aixm:correctionNumber>0</aixm:correctionNumber>
                     <aixm:featureLifetime>
