@@ -146,6 +146,11 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <aixm:status>INACTIVE</aixm:status>
                         </aixm:AirspaceActivation>
                     </aixm:activation>
+                    <aixm:extension>
+                        <event:AirspaceExtension gml:id="ID_11016b">
+                            <event:theEvent xlink:href="urn:uuid:2875edef-d6bc-4830-95f4-672072152a93"/>
+                        </event:AirspaceExtension>
+                    </aixm:extension>
                 </aixm:AirspaceTimeSlice>
             </aixm:timeSlice>
         </aixm:Airspace>
