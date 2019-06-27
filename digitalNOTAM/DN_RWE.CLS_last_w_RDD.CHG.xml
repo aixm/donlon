@@ -104,7 +104,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     </aixm:featureLifetime>
                     <aixm:type>OTHER:LAST</aixm:type>
                     <aixm:length uom="M">200</aixm:length>
-                    <aixm:associatedRunway xlink:href="urn:uuid:c8455a6b-9319-4bb7-b797-08e644342d64"/> <!--the gml identifier of RWY 09L-->
+                    <aixm:associatedRunway xlink:href="urn:uuid:9e51668f-bf8a-4f5b-ba6e-27087972b9b8"/> <!--the gml identifier of RWY 09L/27R-->
                     <aixm:availability>
                         <aixm:ManoeuvringAreaAvailability gml:id="DN_REL_u03">
                             <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
@@ -118,6 +118,34 @@ Editorial note: this license is an instance of the BSD license template as provi
                 </aixm:RunwayElementTimeSlice>
             </aixm:timeSlice>
         </aixm:RunwayElement>
+    </message:hasMember>
+    
+    <message:hasMember>
+        <aixm:RunwayDirection gml:id="uuid.c8455a6b-9319-4bb7-b797-08e644342d64">
+            <aixm:timeSlice>
+                <aixm:RunwayDirectionTimeSlice gml:id="ID_RED_1121">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_RED_1231">
+                            <gml:beginPosition>2018-07-07T10:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-07-17T23:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>6</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:availability>
+                        <aixm:ManoeuvringAreaAvailability gml:id="ID_RED_1331">
+                            <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
+                        </aixm:ManoeuvringAreaAvailability>
+                    </aixm:availability>
+                    <aixm:extension>
+                        <event:RunwayDirectionExtension gml:id="ID_RED_1531">
+                            <event:theEvent xlink:href="#uuid.fe39a177-3f0a-4035-b6aa-65cac4d2f426"/>
+                        </event:RunwayDirectionExtension>
+                    </aixm:extension>
+                </aixm:RunwayDirectionTimeSlice>
+            </aixm:timeSlice>
+        </aixm:RunwayDirection>
     </message:hasMember>
     
     <!--RDD.CHG-->
