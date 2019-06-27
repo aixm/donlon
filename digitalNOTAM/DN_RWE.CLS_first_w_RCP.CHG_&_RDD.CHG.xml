@@ -33,8 +33,8 @@ Editorial note: this license is an instance of the BSD license template as provi
     
     <!--RWE.CLS-->
     <message:hasMember>
-        <event:Event gml:id="uuid.effc819c-0db4-45b3-8598-31fa00771ba5">
-            <gml:identifier codeSpace="urn:uuid:">effc819c-0db4-45b3-8598-31fa00771ba5</gml:identifier>
+        <event:Event gml:id="uuid.dc296f9b-0149-4cef-8e93-650444b47dae">
+            <gml:identifier codeSpace="urn:uuid:">dc296f9b-0149-4cef-8e93-650444b47dae</gml:identifier>
             <event:timeSlice>
                 <event:EventTimeSlice gml:id="DN_REL_E01">
                     <gml:validTime>
@@ -105,7 +105,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     </aixm:featureLifetime>
                     <aixm:type>OTHER:FIRST</aixm:type>
                     <aixm:length uom="M">300</aixm:length>
-                    <aixm:associatedRunway xlink:href="urn:uuid:c8455a6b-9319-4bb7-b797-08e644342d64"/> <!--the gml identifier of RWY 09L-->
+                    <aixm:associatedRunway xlink:href="urn:uuid:9e51668f-bf8a-4f5b-ba6e-27087972b9b8"/> <!--the gml identifier of RWY 09L/27R-->
                     <aixm:availability>
                         <aixm:ManoeuvringAreaAvailability gml:id="DN_REL_u03">
                             <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
@@ -113,12 +113,40 @@ Editorial note: this license is an instance of the BSD license template as provi
                     </aixm:availability>
                     <aixm:extension>
                         <event:RunwayElementExtension gml:id="DN_REL_04">
-                            <event:theEvent xlink:href="urn:uuid:effc819c-0db4-45b3-8598-31fa00771ba5"/>
+                            <event:theEvent xlink:href="urn:uuid:dc296f9b-0149-4cef-8e93-650444b47dae"/>
                         </event:RunwayElementExtension>
                     </aixm:extension>
                 </aixm:RunwayElementTimeSlice>
             </aixm:timeSlice>
         </aixm:RunwayElement>
+    </message:hasMember>
+    
+    <message:hasMember>
+        <aixm:RunwayDirection gml:id="uuid.c8455a6b-9319-4bb7-b797-08e644342d64">
+            <aixm:timeSlice>
+                <aixm:RunwayDirectionTimeSlice gml:id="ID_RED_112">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_RED_123">
+                            <gml:beginPosition>2018-10-03T09:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-10-07T22:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>7</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:availability>
+                        <aixm:ManoeuvringAreaAvailability gml:id="ID_RED_133">
+                            <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
+                        </aixm:ManoeuvringAreaAvailability>
+                    </aixm:availability>
+                    <aixm:extension>
+                        <event:RunwayDirectionExtension gml:id="ID_RED_153">
+                            <event:theEvent xlink:href="#uuid.dc296f9b-0149-4cef-8e93-650444b47dae"/>
+                        </event:RunwayDirectionExtension>
+                    </aixm:extension>
+                </aixm:RunwayDirectionTimeSlice>
+            </aixm:timeSlice>
+        </aixm:RunwayDirection>
     </message:hasMember>
     
     
@@ -148,7 +176,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <event:scenario>RCP.CHG</event:scenario>
                     <event:version>2.0</event:version>
                     <event:revision>2018-10-01T13:54:20</event:revision>
-                    <event:causeEvent xlink:href="urn:uuid:effc819c-0db4-45b3-8598-31fa00771ba5"/> <!--this Event is a consequence of the RWE.CLS Event above-->
+                    <event:causeEvent xlink:href="urn:uuid:dc296f9b-0149-4cef-8e93-650444b47dae"/> <!--this Event is a consequence of the RWE.CLS Event above-->
                     <event:textNOTAM>
                         <event:NOTAM gml:id="DN_REL_THR04">
                             <event:series>A</event:series>
