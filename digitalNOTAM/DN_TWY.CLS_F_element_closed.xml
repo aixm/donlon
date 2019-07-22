@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Andreea PERCA, ASBU For Future GMBH -->
+<!-- Copyright (c) 2018, EUROCONTROL & FAA
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<!-- For sake of completion, the BASELINE data in provided below in the same file--> 
+
+<message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+    xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+    http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
+    gml:id="M00001">
+    
+    <!-- This is a DN for a  EADD TWY F portion closure (see AD 2-23 of Doc 8126) -->
+    
+    <message:hasMember>
+        <event:Event gml:id="uuid.d2874cd5-eedf-4c4a-aeef-dc6fd09913845">
+            <gml:identifier codeSpace="urn:uuid:">d2874cd5-eedf-4c4a-aeef-dc6fd0991384</gml:identifier>
+            <event:timeSlice>
+                <event:EventTimeSlice gml:id="ID_TWYF_C1">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_TWYF_C2">
+                            <gml:beginPosition>2018-07-11T08:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-07-17T18:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="ID_TWYF_C3">
+                            <gml:beginPosition>2018-07-11T08:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-07-17T18:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <event:name>EADD_TWYCLS_F_20180711</event:name>
+                    <event:encoding>DIGITAL</event:encoding>
+                    <event:scenario>TWY.CLS</event:scenario>
+                    <event:version>2.0</event:version>
+                    <event:revision>2018-07-01T11:21:22Z</event:revision>
+                    <event:textNOTAM>
+                        <event:NOTAM gml:id="ID_TWYF_C4">
+                            <event:series>A</event:series>
+                            <event:number>1865</event:number>
+                            <event:year>2018</event:year>
+                            <event:type>N</event:type>
+                            <event:issued>2018-07-01T11:21:22Z</event:issued>
+                            <event:affectedFIR>EAAD</event:affectedFIR>
+                            <event:selectionCode>QMXLT</event:selectionCode>
+                            <event:traffic>IV</event:traffic>
+                            <event:purpose>M</event:purpose>
+                            <event:scope>A</event:scope>
+                            <event:minimumFL>000</event:minimumFL>
+                            <event:maximumFL>999</event:maximumFL>
+                            <event:coordinates>522236N315658W</event:coordinates>
+                            <event:radius>005</event:radius>
+                            <event:location>EAAD</event:location>
+                            <event:effectiveStart>1807110800</event:effectiveStart>
+                            <event:effectiveEnd>1807071800</event:effectiveEnd>
+                            <event:text>TWY F between RWY 09R/27L and TWY G closed due to maintenance work.</event:text>
+                        </event:NOTAM>
+                    </event:textNOTAM>
+                </event:EventTimeSlice>
+            </event:timeSlice>
+        </event:Event>
+    </message:hasMember>
+    <message:hasMember>
+        <aixm:TaxiwayElement gml:id="uuid.84adea93-18ee-4991-8e95-4a35fbb80ef7">
+            <gml:identifier codeSpace="urn:uuid:">84adea93-18ee-4991-8e95-4a35fbb80ef7</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:TaxiwayElementTimeSlice gml:id="ape01013n">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ape010132n">
+                            <gml:beginPosition>2018-07-11T08:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-07-17T18:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:availability>
+                        <aixm:ManoeuvringAreaAvailability gml:id="ape010138n">
+                            <aixm:annotation>
+                                <aixm:Note gml:id="ape010139">
+                                    <aixm:propertyName>operationalStatus</aixm:propertyName>
+                                    <aixm:purpose>REMARK</aixm:purpose>
+                                    <aixm:translatedNote>
+                                        <aixm:LinguisticNote gml:id="ape0101310">
+                                            <aixm:note>maintenance work</aixm:note>
+                                        </aixm:LinguisticNote>
+                                    </aixm:translatedNote>
+                                </aixm:Note>
+                            </aixm:annotation>
+                            <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+                        </aixm:ManoeuvringAreaAvailability>
+                    </aixm:availability>
+                    <aixm:extension>
+                        <event:TaxiwayElementExtension gml:id="ID_TWYB_C8n">
+                            <event:theEvent xlink:href="urn:uuid:d2874cd5-eedf-4c4a-aeef-dc6fd09913845"/>
+                        </event:TaxiwayElementExtension>
+                    </aixm:extension>
+                </aixm:TaxiwayElementTimeSlice>
+            </aixm:timeSlice>
+        </aixm:TaxiwayElement>
+    </message:hasMember>
+    <message:hasMember>
+        <aixm:Taxiway gml:id="uuid.0cb4da5a-9c98-4484-92ed-edc336b8b437"> 
+            <gml:identifier codeSpace="urn:uuid:">0cb4da5a-9c98-4484-92ed-edc336b8b437</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:TaxiwayTimeSlice gml:id="ID_TWYB_C8nb">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_TWYB_C9b">
+                            <gml:beginPosition>2018-07-11T08:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-07-17T18:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:availability>
+                        <aixm:ManoeuvringAreaAvailability gml:id="ID_TWYB_C10b">
+                            <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
+                        </aixm:ManoeuvringAreaAvailability>
+                    </aixm:availability>
+                    <aixm:extension>
+                        <event:TaxiwayExtension gml:id="ID_TWYB_C11b">
+                            <event:theEvent xlink:href="urn:uuid:d2874cd5-eedf-4c4a-aeef-dc6fd09913845"/>
+                        </event:TaxiwayExtension>
+                    </aixm:extension>
+                </aixm:TaxiwayTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Taxiway>
+    </message:hasMember>
+
+<!--BASELINE data:
+    
+    <message:hasMember>
+        <aixm:Taxiway gml:id="uuid.0cb4da5a-9c98-4484-92ed-edc336b8b437"> 
+            <gml:identifier codeSpace="urn:uuid:">0cb4da5a-9c98-4484-92ed-edc336b8b437</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:TaxiwayTimeSlice gml:id="twts1267">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="vt266126">
+                            <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
+                            <gml:endPosition indeterminatePosition="unknown"/>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="lt266126">
+                            <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
+                            <gml:endPosition indeterminatePosition="unknown"/>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <aixm:designator>F</aixm:designator>
+                    <aixm:type>GND</aixm:type>
+                    <aixm:width uom="M">23.0</aixm:width>
+                    <aixm:surfaceProperties>
+                        <aixm:SurfaceCharacteristics gml:id="S-d82b7f8d">
+                            <aixm:composition>CONC</aixm:composition>
+                        </aixm:SurfaceCharacteristics>
+                    </aixm:surfaceProperties>
+                    <aixm:associatedAirportHeliport
+                        xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64"/>
+                </aixm:TaxiwayTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Taxiway>
+    </message:hasMember>
+    <message:hasMember>
+        <aixm:TaxiwayElement gml:id="uuid.84adea93-18ee-4991-8e95-4a35fbb80ef7">
+            <gml:identifier codeSpace="urn:uuid:">84adea93-18ee-4991-8e95-4a35fbb80ef7</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:TaxiwayElementTimeSlice gml:id="ape01013">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ape010132">
+                            <gml:beginPosition>2018-01-01T00:00:00Z</gml:beginPosition>
+                            <gml:endPosition indeterminatePosition="unknown"/>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="ape010135">
+                            <gml:beginPosition>2018-01-01T00:00:00Z</gml:beginPosition>
+                            <gml:endPosition indeterminatePosition="unknown"/>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <aixm:type>NORMAL</aixm:type>
+                    <aixm:associatedTaxiway xlink:href="urn:uuid:0cb4da5a-9c98-4484-92ed-edc336b8b437"/>
+                    <aixm:annotation>
+                        <aixm:Note gml:id="ape010136">
+                            <aixm:purpose>DESCRIPTION</aixm:purpose>
+                            <aixm:translatedNote>
+                                <aixm:LinguisticNote gml:id="ape010137">
+                                    <aixm:note>between RWY 09R/27L and TWY G</aixm:note>
+                                </aixm:LinguisticNote>
+                            </aixm:translatedNote>
+                        </aixm:Note>
+                    </aixm:annotation>
+                    <aixm:availability>
+                        <aixm:ManoeuvringAreaAvailability gml:id="ape010138">
+                            <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+                        </aixm:ManoeuvringAreaAvailability>
+                    </aixm:availability>
+                </aixm:TaxiwayElementTimeSlice>
+            </aixm:timeSlice>
+        </aixm:TaxiwayElement>
+    </message:hasMember>
+    <message:hasMember>
+        <aixm:TaxiwayElement gml:id="uuid.6cacb74f-8c86-4be3-90c3-a2415f822f43">
+            <gml:identifier codeSpace="urn:uuid:">6cacb74f-8c86-4be3-90c3-a2415f822f43</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:TaxiwayElementTimeSlice gml:id="ape0101312">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ape01013212">
+                            <gml:beginPosition>2018-01-01T00:00:00Z</gml:beginPosition>
+                            <gml:endPosition indeterminatePosition="unknown"/>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="ape01013512">
+                            <gml:beginPosition>2018-01-01T00:00:00Z</gml:beginPosition>
+                            <gml:endPosition indeterminatePosition="unknown"/>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <aixm:type>NORMAL</aixm:type>
+                    <aixm:associatedTaxiway xlink:href="urn:uuid:0cb4da5a-9c98-4484-92ed-edc336b8b437"/>
+                    <aixm:annotation>
+                        <aixm:Note gml:id="ape01013612">
+                            <aixm:purpose>DESCRIPTION</aixm:purpose>
+                            <aixm:translatedNote>
+                                <aixm:LinguisticNote gml:id="ape01013712">
+                                    <aixm:note>between TWY G and TWY H</aixm:note>
+                                </aixm:LinguisticNote>
+                            </aixm:translatedNote>
+                        </aixm:Note>
+                    </aixm:annotation>
+                    <aixm:availability>
+                        <aixm:ManoeuvringAreaAvailability gml:id="ape01013812">
+                            <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+                        </aixm:ManoeuvringAreaAvailability>
+                    </aixm:availability>
+                </aixm:TaxiwayElementTimeSlice>
+            </aixm:timeSlice>
+        </aixm:TaxiwayElement>
+    </message:hasMember>
+    <message:hasMember>
+        <aixm:TaxiwayElement gml:id="uuid.4415bad7-7ae0-488a-b2f1-ba3cb5b1e30c">
+            <gml:identifier codeSpace="urn:uuid:">4415bad7-7ae0-488a-b2f1-ba3cb5b1e30c</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:TaxiwayElementTimeSlice gml:id="ape0101322">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ape01013222">
+                            <gml:beginPosition>2018-01-01T00:00:00Z</gml:beginPosition>
+                            <gml:endPosition indeterminatePosition="unknown"/>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="ape01013522">
+                            <gml:beginPosition>2018-01-01T00:00:00Z</gml:beginPosition>
+                            <gml:endPosition indeterminatePosition="unknown"/>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <aixm:type>INTERSECTION</aixm:type>
+                    <aixm:associatedTaxiway xlink:href="urn:uuid:0cb4da5a-9c98-4484-92ed-edc336b8b437"/>
+                    <aixm:annotation>
+                        <aixm:Note gml:id="ape01013622">
+                            <aixm:purpose>DESCRIPTION</aixm:purpose>
+                            <aixm:translatedNote>
+                                <aixm:LinguisticNote gml:id="ape01013722">
+                                    <aixm:note>intersection TWY F and TWY G</aixm:note>
+                                </aixm:LinguisticNote>
+                            </aixm:translatedNote>
+                        </aixm:Note>
+                    </aixm:annotation>
+                    <aixm:availability>
+                        <aixm:ManoeuvringAreaAvailability gml:id="ape01013822">
+                            <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+                        </aixm:ManoeuvringAreaAvailability>
+                    </aixm:availability>
+                </aixm:TaxiwayElementTimeSlice>
+            </aixm:timeSlice>
+        </aixm:TaxiwayElement>
+    </message:hasMember>
+    <message:hasMember>
+        <aixm:TaxiwayElement gml:id="uuid.48188533-4ea4-424d-99fe-f6635a3f6110">
+            <gml:identifier codeSpace="urn:uuid:">48188533-4ea4-424d-99fe-f6635a3f6110</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:TaxiwayElementTimeSlice gml:id="ape0101333">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ape01013233">
+                            <gml:beginPosition>2018-01-01T00:00:00Z</gml:beginPosition>
+                            <gml:endPosition indeterminatePosition="unknown"/>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="ape01013533">
+                            <gml:beginPosition>2018-01-01T00:00:00Z</gml:beginPosition>
+                            <gml:endPosition indeterminatePosition="unknown"/>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <aixm:type>INTERSECTION</aixm:type>
+                    <aixm:associatedTaxiway xlink:href="urn:uuid:0cb4da5a-9c98-4484-92ed-edc336b8b437"/>
+                    <aixm:annotation>
+                        <aixm:Note gml:id="ape01013633">
+                            <aixm:purpose>DESCRIPTION</aixm:purpose>
+                            <aixm:translatedNote>
+                                <aixm:LinguisticNote gml:id="ape01013733">
+                                    <aixm:note>intersection TWY G and TWY H</aixm:note>
+                                </aixm:LinguisticNote>
+                            </aixm:translatedNote>
+                        </aixm:Note>
+                    </aixm:annotation>
+                    <aixm:availability>
+                        <aixm:ManoeuvringAreaAvailability gml:id="ape01013833">
+                            <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+                        </aixm:ManoeuvringAreaAvailability>
+                    </aixm:availability>
+                </aixm:TaxiwayElementTimeSlice>
+            </aixm:timeSlice>
+        </aixm:TaxiwayElement>
+    </message:hasMember>
+    
+-->
+</message:AIXMBasicMessage>
