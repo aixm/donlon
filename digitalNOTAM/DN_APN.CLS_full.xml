@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Andreea PERCA, ASBU For Future GMBH -->
+<!-- Copyright (c) 2018, EUROCONTROL & FAA
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<!-- For sake of completion, the BASELINE data in provided below in the same file--> 
+
+<message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+    xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+    http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
+    gml:id="M00001">
+    
+    <!-- This is a DN for EADD apron closure (see AD 2-23 of Doc 8126)-->
+    
+    <message:hasMember>
+        <event:Event gml:id="uuid.c86e0007-3649-4c25-8ab7-b75ae6669d5f">
+            <gml:identifier codeSpace="urn:uuid:">c86e0007-3649-4c25-8ab7-b75ae6669d5f</gml:identifier>
+            <event:timeSlice>
+                <event:EventTimeSlice gml:id="ID_APN_C1">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_APN_C2">
+                            <gml:beginPosition>2018-11-03T08:30:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-11-17T14:30:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="ID_APN_C3">
+                            <gml:beginPosition>2018-11-03T08:30:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-11-17T14:30:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <event:name>EADD_APNCLS_20181103</event:name>
+                    <event:encoding>DIGITAL</event:encoding>
+                    <event:scenario>APN.CLS</event:scenario>
+                    <event:version>2.0</event:version>
+                    <event:revision>2018-11-01T12:53:11Z</event:revision>
+                    <event:textNOTAM>
+                        <event:NOTAM gml:id="ID_APN_C4">
+                            <event:series>A</event:series>
+                            <event:number>1810</event:number>
+                            <event:year>2018</event:year>
+                            <event:type>N</event:type>
+                            <event:issued>2018-04-20T09:51:22</event:issued>
+                            <event:affectedFIR>EAAD</event:affectedFIR>
+                            <event:selectionCode>QMXLT</event:selectionCode>
+                            <event:traffic>IV</event:traffic>
+                            <event:purpose>NBO</event:purpose>
+                            <event:scope>A</event:scope>
+                            <event:minimumFL>000</event:minimumFL>
+                            <event:maximumFL>999</event:maximumFL>
+                            <event:coordinates>522236N315658W</event:coordinates>
+                            <event:radius>005</event:radius>
+                            <event:location>EAAD</event:location>
+                            <event:effectiveStart>18011031830</event:effectiveStart>
+                            <event:effectiveEnd>1811171430</event:effectiveEnd>
+                            <event:text>Apron closed.</event:text>
+                        </event:NOTAM>
+                    </event:textNOTAM>
+                </event:EventTimeSlice>
+            </event:timeSlice>
+        </event:Event>
+    </message:hasMember>
+    <message:hasMember>
+        <aixm:Apron gml:id="uuid.0dac7a5f-4cb6-41a2-b0eb-dac1c555351c">
+            <gml:identifier codeSpace="urn:uuid:">0dac7a5f-4cb6-41a2-b0eb-dac1c555351c</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:ApronTimeSlice gml:id="nbse123">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="nbse1231">
+                            <gml:beginPosition>2018-11-03T08:30:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-11-17T14:30:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:availability>
+                        <aixm:ApronAreaAvailability gml:id="nbse12311">
+                            <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+                        </aixm:ApronAreaAvailability>
+                    </aixm:availability>
+                    <aixm:extension>
+                        <event:ApronExtension gml:id="nbse1233">
+                            <event:theEvent xlink:href="urn:uuid:c86e0007-3649-4c25-8ab7-b75ae6669d5f"/>
+                        </event:ApronExtension>
+                    </aixm:extension>
+                </aixm:ApronTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Apron>
+    </message:hasMember>
+
+<!-- BASELINE data
+        
+     <message:hasMember> (commons)
+        <aixm:Apron gml:id="uuid.0dac7a5f-4cb6-41a2-b0eb-dac1c555351c">
+            <gml:identifier codeSpace="urn:uuid:">0dac7a5f-4cb6-41a2-b0eb-dac1c555351c</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:ApronTimeSlice gml:id="APRONTS1EADDAPRON">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="vt268128">
+                            <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
+                            <gml:endPosition indeterminatePosition="unknown"/>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="lt268128">
+                            <gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
+                            <gml:endPosition indeterminatePosition="unknown"/>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <aixm:name>APRON</aixm:name>
+                    <aixm:associatedAirportHeliport
+                        xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64"/>
+                </aixm:ApronTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Apron>
+    </message:hasMember>
+    
+-->
+</message:AIXMBasicMessage>
