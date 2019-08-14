@@ -122,6 +122,11 @@ Editorial note: this license is an instance of the BSD license template as provi
                             </aixm:translatedNote>
                         </aixm:Note>
                     </aixm:annotation>
+                    <aixm:extension>
+                        <event:RulesProceduresExtension gml:id="DN_LVP_0142">
+                            <event:theEvent xlink:href="#uuid.f041d155-bd46-438b-8a02-df382770519e"/>
+                        </event:RulesProceduresExtension>
+                    </aixm:extension>
                 </aixm:RulesProceduresTimeSlice>
             </aixm:timeSlice>
         </aixm:RulesProcedures>
