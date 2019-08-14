@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Andreea PERCA, ASBU For Future GMBH -->
+<!-- Copyright (c) 2018, EUROCONTROL & FAA
+    
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+    
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+    xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+    http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
+    gml:id="M00001">
+    
+    <!--This is a test Digital NOTAM example of DEI.IOP - de-icing in operation event from 20-22.01 between 08:00-10:00-->
+
+    <!--Event data-->
+    <message:hasMember>
+        <event:Event gml:id="uuid.5a6a1394-c486-4ad6-945c-1cca1f657698">
+            <gml:identifier codeSpace="urn:uuid:">5a6a1394-c486-4ad6-945c-1cca1f657698</gml:identifier>
+            <event:timeSlice>
+                <event:EventTimeSlice gml:id="RWD_DN_n0121">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="RWD_DN_n0131">
+                            <gml:beginPosition>2018-01-20T08:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-01-22T10:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="RWD_DN_n0141">
+                            <gml:beginPosition>2018-01-20T08:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-01-22T10:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <event:name>EADD_DEI_20180120</event:name>
+                    <event:encoding>DIGITAL</event:encoding>
+                    <event:scenario>DEI.IOP</event:scenario>
+                    <event:version>2.0</event:version>
+                    <event:revision>2018-01-19T20:11:35Z</event:revision>
+                    <event:textNOTAM>
+                        <event:NOTAM gml:id="RWD_DN_n0151">
+                            <event:series>A</event:series>
+                            <event:number>0012</event:number>
+                            <event:year>2018</event:year>
+                            <event:type>N</event:type>
+                            <event:issued>2018-01-19T20:11:35Z</event:issued>
+                            <event:affectedFIR>EAAD</event:affectedFIR>
+                            <event:selectionCode>QFIAO</event:selectionCode>
+                            <event:traffic/>
+                            <event:purpose/>
+                            <event:scope>A</event:scope>
+                            <event:minimumFL>000</event:minimumFL>
+                            <event:maximumFL>999</event:maximumFL>
+                            <event:coordinates>4147N03501W</event:coordinates>
+                            <event:radius>005</event:radius>
+                            <event:location>EADD</event:location>
+                            <event:effectiveStart>1801200800</event:effectiveStart>
+                            <event:effectiveEnd>1801201000</event:effectiveEnd>
+                            <event:schedule>Daily 0800-1000</event:schedule>
+                            <event:text>De-icing in operation at De-icing Pad C     
+                            </event:text>
+                        </event:NOTAM>
+                    </event:textNOTAM>
+                </event:EventTimeSlice>
+            </event:timeSlice>
+        </event:Event>
+    </message:hasMember>
+
+
+    <!--TEMPDELTA data-->
+    <message:hasMember>
+        <aixm:DeicingArea gml:id="uuid.bf804701-8254-420e-b5b8-ca1e05bd8763">
+            <gml:identifier codeSpace="urn:uuid:">bf804701-8254-420e-b5b8-ca1e05bd8763</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:DeicingAreaTimeSlice gml:id="DEI00111">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="DEI00211">
+                            <gml:beginPosition>2018-01-20T08:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-01-22T10:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:availability>
+                        <aixm:ApronAreaAvailability gml:id="DEI00311">
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="DEI00411">
+                                    <aixm:timeReference>UTC</aixm:timeReference>
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>08:00</aixm:startTime>
+                                    <aixm:endTime>10:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+                        </aixm:ApronAreaAvailability>
+                    </aixm:availability>
+                    <aixm:availability>
+                        <aixm:ApronAreaAvailability gml:id="DEI00412">
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="DEI00511">
+                                    <aixm:timeReference>UTC</aixm:timeReference>
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:dayTil>ANY</aixm:dayTil>
+                                    <aixm:startTime>00:00</aixm:startTime>
+                                    <aixm:endTime>00:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="DEI00611">
+                                    <aixm:timeReference>UTC</aixm:timeReference>
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>08:00</aixm:startTime>
+                                    <aixm:endTime>10:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>YES</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:annotation>
+                                <aixm:Note gml:id="DEI00711">
+                                    <aixm:purpose>REMARK</aixm:purpose>
+                                    <aixm:translatedNote>
+                                        <aixm:LinguisticNote gml:id="DEI00811">
+                                            <aixm:note>Baseline data copy. Not included in the NOTAM text generation</aixm:note>
+                                        </aixm:LinguisticNote>
+                                    </aixm:translatedNote>
+                                </aixm:Note>
+                            </aixm:annotation>
+                            <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+                        </aixm:ApronAreaAvailability>
+                    </aixm:availability>
+                    <aixm:extension>
+                        <event:DeicingAreaExtension gml:id="DEI00911">
+                            <event:theEvent xlink:href="#uuid.5a6a1394-c486-4ad6-945c-1cca1f657698"/>
+                        </event:DeicingAreaExtension>
+                    </aixm:extension>
+                </aixm:DeicingAreaTimeSlice>
+            </aixm:timeSlice>
+        </aixm:DeicingArea>
+    </message:hasMember>
+    
+    <!--BASELINE data
+    <message:hasMember>
+        <aixm:DeicingArea gml:id="uuid.bf804701-8254-420e-b5b8-ca1e05bd8763">
+            <gml:identifier codeSpace="urn:uuid:">bf804701-8254-420e-b5b8-ca1e05bd8763</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:DeicingAreaTimeSlice gml:id="DEI001">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="DEI002">
+                            <gml:beginPosition>2017-12-01T11:00:00Z</gml:beginPosition>
+                            <gml:endPosition indeterminatePosition="unknown"/> 
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="DEI003">
+                            <gml:beginPosition>2017-12-01T11:00:00Z</gml:beginPosition>
+                            <gml:endPosition indeterminatePosition="unknown"/> 
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <aixm:associatedApron xlink:href="urn:uuid:0dac7a5f-4cb6-41a2-b0eb-dac1c555351c"/>
+                    <aixm:extent>
+                        <aixm:ElevatedSurface>
+                            <gml:patches>
+                                <gml:PolygonPatch>
+                                    <gml:exterior>
+                                        <gml:Ring>
+                                            <gml:curveMember>
+                                                <aixm:Curve>
+                                                    <gml:segments>
+                                                        <gml:GeodesicString>
+                                                            <gml:posList>52.083 40.02 52.271 40.11 52.185 40.466 52.666 40.148 52.083 40.02</gml:posList> fictional coordinates
+                                                        </gml:GeodesicString>
+                                                    </gml:segments> 
+                                                </aixm:Curve>
+                                            </gml:curveMember>
+                                        </gml:Ring>
+                                    </gml:exterior>
+                                </gml:PolygonPatch>
+                            </gml:patches>
+                        </aixm:ElevatedSurface>
+                    </aixm:extent>
+                    <aixm:annotation>
+                        <aixm:Note gml:id="DEI005">
+                            <aixm:purpose>DESCRIPTION</aixm:purpose>
+                            <aixm:translatedNote>
+                                <aixm:LinguisticNote gml:id="DEI006">
+                                    <aixm:note>De-icing Pad C</aixm:note>
+                                </aixm:LinguisticNote>
+                            </aixm:translatedNote>
+                        </aixm:Note>
+                    </aixm:annotation>                   
+                    <aixm:availability>
+                        <aixm:ApronAreaAvailability gml:id="DEI004">
+                            <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+                        </aixm:ApronAreaAvailability>
+                    </aixm:availability>
+                </aixm:DeicingAreaTimeSlice>
+            </aixm:timeSlice>
+        </aixm:DeicingArea>
+    </message:hasMember> -->
+</message:AIXMBasicMessage>
