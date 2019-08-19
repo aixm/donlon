@@ -622,7 +622,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<gml:endPosition indeterminatePosition="unknown"/>
 						</gml:TimePeriod>
 					</aixm:featureLifetime>
-					<aixm:responsibleOrganisation xlink:title="CIVIL_AVIATION"/>
+					<aixm:responsibleOrganisation xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="CIVIL AVIATION ADMINISTRATION"/>
 				</aixm:AuthorityForAirspaceTimeSlice>
 			</aixm:timeSlice>
 		</aixm:AuthorityForAirspace>
@@ -906,7 +906,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:angle>029.0</aixm:angle>
 					<aixm:angleType>RDL</aixm:angleType>
 					<aixm:indicationDirection>FROM</aixm:indicationDirection>
-					<aixm:fix xlink:href="uuid.2fea81e6-023b-4069-b8cd-2ab96da27862"
+					<aixm:fix xlink:href="urn:uuid:2fea81e6-023b-4069-b8cd-2ab96da27862"
 						xlink:title="BOR10"/>
 					<aixm:pointChoice_navaidSystem
 						xlink:href="urn:uuid:08a1bbd5-ea70-4fe3-836a-ea9686349495"
@@ -1287,7 +1287,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
 						</aixm:ElevatedPoint>
 					</aixm:location>
-					<aixm:servedAirport xlink:href="uuid.1b54b2d6-a5ff-4e57-94c2-f4047a381c64"
+					<aixm:servedAirport xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64"
 						xlink:title="AHP_EADD"/>
 				</aixm:NavaidTimeSlice>
 			</aixm:timeSlice>
@@ -4063,22 +4063,22 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:facilityMakeup>
 								<aixm:PointReference gml:id="pr101">
 									<aixm:point
-										xlink:href="uuid.2fea81e6-023b-4069-b8cd-2ab96da27862"
+										xlink:href="urn:uuid:2fea81e6-023b-4069-b8cd-2ab96da27862"
 										xlink:title="BOR10"/>
 									<aixm:facilityAngle>
 										<aixm:AngleUse gml:id="au101">
 											<aixm:theAngleIndication
-												xlink:href="uuid.fea12fb3-9f19-45f2-ac0c-90b83b850e37"
+												xlink:href="urn:uuid:fea12fb3-9f19-45f2-ac0c-90b83b850e37"
 												xlink:title="AIN_BOR029"/>
 										</aixm:AngleUse>
 									</aixm:facilityAngle>
 									<aixm:facilityDistance
-										xlink:href="uuid.711d3f53-1da1-46b9-b499-373110f018af"
+										xlink:href="urn:uuid:711d3f53-1da1-46b9-b499-373110f018af"
 										xlink:title="DIN_BOR_10DME"/>
 								</aixm:PointReference>
 							</aixm:facilityMakeup>
 							<aixm:pointChoice_fixDesignatedPoint
-								xlink:href="uuid.2fea81e6-023b-4069-b8cd-2ab96da27862"
+								xlink:href="urn:uuid:2fea81e6-023b-4069-b8cd-2ab96da27862"
 								xlink:title="BOR10"/>
 						</aixm:EnRouteSegmentPoint>
 					</aixm:holdingPoint>
@@ -5856,13 +5856,13 @@ Editorial note: this license is an instance of the BSD license template as provi
 						xlink:href="urn:uuid:99c2b65e-a7ac-434d-aae0-0c3a2c62fe61"
 						xlink:title="RCC_AMSWELL_ACC_120.300MHZ"/>
 					<aixm:radioCommunication
-						xlink:href="urn:uuid:99c2b65e-a7ac-434d-aae0-0c3a2c62fe61"
+						xlink:href="urn:uuid:d02978c7-abb5-44ab-93a9-4337b634529b"
 						xlink:title="RCC_AMSWELL_ACC_117.900MHZ"/>
 					<aixm:radioCommunication
-						xlink:href="urn:uuid:99c2b65e-a7ac-434d-aae0-0c3a2c62fe61"
+						xlink:href="urn:uuid:2598f170-958a-4226-bfe9-3464468b0174"
 						xlink:title="RCC_AMSWELL_ACC_121.500MHZ"/>
 					<aixm:radioCommunication
-						xlink:href="urn:uuid:99c2b65e-a7ac-434d-aae0-0c3a2c62fe61"
+						xlink:href="urn:uuid:80b0ad9d-1c1a-4f51-be25-7a6a74d17856"
 						xlink:title="RCC_AMSWELL_ACC_4689.5KHZ"/>
 					<aixm:availability>
 						<aixm:ServiceOperationalStatus gml:id="sosATC_AMSWELL_ACC">
@@ -5886,7 +5886,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 								xlink:href="urn:uuid:a14a8751-5428-46bc-a2d1-32ef84d37b5c"
 								xlink:title="RTE_UA4"/>
 							<aixm:end_fixDesignatedPoint
-								xlink:href="uuid.26009f76-2e05-418d-a631-bec02f84ac5b"
+								xlink:href="urn:uuid:26009f76-2e05-418d-a631-bec02f84ac5b"
 								xlink:title="DPN_VEGAT"/>
 						</aixm:RoutePortion>
 					</aixm:clientRoute>
@@ -5950,9 +5950,9 @@ Editorial note: this license is an instance of the BSD license template as provi
 		</aixm:RadioCommunicationChannel>
 	</message:hasMember>
 	<message:hasMember>
-		<aixm:RadioCommunicationChannel gml:id="uuid.99c2b65e-a7ac-434d-aae0-0c3a2c62fe62">
+		<aixm:RadioCommunicationChannel gml:id="uuid.d02978c7-abb5-44ab-93a9-4337b634529b">
 			<gml:identifier codeSpace="urn:uuid:"
-				>99c2b65e-a7ac-434d-aae0-0c3a2c62fe62</gml:identifier>
+				>d02978c7-abb5-44ab-93a9-4337b634529b</gml:identifier>
 			<aixm:timeSlice>
 				<aixm:RadioCommunicationChannelTimeSlice gml:id="RCC_AMSWELL_ACC_117.900MHZ">
 					<gml:validTime>
@@ -5978,9 +5978,9 @@ Editorial note: this license is an instance of the BSD license template as provi
 		</aixm:RadioCommunicationChannel>
 	</message:hasMember>
 	<message:hasMember>
-		<aixm:RadioCommunicationChannel gml:id="uuid.99c2b65e-a7ac-434d-aae0-0c3a2c62fe63">
+		<aixm:RadioCommunicationChannel gml:id="uuid.2598f170-958a-4226-bfe9-3464468b0174">
 			<gml:identifier codeSpace="urn:uuid:"
-				>99c2b65e-a7ac-434d-aae0-0c3a2c62fe63</gml:identifier>
+				>2598f170-958a-4226-bfe9-3464468b0174</gml:identifier>
 			<aixm:timeSlice>
 				<aixm:RadioCommunicationChannelTimeSlice gml:id="RCC_AMSWELL_ACC_121.500MHZ">
 					<gml:validTime>
@@ -6006,9 +6006,9 @@ Editorial note: this license is an instance of the BSD license template as provi
 		</aixm:RadioCommunicationChannel>
 	</message:hasMember>
 	<message:hasMember>
-		<aixm:RadioCommunicationChannel gml:id="uuid.99c2b65e-a7ac-434d-aae0-0c3a2c62fe64">
+		<aixm:RadioCommunicationChannel gml:id="uuid.80b0ad9d-1c1a-4f51-be25-7a6a74d17856">
 			<gml:identifier codeSpace="urn:uuid:"
-				>99c2b65e-a7ac-434d-aae0-0c3a2c62fe64</gml:identifier>
+				>80b0ad9d-1c1a-4f51-be25-7a6a74d17856</gml:identifier>
 			<aixm:timeSlice>
 				<aixm:RadioCommunicationChannelTimeSlice gml:id="RCC_AMSWELL_ACC_4689.5KHZ">
 					<gml:validTime>
@@ -6057,7 +6057,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:distance uom="NM">15</aixm:distance>
 					<aixm:type>DME</aixm:type>
 					<aixm:pointChoice_navaidSystem
-						xlink:href="uuid.08a1bbd5-ea70-4fe3-836a-ea9686349495" xlink:title="NAV BOR"/>
+						xlink:href="urn:uuid:08a1bbd5-ea70-4fe3-836a-ea9686349495" xlink:title="NAV BOR"/>
 					<aixm:annotation>
 						<aixm:Note gml:id="n121212">
 							<aixm:propertyName>distance</aixm:propertyName>
@@ -6095,10 +6095,10 @@ Editorial note: this license is an instance of the BSD license template as provi
 					</aixm:featureLifetime>
 					<aixm:distance uom="NM">10</aixm:distance>
 					<aixm:type>DME</aixm:type>
-					<aixm:fix xlink:href="uuid.2fea81e6-023b-4069-b8cd-2ab96da27862"
+					<aixm:fix xlink:href="urn:uuid:2fea81e6-023b-4069-b8cd-2ab96da27862"
 						xlink:title="BOR10"/>
 					<aixm:pointChoice_navaidSystem
-						xlink:href="uuid.08a1bbd5-ea70-4fe3-836a-ea9686349495" xlink:title="NAV BOR"/>
+						xlink:href="urn:uuid:08a1bbd5-ea70-4fe3-836a-ea9686349495" xlink:title="NAV BOR"/>
 					<aixm:annotation>
 						<aixm:Note gml:id="n121213">
 							<aixm:propertyName>distance</aixm:propertyName>
@@ -6151,7 +6151,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 	<message:hasMember>
 		<aixm:DesignatedPoint gml:id="uuid.2f31d9ce-b2ba-4a83-99da-fa6a535d6192">
 			<gml:identifier codeSpace="urn:uuid:"
-				>2fea81e6-023b-4069-b8cd-2ab96da27862</gml:identifier>
+				>2f31d9ce-b2ba-4a83-99da-fa6a535d6192</gml:identifier>
 			<aixm:timeSlice>
 				<aixm:DesignatedPointTimeSlice gml:id="DPN_5275N">
 					<gml:validTime>
@@ -6185,7 +6185,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 	<message:hasMember>
 		<aixm:DesignatedPoint gml:id="uuid.cd0bd2da-3a82-4fab-9bc1-248b09a8c06d">
 			<gml:identifier codeSpace="urn:uuid:"
-				>2fea81e6-023b-4069-b8cd-2ab96da27862</gml:identifier>
+				>cd0bd2da-3a82-4fab-9bc1-248b09a8c06d</gml:identifier>
 			<aixm:timeSlice>
 				<aixm:DesignatedPointTimeSlice gml:id="DPN_TORSA">
 					<gml:validTime>
@@ -6281,32 +6281,32 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:facilityMakeup>
 								<aixm:PointReference gml:id="pr111">
 									<aixm:point
-										xlink:href="uuid.9fcb360c-6933-46d6-9c85-a337202efe70"
+										xlink:href="urn:uuid:9fcb360c-6933-46d6-9c85-a337202efe70"
 										xlink:title="ABOLA"/>
 									<aixm:facilityAngle>
 										<aixm:AngleUse gml:id="au111">
 											<aixm:theAngleIndication
-												xlink:href="uuid.feea9acc-b18f-45e0-bf88-c0f001ea4847"
+												xlink:href="urn:uuid:feea9acc-b18f-45e0-bf88-c0f001ea4847"
 												xlink:title="AIN_WOB_015"/>
 										</aixm:AngleUse>
 									</aixm:facilityAngle>
 									<aixm:facilityDistance
-										xlink:href="uuid.c2864b35-bdef-4fa8-bd8d-3a21e5dee2de"
+										xlink:href="urn:uuid:c2864b35-bdef-4fa8-bd8d-3a21e5dee2de"
 										xlink:title="DIN_WOB_337"/>
 								</aixm:PointReference>
 							</aixm:facilityMakeup>
 							<aixm:pointChoice_fixDesignatedPoint
-								xlink:href="uuid.9fcb360c-6933-46d6-9c85-a337202efe70"
+								xlink:href="urn:uuid:9fcb360c-6933-46d6-9c85-a337202efe70"
 								xlink:title="ABOLA"/>
 						</aixm:EnRouteSegmentPoint>
 					</aixm:start>
-					<aixm:routeFormed xlink:href="uuid.40cc05ef-3ca8-47f8-ab1f-65d05ee3d836"
+					<aixm:routeFormed xlink:href="urn:uuid:40cc05ef-3ca8-47f8-ab1f-65d05ee3d836"
 						xlink:title="RTE_UL123"/>
 					<aixm:end>
 						<aixm:EnRouteSegmentPoint gml:id="E-c2a1229">
 							<aixm:reportingATC>COMPULSORY</aixm:reportingATC>
 							<aixm:pointChoice_navaidSystem
-								xlink:href="uuid.b35409d8-f236-4303-a12d-795e9e9c8759"
+								xlink:href="urn:uuid:b35409d8-f236-4303-a12d-795e9e9c8759"
 								xlink:title="DPN_ILURU"/>
 						</aixm:EnRouteSegmentPoint>
 					</aixm:end>
@@ -6316,7 +6316,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:levels>
 								<aixm:AirspaceLayer gml:id="al001">
 									<aixm:discreteLevelSeries
-										xlink:href="uuid.0942496b-7ce7-0b22-e053-0b751dc2499f"
+										xlink:href="urn:uuid:0942496b-7ce7-0b22-e053-0b751dc2499f"
 										xlink:title="EVEN_FL_RVSM_IFR"/>
 								</aixm:AirspaceLayer>
 							</aixm:levels>
@@ -6328,7 +6328,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:levels>
 								<aixm:AirspaceLayer gml:id="al002">
 									<aixm:discreteLevelSeries
-										xlink:href="uuid.0942496b-7ce1-0b22-e053-0b751dc2499f"
+										xlink:href="urn:uuid:0942496b-7ce1-0b22-e053-0b751dc2499f"
 										xlink:title="ODD_FL_RVSM_IFR"/>
 								</aixm:AirspaceLayer>
 							</aixm:levels>
@@ -6372,10 +6372,10 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:angle>015.0</aixm:angle>
 					<aixm:angleType>RDL</aixm:angleType>
 					<aixm:indicationDirection>FROM</aixm:indicationDirection>
-					<aixm:fix xlink:href="uuid.9fcb360c-6933-46d6-9c85-a337202efe70"
+					<aixm:fix xlink:href="urn:uuid:9fcb360c-6933-46d6-9c85-a337202efe70"
 						xlink:title="ABOLA"/>
 					<aixm:pointChoice_navaidSystem
-						xlink:href="uuid.882e849c-682d-4e95-ac19-a7808d55cdbb" xlink:title="NAV_WOB"/>
+						xlink:href="urn:uuid.882e849c-682d-4e95-ac19-a7808d55cdbb" xlink:title="NAV_WOB"/>
 					<aixm:annotation>
 						<aixm:Note gml:id="n121217">
 							<aixm:propertyName>angle</aixm:propertyName>
@@ -6413,10 +6413,10 @@ Editorial note: this license is an instance of the BSD license template as provi
 					</aixm:featureLifetime>
 					<aixm:distance uom="NM">336.7</aixm:distance>
 					<aixm:type>DME</aixm:type>
-					<aixm:fix xlink:href="uuid.9fcb360c-6933-46d6-9c85-a337202efe70"
+					<aixm:fix xlink:href="urn:uuid:9fcb360c-6933-46d6-9c85-a337202efe70"
 						xlink:title="ABOLA"/>
 					<aixm:pointChoice_navaidSystem
-						xlink:href="uuid.882e849c-682d-4e95-ac19-a7808d55cdbb" xlink:title="NAV_WOB"/>
+						xlink:href="urn:uuid.882e849c-682d-4e95-ac19-a7808d55cdbb" xlink:title="NAV_WOB"/>
 					<aixm:annotation>
 						<aixm:Note gml:id="n121214">
 							<aixm:propertyName>distance</aixm:propertyName>
@@ -7773,10 +7773,10 @@ Editorial note: this license is an instance of the BSD license template as provi
 						</aixm:CallsignDetail>
 					</aixm:call-sign>
 					<aixm:radioCommunication
-						xlink:href="urn:uuid:99c2b65e-a7ac-434d-aae0-0c3a2c62fe61"
+						xlink:href="urn:uuid:a8bda865-1402-4ad7-ab49-6006c2187026"
 						xlink:title="RCC_DONLON_TWR_118.100MHZ"/>
 					<aixm:radioCommunication
-						xlink:href="urn:uuid:99c2b65e-a7ac-434d-aae0-0c3a2c62fe61"
+						xlink:href="urn:uuid:e1bd8af7-62ed-4b6f-b25d-f4335cf40ddf"
 						xlink:title="RCC_DONLON_TWR_117.900MHZ"/>
 					<aixm:type>TWR</aixm:type>
 					<aixm:clientAirspace 
@@ -7787,9 +7787,9 @@ Editorial note: this license is an instance of the BSD license template as provi
 		</aixm:AirTrafficControlService>
 	</message:hasMember>
 	<message:hasMember>
-		<aixm:RadioCommunicationChannel gml:id="uuid.99c2b65e-a7ac-434d-aae0-0c3a2c62fe65">
+		<aixm:RadioCommunicationChannel gml:id="uuid.a8bda865-1402-4ad7-ab49-6006c2187026">
 			<gml:identifier codeSpace="urn:uuid:"
-				>99c2b65e-a7ac-434d-aae0-0c3a2c62fe65</gml:identifier>
+				>a8bda865-1402-4ad7-ab49-6006c2187026</gml:identifier>
 			<aixm:timeSlice>
 				<aixm:RadioCommunicationChannelTimeSlice gml:id="RCC_DONLON_TWR_118.100MHZ">
 					<gml:validTime>
@@ -7864,9 +7864,9 @@ Editorial note: this license is an instance of the BSD license template as provi
 		</aixm:RadioCommunicationChannel>
 	</message:hasMember>
 	<message:hasMember>
-		<aixm:RadioCommunicationChannel gml:id="uuid.99c2b65e-a7ac-434d-aae0-0c3a2c62fe66">
+		<aixm:RadioCommunicationChannel gml:id="uuid.e1bd8af7-62ed-4b6f-b25d-f4335cf40ddf">
 			<gml:identifier codeSpace="urn:uuid:"
-				>99c2b65e-a7ac-434d-aae0-0c3a2c62fe66</gml:identifier>
+				>e1bd8af7-62ed-4b6f-b25d-f4335cf40ddf</gml:identifier>
 			<aixm:timeSlice>
 				<aixm:RadioCommunicationChannelTimeSlice gml:id="RCC_DONLON_TWR_117.900MHZ">
 					<gml:validTime>
