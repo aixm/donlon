@@ -195,6 +195,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:maximumFL>005</event:maximumFL>
                             <event:coordinates>5306N04002W</event:coordinates>
                             <event:radius>4</event:radius>
+                            <event:location>EAAD</event:location>
                             <event:effectiveStart>1708291701</event:effectiveStart>
                             <event:effectiveEnd>1708291900</event:effectiveEnd>
                             <event:text>
