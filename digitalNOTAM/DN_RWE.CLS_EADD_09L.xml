@@ -86,7 +86,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <aixm:purpose>DESCRIPTION</aixm:purpose>
                             <aixm:translatedNote>
                                 <aixm:LinguisticNote gml:id="ID_RED_002">
-                                    <aixm:note>First 300m closed</aixm:note>
+                                    <aixm:note>first 300m closed</aixm:note>
                                 </aixm:LinguisticNote>
                             </aixm:translatedNote>
                         </aixm:Note>
