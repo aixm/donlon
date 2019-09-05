@@ -78,7 +78,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:location>EADD</event:location>
                             <event:effectiveStart>1811031830</event:effectiveStart>
                             <event:effectiveEnd>1811171430</event:effectiveEnd>
-                            <event:text>Apron closed.</event:text>
+                            <event:text>Apron APRON closed.</event:text>
                         </event:NOTAM>
                     </event:textNOTAM>
                 </event:EventTimeSlice>
