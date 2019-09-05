@@ -133,6 +133,16 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <aixm:interpretation>TEMPDELTA</aixm:interpretation>
                     <aixm:sequenceNumber>6</aixm:sequenceNumber>
                     <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:annotation>
+                        <aixm:Note gml:id="ID_RED_00001">
+                            <aixm:purpose>DESCRIPTION</aixm:purpose>
+                            <aixm:translatedNote>
+                                <aixm:LinguisticNote gml:id="ID_RED_00002">
+                                    <aixm:note>last 200m closed</aixm:note>
+                                </aixm:LinguisticNote>
+                            </aixm:translatedNote>
+                        </aixm:Note>
+                    </aixm:annotation>
                     <aixm:availability>
                         <aixm:ManoeuvringAreaAvailability gml:id="ID_RED_1331">
                             <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
