@@ -76,7 +76,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:coordinates>522236N315658W</event:coordinates>
                             <event:radius>005</event:radius>
                             <event:location>EADD</event:location>
-                            <event:effectiveStart>18011031830</event:effectiveStart>
+                            <event:effectiveStart>1811031830</event:effectiveStart>
                             <event:effectiveEnd>1811171430</event:effectiveEnd>
                             <event:text>Apron closed.</event:text>
                         </event:NOTAM>
