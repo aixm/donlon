@@ -32,6 +32,7 @@ Editorial note: this license is an instance of the BSD license template as provi
     gml:id="M00001">
     
     <!-- This is a DN for an aircraft stand closure-->
+    <!-- For sake of completion, the BASELINE data in provided below--> 
     
     <message:hasMember>
         <aixm:AircraftStand gml:id="uuid.595dfb4d-6614-4b0d-8392-5e76c720bd90">
