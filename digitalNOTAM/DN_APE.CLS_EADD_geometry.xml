@@ -153,6 +153,11 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
                         </aixm:ApronAreaAvailability>
                     </aixm:availability>
+                    <aixm:extension>
+                        <event:ApronElementExtension gml:id="ID_AE04e">
+                            <event:theEvent xlink:href="urn:uuid:71b152c5-9d27-45b9-9e30-0b026e25a65a"/>
+                        </event:ApronElementExtension>
+                    </aixm:extension>
                 </aixm:ApronElementTimeSlice>
             </aixm:timeSlice>
         </aixm:ApronElement>
@@ -177,6 +182,11 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
                         </aixm:ApronAreaAvailability>
                     </aixm:availability>
+                    <aixm:extension>
+                        <event:ApronExtension gml:id="ID_APE_003e">
+                            <event:theEvent xlink:href="urn:uuid:71b152c5-9d27-45b9-9e30-0b026e25a65a"/>
+                        </event:ApronExtension>
+                    </aixm:extension>
                 </aixm:ApronTimeSlice>
             </aixm:timeSlice>
         </aixm:Apron>
