@@ -30,7 +30,7 @@ Editorial note: this license is an instance of the BSD license template as provi
     http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
     gml:id="M00001">
     
-    <!--This is a Digital NOTAM for heliport prohibited for aircraft heavier than 25000lbs -->
+    <!--This is a Digital NOTAM for heliport limited to aircraft lighter than 25000lbs -->
     
     <message:hasMember>
         <event:Event gml:id="uuid.a1a51296-bc95-4e22-a41f-dc8163e8dab0">
@@ -77,7 +77,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:effectiveStart>1904101100</event:effectiveStart>
                             <event:effectiveEnd>1904151300</event:effectiveEnd>
                             <event:text>
-                                Heliport prohibited for acft mass equal to or heavier than 25000lbs.
+                                Heliport limited to acft mass equal to or lighter than 25000lbs.
                             </event:text>
                         </event:NOTAM>
                     </event:textNOTAM>
@@ -105,14 +105,14 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
                             <aixm:usage>
                                 <aixm:AirportHeliportUsage gml:id="ID_ADL_14">
-                                    <aixm:type>FORBID</aixm:type>
+                                    <aixm:type>PERMIT</aixm:type>
                                     <aixm:selection>
                                         <aixm:ConditionCombination gml:id="ID_ADL_15">
                                             <aixm:logicalOperator>NONE</aixm:logicalOperator>
                                             <aixm:aircraft>
                                                 <aixm:AircraftCharacteristic gml:id="ID_ADL_16">
                                                     <aixm:weight uom="LB">25000</aixm:weight>
-                                                    <aixm:weightInterpretation>AT_OR_ABOVE</aixm:weightInterpretation>
+                                                    <aixm:weightInterpretation>AT_OR_BELOW</aixm:weightInterpretation>
                                                 </aixm:AircraftCharacteristic>
                                             </aixm:aircraft>
                                         </aixm:ConditionCombination>
