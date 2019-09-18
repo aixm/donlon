@@ -34,29 +34,6 @@ Editorial note: this license is an instance of the BSD license template as provi
     <!-- This is a DN for an aircraft stand closure-->
     <!-- For sake of completion, the BASELINE data in provided below--> 
     
-    <message:hasMember>
-        <aixm:AircraftStand gml:id="uuid.595dfb4d-6614-4b0d-8392-5e76c720bd90">
-            <gml:identifier codeSpace="urn:uuid:">595dfb4d-6614-4b0d-8392-5e76c720bd90</gml:identifier>
-            <aixm:timeSlice>
-                <aixm:AircraftStandTimeSlice gml:id="ID_000485">
-                    <gml:validTime>
-                        <gml:TimePeriod gml:id="ID_000586">
-                            <gml:beginPosition>2018-09-09T10:30:00Z</gml:beginPosition>
-                            <gml:endPosition>2018-09-11T15:00:00Z</gml:endPosition>
-                        </gml:TimePeriod>
-                    </gml:validTime>
-                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
-                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
-                    <aixm:correctionNumber>0</aixm:correctionNumber>
-                    <aixm:availability>
-                        <aixm:ApronAreaAvailability gml:id="ID_197">
-                            <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
-                        </aixm:ApronAreaAvailability>
-                    </aixm:availability>
-                </aixm:AircraftStandTimeSlice>
-            </aixm:timeSlice>
-        </aixm:AircraftStand>
-    </message:hasMember> 
     
     <message:hasMember>
         <event:Event gml:id="uuid.d385a9b1-975f-4d72-8d50-f30087ab8bea">
@@ -109,6 +86,36 @@ Editorial note: this license is an instance of the BSD license template as provi
             </event:timeSlice>
         </event:Event>
     </message:hasMember>
+    
+    <message:hasMember>
+        <aixm:AircraftStand gml:id="uuid.595dfb4d-6614-4b0d-8392-5e76c720bd90">
+            <gml:identifier codeSpace="urn:uuid:">595dfb4d-6614-4b0d-8392-5e76c720bd90</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:AircraftStandTimeSlice gml:id="ID_000485">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_000586">
+                            <gml:beginPosition>2018-09-09T10:30:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-09-11T15:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:availability>
+                        <aixm:ApronAreaAvailability gml:id="ID_197">
+                            <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+                        </aixm:ApronAreaAvailability>
+                    </aixm:availability>
+                    <aixm:extension>
+                        <event:AircraftStandExtension gml:id="ID_000587">
+                            <event:theEvent xlink:href="urn:uuid:d385a9b1-975f-4d72-8d50-f30087ab8bea"/>
+                        </event:AircraftStandExtension>
+                    </aixm:extension>
+                </aixm:AircraftStandTimeSlice>
+            </aixm:timeSlice>
+        </aixm:AircraftStand>
+    </message:hasMember> 
+    
 
     <!--BASEINE data
         
