@@ -32,9 +32,9 @@ Editorial note: this license is an instance of the BSD license template as provi
     xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
     http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
     gml:id="M00001">
-    
+
     <!-- This is a DN for EADD apron element closure -->
-    
+
     <message:hasMember>
         <event:Event gml:id="uuid.71b152c5-9d27-45b9-9e30-0b026e25a65a">
             <gml:identifier codeSpace="urn:uuid:">71b152c5-9d27-45b9-9e30-0b026e25a65a</gml:identifier>
@@ -79,7 +79,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:location>EADD</event:location>
                             <event:effectiveStart>1807011200</event:effectiveStart>
                             <event:effectiveEnd>1807111800</event:effectiveEnd>
-                            <event:text>Apron APRON closed between 52.369376203479014 -31.947955104361693 52.36948258558073 -31.947865454851  52.372153867201185 -31.9483824951364  52.37336828819957 -31.94861756739893 52.369376203479014 -31.947955104361693
+                            <event:text>Apron APRON closed north side between acft stand 1 and 4, 200m length, 100m width,
                                         due to maintenance activities.
                             </event:text>
                         </event:NOTAM>
@@ -88,7 +88,7 @@ Editorial note: this license is an instance of the BSD license template as provi
             </event:timeSlice>
         </event:Event>
     </message:hasMember>
-    
+
     <message:hasMember>
         <aixm:ApronElement gml:id="uuid.cde65385-2dc1-441b-9bd0-3ba4e35336a5">
             <gml:identifier codeSpace="urn:uuid:">cde65385-2dc1-441b-9bd0-3ba4e35336a5</gml:identifier>
@@ -118,17 +118,17 @@ Editorial note: this license is an instance of the BSD license template as provi
                                         <gml:Ring>
                                             <gml:curveMember>
                                                 <aixm:Curve>
-                                                    <gml:segments>
-                                                        <gml:GeodesicString>
-                                                            <gml:posList>
-                                                                52.369376203479014 -31.947955104361693 
-                                                                52.36948258558073 -31.947865454851 
-                                                                52.372153867201185 -31.9483824951364 
-                                                                52.37336828819957 -31.94861756739893 
-                                                                52.369376203479014 -31.947955104361693
-                                                            </gml:posList>
-                                                        </gml:GeodesicString> <!--approximated coordinates, need to be checked-->
-                                                    </gml:segments>
+                                                  <gml:segments>
+                                                  <gml:GeodesicString>
+                                                  <gml:posList> 52.369376203479014
+                                                  -31.947955104361693 52.36948258558073
+                                                  -31.947865454851 52.372153867201185
+                                                  -31.9483824951364 52.37336828819957
+                                                  -31.94861756739893 52.369376203479014
+                                                  -31.947955104361693 </gml:posList>
+                                                  </gml:GeodesicString>
+                                                  <!--approximated coordinates, need to be checked-->
+                                                  </gml:segments>
                                                 </aixm:Curve>
                                             </gml:curveMember>
                                         </gml:Ring>
@@ -138,60 +138,43 @@ Editorial note: this license is an instance of the BSD license template as provi
                         </aixm:ElevatedSurface>
                     </aixm:extent>
                     <aixm:annotation>
-                        <aixm:Note gml:id="ID_AE_07">
-                            <aixm:propertyName>operationalStatus</aixm:propertyName>
-                            <aixm:purpose>REMARK</aixm:purpose>
+                        <aixm:Note gml:id="ID_ADPE_REL00117">
+                            <aixm:propertyName>extent</aixm:propertyName>
+                            <aixm:purpose>DESCRIPTION</aixm:purpose>
                             <aixm:translatedNote>
-                                <aixm:LinguisticNote gml:id="ID_AE_08">
-                                    <aixm:note>maintenance activities</aixm:note>
+                                <aixm:LinguisticNote gml:id="ID_ADPE_REL00118">
+                                    <aixm:note>north side between acft stand 1 and 4, 200m length, 100m width</aixm:note>
                                 </aixm:LinguisticNote>
                             </aixm:translatedNote>
                         </aixm:Note>
                     </aixm:annotation>
                     <aixm:availability>
                         <aixm:ApronAreaAvailability gml:id="ID_AE_04">
+                            <aixm:annotation>
+                                <aixm:Note gml:id="ID_AE_07">
+                                    <aixm:propertyName>operationalStatus</aixm:propertyName>
+                                    <aixm:purpose>REMARK</aixm:purpose>
+                                    <aixm:translatedNote>
+                                        <aixm:LinguisticNote gml:id="ID_AE_08">
+                                            <aixm:note>maintenance activities</aixm:note>
+                                        </aixm:LinguisticNote>
+                                    </aixm:translatedNote>
+                                </aixm:Note>
+                            </aixm:annotation>
                             <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
                         </aixm:ApronAreaAvailability>
                     </aixm:availability>
                     <aixm:extension>
                         <event:ApronElementExtension gml:id="ID_AE04e">
-                            <event:theEvent xlink:href="urn:uuid:71b152c5-9d27-45b9-9e30-0b026e25a65a"/>
+                            <event:theEvent
+                                xlink:href="urn:uuid:71b152c5-9d27-45b9-9e30-0b026e25a65a"/>
                         </event:ApronElementExtension>
                     </aixm:extension>
                 </aixm:ApronElementTimeSlice>
             </aixm:timeSlice>
         </aixm:ApronElement>
     </message:hasMember>
-    
-    <message:hasMember>
-        <aixm:Apron gml:id="uuid.0dac7a5f-4cb6-41a2-b0eb-dac1c555351c">
-            <gml:identifier codeSpace="urn:uuid:">0dac7a5f-4cb6-41a2-b0eb-dac1c555351c</gml:identifier>
-            <aixm:timeSlice>
-                <aixm:ApronTimeSlice gml:id="ID_AP_001">
-                    <gml:validTime>
-                        <gml:TimePeriod gml:id="ID_AP_002">
-                            <gml:beginPosition>2018-07-01T12:00:00Z</gml:beginPosition>
-                            <gml:endPosition>2018-07-11T18:00:00Z</gml:endPosition>
-                        </gml:TimePeriod>
-                    </gml:validTime>
-                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
-                    <aixm:sequenceNumber>41</aixm:sequenceNumber>
-                    <aixm:correctionNumber>0</aixm:correctionNumber>
-                    <aixm:availability>
-                        <aixm:ApronAreaAvailability gml:id="ID_AP_003">
-                            <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
-                        </aixm:ApronAreaAvailability>
-                    </aixm:availability>
-                    <aixm:extension>
-                        <event:ApronExtension gml:id="ID_APE_003e">
-                            <event:theEvent xlink:href="urn:uuid:71b152c5-9d27-45b9-9e30-0b026e25a65a"/>
-                        </event:ApronExtension>
-                    </aixm:extension>
-                </aixm:ApronTimeSlice>
-            </aixm:timeSlice>
-        </aixm:Apron>
-    </message:hasMember>
-    
+
     <!--BASELINE data
         
     <message:hasMember> 
