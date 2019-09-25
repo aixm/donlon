@@ -43,7 +43,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <gml:validTime>
                         <gml:TimePeriod gml:id="ID_HDL_E012">
                             <gml:beginPosition>2019-03-11T11:00:00Z</gml:beginPosition>
-                            <gml:endPosition indeterminatePosition="unknown"/>
+                            <gml:endPosition indeterminatePosition="unknown">2019-03-11T13:00:00Z</gml:endPosition>
                             <!--needs update based on Event Specificatin 2.0-->
                         </gml:TimePeriod>
                     </gml:validTime>
@@ -53,7 +53,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <aixm:featureLifetime>
                         <gml:TimePeriod gml:id="ID_HDL_E013">
                             <gml:beginPosition>2019-03-11T11:00:00Z</gml:beginPosition>
-                            <gml:endPosition indeterminatePosition="unknown"/>
+                            <gml:endPosition indeterminatePosition="unknown">2019-03-11T13:00:00Z</gml:endPosition>
                             <!--needs update based on Event Specificatin 2.0-->
                         </gml:TimePeriod>
                     </aixm:featureLifetime>
@@ -76,7 +76,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <gml:validTime>
                         <gml:TimePeriod>
                             <gml:beginPosition>2019-03-11T11:00:00Z</gml:beginPosition>
-                            <gml:endPosition indeterminatePosition="unknown"/>
+                            <gml:endPosition indeterminatePosition="unknown">2019-03-11T13:00:00Z</gml:endPosition>
                             <!--needs update based on Event Specificatin 2.0-->
                         </gml:TimePeriod>
                     </gml:validTime>
