@@ -55,6 +55,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <event:scenario>DEI.IOP</event:scenario>
                     <event:version>2.0</event:version>
                     <event:revision>2018-01-19T20:11:35Z</event:revision>
+                    <event:textNOTAM xsi:nil="true" nilReason="inapplicable"/>
                 </event:EventTimeSlice>
             </event:timeSlice>
         </event:Event>
