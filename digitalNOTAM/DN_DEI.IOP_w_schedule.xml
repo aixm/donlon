@@ -55,30 +55,6 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <event:scenario>DEI.IOP</event:scenario>
                     <event:version>2.0</event:version>
                     <event:revision>2018-01-19T20:11:35Z</event:revision>
-                    <event:textNOTAM>
-                        <event:NOTAM gml:id="RWD_DN_n0151">
-                            <event:series>A</event:series>
-                            <event:number>0012</event:number>
-                            <event:year>2018</event:year>
-                            <event:type>N</event:type>
-                            <event:issued>2018-01-19T20:11:35Z</event:issued>
-                            <event:affectedFIR>EAAD</event:affectedFIR>
-                            <event:selectionCode>QFIAO</event:selectionCode>
-                            <event:traffic/>
-                            <event:purpose/>
-                            <event:scope>A</event:scope>
-                            <event:minimumFL>000</event:minimumFL>
-                            <event:maximumFL>999</event:maximumFL>
-                            <event:coordinates>4147N03501W</event:coordinates>
-                            <event:radius>005</event:radius>
-                            <event:location>EADD</event:location>
-                            <event:effectiveStart>1801200800</event:effectiveStart>
-                            <event:effectiveEnd>1801201000</event:effectiveEnd>
-                            <event:schedule>Daily 0800-1000</event:schedule>
-                            <event:text>De-icing in operation at De-icing Pad C     
-                            </event:text>
-                        </event:NOTAM>
-                    </event:textNOTAM>
                 </event:EventTimeSlice>
             </event:timeSlice>
         </event:Event>
@@ -112,7 +88,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                                     <aixm:excluded>NO</aixm:excluded>
                                 </aixm:Timesheet>
                             </aixm:timeInterval>
-                            <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+                            <aixm:operationalStatus>OTHER:ACTIVE</aixm:operationalStatus>
                         </aixm:ApronAreaAvailability>
                     </aixm:availability>
                     <aixm:availability>
@@ -148,7 +124,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                                     </aixm:translatedNote>
                                 </aixm:Note>
                             </aixm:annotation>
-                            <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+                            <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
                         </aixm:ApronAreaAvailability>
                     </aixm:availability>
                     <aixm:extension>
@@ -216,7 +192,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     </aixm:annotation>                   
                     <aixm:availability>
                         <aixm:ApronAreaAvailability gml:id="DEI004">
-                            <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+                            <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
                         </aixm:ApronAreaAvailability>
                     </aixm:availability>
                 </aixm:DeicingAreaTimeSlice>
