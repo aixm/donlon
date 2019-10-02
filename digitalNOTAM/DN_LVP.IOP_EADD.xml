@@ -30,7 +30,7 @@ Editorial note: this license is an instance of the BSD license template as provi
     http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
     gml:id="M00001">
     
-    <!--This is a Digital NOTAM for announcement of low visibility procedures status -->
+    <!--This is a Digital NOTAM for announcement of low visibility procedures at EADD -->
     
     <message:hasMember>
         <event:Event gml:id="uuid.f041d155-bd46-438b-8a02-df382770519e">
@@ -40,7 +40,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <gml:validTime>
                         <gml:TimePeriod gml:id="IDE_LVP_23">
                             <gml:beginPosition>2019-01-11T09:00:00Z</gml:beginPosition>
-                            <gml:endPosition indeterminatePosition="unknown"/>
+                            <gml:endPosition indeterminatePosition="unknown">2019-01-11T11:00:00Z</gml:endPosition>
                         </gml:TimePeriod>
                     </gml:validTime>
                     <aixm:interpretation>BASELINE</aixm:interpretation>
@@ -56,51 +56,28 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <event:encoding>DIGITAL</event:encoding>
                     <event:scenario>LVP.IOP</event:scenario>
                     <event:version>2.0</event:version>
-                    <event:revision>2019-01-11T08:35:11Z</event:revision>
-                    <event:textNOTAM>
-                        <event:NOTAM gml:id="IDE_LVP_25">
-                            <event:series>A</event:series>
-                            <event:number>0011</event:number>
-                            <event:year>2019</event:year>
-                            <event:type>N</event:type>
-                            <event:issued>2019-01-11T08:35:11Z</event:issued>
-                            <event:affectedFIR>EAAD</event:affectedFIR>
-                            <event:selectionCode/>
-                            <event:traffic/>
-                            <event:purpose/>
-                            <event:scope>A</event:scope>
-                            <event:minimumFL>000</event:minimumFL>
-                            <event:maximumFL>999</event:maximumFL>
-                            <event:coordinates>4147N03501W</event:coordinates>
-                            <event:radius>005</event:radius>
-                            <event:location>EADD</event:location>
-                            <event:effectiveStart>1901110900</event:effectiveStart>
-                            <event:effectiveEnd/>
-                            <event:text>
-                                AD LPV Preparation Phase in progress.
-                                Follow Me car assistance not available.
-                            </event:text>
-                        </event:NOTAM>
-                    </event:textNOTAM>
+                    <event:revision>2019-01-11T09:00:00Z</event:revision>
+                    <event:textNOTAM nilReason="inapplicable" xsi:nil="true"/>
                 </event:EventTimeSlice>
             </event:timeSlice>
         </event:Event>
     </message:hasMember>
     
-    <!--TEMPDELTA-->
+    <!--TEMPDELTAs-->
+    
     <message:hasMember>
-        <aixm:RulesProcedures gml:id="uuid.cdee865e-2bbf-4f3b-a78a-e6a9a0a018d9">
-            <gml:identifier codeSpace="urn:uuid:">cdee865e-2bbf-4f3b-a78a-e6a9a0a018d9</gml:identifier>
+        <aixm:AirportHeliport gml:id="uuid.1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
+            <gml:identifier codeSpace="urn:uuid:">1b54b2d6-a5ff-4e57-94c2-f4047a381c64</gml:identifier>
             <aixm:timeSlice>
-                <aixm:RulesProceduresTimeSlice gml:id="DN_LVP_0110">
+                <aixm:AirportHeliportTimeSlice gml:id="ID_LVP_H1">
                     <gml:validTime>
-                        <gml:TimePeriod gml:id="DN_LVP_0120">
+                        <gml:TimePeriod gml:id="ID_LVP_H2">
                             <gml:beginPosition>2019-01-11T09:00:00Z</gml:beginPosition>
-                            <gml:endPosition indeterminatePosition="unknown"/>
+                            <gml:endPosition indeterminatePosition="unknown">2019-01-11T19:30:00Z</gml:endPosition>
                         </gml:TimePeriod>
                     </gml:validTime>
                     <aixm:interpretation>TEMPDELTA</aixm:interpretation>
-                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:sequenceNumber>6</aixm:sequenceNumber>
                     <aixm:correctionNumber>0</aixm:correctionNumber>
                     <aixm:annotation>
                         <aixm:Note gml:id="DN_LVP_0130">
@@ -114,30 +91,57 @@ Editorial note: this license is an instance of the BSD license template as provi
                     </aixm:annotation>
                     <aixm:annotation>
                         <aixm:Note gml:id="DN_LVP_0131">
-                            <aixm:purpose>WARNING</aixm:purpose>
+                            <aixm:purpose>OTHER:LPV_WARNING</aixm:purpose>
                             <aixm:translatedNote>
                                 <aixm:LinguisticNote gml:id="DN_LVP_0141">
-                                    <aixm:note>Follow Me car assistance not available.</aixm:note> <!--the BASELINE information is assumed to specify that Follow ME car assistence is available-->
+                                    <aixm:note>Follow Me car assistance not available.</aixm:note> 
                                 </aixm:LinguisticNote>
                             </aixm:translatedNote>
                         </aixm:Note>
                     </aixm:annotation>
                     <aixm:extension>
-                        <event:RulesProceduresExtension gml:id="DN_LVP_0142">
-                            <event:theEvent xlink:href="#uuid.f041d155-bd46-438b-8a02-df382770519e"/>
-                        </event:RulesProceduresExtension>
+                        <event:AirportHeliportExtension gml:id="ID_WLD_H5">
+                            <event:theEvent xlink:href="urn:uuid:f041d155-bd46-438b-8a02-df382770519e"/>
+                        </event:AirportHeliportExtension>
                     </aixm:extension>
-                </aixm:RulesProceduresTimeSlice>
+                </aixm:AirportHeliportTimeSlice>
             </aixm:timeSlice>
-        </aixm:RulesProcedures>
+        </aixm:AirportHeliport>
     </message:hasMember>
-   
-    <!--BASELINE data
+    
     <message:hasMember>
-        <aixm:RulesProcedures gml:id="uuid.cdee865e-2bbf-4f3b-a78a-e6a9a0a018d9">
+        <aixm:RunwayProtectArea gml:id="uuid.cdee865e-2bbf-4f3b-a78a-e6a9a0a018d9">
             <gml:identifier codeSpace="urn:uuid:">cdee865e-2bbf-4f3b-a78a-e6a9a0a018d9</gml:identifier>
             <aixm:timeSlice>
-                <aixm:RulesProceduresTimeSlice gml:id="ID_LVP_011">
+                <aixm:RunwayProtectAreaTimeSlice gml:id="DN_LVP_0110">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="DN_LVP_0120">
+                            <gml:beginPosition>2019-01-11T09:00:00Z</gml:beginPosition>
+                            <gml:endPosition indeterminatePosition="unknown">2019-01-11T19:30:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:status>OTHER:ACTIVE</aixm:status>
+                    <aixm:extension>
+                        <event:RunwayProtectAreaExtension gml:id="DN_LVP_0121">
+                            <event:theEvent xlink:href="urn:uuid:f041d155-bd46-438b-8a02-df382770519e"/>
+                        </event:RunwayProtectAreaExtension>
+                    </aixm:extension>
+                </aixm:RunwayProtectAreaTimeSlice>
+            </aixm:timeSlice>
+        </aixm:RunwayProtectArea>
+    </message:hasMember>
+
+   
+<!--BASELINE 
+        
+    <message:hasMember>
+        <aixm:RunwayProtectArea gml:id="uuid.cdee865e-2bbf-4f3b-a78a-e6a9a0a018d9">
+            <gml:identifier codeSpace="urn:uuid:">cdee865e-2bbf-4f3b-a78a-e6a9a0a018d9</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:RunwayProtectAreaTimeSlice gml:id="ID_LVP_011">
                     <gml:validTime>
                         <gml:TimePeriod gml:id="ID_LVP_012">
                             <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
@@ -153,13 +157,12 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <gml:endPosition indeterminatePosition="unknown"/>
                         </gml:TimePeriod>
                     </aixm:featureLifetime>
-                    <aixm:category>PROCEDURE</aixm:category>
-                    <aixm:title>OTHER:FLIGHT_RULES_LVP</aixm:title>
-                    <aixm:content/> check how to add XHTML here
-                    <aixm:affectedLocation xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64"/>
-                </aixm:RulesProceduresTimeSlice>
+                    <aixm:type>ILS</aixm:type>
+                    <aixm:status>NORMAL</aixm:status>
+                    <aixm:protectedRunwayDirection xlink:href="urn:uuid:4428d037-1cdf-433a-9bfa-d0857aaf448a"/>
+                </aixm:RunwayProtectAreaTimeSlice>
             </aixm:timeSlice>
-        </aixm:RulesProcedures>
-    </message:hasMember> -->
-    
+        </aixm:RunwayProtectArea>
+    </message:hasMember>
+    -->
 </message:AIXMBasicMessage>
