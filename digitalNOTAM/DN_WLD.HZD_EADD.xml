@@ -58,6 +58,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <event:scenario>WLD.HZD</event:scenario>
                     <event:version>2.0</event:version>
                     <event:revision>2018-10-12T16:22:00Z</event:revision>
+                    <event:textNOTAM nilReason="inapplicable" xsi:nil="true">
                 </event:EventTimeSlice>
             </event:timeSlice>
         </event:Event>
