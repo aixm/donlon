@@ -131,6 +131,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <aixm:annotation>
                         <aixm:Note gml:id="ID_0123a">
                             <aixm:propertyName>extent</aixm:propertyName>
+                            <aixm:purpose>DESCRIPTION</aixm:purpose>
                             <aixm:translatedNote>
                                 <aixm:LinguisticNote gml:id="ID_0123b">
                                     <aixm:note>first 300m of RWY 09L</aixm:note>
