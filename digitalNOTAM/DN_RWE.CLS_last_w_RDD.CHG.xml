@@ -28,7 +28,7 @@ Editorial note: this license is an instance of the BSD license template as provi
     http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
     gml:id="M00001">
     
-    <!-- This is a DN for a temporary closure of last 200m portion of EADD RWY 09L including changes to declared distances (REL.CLS triggering RDD.CHG)-->
+    <!-- This is a DN for a temporary closure of last 200m portion of EADD RWY 09L including changes to declared distances (RWE.CLS triggering RDD.CHG)-->
     
     <!--RWE.CLS-->
     <message:hasMember>
@@ -75,7 +75,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:location>EADD</event:location>
                             <event:effectiveStart>1807071000</event:effectiveStart>
                             <event:effectiveEnd>1807172300</event:effectiveEnd>
-                            <event:text>RWY 09L last 200m closed.</event:text>
+                            <event:text>RWY 09L/27R closed last 200m of RWY 09L.</event:text>
                         </event:NOTAM>
                     </event:textNOTAM>
                 </event:EventTimeSlice>
@@ -102,9 +102,44 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <gml:endPosition>2018-07-17T23:00:00Z</gml:endPosition>
                         </gml:TimePeriod>
                     </aixm:featureLifetime>
-                    <aixm:type>OTHER:LAST</aixm:type>
-                    <aixm:length uom="M">200</aixm:length>
                     <aixm:associatedRunway xlink:href="urn:uuid:9e51668f-bf8a-4f5b-ba6e-27087972b9b8"/> <!--the gml identifier of RWY 09L/27R-->
+                    <aixm:extent>
+                        <aixm:ElevatedSurface>
+                            <gml:patches>
+                                <gml:PolygonPatch>
+                                    <gml:exterior>
+                                        <gml:Ring>
+                                            <gml:curveMember>
+                                                <gml:Curve gml:id="C00114">
+                                                    <gml:segments>
+                                                        <gml:GeodesicString>
+                                                            <gml:posList>52.37590585931356 -31.964278043969905
+                                                                52.375111423433644 -31.964228391727417
+                                                                52.377870286949445 -31.92180984838786
+                                                                52.378484819142066 -31.921878401779864
+                                                                52.37590585931356
+                                                                -31.964278043969905</gml:posList> <!--fictional coordinates, to be updated-->
+                                                        </gml:GeodesicString>
+                                                    </gml:segments>
+                                                </gml:Curve>
+                                            </gml:curveMember>
+                                        </gml:Ring>
+                                    </gml:exterior>
+                                </gml:PolygonPatch>
+                            </gml:patches>
+                        </aixm:ElevatedSurface>
+                    </aixm:extent>
+                    <aixm:annotation>
+                        <aixm:Note gml:id="ID_RWE_001a">
+                            <aixm:propertyName>extent</aixm:propertyName>
+                            <aixm:purpose>DESCRIPTION</aixm:purpose>
+                            <aixm:translatedNote>
+                                <aixm:LinguisticNote gml:id="ID_RWE_001b">
+                                    <aixm:note>last 200m of RWY 09L</aixm:note>
+                                </aixm:LinguisticNote>
+                            </aixm:translatedNote>
+                        </aixm:Note>
+                    </aixm:annotation>
                     <aixm:availability>
                         <aixm:ManoeuvringAreaAvailability gml:id="DN_REL_u03">
                             <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
@@ -118,44 +153,6 @@ Editorial note: this license is an instance of the BSD license template as provi
                 </aixm:RunwayElementTimeSlice>
             </aixm:timeSlice>
         </aixm:RunwayElement>
-    </message:hasMember>
-    
-    <message:hasMember>
-        <aixm:RunwayDirection gml:id="uuid.c8455a6b-9319-4bb7-b797-08e644342d64">
-            <aixm:timeSlice>
-                <aixm:RunwayDirectionTimeSlice gml:id="ID_RED_1121">
-                    <gml:validTime>
-                        <gml:TimePeriod gml:id="ID_RED_1231">
-                            <gml:beginPosition>2018-07-07T10:00:00Z</gml:beginPosition>
-                            <gml:endPosition>2018-07-17T23:00:00Z</gml:endPosition>
-                        </gml:TimePeriod>
-                    </gml:validTime>
-                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
-                    <aixm:sequenceNumber>6</aixm:sequenceNumber>
-                    <aixm:correctionNumber>0</aixm:correctionNumber>
-                    <aixm:annotation>
-                        <aixm:Note gml:id="ID_RED_00001">
-                            <aixm:purpose>DESCRIPTION</aixm:purpose>
-                            <aixm:translatedNote>
-                                <aixm:LinguisticNote gml:id="ID_RED_00002">
-                                    <aixm:note>last 200m closed</aixm:note>
-                                </aixm:LinguisticNote>
-                            </aixm:translatedNote>
-                        </aixm:Note>
-                    </aixm:annotation>
-                    <aixm:availability>
-                        <aixm:ManoeuvringAreaAvailability gml:id="ID_RED_1331">
-                            <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
-                        </aixm:ManoeuvringAreaAvailability>
-                    </aixm:availability>
-                    <aixm:extension>
-                        <event:RunwayDirectionExtension gml:id="ID_RED_1531">
-                            <event:theEvent xlink:href="#uuid.fe39a177-3f0a-4035-b6aa-65cac4d2f426"/>
-                        </event:RunwayDirectionExtension>
-                    </aixm:extension>
-                </aixm:RunwayDirectionTimeSlice>
-            </aixm:timeSlice>
-        </aixm:RunwayDirection>
     </message:hasMember>
     
     <!--RDD.CHG-->
@@ -184,7 +181,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <event:scenario>RDD.CHG</event:scenario>
                     <event:version>2.0</event:version>
                     <event:revision>2018-07-06T13:24:32Z</event:revision>
-                    <event:causeEvent xlink:href="urn:uuid:fe39a177-3f0a-4035-b6aa-65cac4d2f426"/> <!--this Event is a consequence of the REL.CHG Event above-->
+                    <event:causeEvent xlink:href="urn:uuid:fe39a177-3f0a-4035-b6aa-65cac4d2f426"/> <!--this Event is a consequence of the RWE.ClS Event above-->
                     <event:textNOTAM>
                         <event:NOTAM gml:id="RWD_DN_015">
                             <event:series>A</event:series>
