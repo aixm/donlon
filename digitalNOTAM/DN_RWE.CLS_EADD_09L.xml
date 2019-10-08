@@ -31,82 +31,6 @@ Editorial note: this license is an instance of the BSD license template as provi
     <!-- This is a DN for a temporary closure of first 300m portion of EADD RWY 09L -->
     
     <message:hasMember>
-        <aixm:RunwayElement gml:id="uuid.b2ad9f40-042f-4f2c-8e3b-9bd10f7b6347">
-            <gml:identifier codeSpace="urn:uuid:">b2ad9f40-042f-4f2c-8e3b-9bd10f7b6347</gml:identifier>
-            <aixm:timeSlice>
-                <aixm:RunwayElementTimeSlice gml:id="DN_REL_01">
-                    <gml:validTime>
-                        <gml:TimePeriod gml:id="DN_REL_02">
-                            <gml:beginPosition>2018-09-03T09:00:00Z</gml:beginPosition>
-                            <gml:endPosition>2018-09-07T22:00:00Z</gml:endPosition>
-                        </gml:TimePeriod>
-                    </gml:validTime>
-                    <aixm:interpretation>BASELINE</aixm:interpretation>
-                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
-                    <aixm:correctionNumber>0</aixm:correctionNumber>
-                    <aixm:featureLifetime>
-                        <gml:TimePeriod gml:id="DN_REL_03">
-                            <gml:beginPosition>2018-09-03T09:00:00Z</gml:beginPosition>
-                            <gml:endPosition>2018-09-07T22:00:00Z</gml:endPosition>
-                        </gml:TimePeriod>
-                    </aixm:featureLifetime>
-                    <aixm:type>OTHER:FIRST</aixm:type>
-                    <aixm:length uom="M">300</aixm:length>
-                    <aixm:associatedRunway xlink:href="urn:uuid:9e51668f-bf8a-4f5b-ba6e-27087972b9b8"/> <!--the gml identifier of RWY 09L/27R-->
-                    <aixm:availability>
-                        <aixm:ManoeuvringAreaAvailability gml:id="DN_REL_u03">
-                            <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
-                        </aixm:ManoeuvringAreaAvailability>
-                    </aixm:availability>
-                    <aixm:extension>
-                        <event:RunwayElementExtension gml:id="DN_REL_04">
-                            <event:theEvent xlink:href="urn:uuid:effc819c-0db4-45b3-8598-31fa00771ba5"/>
-                        </event:RunwayElementExtension>
-                    </aixm:extension>
-                </aixm:RunwayElementTimeSlice>
-            </aixm:timeSlice>
-        </aixm:RunwayElement>
-    </message:hasMember>
-    
-    <message:hasMember>
-        <aixm:RunwayDirection gml:id="uuid.c8455a6b-9319-4bb7-b797-08e644342d64">
-            <aixm:timeSlice>
-                <aixm:RunwayDirectionTimeSlice gml:id="ID_RED_11">
-                    <gml:validTime>
-                        <gml:TimePeriod gml:id="ID_RED_12">
-                            <gml:beginPosition>2018-09-03T09:00:00Z</gml:beginPosition>
-                            <gml:endPosition>2018-09-07T22:00:00Z</gml:endPosition>
-                        </gml:TimePeriod>
-                    </gml:validTime>
-                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
-                    <aixm:sequenceNumber>4</aixm:sequenceNumber>
-                    <aixm:correctionNumber>0</aixm:correctionNumber>
-                    <aixm:annotation>
-                        <aixm:Note gml:id="ID_RED_001">
-                            <aixm:purpose>DESCRIPTION</aixm:purpose>
-                            <aixm:translatedNote>
-                                <aixm:LinguisticNote gml:id="ID_RED_002">
-                                    <aixm:note>first 300m closed</aixm:note>
-                                </aixm:LinguisticNote>
-                            </aixm:translatedNote>
-                        </aixm:Note>
-                    </aixm:annotation>
-                    <aixm:availability>
-                        <aixm:ManoeuvringAreaAvailability gml:id="ID_RED_13">
-                            <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
-                        </aixm:ManoeuvringAreaAvailability>
-                    </aixm:availability>
-                    <aixm:extension>
-                        <event:RunwayDirectionExtension gml:id="ID_RED_15">
-                            <event:theEvent xlink:href="#uuid.effc819c-0db4-45b3-8598-31fa00771ba5"/>
-                        </event:RunwayDirectionExtension>
-                    </aixm:extension>
-                </aixm:RunwayDirectionTimeSlice>
-            </aixm:timeSlice>
-        </aixm:RunwayDirection>
-    </message:hasMember>
-    
-    <message:hasMember>
         <event:Event gml:id="uuid.effc819c-0db4-45b3-8598-31fa00771ba5">
             <gml:identifier codeSpace="urn:uuid:">effc819c-0db4-45b3-8598-31fa00771ba5</gml:identifier>
             <event:timeSlice>
@@ -150,11 +74,91 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:location>EADD</event:location>
                             <event:effectiveStart>1809030900</event:effectiveStart>
                             <event:effectiveEnd>1809072200</event:effectiveEnd>
-                            <event:text>RWY 09L first 300m closed.</event:text>
+                            <event:text>RWY 09L/27R closed first 300m of RWY 07L due to maintenance work.</event:text>
                         </event:NOTAM>
                     </event:textNOTAM>
                 </event:EventTimeSlice>
             </event:timeSlice>
         </event:Event>
+    </message:hasMember>
+    
+    <message:hasMember>
+        <aixm:RunwayElement gml:id="uuid.b2ad9f40-042f-4f2c-8e3b-9bd10f7b6347">
+            <gml:identifier codeSpace="urn:uuid:">b2ad9f40-042f-4f2c-8e3b-9bd10f7b6347</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:RunwayElementTimeSlice gml:id="DN_REL_01">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="DN_REL_02">
+                            <gml:beginPosition>2018-09-03T09:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-09-07T22:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="DN_REL_03">
+                            <gml:beginPosition>2018-09-03T09:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-09-07T22:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <aixm:associatedRunway xlink:href="urn:uuid:9e51668f-bf8a-4f5b-ba6e-27087972b9b8"/> <!--the gml identifier of RWY 09L/27R-->
+                    <aixm:extent>
+                        <aixm:ElevatedSurface>
+                            <gml:patches>
+                                <gml:PolygonPatch>
+                                    <gml:exterior>
+                                        <gml:Ring>
+                                            <gml:curveMember>
+                                                <gml:Curve gml:id="C00115">
+                                                    <gml:segments>
+                                                        <gml:GeodesicString>
+                                                            <gml:posList>52.36589862656441 -31.96504267834769
+                                                                52.36519841646239 -31.964972171080476
+                                                                52.36785927788303 -31.925539068377507
+                                                                52.36850257170318 -31.92561516687336
+                                                                52.36589862656441 -31.96504267834769</gml:posList> <!-- fictional coordinates, to be updated-->
+                                                        </gml:GeodesicString>
+                                                    </gml:segments>
+                                                </gml:Curve>
+                                            </gml:curveMember>
+                                        </gml:Ring>
+                                    </gml:exterior>
+                                </gml:PolygonPatch>
+                            </gml:patches>
+                        </aixm:ElevatedSurface>
+                    </aixm:extent>
+                    <aixm:annotation>
+                        <aixm:Note gml:id="ID_0123a">
+                            <aixm:propertyName>extent</aixm:propertyName>
+                            <aixm:translatedNote>
+                                <aixm:LinguisticNote gml:id="ID_0123b">
+                                    <aixm:note>first 300m of RWY 09L</aixm:note>
+                                </aixm:LinguisticNote>
+                            </aixm:translatedNote>
+                        </aixm:Note>
+                    </aixm:annotation>
+                    <aixm:availability>
+                        <aixm:ManoeuvringAreaAvailability gml:id="DN_REL_u03">
+                            <aixm:annotation>
+                                <aixm:Note gml:id="ID_0012b">
+                                    <aixm:translatedNote>
+                                        <aixm:LinguisticNote gml:id="ID_0012c">
+                                            <aixm:note>maintenance work</aixm:note>
+                                        </aixm:LinguisticNote>
+                                    </aixm:translatedNote>
+                                </aixm:Note>
+                            </aixm:annotation>
+                            <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
+                        </aixm:ManoeuvringAreaAvailability>
+                    </aixm:availability>
+                    <aixm:extension>
+                        <event:RunwayElementExtension gml:id="DN_REL_04">
+                            <event:theEvent xlink:href="urn:uuid:effc819c-0db4-45b3-8598-31fa00771ba5"/>
+                        </event:RunwayElementExtension>
+                    </aixm:extension>
+                </aixm:RunwayElementTimeSlice>
+            </aixm:timeSlice>
+        </aixm:RunwayElement>
     </message:hasMember>
 </message:AIXMBasicMessage>
