@@ -1,0 +1,1588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Wolfgang Scheucher, SOLITEC Software Solutions GmbH -->
+<!-- Copyright (c) 2018, EUROCONTROL & FAA
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1/message" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:aixm="http://www.aixm.aero/schema/5.1" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.aixm.aero/schema/5.1/message http://www.aixm.aero/schema/5.1/message/AIXM_BasicMessage.xsd" 
+	gml:id="M0000001">
+	<!-- OPEN QUESTION: : How to use gml:boundedBy vs. MD_DataIdentification.extend vs. aixm:ObstacleArea 
+	Is it redundant information or may it define a different geographical area? 
+	gml:boundedBy could be used for the whole geographical extent of the data set whereas MD_DataIdentification provides the individual AoC.
+	see Area 2a, etc file? -->
+	<gml:boundedBy>
+		<gml:Envelope srsName="urn:ogc:def:crs:EPSG::4326">
+			<gml:lowerCorner>52.0886111111111 -17.0</gml:lowerCorner>
+			<gml:upperCorner>57.690815969999996 -28.4283333333333</gml:upperCorner>
+		</gml:Envelope>
+	</gml:boundedBy>
+	<aixm:messageMetadata>
+		<gmd:MD_Metadata id="MD_DONLON_OBS_DS_AREA1">
+			<!--  gmd:contact (for Metadata) is required by ISO 19115 (2003). 
+				It should be marked as "inapplicable" (<gmd:contact gco:nilReason="inapplicable"/>) or be used to give the organisation name and email address of the party who added the metadata.  -->
+			<gmd:contact>
+				<gmd:CI_ResponsibleParty>
+					<gmd:organisationName>
+						<gco:CharacterString>EUROCONTROL</gco:CharacterString>
+					</gmd:organisationName>
+					<gmd:contactInfo>
+						<gmd:CI_Contact>
+							<gmd:address>
+								<gmd:CI_Address>
+									<gmd:electronicMailAddress>
+										<gco:CharacterString>info@organisation.org</gco:CharacterString>
+									</gmd:electronicMailAddress>
+								</gmd:CI_Address>
+							</gmd:address>
+						</gmd:CI_Contact>
+					</gmd:contactInfo>
+					<gmd:role>
+						<gmd:CI_RoleCode codeList="https://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+					</gmd:role>
+				</gmd:CI_ResponsibleParty>
+			</gmd:contact>
+			<!--  gmd:dateStamp (for Metdata) is required by ISO 19115 (2003).
+			It should be marked as "inapplicable"  (<gmd:dateStamp gco:nilReason="inapplicable"/>) or used to record a date. -->
+			<gmd:dateStamp>
+				<gco:DateTime>2019-09-12T00:00:00Z</gco:DateTime>
+			</gmd:dateStamp>
+			<gmd:identificationInfo>
+				<gmd:MD_DataIdentification>
+					<gmd:citation>
+						<gmd:CI_Citation>
+							<!-- gmd:title is required by ISO 19115 (2003). This should be used to provide the name of the dataset (including on a hight level what it contains).-->
+							<gmd:title>
+								<gco:CharacterString>AIXM 5.1 Obstacle data set sample for DONLON Area 1; Full initial data set (Eff Date: 2019-12-05)</gco:CharacterString>
+							</gmd:title>
+							<!-- gmd:date;
+								Publication date required by PANS-AIM 
+								5.3.2 "the date and time when the data set was provided" and 
+								4.2 "the date and time the action was performed". -->
+							<!-- OPEN QUESTION: PANS-AIM in Table6-2 also list as mandatory attribute in "Date and time stamp" (creation/modification date and time of data set)
+								It seems that this could be another date than the publication date, i.e. the creation or revision date (i.e. the "Cut-off" date)? 
+								Shall it be coded in addition?
+								I think that the current AIXM mapping to FeatureLifetime is wrong! -->
+							<gmd:date>
+								<gmd:CI_Date>
+									<gmd:date>
+										<gco:DateTime>2019-09-12T00:00:00Z</gco:DateTime>
+									</gmd:date>
+									<gmd:dateType>
+										<gmd:CI_DateTypeCode codeList="https://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+									</gmd:dateType>
+								</gmd:CI_Date>
+							</gmd:date>
+							<!-- Creation or Revision date required by PANS-AIM in Table6-2 "Date and time stamp".-->
+							<gmd:date>
+								<gmd:CI_Date>
+									<gmd:date>
+										<gco:DateTime>2019-08-29T00:00:00Z</gco:DateTime>
+									</gmd:date>
+									<gmd:dateType>
+										<gmd:CI_DateTypeCode codeList="https://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+									</gmd:dateType>
+								</gmd:CI_Date>
+							</gmd:date>
+						</gmd:CI_Citation>
+					</gmd:citation>
+					<!--gmd:abstract is required by ISO 19115 (2003). Should be used to give a detailed description of what data (i.e. based on what requirements) is provided with the data set:
+						(e.g. Acc. ICAO Provison Annex 15, 16th Ed. or, if applicapbe, deviations e.g. more stringent obstacle collection requirememts).  -->
+					<gmd:abstract>
+						<gco:CharacterString>DONLON Area 1 Obstacle data set sample (Full initial data set).
+						Data collection and publication according ICAO Annex 15 (16th Edition July 2018) requirements.
+						</gco:CharacterString>
+					</gmd:abstract>
+					<!-- gmd:pointOfContact required by PANS-AIM 
+						5.3.2 "the names of the organization or entities providing the data set"; 
+						4.2 "the names of the organizations or entities performing any action.of transmitting..the data"; 
+						Table A6-2 Obstacle attributes "Data source idenitifier" -->
+					<gmd:pointOfContact>
+						<gmd:CI_ResponsibleParty>
+							<gmd:organisationName>
+								<gco:CharacterString>Eurocontrol</gco:CharacterString>
+							</gmd:organisationName>
+							<gmd:contactInfo>
+								<gmd:CI_Contact>
+									<gmd:phone>
+										<gmd:CI_Telephone>
+											<gmd:voice>
+												<gco:CharacterString>+32 02...</gco:CharacterString>
+											</gmd:voice>
+										</gmd:CI_Telephone>
+									</gmd:phone>
+									<gmd:address>
+										<gmd:CI_Address>
+											<gmd:electronicMailAddress>
+												<gco:CharacterString>info@organisation.org</gco:CharacterString>
+											</gmd:electronicMailAddress>
+										</gmd:CI_Address>
+									</gmd:address>
+									<gmd:onlineResource>
+										<gmd:CI_OnlineResource>
+											<gmd:linkage>
+												<gmd:URL>https://github.com/aixm/donlon</gmd:URL>
+											</gmd:linkage>
+											<gmd:name>
+												<gco:CharacterString>aixm donlon</gco:CharacterString>
+											</gmd:name>
+										</gmd:CI_OnlineResource>
+									</gmd:onlineResource>
+								</gmd:CI_Contact>
+							</gmd:contactInfo>
+							<!-- gmd:role is required by ISO 19115 (2003) -->
+							<gmd:role>
+								<gmd:CI_RoleCode codeList="https://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+							</gmd:role>
+						</gmd:CI_ResponsibleParty>
+					</gmd:pointOfContact>
+					<!-- gmd:resourceConstraints required by PANS-AIM 5.3.2 "any limitations with regard to the use of the data set." 
+					In addtion also these elments may be coded:
+					gmd:accessConstraints (e.g. "license") to assure the protection of privacy or intellectual property, and any special restrictions or limitations on obtaining the resource or metadata
+					and gmd:classification (e.g. "restricted")-->
+					<gmd:resourceConstraints>
+						<gmd:MD_Constraints>
+							<gmd:useLimitation>
+								<gco:CharacterString>To be used for demonstration purposes only! Any operational usage is prohibited!</gco:CharacterString>
+							</gmd:useLimitation>
+						</gmd:MD_Constraints>
+					</gmd:resourceConstraints>
+					<!-- gmd:language is required by ISO 19115 (2003). -->
+					<gmd:language>
+						<gco:CharacterString>eng</gco:CharacterString>
+					</gmd:language>
+					<!-- gmd:topicCategory is required by ISO 19115 (2003). As default use the codelist value "transportation".-->
+					<gmd:topicCategory>
+						<gmd:MD_TopicCategoryCode>transportation</gmd:MD_TopicCategoryCode>
+					</gmd:topicCategory>
+					<!-- required by PANS-AIM Table A6-2: "Area of coverage" 
+					One of the three options must be provided:
+					gmd:EX_GeographicBoundingBox or;
+					gmd:EX_BoundingPolygon or;
+					gmd:EX_GeographicDescription -->
+					<gmd:extent>
+						<gmd:EX_Extent>
+							<gmd:description>
+								<gco:CharacterString>DONLON State Territory</gco:CharacterString>
+							</gmd:description>
+							<gmd:geographicElement>
+								<gmd:EX_GeographicBoundingBox>
+									<gmd:westBoundLongitude>
+										<gco:Decimal>-28.4283333333333</gco:Decimal>
+									</gmd:westBoundLongitude>
+									<gmd:eastBoundLongitude>
+										<gco:Decimal>-17.0</gco:Decimal>
+									</gmd:eastBoundLongitude>
+									<gmd:southBoundLatitude>
+										<gco:Decimal>52.0886111111111</gco:Decimal>
+									</gmd:southBoundLatitude>
+									<gmd:northBoundLatitude>
+										<gco:Decimal>57.690815969999996</gco:Decimal>
+									</gmd:northBoundLatitude>
+								</gmd:EX_GeographicBoundingBox>
+							</gmd:geographicElement>
+						</gmd:EX_Extent>
+					</gmd:extent>
+					<!-- required by PANS-AIM 5.3.2 "validity of the data set" 
+					When the end of validity is unknown use indeterminatePosition="unknown". -->
+					<!-- OPEN QUESTION: Assumption is that this is the same as the publication date? -->
+					<gmd:extent>
+						<gmd:EX_Extent>
+							<gmd:description>
+								<gco:CharacterString>Validity of data set</gco:CharacterString>
+							</gmd:description>
+							<gmd:temporalElement>
+								<gmd:EX_TemporalExtent>
+									<gmd:extent>
+										<gml:TimePeriod gml:id="period1">
+											<gml:beginPosition>2019-09-12T00:00:00Z</gml:beginPosition>
+											<gml:endPosition indeterminatePosition="unknown"></gml:endPosition>
+										</gml:TimePeriod>
+									</gmd:extent>
+								</gmd:EX_TemporalExtent>
+							</gmd:temporalElement>
+						</gmd:EX_Extent>
+					</gmd:extent>
+				</gmd:MD_DataIdentification>
+			</gmd:identificationInfo>
+		</gmd:MD_Metadata>
+	</aixm:messageMetadata>
+	<message:hasMember>
+		<!-- OPEN QUESTION: Is it an issue to have the referenced features (e.g. the ORG) with an effective date previous to the effective date of the obstacle data set? -->
+		<aixm:OrganisationAuthority gml:id="uuid.6384a4e0-8497-4f83-8eaa-d73ef549d90e">
+			<gml:identifier codeSpace="urn:uuid:">6384a4e0-8497-4f83-8eaa-d73ef549d90e</gml:identifier>
+			<aixm:timeSlice>
+				<aixm:OrganisationAuthorityTimeSlice gml:id="DONLONSTATE">
+					<!-- OPEN QUESTION: What should be the timePosition (publication date?) -->
+					<gml:validTime>
+						<gml:TimeInstant gml:id="vtDONLONSTATE">
+							<gml:timePosition>2009-01-01T00:00:00Z</gml:timePosition>
+						</gml:TimeInstant>
+					</gml:validTime>
+					<aixm:interpretation>SNAPSHOT</aixm:interpretation>
+					<aixm:featureLifetime>
+						<gml:TimePeriod gml:id="ltDONLONSTATE">
+							<gml:beginPosition>2019-09-12T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</aixm:featureLifetime>
+					<aixm:name>REPUBLIC OF DONLON</aixm:name>
+					<aixm:type>STATE</aixm:type>
+				</aixm:OrganisationAuthorityTimeSlice>
+			</aixm:timeSlice>
+		</aixm:OrganisationAuthority>
+	</message:hasMember>
+	<message:hasMember>
+		<!-- SINGLE POINT OBSTACLE. 
+			This sample obstacle contains all the AIXM properties for Vertical Stucture (with annotations). 
+			Note: Not all of them are required by PANS-AIM for an Obstacle data set. 
+			The other obstacle examples in this file contain only those properties considered to be required by PANS-AIM  (incl. coding of nil value if applicable). -->
+		<!-- OPEN QUESTION: Which attributes should be in the sampel file (incl. nil coding): All that are used for coding, only those traceable or mandatory to PANS-AIM or only those needed? -->
+		<aixm:VerticalStructure gml:id="uuid.5f68d835-828c-4ccd-91b7-791058d9dd4d">
+			<gml:identifier codeSpace="urn:uuid:">5f68d835-828c-4ccd-91b7-791058d9dd4d</gml:identifier>
+			<aixm:timeSlice>
+				<aixm:VerticalStructureTimeSlice gml:id="VSRUCTTS1121">
+					<gml:validTime>
+						<gml:TimePeriod gml:id="vt120131">
+							<gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</gml:validTime>
+					<aixm:interpretation>BASELINE</aixm:interpretation>
+					<aixm:sequenceNumber>2</aixm:sequenceNumber>
+					<aixm:correctionNumber>0</aixm:correctionNumber>
+					<aixm:featureLifetime>
+						<gml:TimePeriod gml:id="lt120131">
+							<gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</aixm:featureLifetime>
+					<!-- name not required by PANS-AIM,
+						but may be used to code PANS-AIM Table A-6.2 "Obstcale Identifier"; 
+						ENR 5.4/AD 2.10 "obstacle identification or designation"-->
+					<aixm:name xsi:nil="true" nilReason="inapplicable"/>
+					<!-- type required by PANS-AIM Table A6-2 and ENR 5.4, AD 2/3.10 -->
+					<aixm:type>ANTENNA</aixm:type>
+					<!-- lighted required by PANS-AIM Table A6-2 -->
+					<aixm:lighted>YES</aixm:lighted>
+					<!-- marking required by PANS-AIM Table A6-2 and ENR 5.4, AD 2/3.10.
+						NOTE: AIXM 5.1(.1) provides only the property MarkingICAOStandard but no 'general' marking property . 
+						It case the marking is not acc. to ICAO code "NO" if unknown provide nilReason "unknown" and then provide the other relevant marking attributes such as markingFirstColour. -->
+					<aixm:markingICAOStandard>NO</aixm:markingICAOStandard>
+					<!-- group not required by PANS-AIM -->
+					<aixm:group>NO</aixm:group>
+					<!-- horizontalExtent required by PANS-AIM Table A6-2 
+						NOTE: Only applicable for point and line obstacles (e.g. the extend of the guy wires of the mast)
+						NOTE: It may also be used for a polygon obstacle georgaphical defined by its centre point, (e.g. a building) to provide a simplified polygon extend.
+						NOTE: Either radius or lenght and width shall be used to describe the horizontal extend. -->
+					<aixm:length xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:width xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:radius uom="M">30</aixm:radius>
+					<!-- lightingICAOStandard and synchronisedLighting is not expclicitly required by PANS-AIM -->
+					<aixm:lightingICAOStandard xsi:nil="true" nilReason="unknown"/>
+					<aixm:synchronisedLighting xsi:nil="true" nilReason="unknown"/>
+					<!-- marker not required by PANS-AIM -->
+					<aixm:marker xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="V-af4ee6d6">
+							<!-- verticalExtent optional in PANS-AIM Table A-6-2("height") and ENR 5.4, AD2/3.10 -->
+							<aixm:verticalExtent uom="M">120</aixm:verticalExtent>
+							<aixm:verticalExtentAccuracy uom="M">30.0</aixm:verticalExtentAccuracy>
+							<!-- type for the part(s) is not needed for a single part obstacle, because coded on VerticalStructure level, but may be used for multipart obstacles -->
+							<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+							<!-- constructionStatus optional in PANS-AIM Table A6-2 ("operations") -->
+							<!-- OPEN QUESTION: Is this really operations as defined in the TOD manual or rather a property missing in PANS-AIM for status? -->
+							<!-- OPEN QUESTION: How is Planned and In Construction used especially in regard to the valid time?  -->
+							<aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+							<!-- PANS-AIM table A6-2 only requires information if an obstcle is marked.
+								Marking pattern and colour is not explicitly required by PANS-AIM. -->
+								<!-- OPEN QUESTION:As there is no 'general' marking property provided by AIXM the only possibility is to use one of the following elements.
+								But in case none of them is known and it is just known that the obstcle is marked but not how. recom. code MarkingPattern with OTHER:UNKNOWN-->
+							<aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
+							<!-- mobile optional in PANS-AIM Table A6-2("operations") -->
+							<aixm:mobile>NO</aixm:mobile>
+							<!-- frangible not required by PANS-AIM -->
+							<aixm:frangible>NO</aixm:frangible>
+							<!-- visibleMaterial not required by PANS-AIM but contained in Appendix 1 "Aeronautical Data Catalogue" ("Material")-->
+							<aixm:visibleMaterial xsi:nil="true" nilReason="unknown"/>
+							<!-- designator required by PANS-AIM Table A6-2 "Obstacle identifier" and ENR 5.4, AD 2/3.10 "obstacle identification or designation" -->
+							<aixm:designator>OBS-00001</aixm:designator>
+							<!-- horizontalProjection required by PANS-AIM Table A6-2 "horizontal position" and ENR 5.4,AD 2/3.10 "obstacle position" -->
+							<aixm:horizontalProjection_location>
+								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="p1121">
+									<gml:pos>52.36171388888889 -28.03756666666666</gml:pos>
+									<!-- horizontalAccuracy required by PANS-AIM Table A6-2 -->
+									<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
+									<!-- elevation required by PANS-AIM Table A6-2 "Elevation" and ENR 5.4,AD 2/3.10 -->
+									<aixm:elevation uom="M">150</aixm:elevation>
+									<!-- geoidUndulation not required by PANS-AIM -->
+									<aixm:geoidUndulation xsi:nil="true" nilReason="inapplicable"/>
+									<!-- verticalDatum required by PANS-AIM Table A6-2 "Vertical reference system" -->
+									<aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+									<!-- verticalAccuracy required by PANS-AIM Table A6-2 -->
+									<aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
+								</aixm:ElevatedPoint>
+							</aixm:horizontalProjection_location>
+							<aixm:lighting>
+								<aixm:LightElement gml:id="le0001">
+									<!-- PANS-AIM table A-6-2 only requires information if an obstcale is lighted. 
+										However, colour and type are properties listed in the PANS-AIM Appendix 1 "Aeronautical Data Catalogue" and ENR 5.4, AD2/3.10. 
+										intensityLevel, intensity and availability is not explicitly required by PANS-AIM 
+										(Note that there is also a lightingAvailability element for the VerticalStructure.)  -->
+									<aixm:colour>RED</aixm:colour>
+									<aixm:intensityLevel xsi:nil="true" nilReason="unknown"/>
+									<aixm:intensity xsi:nil="true" nilReason="unknown"/>
+									<aixm:type xsi:nil="true" nilReason="unknown"/>
+									<aixm:availability xsi:nil="true" nilReason="unknown"/>
+								</aixm:LightElement>
+							</aixm:lighting>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+					<!-- Relationships to other "hosted/supported" AIXM features not required by PANS-AIM. -->
+					<aixm:hostedPassengerService xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:supportedGroundLight xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:hostedNavaidEquipment xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:hostedSpecialNavStation xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:hostedUnit xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:hostedOrganisation xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:supportedService xsi:nil="true" nilReason="inapplicable"/>
+					<!-- Operator/Owner not required by PANS-AIM but contained in Appendix 1 "Aeronautical Data Catalogue".
+					In AIXM 5.1(1) it may only be coded as Note for an Obsatcle data set.
+					Note: For data provided by the data orginator this information will be rather coded as metadata.-->
+					<aixm:annotation>
+						<aixm:Note gml:id="n0001">
+							<aixm:purpose>REMARK</aixm:purpose>
+							<aixm:translatedNote>
+								<aixm:LinguisticNote gml:id="ln0001">
+									<aixm:note>Obstacle Owner: DONLON TELECOM, Donlon Street 100, 2020 DOLNLON, Phone: +00123456789, email: info@donlontele.com</aixm:note>
+								</aixm:LinguisticNote>
+							</aixm:translatedNote>
+						</aixm:Note>
+					</aixm:annotation>
+					<!-- Horizontal Confidence Level required by PANS-AIM Table A6-2". 
+					OPEN QUESTION: 1) This is based on the AIXM mapping but shouldn't that be rather Metadata? 
+					2) If coded as Note it actually has to be coded on each part level as it related to the horizontalAccuracy? -->
+					<aixm:annotation>
+						<aixm:Note gml:id="n0002">
+							<aixm:purpose>REMARK</aixm:purpose>
+							<aixm:translatedNote>
+								<aixm:LinguisticNote gml:id="ln0002">
+									<aixm:note>Horizontal Confidence Level is 90%.</aixm:note>
+								</aixm:LinguisticNote>
+							</aixm:translatedNote>
+						</aixm:Note>
+					</aixm:annotation>
+					<!--  Vertical Confidence Level required by PANS-AIM". 
+					OPEN QUESTION: 1) This is based on the AIXM mapping but shouldn't that be rather Metadata? 
+					2) If coded as Note it actually has to be coded on each part level (twice!) as it related to the verticalAccuracy and verticalExtentAccuracy? -->
+					<aixm:annotation>
+						<aixm:Note gml:id="n0003">
+							<aixm:purpose>REMARK</aixm:purpose>
+							<aixm:translatedNote>
+								<aixm:LinguisticNote gml:id="ln0003">
+									<aixm:note>Vertical Confidence Level is 90%.</aixm:note>
+								</aixm:LinguisticNote>
+							</aixm:translatedNote>
+						</aixm:Note>
+					</aixm:annotation>
+					<!-- Horizontal Resolution required by PANS-AIM".
+					OPEN QUESTION: 1. This is based on the AIXM mapping but shouldn't that be rather Metadata? 
+					2) If coded as Note it actually has to be coded on each part level as it related to the horizontalAccuracy? -->
+					<aixm:annotation>
+						<aixm:Note gml:id="n0004">
+							<aixm:purpose>REMARK</aixm:purpose>
+							<aixm:translatedNote>
+								<aixm:LinguisticNote gml:id="ln0004">
+									<aixm:note>Horizontal resolution is 1 sec.</aixm:note>
+								</aixm:LinguisticNote>
+							</aixm:translatedNote>
+						</aixm:Note>
+					</aixm:annotation>
+					<!--  Vertical Resolution required by PANS-AIM".
+					OPEN QUESTION: 1 This is based on the AIXM mapping but shouldn't that be rather Metadata?
+					2.If coded as Note it actually has to be coded on each part level (twice!) as it related to the verticalAccuracy and verticalExtentAccuracy? -->
+					<aixm:annotation>
+						<aixm:Note gml:id="n0005">
+							<aixm:purpose>REMARK</aixm:purpose>
+							<aixm:translatedNote>
+								<aixm:LinguisticNote gml:id="ln0005">
+									<aixm:note>Vertical resolution is 1 m.</aixm:note>
+								</aixm:LinguisticNote>
+							</aixm:translatedNote>
+						</aixm:Note>
+					</aixm:annotation>
+					<!-- lightingAvailability not explicitly required by PANS-AIM" 
+						(NOTE: there is also a availability property for the LightElement of the VerticalStructurePart.) -->
+					<aixm:lightingAvailability xsi:nil="true" nilReason="inapplicable"/>
+					</aixm:VerticalStructureTimeSlice>
+			</aixm:timeSlice>
+		</aixm:VerticalStructure>
+	</message:hasMember>
+	<message:hasMember>
+		<!-- GROUPS OF OBSTACLES WITH SIMILAR HEIGHT LOCATED IN CLOSE PROXIMITY TO ONE ANOTHER (Wind turbines).
+			Case when each obstacle collected is published individually.
+			To indicate that the individual listed obstacles are part of a group, the obstacle type may be published commonly for the obstacle group. -->
+		<aixm:VerticalStructure gml:id="uuid.6c7fac45-c24f-4e36-b196-687458d99070 ">
+			<gml:identifier codeSpace="urn:uuid:">6c7fac45-c24f-4e36-b196-687458d99070</gml:identifier>
+			<aixm:timeSlice>
+				<aixm:VerticalStructureTimeSlice gml:id="vsts0003">
+					<gml:validTime>
+						<gml:TimePeriod gml:id="tp0003-1">
+							<gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</gml:validTime>
+					<aixm:interpretation>BASELINE</aixm:interpretation>
+					<aixm:sequenceNumber>1</aixm:sequenceNumber>
+					<aixm:correctionNumber>0</aixm:correctionNumber>
+					<aixm:featureLifetime>
+						<gml:TimePeriod gml:id="tp0003-2">
+							<gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</aixm:featureLifetime>
+					<aixm:name>WINDPARK BAUMGARTEN</aixm:name>
+					<!-- OPEN QUESTION: When to use WINDILL when WINDMILL_FARMS? -->
+					<aixm:type>WINDMILL</aixm:type>
+					<aixm:lighted>NO</aixm:lighted>
+					<!-- OPEN QUESTION: How to code marked : NO? -->
+					<aixm:markingICAOStandard>NO</aixm:markingICAOStandard>
+					<!-- OPEN QUESTION: How to use group? What value would it have? -->
+					<aixm:group>YES</aixm:group>
+					<aixm:length xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:width xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:radius xsi:nil="true" nilReason="inapplicable"/>
+					<!-- Windturbine 1 of the Windpark-->
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="vsp0003-1">
+							<aixm:verticalExtent uom="M">150</aixm:verticalExtent>
+							<aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
+							<aixm:designator>OBS-00003-1</aixm:designator>
+							<aixm:horizontalProjection_location>
+								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0003-1">
+									<gml:pos>47.74500000 -27.52583333</gml:pos>
+									<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
+									<aixm:elevation uom="M">264</aixm:elevation>
+									<aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+									<aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
+								</aixm:ElevatedPoint>
+							</aixm:horizontalProjection_location>
+							<aixm:lighting>
+								<aixm:LightElement gml:id="le0003-1">
+									<aixm:colour xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensityLevel xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensity xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+								</aixm:LightElement>
+							</aixm:lighting>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+					<!-- Windturbine 2 of the Windpark-->
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="vsp0003-2">
+							<aixm:verticalExtent uom="M">150</aixm:verticalExtent>
+							<aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
+							<aixm:designator>OBS-00003-2</aixm:designator>
+							<aixm:horizontalProjection_location>
+								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0003-2">
+									<gml:pos>47.74222222 -27.52388889</gml:pos>
+									<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
+									<aixm:elevation uom="M">253</aixm:elevation>
+									<aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+									<aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
+								</aixm:ElevatedPoint>
+							</aixm:horizontalProjection_location>
+							<aixm:lighting>
+								<aixm:LightElement gml:id="le0003-2">
+									<aixm:colour xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensityLevel xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensity xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+								</aixm:LightElement>
+							</aixm:lighting>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+					<!-- Windturbine 3 of the Windpark-->
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="vsp0003-3">
+							<aixm:verticalExtent uom="M">150</aixm:verticalExtent>
+							<aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
+							<aixm:designator>OBS-00003-3</aixm:designator>
+							<aixm:horizontalProjection_location>
+								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0003-3">
+									<gml:pos>47.74194444 -27.528888896</gml:pos>
+									<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
+									<aixm:elevation uom="M">255</aixm:elevation>
+									<aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+									<aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
+								</aixm:ElevatedPoint>
+							</aixm:horizontalProjection_location>
+							<aixm:lighting>
+								<aixm:LightElement gml:id="le0003-3">
+									<aixm:colour xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensityLevel xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensity xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+								</aixm:LightElement>
+							</aixm:lighting>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+					<!-- Windturbine 4 of the Windpark-->
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="vsp0003-4">
+							<aixm:verticalExtent uom="M">150</aixm:verticalExtent>
+							<aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
+							<aixm:designator>OBS-00003-4</aixm:designator>
+							<aixm:horizontalProjection_location>
+								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0003-4">
+									<gml:pos>47.73888889 -27.52750000</gml:pos>
+									<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
+									<aixm:elevation uom="M">239</aixm:elevation>
+									<aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+									<aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
+								</aixm:ElevatedPoint>
+							</aixm:horizontalProjection_location>
+							<aixm:lighting>
+								<aixm:LightElement gml:id="le0003-4">
+									<aixm:colour xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensityLevel xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensity xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+								</aixm:LightElement>
+							</aixm:lighting>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+					<!-- Windturbine 5 of the Windpark-->
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="vsp0003-5">
+							<aixm:verticalExtent uom="M">150</aixm:verticalExtent>
+							<aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
+							<aixm:designator>OBS-00003-5</aixm:designator>
+							<aixm:horizontalProjection_location>
+								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0003-5">
+									<gml:pos>47.73888889 -27.43361111</gml:pos>
+									<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
+									<aixm:elevation uom="M">269</aixm:elevation>
+									<aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+									<aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
+								</aixm:ElevatedPoint>
+							</aixm:horizontalProjection_location>
+							<aixm:lighting>
+								<aixm:LightElement gml:id="le0003-5">
+									<aixm:colour xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensityLevel xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensity xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+								</aixm:LightElement>
+							</aixm:lighting>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+				</aixm:VerticalStructureTimeSlice>
+			</aixm:timeSlice>
+		</aixm:VerticalStructure>
+	</message:hasMember>
+	<message:hasMember>
+		<!-- GROUPS OF OBSTACLES WITH SIMILAR HEIGHT LOCATED IN CLOSE PROXIMITY TO ONE ANOTHER (Windfarm area).
+			Case where a large number of obstacles with similar elevation are grouped with an area (polygon) 
+			encompassing the grouped obstacles published instead of publishing each individual object.	-->
+		<aixm:VerticalStructure gml:id="uuid.47db48e9-d46a-4100-a266-25a3968b6a98">
+			<gml:identifier codeSpace="urn:uuid:">47db48e9-d46a-4100-a266-25a3968b6a98</gml:identifier>
+			<aixm:timeSlice>
+				<aixm:VerticalStructureTimeSlice gml:id="vsts0002">
+					<gml:validTime>
+						<gml:TimePeriod gml:id="tp0002-1">
+							<gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</gml:validTime>
+					<aixm:interpretation>BASELINE</aixm:interpretation>
+					<aixm:sequenceNumber>1</aixm:sequenceNumber>
+					<aixm:correctionNumber>0</aixm:correctionNumber>
+					<aixm:featureLifetime>
+						<gml:TimePeriod gml:id="tp0002-2">
+							<gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</aixm:featureLifetime>
+					<aixm:name>RODSAND II</aixm:name>
+					<!-- OPEN QUESTION: Acc. to EUROCONTROL Guidelines for harmonised AIP publication and data set provision 
+						type would have area at the end and the no of obstacles! 
+						Area could be derived from ElevatedSurface. Number can only be coded as a Note (to group ? see below.) -->
+					<aixm:type>WINDMILL_FARMS</aixm:type>
+					<aixm:lighted>YES</aixm:lighted>
+					<aixm:markingICAOStandard>NO</aixm:markingICAOStandard>
+					<!-- OPEN QUESTION: How to use group? Is it needed here - for charting? -->
+					<aixm:group>YES</aixm:group>
+					<aixm:length xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:width xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:radius xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:lightingICAOStandard xsi:nil="true" nilReason="unknown"/>
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="vsp0002-1">
+							<aixm:verticalExtent uom="M">115</aixm:verticalExtent>
+							<aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
+							<aixm:markingFirstColour>GREEN</aixm:markingFirstColour>
+							<aixm:designator>OBS-00002</aixm:designator>
+							<aixm:horizontalProjection_surfaceExtent>
+								<aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0002-1">
+									<gml:patches>
+										<gml:PolygonPatch>
+											<gml:exterior>
+												<gml:Ring>
+													<gml:curveMember>
+														<gml:Curve gml:id="c1234">
+															<gml:segments>
+																<gml:GeodesicString>
+																	<gml:posList>54.58333333 -24.48555556 
+																		54.56222222 -24.61694444 
+																		54.52638889 -24.61694444 
+																		54.57111111 -24.45777778 
+																		54.58333333 -24.48555556</gml:posList>
+																</gml:GeodesicString>
+															</gml:segments>
+														</gml:Curve>
+													</gml:curveMember>
+												</gml:Ring>
+											</gml:exterior>
+										</gml:PolygonPatch>
+									</gml:patches>
+									<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
+									<aixm:elevation uom="M">115</aixm:elevation>
+									<aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+									<aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
+								</aixm:ElevatedSurface>
+							</aixm:horizontalProjection_surfaceExtent>
+							<aixm:lighting>
+								<aixm:LightElement gml:id="le0002-1">
+									<aixm:colour>RED</aixm:colour>
+									<aixm:intensityLevel>LIM</aixm:intensityLevel>
+									<aixm:type>OTHER:FLASHING</aixm:type>
+								</aixm:LightElement>
+							</aixm:lighting>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+					<aixm:annotation>
+						<aixm:Note gml:id="n12-12">
+							<aixm:propertyName>group</aixm:propertyName>
+							<aixm:translatedNote>
+								<aixm:LinguisticNote gml:id="ln12-12">
+									<aixm:note lang="eng">8 Wind Turbines</aixm:note>
+								</aixm:LinguisticNote>
+							</aixm:translatedNote>
+						</aixm:Note>
+					</aixm:annotation>
+					<aixm:annotation>
+						<aixm:Note gml:id="n12-13">
+							<aixm:propertyName>lighted</aixm:propertyName>
+							<aixm:translatedNote>
+								<aixm:LinguisticNote gml:id="ln12-13">
+									<aixm:note lang="eng">day and night</aixm:note>
+								</aixm:LinguisticNote>
+							</aixm:translatedNote>
+						</aixm:Note>
+					</aixm:annotation>
+				</aixm:VerticalStructureTimeSlice>
+			</aixm:timeSlice>
+		</aixm:VerticalStructure>
+	</message:hasMember>
+	<message:hasMember>
+		<!-- LINE OBSTACLE (Cableway) Partially in construction.
+			OPTION A: 1x VerticalStructure with several VerticalStructurePart.-->
+		<aixm:VerticalStructure gml:id="uuid.87a585b3-0597-4f5c-974f-cddfc604dc93">
+			<gml:identifier codeSpace="urn:uuid:">87a585b3-0597-4f5c-974f-cddfc604dc93</gml:identifier>
+			<aixm:timeSlice>
+				<aixm:VerticalStructureTimeSlice gml:id="vsts0004">
+					<gml:validTime>
+						<gml:TimePeriod gml:id="tp0004-1">
+							<gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</gml:validTime>
+					<aixm:interpretation>BASELINE</aixm:interpretation>
+					<aixm:sequenceNumber>1</aixm:sequenceNumber>
+					<aixm:correctionNumber>0</aixm:correctionNumber>
+					<aixm:featureLifetime>
+						<gml:TimePeriod gml:id="tp0004-2">
+							<gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</aixm:featureLifetime>
+					<aixm:name>LANGTALERECKHUETTE - HOCHWILDEHAUS</aixm:name>
+					<aixm:type>CABLE_CAR</aixm:type>
+					<aixm:lighted>NO</aixm:lighted>
+					<aixm:markingICAOStandard>NO</aixm:markingICAOStandard>
+					<!-- How to use group here? What would be the value add? -->
+					<aixm:group>YES</aixm:group>
+					<aixm:length xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:width xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:radius xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:lightingICAOStandard xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:synchronisedLighting xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:marker xsi:nil="true" nilReason="inapplicable"/>
+					<!-- PART1: LANGTALERECKHUETTE (Ground Station) of Cable Way -->
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="vsp0004-1">
+							<aixm:verticalExtent xsi:nil="true" nilReason="unknown"/>
+							<aixm:verticalExtentAccuracy xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:type>BUILDING</aixm:type>
+							<aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+							<aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:mobile>NO</aixm:mobile>
+							<aixm:frangible xsi:nil="true" nilReason="unknown"/>
+							<aixm:visibleMaterial xsi:nil="true" nilReason="unknown"/>
+							<aixm:designator>OBS-00004-1</aixm:designator>
+							<aixm:horizontalProjection_location>
+								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0004-1">
+									<gml:pos>46.82722222 -27.99166667</gml:pos>
+									<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
+									<aixm:elevation uom="M">2438</aixm:elevation>
+									<aixm:geoidUndulation xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+									<aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
+								</aixm:ElevatedPoint>
+							</aixm:horizontalProjection_location>
+							<aixm:lighting>
+								<aixm:LightElement gml:id="le0004-1">
+									<aixm:colour xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensityLevel xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensity xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:availability xsi:nil="true" nilReason="inapplicable"/>
+								</aixm:LightElement>
+							</aixm:lighting>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+					<!-- PART2: Line (rope) between Ground Station and Top Station -->
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="vsp0004-2">
+							<aixm:verticalExtent uom="M">280</aixm:verticalExtent>
+							<aixm:verticalExtentAccuracy uom="M">30.0</aixm:verticalExtentAccuracy>
+							<aixm:type>CATENARY</aixm:type>
+							<aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+							<aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:mobile>NO</aixm:mobile>
+							<aixm:frangible xsi:nil="true" nilReason="unknown"/>
+							<aixm:visibleMaterial xsi:nil="true" nilReason="unknown"/>
+							<aixm:designator>OBS-00004-2</aixm:designator>
+							<aixm:horizontalProjection_linearExtent>
+								<aixm:ElevatedCurve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="crv1242">
+									<gml:segments>
+										<gml:GeodesicString>
+											<gml:posList>46.82722222 -27.99166667 46.80555556 -27.98638889</gml:posList>
+										</gml:GeodesicString>
+									</gml:segments>
+									<aixm:horizontalAccuracy xsi:nil="true" nilReason="inapplicable"/>
+									<!-- elevation is not applicable (or unknown?) as for the catenary only the max hight above ground is  known -->
+									<aixm:elevation xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:geoidUndulation xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:verticalDatum xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:verticalAccuracy xsi:nil="true" nilReason="inapplicable"/>
+								</aixm:ElevatedCurve>
+							</aixm:horizontalProjection_linearExtent>
+							<aixm:lighting>
+								<aixm:LightElement gml:id="le0004-2">
+									<aixm:colour xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensityLevel xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensity xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:availability xsi:nil="true" nilReason="inapplicable"/>
+								</aixm:LightElement>
+							</aixm:lighting>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+					<!-- PART3: HOCHWILDEHAUS (Top Station) of Cable Way -->
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="vsp0004-3">
+							<aixm:verticalExtent xsi:nil="true" nilReason="unknown"/>
+							<aixm:verticalExtentAccuracy xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:type>BUILDING</aixm:type>
+							<aixm:constructionStatus>IN_CONSTRUCTION</aixm:constructionStatus>
+							<aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:mobile>NO</aixm:mobile>
+							<aixm:frangible xsi:nil="true" nilReason="unknown"/>
+							<aixm:visibleMaterial xsi:nil="true" nilReason="unknown"/>
+							<aixm:designator>OBS-00004-3</aixm:designator>
+							<aixm:horizontalProjection_location>
+								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0004-3">
+									<gml:pos>46.80555556 -27.98638889</gml:pos>
+									<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
+									<aixm:elevation uom="M">2883</aixm:elevation>
+									<aixm:geoidUndulation xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+									<aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
+								</aixm:ElevatedPoint>
+							</aixm:horizontalProjection_location>
+							<aixm:lighting>
+								<aixm:LightElement gml:id="le0004-3">
+									<aixm:colour xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensityLevel xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensity xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:availability xsi:nil="true" nilReason="inapplicable"/>
+								</aixm:LightElement>
+							</aixm:lighting>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+					<aixm:lightingAvailability xsi:nil="true" nilReason="inapplicable"/>
+				</aixm:VerticalStructureTimeSlice>
+			</aixm:timeSlice>
+		</aixm:VerticalStructure>
+	</message:hasMember>
+	<message:hasMember>
+		<!-- LINE OBSTACLE (Cableway)
+			OPTION A: 1x VerticalStructure with several VerticalStructurePart.-->
+		<aixm:VerticalStructure gml:id="uuid.9bba0abf-db41-4c78-926d-c9f35fde8efb">
+			<gml:identifier codeSpace="urn:uuid:">9bba0abf-db41-4c78-926d-c9f35fde8efb</gml:identifier>
+			<aixm:timeSlice>
+				<aixm:VerticalStructureTimeSlice gml:id="vsts0005">
+					<gml:validTime>
+						<gml:TimePeriod gml:id="tp0005-1">
+							<gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</gml:validTime>
+					<aixm:interpretation>BASELINE</aixm:interpretation>
+					<aixm:sequenceNumber>1</aixm:sequenceNumber>
+					<aixm:correctionNumber>0</aixm:correctionNumber>
+					<aixm:featureLifetime>
+						<gml:TimePeriod gml:id="tp0005-2">
+							<gml:beginPosition>2009-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</aixm:featureLifetime>
+					<aixm:name>MUTTERBERGALM - DRESDNER HUETTE - EISGRAT</aixm:name>
+					<aixm:type>CABLE_CAR</aixm:type>
+					<aixm:lighted>NO</aixm:lighted>
+					<aixm:markingICAOStandard>NO</aixm:markingICAOStandard>
+					<!-- How to use group here? What added valud has it ? -->
+					<aixm:group>YES</aixm:group>
+					<aixm:length xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:width xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:radius xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:lightingICAOStandard xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:synchronisedLighting xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:marker xsi:nil="true" nilReason="inapplicable"/>
+					<!-- PART1: MUTTERBERGALM (Ground Station) of Cable Way -->
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="vsp0005-1">
+							<aixm:verticalExtent xsi:nil="true" nilReason="unknown"/>
+							<aixm:verticalExtentAccuracy xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:type>BUILDING</aixm:type>
+							<aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+							<aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:mobile>NO</aixm:mobile>
+							<aixm:frangible xsi:nil="true" nilReason="unknown"/>
+							<aixm:visibleMaterial xsi:nil="true" nilReason="unknown"/>
+							<aixm:designator>OBS-00005-1</aixm:designator>
+							<aixm:horizontalProjection_location>
+								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0005-1">
+									<gml:pos>47.01055556 -26.15166667</gml:pos>
+									<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
+									<aixm:elevation uom="M">1750</aixm:elevation>
+									<aixm:geoidUndulation xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+									<aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
+								</aixm:ElevatedPoint>
+							</aixm:horizontalProjection_location>
+							<aixm:lighting>
+								<aixm:LightElement gml:id="le0005-1">
+									<aixm:colour xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensityLevel xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensity xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:availability xsi:nil="true" nilReason="inapplicable"/>
+								</aixm:LightElement>
+							</aixm:lighting>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+					<!-- PART2: Line inbetween MUTTERBERGALM (Ground Station) and DRESDNER HUETTE (Middle Station) -->
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="vsp0005-2">
+							<aixm:verticalExtent uom="M">95</aixm:verticalExtent>
+							<aixm:verticalExtentAccuracy uom="M">30.0</aixm:verticalExtentAccuracy>
+							<aixm:type>CATENARY</aixm:type>
+							<aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+							<aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:mobile>NO</aixm:mobile>
+							<aixm:frangible xsi:nil="true" nilReason="unknown"/>
+							<aixm:visibleMaterial xsi:nil="true" nilReason="unknown"/>
+							<aixm:designator>OBS-00005-2</aixm:designator>
+							<aixm:horizontalProjection_linearExtent>
+								<aixm:ElevatedCurve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="crv1245">
+									<gml:segments>
+										<gml:GeodesicString>
+											<gml:posList>47.01055556 -26.15166667 46.99666667 -26.14027778</gml:posList>
+										</gml:GeodesicString>
+									</gml:segments>
+									<aixm:horizontalAccuracy xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:elevation xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:geoidUndulation xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:verticalDatum xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:verticalAccuracy xsi:nil="true" nilReason="inapplicable"/>
+								</aixm:ElevatedCurve>
+							</aixm:horizontalProjection_linearExtent>
+							<aixm:lighting>
+								<aixm:LightElement gml:id="le0005-2">
+									<aixm:colour xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensityLevel xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensity xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:availability xsi:nil="true" nilReason="inapplicable"/>
+								</aixm:LightElement>
+							</aixm:lighting>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+					<!-- PART 3: DRESDNER HUETTE (Middle Station) of Cable Way -->
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="vsp0005-3">
+							<aixm:verticalExtent xsi:nil="true" nilReason="unknown"/>
+							<aixm:verticalExtentAccuracy xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:type>BUILDING</aixm:type>
+							<aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+							<aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:mobile>NO</aixm:mobile>
+							<aixm:frangible xsi:nil="true" nilReason="unknown"/>
+							<aixm:visibleMaterial xsi:nil="true" nilReason="unknown"/>
+							<aixm:designator>OBS-00005-3</aixm:designator>
+							<aixm:horizontalProjection_location>
+								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0005-3">
+									<gml:pos>46.99666667 -26.14027778</gml:pos>
+									<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
+									<aixm:elevation uom="M">2310</aixm:elevation>
+									<aixm:geoidUndulation xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+									<aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
+								</aixm:ElevatedPoint>
+							</aixm:horizontalProjection_location>
+							<aixm:lighting>
+								<aixm:LightElement gml:id="le0005-3">
+									<aixm:colour xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensityLevel xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensity xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:availability xsi:nil="true" nilReason="inapplicable"/>
+								</aixm:LightElement>
+							</aixm:lighting>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+					<!-- PART4: Line inbetween DRESDNER HUETTE (Middle Station) and EISGRAT (Top Station) -->
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="vsp0005-4">
+							<aixm:verticalExtent uom="M">95</aixm:verticalExtent>
+							<aixm:verticalExtentAccuracy uom="M">30.0</aixm:verticalExtentAccuracy>
+							<aixm:type>CATENARY</aixm:type>
+							<aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+							<aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:mobile>NO</aixm:mobile>
+							<aixm:frangible xsi:nil="true" nilReason="unknown"/>
+							<aixm:visibleMaterial xsi:nil="true" nilReason="unknown"/>
+							<aixm:designator>OBS-00005-4</aixm:designator>
+							<aixm:horizontalProjection_linearExtent>
+								<aixm:ElevatedCurve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="crv12454">
+									<gml:segments>
+										<gml:GeodesicString>
+											<gml:posList>46.99666667 -26.14027778 46.98694444 -26.11638889</gml:posList>
+										</gml:GeodesicString>
+									</gml:segments>
+									<aixm:horizontalAccuracy xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:elevation xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:geoidUndulation xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:verticalDatum xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:verticalAccuracy xsi:nil="true" nilReason="inapplicable"/>
+								</aixm:ElevatedCurve>
+							</aixm:horizontalProjection_linearExtent>
+							<aixm:lighting>
+								<aixm:LightElement gml:id="le0005-4">
+									<aixm:colour xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensityLevel xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensity xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:availability xsi:nil="true" nilReason="inapplicable"/>
+								</aixm:LightElement>
+							</aixm:lighting>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+					<!-- PART 5: EISGRAT (Top Station) of Cable Way -->
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="vsp0005-5">
+							<aixm:verticalExtent xsi:nil="true" nilReason="unknown"/>
+							<aixm:verticalExtentAccuracy xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:type>BUILDING</aixm:type>
+							<aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+							<aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:mobile>NO</aixm:mobile>
+							<aixm:frangible xsi:nil="true" nilReason="unknown"/>
+							<aixm:visibleMaterial xsi:nil="true" nilReason="unknown"/>
+							<aixm:designator>OBS-00005-5</aixm:designator>
+							<aixm:horizontalProjection_location>
+								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0005-5">
+									<gml:pos>46.98694444 -26.11638889</gml:pos>
+									<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
+									<aixm:elevation uom="M">3200</aixm:elevation>
+									<aixm:geoidUndulation xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+									<aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
+								</aixm:ElevatedPoint>
+							</aixm:horizontalProjection_location>
+							<aixm:lighting>
+								<aixm:LightElement gml:id="le0005-5">
+									<aixm:colour xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensityLevel xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensity xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:availability xsi:nil="true" nilReason="inapplicable"/>
+								</aixm:LightElement>
+							</aixm:lighting>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+					<aixm:lightingAvailability xsi:nil="true" nilReason="inapplicable"/>
+				</aixm:VerticalStructureTimeSlice>
+			</aixm:timeSlice>
+		</aixm:VerticalStructure>
+	</message:hasMember>
+	<message:hasMember>
+		<!-- LINE OBSTACLE (Windfarm) 
+			OPTION B: 1x VerticalStructure with 1 x VerticalStructurePart as linearExtent 
+			(Can only be used in case all verticalStructure elements have same values for all "parts" of the obstacle..-->
+		<aixm:VerticalStructure gml:id="uuid.718c2782-a624-405e-86b6-144b40b680b0">
+			<gml:identifier codeSpace="urn:uuid:">718c2782-a624-405e-86b6-144b40b680b0</gml:identifier>
+			<aixm:timeSlice>
+				<aixm:VerticalStructureTimeSlice gml:id="vsts0006">
+					<gml:validTime>
+						<gml:TimePeriod gml:id="tp0006-1">
+							<gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</gml:validTime>
+					<aixm:interpretation>BASELINE</aixm:interpretation>
+					<aixm:sequenceNumber>1</aixm:sequenceNumber>
+					<aixm:correctionNumber>0</aixm:correctionNumber>
+					<aixm:featureLifetime>
+						<gml:TimePeriod gml:id="tp0006-2">
+							<gml:beginPosition>2009-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</aixm:featureLifetime>
+					<aixm:name>TUBORG IIB</aixm:name>
+					<aixm:type>WINDMILL_FARMS</aixm:type>
+					<aixm:lighted>YES</aixm:lighted>
+					<aixm:markingICAOStandard>NO</aixm:markingICAOStandard>
+					<!-- How to use group here? recommed to use group here as there is actually more than one vertical structure -->
+					<aixm:group>YES</aixm:group>
+					<aixm:length xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:width xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:radius xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:lightingICAOStandard xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:synchronisedLighting xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:marker xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="vsp0006-1">
+							<aixm:verticalExtent uom="M">75</aixm:verticalExtent>
+							<aixm:verticalExtentAccuracy xsi:nil="true" nilReason="unknown"/>
+							<!-- type is not applicabe for the part as alraedy defined for the VerticalStructure -->
+							<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+							<aixm:markingPattern xsi:nil="true" nilReason="unknown"/>
+							<aixm:markingFirstColour>GREEN</aixm:markingFirstColour>
+							<aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:mobile>NO</aixm:mobile>
+							<aixm:frangible xsi:nil="true" nilReason="unknown"/>
+							<aixm:visibleMaterial xsi:nil="true" nilReason="unknown"/>
+							<aixm:designator>OBS-00006</aixm:designator>
+							<aixm:horizontalProjection_linearExtent>
+								<aixm:ElevatedCurve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="crv12456">
+									<gml:segments>
+										<gml:GeodesicString>
+											<gml:posList>54.33333333 -26.48555556 54.33777778 -26.45777778</gml:posList>
+										</gml:GeodesicString>
+									</gml:segments>
+									<aixm:horizontalAccuracy xsi:nil="true" nilReason="unknown"/>
+									<aixm:elevation uom="M">75</aixm:elevation>
+									<aixm:geoidUndulation xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:verticalDatum xsi:nil="true" nilReason="unknown"/>
+									<aixm:verticalAccuracy xsi:nil="true" nilReason="unknown"/>
+								</aixm:ElevatedCurve>
+							</aixm:horizontalProjection_linearExtent>
+							<aixm:lighting>
+								<aixm:LightElement gml:id="le0006-1">
+									<aixm:colour>RED</aixm:colour>
+									<aixm:intensityLevel xsi:nil="true" nilReason="unknown"/>
+									<aixm:intensity xsi:nil="true" nilReason="unknown"/>
+									<aixm:type>OTHER:FLASHING</aixm:type>
+									<aixm:availability xsi:nil="true" nilReason="unknown"/>
+								</aixm:LightElement>
+							</aixm:lighting>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+					<aixm:lightingAvailability xsi:nil="true" nilReason="inapplicable"/>
+				</aixm:VerticalStructureTimeSlice>
+			</aixm:timeSlice>
+		</aixm:VerticalStructure>
+	</message:hasMember>
+	<message:hasMember>
+		<!-- POINT ON SURFACE: roof mounted antenna (Vertical Segmentation: 2 parts)-->
+		<aixm:VerticalStructure gml:id="uuid.15c2c2ba-c5f2-47b5-9ada-1964d51b82c0">
+			<gml:identifier codeSpace="urn:uuid:">15c2c2ba-c5f2-47b5-9ada-1964d51b82c0</gml:identifier>
+			<aixm:timeSlice>
+				<aixm:VerticalStructureTimeSlice gml:id="vsts0007">
+					<gml:validTime>
+						<gml:TimePeriod gml:id="tp0007-1">
+							<gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</gml:validTime>
+					<aixm:interpretation>BASELINE</aixm:interpretation>
+					<aixm:sequenceNumber>2</aixm:sequenceNumber>
+					<aixm:correctionNumber>0</aixm:correctionNumber>
+					<aixm:featureLifetime>
+						<gml:TimePeriod gml:id="tp0007-2">
+							<gml:beginPosition>2009-04-06T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</aixm:featureLifetime>
+					<aixm:name xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:type>BUILDING</aixm:type>
+					<aixm:lighted>YES</aixm:lighted>
+					<aixm:markingICAOStandard>YES</aixm:markingICAOStandard>
+					<!-- Does group make sense in this case? if yes how shall it be coded? recom. to code nil-->
+					<aixm:group xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:length xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:width xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:radius xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:lightingICAOStandard xsi:nil="true" nilReason="unknown"/>
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="vsp0007-1">
+							<aixm:verticalExtent uom="M">110</aixm:verticalExtent>
+							<aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
+							<aixm:type>BUILDING</aixm:type>
+							<aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:designator>OBS-00007-1</aixm:designator>
+							<aixm:horizontalProjection_surfaceExtent>
+								<aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0007-1">
+									<gml:patches>
+										<gml:PolygonPatch>
+											<gml:exterior>
+												<gml:Ring>
+													<gml:curveMember>
+														<gml:Curve gml:id="c4567">
+															<gml:segments>
+																<gml:GeodesicString>
+																	<gml:posList>55.5243055555556 -24.64125833333333 
+																		55.5201388888889 -24.63178888888889 
+																		55.5211666666667 -24.63032222222222 
+																		55.5251944444444 -24.63868888888889 
+																		55.5243055555556 -24.64125833333333</gml:posList>
+																</gml:GeodesicString>
+															</gml:segments>
+														</gml:Curve>
+													</gml:curveMember>
+												</gml:Ring>
+											</gml:exterior>
+										</gml:PolygonPatch>
+									</gml:patches>
+									<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
+									<aixm:elevation uom="M">168</aixm:elevation>
+									<aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+									<aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
+								</aixm:ElevatedSurface>
+							</aixm:horizontalProjection_surfaceExtent>
+							<aixm:lighting>
+								<aixm:LightElement gml:id="le0007-1">
+									<aixm:colour>RED</aixm:colour>
+									<aixm:intensityLevel xsi:nil="true" nilReason="unknown"/>
+									<!-- OPEN QUESTION: Not clear where to code FLG (i.e. Flashing) -->
+									<aixm:type>OTHER:FLASHING</aixm:type>
+								</aixm:LightElement>
+							</aixm:lighting>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="vsp0007-2">
+							<!-- OPEN QUESTION: Shall the height be above Ground or above underlying part?  Acc. TOD-M B.2.2. it shall be above ground. -->
+							<aixm:verticalExtent uom="M">118</aixm:verticalExtent>
+							<aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
+							<aixm:type>ANTENNA</aixm:type>
+							<aixm:markingPattern>HBANDS</aixm:markingPattern>
+							<aixm:markingFirstColour>RED</aixm:markingFirstColour>
+							<aixm:markingSecondColour>WHITE</aixm:markingSecondColour>
+							<aixm:designator>OBS-00007-1</aixm:designator>
+							<aixm:horizontalProjection_location>
+								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="VID000005">
+									<gml:pos>55.52416667 -24.63888889</gml:pos>
+									<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
+									<aixm:elevation uom="M">191</aixm:elevation>
+									<aixm:geoidUndulation xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+									<aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
+								</aixm:ElevatedPoint>
+							</aixm:horizontalProjection_location>
+							<aixm:lighting>
+								<aixm:LightElement gml:id="le0007-2">
+									<aixm:colour>RED</aixm:colour>
+									<aixm:intensityLevel xsi:nil="true" nilReason="unknown"/>
+									<aixm:type>OTHER:FLASHING</aixm:type>
+								</aixm:LightElement>
+							</aixm:lighting>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+				</aixm:VerticalStructureTimeSlice>
+			</aixm:timeSlice>
+		</aixm:VerticalStructure>
+	</message:hasMember>
+	<message:hasMember>
+		<!-- POINT OBSTACLE -->
+		<aixm:VerticalStructure gml:id="uuid.359c8b02-8be7-4e2c-aa6d-d990dbb6b057">
+			<gml:identifier codeSpace="urn:uuid:">359c8b02-8be7-4e2c-aa6d-d990dbb6b057</gml:identifier>
+			<aixm:timeSlice>
+				<aixm:VerticalStructureTimeSlice gml:id="vsts0008">
+					<gml:validTime>
+						<gml:TimePeriod gml:id="tp0008-1">
+							<gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</gml:validTime>
+					<aixm:interpretation>BASELINE</aixm:interpretation>
+					<aixm:sequenceNumber>1</aixm:sequenceNumber>
+					<aixm:correctionNumber>0</aixm:correctionNumber>
+					<aixm:featureLifetime>
+						<gml:TimePeriod gml:id="tp0008-2">
+							<gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</aixm:featureLifetime>
+					<aixm:name xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:type>OTHER:CHIMNEY</aixm:type>
+					<aixm:lighted>NO</aixm:lighted>
+					<aixm:markingICAOStandard xsi:nil="true" nilReason="unknown"/>
+					<aixm:group xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:length xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:width xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:radius xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:lightingICAOStandard xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="vsp0008-2">
+							<aixm:verticalExtent uom="M">120.0</aixm:verticalExtent>
+							<aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
+							<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingPattern xsi:nil="true" nilReason="unknown"/>
+							<aixm:markingFirstColour xsi:nil="true" nilReason="unknown"/>
+							<aixm:markingSecondColour xsi:nil="true" nilReason="unknown"/>
+							<aixm:designator>OBS-00008</aixm:designator>
+							<aixm:horizontalProjection_location>
+								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="VID000008">
+									<gml:pos>55.5185166666667 -25.63186944444445</gml:pos>
+									<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
+									<aixm:elevation uom="M">191</aixm:elevation>
+									<aixm:geoidUndulation xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+									<aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
+								</aixm:ElevatedPoint>
+							</aixm:horizontalProjection_location>
+							<aixm:lighting>
+								<aixm:LightElement gml:id="le0008-2">
+									<aixm:colour xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensityLevel xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+								</aixm:LightElement>
+							</aixm:lighting>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+				</aixm:VerticalStructureTimeSlice>
+			</aixm:timeSlice>
+		</aixm:VerticalStructure>
+	</message:hasMember>
+	<message:hasMember>
+		<!-- POINT OBSTACLE WITH HORIZ. EXTENT (representing a polygon)-->
+		<aixm:VerticalStructure gml:id="uuid.7f89403f-a680-41e0-8274-ee498e86ff77">
+			<gml:identifier codeSpace="urn:uuid:">7f89403f-a680-41e0-8274-ee498e86ff77</gml:identifier>
+			<aixm:timeSlice>
+				<aixm:VerticalStructureTimeSlice gml:id="vsts0009">
+					<gml:validTime>
+						<gml:TimePeriod gml:id="vt120135">
+							<gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</gml:validTime>
+					<aixm:interpretation>BASELINE</aixm:interpretation>
+					<aixm:sequenceNumber>2</aixm:sequenceNumber>
+					<aixm:correctionNumber>0</aixm:correctionNumber>
+					<aixm:featureLifetime>
+						<gml:TimePeriod gml:id="lt120135">
+							<gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</aixm:featureLifetime>
+					<aixm:name xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:type>STADIUM</aixm:type>
+					<aixm:lighted>YES</aixm:lighted>
+					<aixm:markingICAOStandard>NO</aixm:markingICAOStandard>
+					<aixm:group>NO</aixm:group>
+					<aixm:length xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:width xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:radius uom="M">300</aixm:radius>
+					<aixm:lightingICAOStandard xsi:nil="true" nilReason="unknown"/>
+					<aixm:synchronisedLighting xsi:nil="true" nilReason="unknown"/>
+					<aixm:marker xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="V-af4ee6d5">
+							<aixm:verticalExtent uom="M">133</aixm:verticalExtent>
+							<aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
+							<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+							<aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingFirstColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingSecondColour xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:mobile>NO</aixm:mobile>
+							<aixm:frangible>NO</aixm:frangible>
+							<aixm:visibleMaterial xsi:nil="true" nilReason="unknown"/>
+							<aixm:designator>OBS-00010</aixm:designator>
+							<aixm:horizontalProjection_location>
+								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="p1129">
+									<gml:pos>52.36171388888889 -23.03756666666666</gml:pos>
+									<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
+									<aixm:elevation uom="M">189</aixm:elevation>
+									<aixm:geoidUndulation xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+									<aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
+								</aixm:ElevatedPoint>
+							</aixm:horizontalProjection_location>
+							<aixm:lighting xsi:nil="true" nilReason="inapplicable"/>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+					<aixm:annotation>
+						<aixm:Note gml:id="n0009-1">
+							<aixm:propertyName>lighted</aixm:propertyName>
+							<aixm:purpose>DESCRIPTION</aixm:purpose>
+							<aixm:translatedNote>
+								<aixm:LinguisticNote gml:id="ln0009-1">
+									<aixm:note>iluminated.</aixm:note>
+								</aixm:LinguisticNote>
+							</aixm:translatedNote>
+						</aixm:Note>
+					</aixm:annotation>
+					<aixm:annotation>
+						<aixm:Note gml:id="n0009-3">
+							<aixm:purpose>REMARK</aixm:purpose>
+							<aixm:translatedNote>
+								<aixm:LinguisticNote gml:id="ln0009-3">
+									<aixm:note>133 M is the MAXIMUM HEIGHT</aixm:note>
+								</aixm:LinguisticNote>
+							</aixm:translatedNote>
+						</aixm:Note>
+					</aixm:annotation>
+					<aixm:lightingAvailability xsi:nil="true" nilReason="inapplicable"/>
+				</aixm:VerticalStructureTimeSlice>
+			</aixm:timeSlice>
+		</aixm:VerticalStructure>
+	</message:hasMember>
+	<message:hasMember>
+		<!-- POINT OBSTACLE -->
+		<aixm:VerticalStructure gml:id="uuid.56ef6d9c-4951-4a0b-83d8-95e4836c63c8">
+			<gml:identifier codeSpace="urn:uuid:">56ef6d9c-4951-4a0b-83d8-95e4836c63c8</gml:identifier>
+			<aixm:timeSlice>
+				<aixm:VerticalStructureTimeSlice gml:id="OBS-0010">
+					<gml:validTime>
+						<gml:TimePeriod gml:id="tp0010-1">
+							<gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</gml:validTime>
+					<aixm:interpretation>BASELINE</aixm:interpretation>
+					<aixm:sequenceNumber>1</aixm:sequenceNumber>
+					<aixm:correctionNumber>0</aixm:correctionNumber>
+					<aixm:featureLifetime>
+						<gml:TimePeriod gml:id="tp0010-2">
+							<gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</aixm:featureLifetime>
+					<aixm:name xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:type>OTHER:CHIMNEY</aixm:type>
+					<aixm:lighted>NO</aixm:lighted>
+					<aixm:markingICAOStandard xsi:nil="true" nilReason="unknown"/>
+					<aixm:group xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:length xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:width xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:radius xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:lightingICAOStandard xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="vsp0010-2">
+							<aixm:verticalExtent uom="M">118.0</aixm:verticalExtent>
+							<aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
+							<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:markingPattern xsi:nil="true" nilReason="unknown"/>
+							<aixm:markingFirstColour xsi:nil="true" nilReason="unknown"/>
+							<aixm:markingSecondColour xsi:nil="true" nilReason="unknown"/>
+							<aixm:designator>OBS-0010</aixm:designator>
+							<aixm:horizontalProjection_location>
+								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="VID000010">
+									<gml:pos>55.5185166666667 -24.62186944444445</gml:pos>
+									<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
+									<aixm:elevation uom="M">189</aixm:elevation>
+									<aixm:geoidUndulation xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+									<aixm:verticalAccuracy uom="M">30</aixm:verticalAccuracy>
+								</aixm:ElevatedPoint>
+							</aixm:horizontalProjection_location>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+				</aixm:VerticalStructureTimeSlice>
+			</aixm:timeSlice>
+		</aixm:VerticalStructure>
+	</message:hasMember>
+	<message:hasMember>
+		<!-- WINDPARK LOCATED IN AREA 1 AND AREA 2d.
+			GROUPS OF OBSTACLES WITH SIMILAR HEIGHT LOCATED IN CLOSE PROXIMITY TO ONE ANOTHER (Windfarm area).-->
+		<aixm:VerticalStructure gml:id="uuid.499c5bb4-de1e-49fc-8db1-11ffa84406d6">
+			<gml:identifier codeSpace="urn:uuid:">499c5bb4-de1e-49fc-8db1-11ffa84406d6</gml:identifier>
+			<aixm:timeSlice>
+				<aixm:VerticalStructureTimeSlice gml:id="OBS-EADD-0012">
+					<gml:validTime>
+						<gml:TimePeriod gml:id="tp00022-1">
+							<gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</gml:validTime>
+					<aixm:interpretation>BASELINE</aixm:interpretation>
+					<aixm:sequenceNumber>1</aixm:sequenceNumber>
+					<aixm:correctionNumber>0</aixm:correctionNumber>
+					<aixm:featureLifetime>
+						<gml:TimePeriod gml:id="tp00022-2">
+							<gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</aixm:featureLifetime>
+					<aixm:name>DONLON NORTHEAST I</aixm:name>
+					<aixm:type>WINDMILL_FARMS</aixm:type>
+					<aixm:lighted>YES</aixm:lighted>
+					<aixm:markingICAOStandard>YES</aixm:markingICAOStandard>
+					<aixm:group>YES</aixm:group>
+					<aixm:length xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:width xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:radius xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:lightingICAOStandard>YES</aixm:lightingICAOStandard>
+					<aixm:synchronisedLighting>YES</aixm:synchronisedLighting>
+					<aixm:part>
+						<aixm:VerticalStructurePart gml:id="vsp0002-9">
+							<aixm:verticalExtent uom="M">119</aixm:verticalExtent>
+							<aixm:verticalExtentAccuracy uom="M">3</aixm:verticalExtentAccuracy>
+							<aixm:markingPattern>HBANDS</aixm:markingPattern>
+							<aixm:markingFirstColour>RED</aixm:markingFirstColour>
+							<aixm:markingSecondColour>WHITE</aixm:markingSecondColour>
+							<aixm:designator>OBS-0012</aixm:designator>
+							<aixm:horizontalProjection_surfaceExtent>
+								<aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep00023-1">
+									<gml:patches>
+										<gml:PolygonPatch>
+											<gml:exterior>
+												<gml:Ring>
+													<gml:curveMember>
+														<gml:Curve gml:id="c0001">
+															<gml:segments>
+																<gml:GeodesicString>
+																	<gml:posList>52.36171388888889 -31.73756666666666 
+																		52.31271388888889 -31.74756666666666 
+																		52.31371388888889 -31.75756666666666
+																		52.36371388888889 -31.75756666666666
+																		52.36171388888889 -31.73756666666666</gml:posList>
+																</gml:GeodesicString>
+															</gml:segments>
+														</gml:Curve>
+													</gml:curveMember>
+												</gml:Ring>
+											</gml:exterior>
+										</gml:PolygonPatch>
+									</gml:patches>
+									<aixm:horizontalAccuracy uom="M">5</aixm:horizontalAccuracy>
+									<aixm:elevation uom="M">215</aixm:elevation>
+									<aixm:verticalDatum>EGM_96</aixm:verticalDatum>
+									<aixm:verticalAccuracy uom="M">3</aixm:verticalAccuracy>
+								</aixm:ElevatedSurface>
+							</aixm:horizontalProjection_surfaceExtent>
+							<aixm:lighting>
+								<aixm:LightElement gml:id="le00022-1">
+									<aixm:colour>RED</aixm:colour>
+									<aixm:intensityLevel>LIM</aixm:intensityLevel>
+									<aixm:type>OTHER:FLASHING</aixm:type>
+								</aixm:LightElement>
+							</aixm:lighting>
+						</aixm:VerticalStructurePart>
+					</aixm:part>
+				</aixm:VerticalStructureTimeSlice>
+			</aixm:timeSlice>
+		</aixm:VerticalStructure>
+	</message:hasMember>
+	<message:hasMember>
+		<!-- AREA 1 -->
+		<aixm:ObstacleArea gml:id="uuid.03fcffab-d281-4da4-8acd-0b14461b7465">
+			<gml:identifier codeSpace="urn:uuid:">03fcffab-d281-4da4-8acd-0b14461b7465</gml:identifier>
+			<aixm:timeSlice>
+				<aixm:ObstacleAreaTimeSlice gml:id="oats0001">
+					<gml:validTime>
+						<gml:TimePeriod gml:id="tp0002">
+							<gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</gml:validTime>
+					<aixm:interpretation>BASELINE</aixm:interpretation>
+					<aixm:sequenceNumber>1</aixm:sequenceNumber>
+					<aixm:correctionNumber>0</aixm:correctionNumber>
+					<aixm:featureLifetime>
+						<gml:TimePeriod gml:id="tp0001">
+							<gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</aixm:featureLifetime>
+					<aixm:type>AREA1</aixm:type>
+					<!-- <aixm:obstructionIdSurfaceCondition/> shall not be used. Will be depreated with AIXM 5.2 -->
+					<aixm:reference_ownerOrganisation xlink:href="urn:uuid:6384a4e0-8497-4f83-8eaa-d73ef549d90e" xlink:title="REPUBLIC OF DONLON"/>
+					<aixm:obstacle xlink:href="urn:uuid:5f68d835-828c-4ccd-91b7-791058d9dd4d" xlink:title="OBS-0001"/>
+					<aixm:obstacle xlink:href="urn:uuid:6c7fac45-c24f-4e36-b196-687458d99070" xlink:title="WINDPARK BAUMGARTEN"/>
+					<aixm:obstacle xlink:href="urn:uuid:47db48e9-d46a-4100-a266-25a3968b6a98" xlink:title="RODSAND II"/>
+					<aixm:obstacle xlink:href="urn:uuid:87a585b3-0597-4f5c-974f-cddfc604dc93" xlink:title="LANGTALERECKHUETTE - HOCHWILDEHAUS"/>
+					<aixm:obstacle xlink:href="urn:uuid:9bba0abf-db41-4c78-926d-c9f35fde8efb" xlink:title="MUTTERBERGALM - DRESDNER HUETTE - EISGRAT"/>
+					<aixm:obstacle xlink:href="urn:uuid:718c2782-a624-405e-86b6-144b40b680b0" xlink:title="TUBORG IIB"/>
+					<aixm:obstacle xlink:href="urn:uuid:15c2c2ba-c5f2-47b5-9ada-1964d51b82c0" xlink:title="OBS-0007"/>
+					<aixm:obstacle xlink:href="urn:uuid:359c8b02-8be7-4e2c-aa6d-d990dbb6b057" xlink:title="OBS-0008"/>
+					<aixm:obstacle xlink:href="urn:uuid:7f89403f-a680-41e0-8274-ee498e86ff77" xlink:title="OBS-0009"/>
+					<aixm:obstacle xlink:href="urn:uuid:56ef6d9c-4951-4a0b-83d8-95e4836c63c8" xlink:title="OBS-0010"/>
+					<aixm:obstacle xlink:href="urn:uuid:499c5bb4-de1e-49fc-8db1-11ffa84406d6" xlink:title="OBS-EADD-0012"/>
+				</aixm:ObstacleAreaTimeSlice>
+			</aixm:timeSlice>
+		</aixm:ObstacleArea>
+	</message:hasMember>	
+</message:AIXMBasicMessage>
