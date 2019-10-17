@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Andreea PERCA, ASBU For Future GMBH -->
+<!-- Copyright (c) 2018, EUROCONTROL & FAA
+    
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+    
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+    xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+    http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
+    gml:id="M00001">
+    
+    <!--This is a Digital NOTAM example to announce a temporary airspace.-->
+
+    <message:hasMember>
+        <event:Event gml:id="uuid.50e97079-da54-495e-ad0c-c729dd71024c">
+            <gml:identifier codeSpace="urn:uuid:">50e97079-da54-495e-ad0c-c729dd71024c</gml:identifier>
+            <event:timeSlice>
+                <event:EventTimeSlice gml:id="ID_011012211a">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_011022311b">
+                            <gml:beginPosition>2018-11-15T10:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-11-15T20:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="ID_011032411c">
+                            <gml:beginPosition>2018-11-15T10:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-11-15T20:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <event:name>TEMPA_20181045_2</event:name>
+                    <event:encoding>DIGITAL</event:encoding>
+                    <event:scenario>ATSA.NEW</event:scenario>
+                    <event:version>2.0</event:version>
+                    <event:revision>2018-10-14T16:22:42Z</event:revision>
+                <!--<event:associatedEvent xlink:href="#uuid.f4d5e4d4-d84a-481f-b9e3-b359e42c0dff"/> -->
+                    <event:textNOTAM>
+                        <event:NOTAM gml:id="ID_7072511d">
+                            <event:series>A</event:series>
+                            <event:number>1574</event:number>
+                            <event:year>2018</event:year>
+                            <event:type>N</event:type>
+                            <event:issued>2018-10-14T16:22:42Z</event:issued>
+                            <event:affectedFIR>EAAD</event:affectedFIR>
+                            <event:selectionCode>QXXCA</event:selectionCode>
+                            <event:traffic>IV</event:traffic>
+                            <event:purpose>NBO</event:purpose>
+                            <event:scope>E</event:scope>
+                            <event:minimumFL>000</event:minimumFL>
+                            <event:maximumFL>050</event:maximumFL>
+                            <event:coordinates>5117N00047W</event:coordinates> <!--exact coordinates to be determined-->
+                            <event:radius>010</event:radius> 
+                            <event:location>EAAD</event:location>
+                            <event:effectiveStart>1811151000</event:effectiveStart>
+                            <event:effectiveEnd>1811152000</event:effectiveEnd>
+                            <event:text>
+                                Class A airspace (EAA0422-18) established within: 
+                                Circle of 10NM radius centered on 511659N0004659W, from SFC up to FL050.                                 
+                            </event:text>
+                        </event:NOTAM>
+                    </event:textNOTAM>
+                </event:EventTimeSlice>
+            </event:timeSlice>
+        </event:Event>
+    </message:hasMember>
+    
+    <message:hasMember>
+        <aixm:Airspace gml:id="ID_TEMP_01">
+            <aixm:timeSlice>
+                <aixm:AirspaceTimeSlice gml:id="ID_TEMP_02">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_TEMP_03">
+                            <gml:beginPosition>2018-11-15T10:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-11-15T20:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="ID_TEMP_04">
+                            <gml:beginPosition>2018-11-15T10:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-11-15T20:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <aixm:type>CLASS</aixm:type>
+                    <aixm:designator>EAA0422-18</aixm:designator>
+                    <aixm:class>
+                        <aixm:AirspaceLayerClass gml:id="ID_TEMP_041">
+                            <aixm:classification>A</aixm:classification>
+                            <aixm:associatedLevels>
+                                <aixm:AirspaceLayer gml:id="ID_TEMP_0412">
+                                    <aixm:upperLimit uom="OTHER">CEILING</aixm:upperLimit>
+                                    <aixm:lowerLimit uom="OTHER">FLOOR</aixm:lowerLimit>
+                                    <aixm:altitudeInterpretation>BETWEEN</aixm:altitudeInterpretation>
+                                </aixm:AirspaceLayer>
+                            </aixm:associatedLevels>
+                        </aixm:AirspaceLayerClass>
+                    </aixm:class>
+                    <aixm:geometryComponent>
+                        <aixm:AirspaceGeometryComponent gml:id="ID_429">
+                            <aixm:operation>BASE</aixm:operation>
+                            <aixm:operationSequence>1</aixm:operationSequence>
+                            <aixm:theAirspaceVolume>
+                                <aixm:AirspaceVolume gml:id="ID_430">
+                                    <aixm:upperLimit uom="FL">050</aixm:upperLimit>
+                                    <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                                    <aixm:lowerLimit uom="FT">0</aixm:lowerLimit>
+                                    <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
+                                    <aixm:horizontalProjection>
+                                        <aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ID_431">
+                                            <gml:patches>
+                                                <gml:PolygonPatch>
+                                                    <gml:exterior>
+                                                        <gml:Ring>
+                                                            <gml:curveMember>
+                                                                <gml:Curve gml:id="ID_432">
+                                                                    <gml:segments>
+                                                                        <gml:CircleByCenterPoint numArc="1">
+                                                                            <gml:pos>51.28333333333333 -0.7833333333333333</gml:pos> <!--fictional coordinates, exact ones to be determined-->
+                                                                            <gml:radius uom="NM">10.0</gml:radius>
+                                                                        </gml:CircleByCenterPoint>
+                                                                    </gml:segments>
+                                                                </gml:Curve>
+                                                            </gml:curveMember>
+                                                        </gml:Ring>
+                                                    </gml:exterior>
+                                                </gml:PolygonPatch>
+                                            </gml:patches>
+                                        </aixm:Surface>
+                                    </aixm:horizontalProjection>
+                                </aixm:AirspaceVolume>
+                            </aixm:theAirspaceVolume>
+                        </aixm:AirspaceGeometryComponent>
+                    </aixm:geometryComponent>
+                    <aixm:activation>
+                        <aixm:AirspaceActivation gml:id="ID_TEMP_05">
+                            <aixm:status>IN_USE</aixm:status>
+                            <aixm:levels>
+                                <aixm:AirspaceLayer gml:id="ID_TEMP_06">
+                                    <aixm:upperLimit uom="OTHER">CEILING</aixm:upperLimit>
+                                    <aixm:lowerLimit uom="OTHER">FLOOR</aixm:lowerLimit>
+                                </aixm:AirspaceLayer>
+                            </aixm:levels>
+                        </aixm:AirspaceActivation>
+                    </aixm:activation>
+                    <aixm:extension>
+                        <event:AirspaceExtension gml:id="ID_TEMP_04ex">
+                            <event:theEvent xlink:href="#uuid.50e97079-da54-495e-ad0c-c729dd71024c"/>
+                        </event:AirspaceExtension>
+                    </aixm:extension>
+                </aixm:AirspaceTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Airspace>
+    </message:hasMember>
+</message:AIXMBasicMessage>
