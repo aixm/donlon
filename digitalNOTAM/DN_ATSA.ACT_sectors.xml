@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Andreea PERCA, ASBU For Future GMBH -->
+<!-- Copyright (c) 2018, EUROCONTROL & FAA
+    
+All rights reserved.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+    
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+    xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+    http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
+    gml:id="M00001">
+
+    <!--This is a Digital NOTAM example of SECTOR DONLON EAST and SECTOR DONLON WEST activation.-->
+
+    <message:hasMember>
+        <event:Event gml:id="uuid.1c69ed75-856d-4ba2-8995-88bac4aff13e">
+            <gml:identifier codeSpace="urn:uuid:">1c69ed75-856d-4ba2-8995-88bac4aff13e</gml:identifier>
+            <event:timeSlice>
+                <event:EventTimeSlice gml:id="ID_0110122">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_0110223">
+                            <gml:beginPosition>2018-10-14T15:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-10-15T23:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="ID_0110324">
+                            <gml:beginPosition>2018-10-14T15:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-10-15T23:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <event:name>CTAP_20181045_2</event:name>
+                    <event:encoding>DIGITAL</event:encoding>
+                    <event:scenario>ATSA.ACT</event:scenario>
+                    <event:version>2.0</event:version>
+                    <event:revision>2018-10-14T08:20:11Z</event:revision>
+                <!--<event:associatedEvent href: xlink:href="#uuid.1b54b2d6-a5ff-4e57-94c2-f4047a381c64" DONLON Airport identifier-->     
+                <!--<event:associatedEvent href: xlink:href="#uuid.b35409d8-f236-4303-a12d-795e9e9c8751" DONLON Heliport identifier--> 
+                    <event:textNOTAM>
+                        <event:NOTAM gml:id="ID_70725">
+                            <event:series>A</event:series>
+                            <event:number>1455</event:number>
+                            <event:year>2018</event:year>
+                            <event:type>N</event:type>
+                            <event:issued>2018-10-14T08:20:11Z</event:issued>
+                            <event:affectedFIR>EAAD</event:affectedFIR>
+                            <event:selectionCode>QAECA</event:selectionCode>
+                            <event:traffic>IV</event:traffic>
+                            <event:purpose>NBO</event:purpose>
+                            <event:scope>E</event:scope>
+                            <event:minimumFL>30</event:minimumFL>
+                            <event:maximumFL>450</event:maximumFL>
+                            <event:coordinates>4922N00009E</event:coordinates> <!--exact coordinates to be determined-->
+                            <event:radius>014</event:radius> <!--exact radius to be determined-->
+                            <event:location>EAAD</event:location>
+                            <event:effectiveStart>1810141500</event:effectiveStart>
+                            <event:effectiveEnd>1810152300</event:effectiveEnd>
+                            <event:text>
+                                CTA part SECTOR DONLON EAST EADD1 and SECTOR DONLON WEST EADD2 activated.                                
+                            </event:text>
+                        </event:NOTAM>
+                    </event:textNOTAM>
+                    <event:textNOTAM>
+                        <event:NOTAM gml:id="ID_70725_a1">
+                            <event:series>A</event:series>
+                            <event:number>1456</event:number>
+                            <event:year>2018</event:year>
+                            <event:type>N</event:type>
+                            <event:issued>2018-10-14T08:20:11Z</event:issued>
+                            <event:affectedFIR>EAAD</event:affectedFIR>
+                            <event:selectionCode>QAECA</event:selectionCode>
+                            <event:traffic>IV</event:traffic>
+                            <event:purpose>NBO</event:purpose>
+                            <event:scope>A</event:scope>
+                            <event:minimumFL>000</event:minimumFL>
+                            <event:maximumFL>999</event:maximumFL>
+                            <event:coordinates>522236N315658W</event:coordinates> <!--ARP EADD-->
+                            <event:radius>005</event:radius> <!--exact radius to be determined-->
+                            <event:location>EADD</event:location>
+                            <event:effectiveStart>1810141500</event:effectiveStart>
+                            <event:effectiveEnd>1810152300</event:effectiveEnd>
+                            <event:text>
+                                CTA part SECTOR DONLON EAST EADD1 and SECTOR DONLON WEST EADD2 activated.                                
+                            </event:text>
+                        </event:NOTAM>
+                    </event:textNOTAM>
+                    <event:textNOTAM>
+                        <event:NOTAM gml:id="ID_70725_a2">
+                            <event:series>A</event:series>
+                            <event:number>1457</event:number>
+                            <event:year>2018</event:year>
+                            <event:type>N</event:type>
+                            <event:issued>2018-10-14T08:20:11Z</event:issued>
+                            <event:affectedFIR>EAAD</event:affectedFIR>
+                            <event:selectionCode>QAECA</event:selectionCode>
+                            <event:traffic>IV</event:traffic>
+                            <event:purpose>NBO</event:purpose>
+                            <event:scope>A</event:scope>
+                            <event:minimumFL>000</event:minimumFL>
+                            <event:maximumFL>999</event:maximumFL>
+                            <event:coordinates>522231N315670W</event:coordinates> <!--ARP EADH-->
+                            <event:radius>005</event:radius> <!--exact radius to be determined-->
+                            <event:location>EADH</event:location> 
+                            <event:effectiveStart>1810141500</event:effectiveStart>
+                            <event:effectiveEnd>1810152300</event:effectiveEnd>
+                            <event:text>
+                                CTA part SECTOR DONLON EAST EADD1 and SECTOR DONLON WEST EADD2 activated.                                
+                            </event:text>
+                        </event:NOTAM>
+                    </event:textNOTAM>               
+                </event:EventTimeSlice>
+            </event:timeSlice>
+        </event:Event>
+    </message:hasMember>
+
+    <message:hasMember>
+        <aixm:Airspace gml:id="uuid.204451c5-be5e-4eaf-8859-0a62b24a389d">
+            <gml:identifier codeSpace="urn:uuid:">204451c5-be5e-4eaf-8859-0a62b24a389d</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:AirspaceTimeSlice gml:id="ID_012213">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_012214">
+                            <gml:beginPosition>2018-10-14T15:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-10-15T23:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>3</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:activation>
+                        <aixm:AirspaceActivation gml:id="ID_012215">
+                            <aixm:status>ACTIVE</aixm:status>
+                            <aixm:levels>
+                                <aixm:AirspaceLayer gml:id="ID_012216">
+                                    <aixm:upperLimit uom="OTHER">CEILING</aixm:upperLimit>
+                                    <aixm:lowerLimit uom="OTHER">FLOOR</aixm:lowerLimit>
+                                </aixm:AirspaceLayer>
+                            </aixm:levels>
+                        </aixm:AirspaceActivation>
+                    </aixm:activation>
+                    <aixm:extension>
+                        <event:AirspaceExtension gml:id="ID_012216e">
+                            <event:theEvent xlink:href="#uuid.1c69ed75-856d-4ba2-8995-88bac4aff13e"/>
+                        </event:AirspaceExtension>
+                    </aixm:extension>
+                </aixm:AirspaceTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Airspace>
+    </message:hasMember>
+    <message:hasMember>
+        <aixm:Airspace gml:id="uuid.b936e0e4-2b58-404f-9d95-d95c421c50d2">
+            <gml:identifier codeSpace="urn:uuid:">b936e0e4-2b58-404f-9d95-d95c421c50d2</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:AirspaceTimeSlice gml:id="ASE_DONLON2_CTA_P">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="tpID_313">
+                            <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+                            <gml:endPosition indeterminatePosition="unknown"/>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>2</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:activation>
+                        <aixm:AirspaceActivation gml:id="ID_012217">
+                            <aixm:status>ACTIVE</aixm:status>
+                            <aixm:levels>
+                                <aixm:AirspaceLayer gml:id="ID_012218">
+                                    <aixm:upperLimit uom="OTHER">CEILING</aixm:upperLimit>
+                                    <aixm:lowerLimit uom="OTHER">FLOOR</aixm:lowerLimit>
+                                </aixm:AirspaceLayer>
+                            </aixm:levels>
+                        </aixm:AirspaceActivation>
+                    </aixm:activation>
+                    <aixm:extension>
+                        <event:AirspaceExtension gml:id="ID_012218e">
+                            <event:theEvent xlink:href="#uuid.1c69ed75-856d-4ba2-8995-88bac4aff13e"/>
+                        </event:AirspaceExtension>
+                    </aixm:extension>
+                </aixm:AirspaceTimeSlice>
+            </aixm:timeSlice>
+        </aixm:Airspace>
+    </message:hasMember>
+
+</message:AIXMBasicMessage>
