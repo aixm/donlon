@@ -54,7 +54,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <event:scenario>ATSA.NEW</event:scenario>
                     <event:version>2.0</event:version>
                     <event:revision>2018-10-14T16:22:42Z</event:revision>
-                <!--<event:associatedEvent xlink:href="#uuid.f4d5e4d4-d84a-481f-b9e3-b359e42c0dff"/> -->
+                <!--<event:concernedAirspace xlink:href="#uuid.f4d5e4d4-d84a-481f-b9e3-b359e42c0dff"/> -->
                     <event:textNOTAM>
                         <event:NOTAM gml:id="ID_7072511d">
                             <event:series>A</event:series>
