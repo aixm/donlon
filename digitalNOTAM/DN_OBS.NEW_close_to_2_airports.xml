@@ -54,6 +54,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <event:scenario>OBS.NEW</event:scenario>
                     <event:version>2.0</event:version>
                     <event:revision>2018-05-21T16:32:00Z</event:revision>
+                <!--<event:concernedAirportHeliport href: xlink:href="#uuid.b35409d8-f236-4303-a12d-795e9e9c8751" DONLON Heliport identifier-->
                     <event:textNOTAM>
                         <event:NOTAM gml:id="ID_70721">
                             <event:series>A</event:series>
