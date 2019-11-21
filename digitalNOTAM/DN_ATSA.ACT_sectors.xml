@@ -67,12 +67,12 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:selectionCode>QAECA</event:selectionCode>
                             <event:traffic>IV</event:traffic>
                             <event:purpose>NBO</event:purpose>
-                            <event:scope>E</event:scope>
+                            <event:scope>AE</event:scope>
                             <event:minimumFL>30</event:minimumFL>
                             <event:maximumFL>450</event:maximumFL>
                             <event:coordinates>4922N00009E</event:coordinates> <!--exact coordinates to be determined-->
                             <event:radius>014</event:radius> <!--exact radius to be determined-->
-                            <event:location>EAAD</event:location>
+                            <event:location>EADD</event:location>
                             <event:effectiveStart>1810141500</event:effectiveStart>
                             <event:effectiveEnd>1810152300</event:effectiveEnd>
                             <event:text>
@@ -80,7 +80,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                             </event:text>
                         </event:NOTAM>
                     </event:textNOTAM>
-                    <event:textNOTAM>
+            <!--        <event:textNOTAM>
                         <event:NOTAM gml:id="ID_70725_a1">
                             <event:series>A</event:series>
                             <event:number>1456</event:number>
@@ -94,8 +94,8 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:scope>A</event:scope>
                             <event:minimumFL>000</event:minimumFL>
                             <event:maximumFL>999</event:maximumFL>
-                            <event:coordinates>522236N315658W</event:coordinates> <!--ARP EADD-->
-                            <event:radius>005</event:radius> <!--exact radius to be determined-->
+                            <event:coordinates>522236N315658W</event:coordinates> ARP EADD
+                            <event:radius>005</event:radius> --exact radius to be determined-
                             <event:location>EADD</event:location>
                             <event:effectiveStart>1810141500</event:effectiveStart>
                             <event:effectiveEnd>1810152300</event:effectiveEnd>
@@ -103,7 +103,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                                 CTA part SECTOR DONLON EAST EADD1 and SECTOR DONLON WEST EADD2 activated.                                
                             </event:text>
                         </event:NOTAM>
-                    </event:textNOTAM>
+                    </event:textNOTAM> -->
                     <event:textNOTAM>
                         <event:NOTAM gml:id="ID_70725_a2">
                             <event:series>A</event:series>
