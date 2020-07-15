@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Example created by Wolfgang Scheucher, SOLITEC Software Solutions GmbH -->
-<!-- Copyright (c) 2018, EUROCONTROL & FAA
+<!-- Copyright (c) 2018, EUROCONTROL
 All rights reserved.
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
     Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
@@ -31,19 +31,20 @@ Editorial note: this license is an instance of the BSD license template as provi
 	xsi:schemaLocation="http://www.aixm.aero/schema/5.1/message http://www.aixm.aero/schema/5.1/message/AIXM_BasicMessage.xsd" 
 	gml:id="M0000001">
 	<gml:boundedBy>
+		<!-- Based on Amswell FIR. --> 
 		<gml:Envelope srsName="urn:ogc:def:crs:EPSG::4326">
-			<gml:lowerCorner>52.0886111111111 -17.0</gml:lowerCorner>
-			<gml:upperCorner>57.690815969999996 -28.4283333333333</gml:upperCorner>
+			<gml:lowerCorner>40.73333334 -41.78333334</gml:lowerCorner>
+			<gml:upperCorner>57.08333334 -21.13333334</gml:upperCorner>
 		</gml:Envelope>
 	</gml:boundedBy>
 	<aixm:messageMetadata>
 		<gmd:MD_Metadata id="MD_DONLON_OBS_DS_AREA1">
-			<!--  gmd:contact (for Metadata) is required by ISO 19115 (2003). 
-				It should be marked as "inapplicable" (<gmd:contact gco:nilReason="inapplicable"/>) or be used to give the organisation name and email address of the party who added the metadata.  -->
+			<!-- MD_Metadata.contact > CI_ResponsibleParty (i.e. Metadata point of contact). Mandatory by ISO 19115 (2003). 
+				It should be marked as "inapplicable" (<gmd:contact/gco:nilReason="inapplicable"/>) or be used to give the organisation name and email address of the party who added the metadata.  -->
 			<gmd:contact>
 				<gmd:CI_ResponsibleParty>
 					<gmd:organisationName>
-						<gco:CharacterString>EUROCONTROL</gco:CharacterString>
+						<gco:CharacterString>Data initially created by Solitec Software Solutions(solitec.com); currently maintained by Eurocontrol.</gco:CharacterString>
 					</gmd:organisationName>
 					<gmd:contactInfo>
 						<gmd:CI_Contact>
@@ -61,65 +62,63 @@ Editorial note: this license is an instance of the BSD license template as provi
 					</gmd:role>
 				</gmd:CI_ResponsibleParty>
 			</gmd:contact>
-			<!--  gmd:dateStamp (for Metdata) is required by ISO 19115 (2003).
+			<!--  MD_Metadata.dateStamp (Metadata date stamp). Mandatory by by ISO 19115 (2003).
 			It should be marked as "inapplicable"  (<gmd:dateStamp gco:nilReason="inapplicable"/>) or used to record a date. -->
 			<gmd:dateStamp>
-				<gco:DateTime>2019-09-12T00:00:00Z</gco:DateTime>
+				<gco:DateTime>2019-11-28T00:00:00Z</gco:DateTime>
 			</gmd:dateStamp>
 			<gmd:identificationInfo>
 				<gmd:MD_DataIdentification>
 					<gmd:citation>
 						<gmd:CI_Citation>
-							<!-- gmd:title is required by ISO 19115 (2003). This should be used to provide the name of the dataset (including on a hight level what it contains) 
-								Open Question: shall it include the effectve date?.-->
+							<!-- MD_Metadata > MD_DataIdentification.citation > CI_Citation.title. Mandatory by ISO 19115 (2003).
+								Name by which the cited resource is known (i.e. name of the dataset).  -->
 							<gmd:title>
-								<gco:CharacterString>AIXM 5.1 Obstacle data set sample for DONLON Area 1; Full initial data set (Eff Date: 2019-12-05)</gco:CharacterString>
+								<gco:CharacterString>DONLON Area 1 Obstacle Data Set (Full)</gco:CharacterString>
 							</gmd:title>
-							<!-- gmd:date;
-								Publication date required by PANS-AIM 
-								5.3.2 "the date and time when the data set was provided" and 
-								4.2 "the date and time the action was performed". -->
-							<!-- OPEN QUESTION: PANS-AIM in Table6-2 also list as mandatory attribute in "Date and time stamp" 
-								(creation/modification date and time of data set or effective date start of lifetime of on feature levl)?)
-								Could it be coded, i.e. the creation or revision date (i.e. the "Cut-off" date) in addition  -->
+							<!-- MD_Metadata > MD_DataIdentification.citation > CI_Citation.date (Dataset reference date);
+								Publication date required by PANS-AIM chapter 5.3.2 "the date and time when the data set was provided".
+								Note: In addtion the creation and/or revision date of the data set may be provided as metadata as well, although not required by ICAO nor by ISO 19115 (2003).-->
 							<gmd:date>
 								<gmd:CI_Date>
 									<gmd:date>
-										<gco:DateTime>2019-09-12T00:00:00Z</gco:DateTime>
+										<gco:DateTime>2019-11-28T00:00:00Z</gco:DateTime>
 									</gmd:date>
 									<gmd:dateType>
 										<gmd:CI_DateTypeCode codeList="https://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
 									</gmd:dateType>
 								</gmd:CI_Date>
 							</gmd:date>
-							<!-- Creation or Revision date of data set. -->
+							<!-- Revision date of data set. -->
 							<gmd:date>
 								<gmd:CI_Date>
 									<gmd:date>
-										<gco:DateTime>2019-08-29T00:00:00Z</gco:DateTime>
+										<gco:DateTime>2019-11-21T00:00:00Z</gco:DateTime>
 									</gmd:date>
 									<gmd:dateType>
-										<gmd:CI_DateTypeCode codeList="https://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+										<gmd:CI_DateTypeCode codeList="https://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
 									</gmd:dateType>
 								</gmd:CI_Date>
 							</gmd:date>
 						</gmd:CI_Citation>
 					</gmd:citation>
-					<!--gmd:abstract is required by ISO 19115 (2003). Should be used to give a description of what data (i.e. based on what requirements) is provided with the data set:
-						(e.g. Acc. ICAO Provison Annex 15, 16th Ed. or, if applicapbe, deviations e.g. more stringent obstacle collection requirememts).  -->
+					<!-- MD_Metadata > MD_DataIdentification.abstract (Abstract describing the dataset). Mandatory by ISO 19115 (2003). 
+						A short description of what data  based on what requirements are provided within the data set
+						(e.g. compliance with ICAO Provisons or, if applicapbe, deviations could be more or less stringent obstacle collection requirements).  -->
+					<!-- OPEN QUESTION: Horizontal & Vertical Confidence Level required by PANS-AIM Table A6-2. May it be coded in the abstract?. -->
 					<gmd:abstract>
-						<gco:CharacterString>DONLON Area 1 Obstacle data set sample (Full initial data set)in AIXm 5.1 format.
-						Data collection and publication according ICAO Annex 15 (16th Edition July 2018) requirements.
+						<gco:CharacterString>DONLON Area 1 obstacle data set sample (Full initial data set) in AIXM 5.1 format.
+						Data collection and publication fully compliant with ICAO Annex 15 (16th Edition, July 2018) requirements and AIXM 5.1. coding guidelines (aixm.aero/confluence).
+						Horizontal and Vertical Confidence Level for all data is 90%.
 						</gco:CharacterString>
 					</gmd:abstract>
-					<!-- gmd:pointOfContact required by PANS-AIM 
-						5.3.2 "the names of the organization or entities providing the data set"; 
-						4.2 "the names of the organizations or entities performing any action...of transmitting...the data"; 
+					<!-- MD_Metadata > MD_DataIdentification.pointOfContact > CI_ResponsibleParty. (Dataset responsible party). Required by PANS-AIM: 						
+						5.3.2 "the names of the organization or entities providing the data set";
 						Table A6-2 Obstacle attributes "Data source idenitifier" -->
 					<gmd:pointOfContact>
 						<gmd:CI_ResponsibleParty>
 							<gmd:organisationName>
-								<gco:CharacterString>Eurocontrol</gco:CharacterString>
+								<gco:CharacterString>Data initially created by Solitec Software Solutions(solitec.com); currently maintained by Eurocontrol.</gco:CharacterString>
 							</gmd:organisationName>
 							<gmd:contactInfo>
 								<gmd:CI_Contact>
@@ -142,23 +141,21 @@ Editorial note: this license is an instance of the BSD license template as provi
 											<gmd:linkage>
 												<gmd:URL>https://github.com/aixm/donlon</gmd:URL>
 											</gmd:linkage>
-											<gmd:name>
-												<gco:CharacterString>aixm donlon</gco:CharacterString>
-											</gmd:name>
 										</gmd:CI_OnlineResource>
 									</gmd:onlineResource>
 								</gmd:CI_Contact>
 							</gmd:contactInfo>
-							<!-- gmd:role is required by ISO 19115 (2003) -->
+							<!-- MD_Metadata > MD_DataIdentification.pointOfContact > CI_ResponsibleParty.role (function performed by the responsible party). Mandatory by ISO 19115 (2003). -->
 							<gmd:role>
 								<gmd:CI_RoleCode codeList="https://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
 							</gmd:role>
 						</gmd:CI_ResponsibleParty>
 					</gmd:pointOfContact>
-					<!-- gmd:resourceConstraints required by PANS-AIM 5.3.2 "any limitations with regard to the use of the data set." 
-					In addtion also these elments may be coded:
-					gmd:accessConstraints (e.g. "license") to assure the protection of privacy or intellectual property, and any special restrictions or limitations on obtaining the resource or metadata
-					and gmd:classification (e.g. "restricted")-->
+					<!-- MD_Metadata > MD_DataIdentification.resourceConstraints > MD_Constraints. Required by PANS-AIM:
+						5.3.2 "any limitations with regard to the use of the data set." 
+						In addtion also these elements may be coded:
+						gmd:accessConstraints (e.g. "license") to assure the protection of privacy or intellectual property, and any special restrictions or limitations on obtaining the resource or metadata
+						gmd:classification (e.g. "restricted"). -->
 					<gmd:resourceConstraints>
 						<gmd:MD_Constraints>
 							<gmd:useLimitation>
@@ -166,44 +163,58 @@ Editorial note: this license is an instance of the BSD license template as provi
 							</gmd:useLimitation>
 						</gmd:MD_Constraints>
 					</gmd:resourceConstraints>
-					<!-- gmd:language is required by ISO 19115 (2003). -->
+					<!-- MD_Metadata > MD_DataIdentification.language. (Language(s) used within the dataset). Mandatory by ISO 19115(2003). -->
 					<gmd:language>
 						<gco:CharacterString>eng</gco:CharacterString>
 					</gmd:language>
-					<!-- gmd:topicCategory is required by ISO 19115 (2003). As default use the codelist value "transportation".-->
+					<!-- MD_Metadata > MD_DataIdentification.topicCategory. (Main theme(s) of the dataset). Mandatory by ISO 19115(2003).
+						Default for ICAO data sets is "transportation".-->
 					<gmd:topicCategory>
 						<gmd:MD_TopicCategoryCode>transportation</gmd:MD_TopicCategoryCode>
 					</gmd:topicCategory>
-					<!-- required by PANS-AIM Table A6-2: "Area of coverage" 
-					One of the three options must be provided:
-					gmd:EX_GeographicBoundingBox or;
-					gmd:EX_BoundingPolygon or;
-					gmd:EX_GeographicDescription -->
+					<!-- MD_Metadata > MD_DataIdentification.extent > EX_Extent.geographicElement. (geographic area of the dataset). Required by PANS-AIM:
+						Table A6-2: "Area of coverage". 
+						One of the three options must be provided:
+						gmd:EX_GeographicBoundingBox or;
+						gmd:EX_BoundingPolygon or;
+						gmd:EX_GeographicDescription -->
 					<gmd:extent>
 						<gmd:EX_Extent>
 							<gmd:description>
-								<gco:CharacterString>DONLON State Territory</gco:CharacterString>
+								<gco:CharacterString>Area of coverage (Area 1)</gco:CharacterString>
 							</gmd:description>
 							<gmd:geographicElement>
 								<gmd:EX_GeographicBoundingBox>
 									<gmd:westBoundLongitude>
-										<gco:Decimal>-28.4283333333333</gco:Decimal>
+										<gco:Decimal>-41.78333334</gco:Decimal>
 									</gmd:westBoundLongitude>
 									<gmd:eastBoundLongitude>
-										<gco:Decimal>-17.0</gco:Decimal>
+										<gco:Decimal>-21.13333334</gco:Decimal>
 									</gmd:eastBoundLongitude>
 									<gmd:southBoundLatitude>
-										<gco:Decimal>52.0886111111111</gco:Decimal>
+										<gco:Decimal>40.73333334</gco:Decimal>
 									</gmd:southBoundLatitude>
 									<gmd:northBoundLatitude>
-										<gco:Decimal>57.690815969999996</gco:Decimal>
+										<gco:Decimal>57.08333334</gco:Decimal>
 									</gmd:northBoundLatitude>
 								</gmd:EX_GeographicBoundingBox>
 							</gmd:geographicElement>
+							<gmd:geographicElement>
+								<gmd:EX_GeographicDescription>
+									<gmd:geographicIdentifier>
+										<gmd:MD_Identifier>
+											<gmd:code>
+												<gco:CharacterString>DONLON State territory</gco:CharacterString>
+											</gmd:code>
+										</gmd:MD_Identifier>
+									</gmd:geographicIdentifier>
+								</gmd:EX_GeographicDescription>
+							</gmd:geographicElement>
 						</gmd:EX_Extent>
 					</gmd:extent>
-					<!-- required by PANS-AIM 5.3.2 "validity of the data set" 
-					When the end of validity is unknown use indeterminatePosition="unknown". -->
+					<!-- MD_Metadata > MD_DataIdentification.extent > EX_Extent.temporalElement. (time period covered by the content of the dataset). Required by PANS-AIM:
+						5.3.2 "validity of the data set" 
+						When the end of validity is unknown use indeterminatePosition="unknown". -->
 					<gmd:extent>
 						<gmd:EX_Extent>
 							<gmd:description>
@@ -213,8 +224,8 @@ Editorial note: this license is an instance of the BSD license template as provi
 								<gmd:EX_TemporalExtent>
 									<gmd:extent>
 										<gml:TimePeriod gml:id="period1">
-											<gml:beginPosition>2019-09-12T00:00:00Z</gml:beginPosition>
-											<gml:endPosition indeterminatePosition="unknown"></gml:endPosition>
+											<gml:beginPosition>2019-12-05T00:00:00Z</gml:beginPosition>
+											<gml:endPosition indeterminatePosition="unknown"/>
 										</gml:TimePeriod>
 									</gmd:extent>
 								</gmd:EX_TemporalExtent>
@@ -232,6 +243,8 @@ Editorial note: this license is an instance of the BSD license template as provi
 			The other obstacle examples in this file contain only those properties considered to be required by PANS-AIM  (incl. coding of nil value if applicable). -->
 		<aixm:VerticalStructure gml:id="uuid.5f68d835-828c-4ccd-91b7-791058d9dd4d">
 			<gml:identifier codeSpace="urn:uuid:">5f68d835-828c-4ccd-91b7-791058d9dd4d</gml:identifier>
+			<!-- validTime and featureLifetime is used to code PANS-AIM Table A-6.2 "Effectivity".  
+			NOTE: In case of temporary obstacles, also VerticalStructurePart.timeInterval.Timesheet may be needed to fulfill this requirement..-->
 			<aixm:timeSlice>
 				<aixm:VerticalStructureTimeSlice gml:id="OBS-0001">
 					<gml:validTime>
@@ -249,10 +262,8 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<gml:endPosition indeterminatePosition="unknown"/>
 						</gml:TimePeriod>
 					</aixm:featureLifetime>
-					<!-- name not required by PANS-AIM,
-						but may be used to code PANS-AIM Table A-6.2 "Obstcale Identifier"; 
-						ENR 5.4/AD 2.10 "obstacle identification or designation"-->
-					<aixm:name xsi:nil="true" nilReason="inapplicable"/>
+					<!-- VerticalStructure.name is used to code PANS-AIM Table A-6.2 "Obstacle Identifier"; ENR 5.4/AD 2.10 "obstacle identification or designation".-->
+					<aixm:name>OBS-0001</aixm:name> 
 					<!-- type required by PANS-AIM Table A6-2 and ENR 5.4, AD 2/3.10 -->
 					<aixm:type>ANTENNA</aixm:type>
 					<!-- lighted required by PANS-AIM Table A6-2 -->
@@ -263,35 +274,38 @@ Editorial note: this license is an instance of the BSD license template as provi
 						propertyName=markingICAOStandard,
 						purpose=“REMARK”,
 						translatedNote.LinguisticNote.note=”marked=YES”.
-						the other marking attributes such as markingFirstColour if applicable (as defined in CP AIXM-233).
-						OPEN QUESTION: Shall markingICAOStandard be coded as no or nilReason = inapplicable or not at all? -->
-					<!-- OPEN QUESTION: How to code unmarked and unkown?--> 
-					<aixm:markingICAOStandard>NO</aixm:markingICAOStandard>
+						the other marking attributes such as markingFirstColour if applicable (as defined in CP AIXM-233). -->
+					<!-- OPEN QUESTION: Shall markingICAOStandard be coded as no or nilReason = inapplicable or not at all? -->
+					<!-- markingICAOStandard is not expclicitly required by PANS-AIM -->
+					<aixm:markingICAOStandard xsi:nil="true" nilReason="inapplicable"/>
 					<!-- group not required by PANS-AIM (but should be used a best pratice for certain use cases, see group of obstacle examples). -->
-					<aixm:group>NO</aixm:group>
+					<aixm:group xsi:nil="true" nilReason="inapplicable"/>
 					<!-- horizontalExtent required by PANS-AIM Table A6-2 
 						NOTE: Only applicable for point and line obstacles (e.g. the extend of the guy wires of the mast)
-						NOTE: It may also be used for a polygon obstacle georgaphical defined by its centre point, (e.g. a building) to provide a simplified polygon extend.
+						NOTE: It may also be used for an obstacle with polygon shape but georgaphical defined by its centre point, (e.g. a building) to provide a simplified polygon extend.
 						NOTE: Either radius or lenght and width shall be used to describe the horizontal extend. -->
 					<aixm:length xsi:nil="true" nilReason="inapplicable"/>
 					<aixm:width xsi:nil="true" nilReason="inapplicable"/>
 					<aixm:radius xsi:nil="true" nilReason="inapplicable"/>
 					<!-- lightingICAOStandard and synchronisedLighting is not expclicitly required by PANS-AIM -->
-					<aixm:lightingICAOStandard xsi:nil="true" nilReason="unknown"/>
-					<aixm:synchronisedLighting xsi:nil="true" nilReason="unknown"/>
+					<aixm:lightingICAOStandard xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:synchronisedLighting xsi:nil="true" nilReason="inapplicable"/>
 					<!-- marker not required by PANS-AIM -->
 					<aixm:marker xsi:nil="true" nilReason="inapplicable"/>
 					<aixm:part>
 						<aixm:VerticalStructurePart gml:id="V-af4ee6d6">
-							<!-- verticalExtent optional in PANS-AIM Table A-6-2("height") and ENR 5.4, AD2/3.10 -->
+							<!-- Height is an optional attribute in PANS-AIM Table A-6-2.
+							Height is listed in ENR 5.4 and AD2/3.10. 
+							Note: Height is mandatory in RTCA/EUROCAE ED-98C/DO-276C -->
+							<!-- NOTE: In case of a single part obstacle the verticalExtent is the height (above ground) of the obstacle. 
+							In case of a multi part obstacle it may not be the height above ground, as per definition verticalExtent is the height of the obstacle part from its bottom. -->
 							<aixm:verticalExtent uom="M">120</aixm:verticalExtent>
 							<aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
 							<!-- In case of single part obstacle type of verticalStrcuture shall be the same as for the part.
 								 In case of multi part obstacles types may have different values. -->
-							<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:type>ANTENNA</aixm:type>
 							<!-- constructionStatus not requried by PANS-AIM but contained in ED-98. -->
-							<!-- OPEN QUESTION: How is Planned and In Construction used especially in regard to the valid time?  -->
-							<aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
+							<aixm:constructionStatus xsi:nil="true" nilReason="inapplicable"/>
 							<!-- PANS-AIM table A6-2 only requires information if an obstcle is marked.
 								Marking pattern and colour is not explicitly required by PANS-AIM. -->
 							<aixm:markingPattern xsi:nil="true" nilReason="inapplicable"/>
@@ -300,15 +314,16 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<!-- mobile optional in PANS-AIM Table A6-2("operations") -->
 							<aixm:mobile>NO</aixm:mobile>
 							<!-- frangible not required by PANS-AIM -->
-							<aixm:frangible>NO</aixm:frangible>
+							<aixm:frangible xsi:nil="true" nilReason="inapplicable"/>
 							<!-- visibleMaterial not required by PANS-AIM but contained in Appendix 1 "Aeronautical Data Catalogue" ("Material")-->
-							<aixm:visibleMaterial xsi:nil="true" nilReason="unknown"/>
-							<!-- designator required by PANS-AIM Table A6-2 "Obstacle identifier" and ENR 5.4, AD 2/3.10 "obstacle identification or designation" -->
-							<aixm:designator>OBS-0001</aixm:designator>
-							<!-- horizontalProjection required by PANS-AIM Table A6-2 "horizontal position" and ENR 5.4,AD 2/3.10 "obstacle position" -->
+							<aixm:visibleMaterial xsi:nil="true" nilReason="inapplicable"/>
+							<!-- part designator is not required by PANS-AIM (see VerticalStructure.name) but may be used for multiple part obstacles. -->
+							<aixm:designator xsi:nil="true" nilReason="inapplicable"/>
+							<!-- horizontalProjection required by PANS-AIM Table A6-2 "horizontal position" and ENR 5.4,AD 2/3.10 "obstacle position. -->							
 							<aixm:horizontalProjection_location>
+								<!-- Geometry type required by PANS-AIM Table A6-2 results from the horizontalProjection choice.-->
 								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="p1121">
-									<gml:pos>52.36171388888889 -28.03756666666666</gml:pos>
+									<gml:pos>52.36171389 -28.03756667</gml:pos>
 									<!-- horizontalAccuracy required by PANS-AIM Table A6-2 -->
 									<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
 									<!-- elevation required by PANS-AIM Table A6-2 "Elevation" and ENR 5.4,AD 2/3.10 -->
@@ -325,28 +340,14 @@ Editorial note: this license is an instance of the BSD license template as provi
 								<aixm:LightElement gml:id="le0001">
 									<!-- PANS-AIM table A-6-2 only requires information if an obstcale is lighted. 
 										However, colour and type are properties listed in the PANS-AIM Appendix 1 "Aeronautical Data Catalogue" and ENR 5.4, AD2/3.10. 
-										intensityLevel, intensity and availability is not explicitly required by PANS-AIM 
+										intensityLevel, intensity and availability is not explicitly required by PANS-AIM. 
 										(Note that there is also a lightingAvailability element for the VerticalStructure.)  -->
-									<!-- OPEN QUESTION: How to code light availabilty for single part obstacle: LightElement.availability or VerticalStrcuture.availability. -->
-									<aixm:colour>RED</aixm:colour>
-									<aixm:intensityLevel xsi:nil="true" nilReason="unknown"/>
-									<aixm:intensity xsi:nil="true" nilReason="unknown"/>
-									<aixm:type xsi:nil="true" nilReason="unknown"/>
-									<!-- Coding of the availablity meaning lighted during Night. May also be coded as annotation. See OBS-0002. -->
-									<aixm:availability>
-										<aixm:LightElementStatus gml:id="les01">
-											<aixm:timeInterval>
-												<aixm:Timesheet gml:id="ts01">
-													<aixm:day>ANY</aixm:day>
-													<aixm:dayTil>ANY</aixm:dayTil>
-													<aixm:startEvent>SS</aixm:startEvent>
-													<aixm:endEvent>SR</aixm:endEvent>
-												</aixm:Timesheet>
-											</aixm:timeInterval>
-											<!-- OPEN QUESTION: is status required (i.e. for Digital NOTAM)? -->
-											<aixm:status>NORMAL</aixm:status>
-										</aixm:LightElementStatus>
-									</aixm:availability>
+									<aixm:colour xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensityLevel xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:intensity xsi:nil="true" nilReason="inapplicable"/>
+									<aixm:type xsi:nil="true" nilReason="inapplicable"/>
+									<!-- regarding availability, see also lightingAvailability, below.  -->
+									<aixm:availability xsi:nil="true" nilReason="inapplicable"/>
 								</aixm:LightElement>
 							</aixm:lighting>
 						</aixm:VerticalStructurePart>
@@ -359,7 +360,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:hostedUnit xsi:nil="true" nilReason="inapplicable"/>
 					<aixm:hostedOrganisation xsi:nil="true" nilReason="inapplicable"/>
 					<aixm:supportedService xsi:nil="true" nilReason="inapplicable"/>
-					<!-- Coding of marked but not according to ICAO standards using an annotation (based on CP AIXM-322). -->
+					<!-- Coding that the obstacle is marked using an annotation (acc. to CP AIXM-322).-->
 					<aixm:annotation>
 						<aixm:Note gml:id="n0000">
 							<aixm:propertyName>markingICAOStandard</aixm:propertyName>
@@ -372,7 +373,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 						</aixm:Note>
 					</aixm:annotation>
 					<!-- Operator/Owner not required by PANS-AIM but contained in Appendix 1 "Aeronautical Data Catalogue".
-					In AIXM 5.1(1) it may only be coded as Note for an Obsatcle data set.
+					In AIXM 5.1(1) it may only be coded as Note for an Obstacle data set.
 					Note: For data provided by the data orginator this information will be rather coded as metadata.-->
 					<aixm:annotation>
 						<aixm:Note gml:id="n0001">
@@ -384,35 +385,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							</aixm:translatedNote>
 						</aixm:Note>
 					</aixm:annotation>
-					<!-- Horizontal Confidence Level required by PANS-AIM Table A6-2". 
-					OPEN QUESTION: 1) This is based on the AIXM mapping but shouldn't that be rather Metadata? 
-					2) If coded as Note it actually has to be coded on each part level as it is related to the horizontalAccuracy? -->
-					<aixm:annotation>
-						<aixm:Note gml:id="n0002">
-							<aixm:purpose>REMARK</aixm:purpose>
-							<aixm:translatedNote>
-								<aixm:LinguisticNote gml:id="ln0002">
-									<aixm:note>Horizontal Confidence Level is 90%.</aixm:note>
-								</aixm:LinguisticNote>
-							</aixm:translatedNote>
-						</aixm:Note>
-					</aixm:annotation>
-					<!--  Vertical Confidence Level required by PANS-AIM". 
-					OPEN QUESTION: 1) This is based on the AIXM mapping but shouldn't that be rather Metadata? 
-					2) If coded as Note it actually has to be coded on each part level (twice!) as it is related to the verticalAccuracy and verticalExtentAccuracy? -->
-					<aixm:annotation>
-						<aixm:Note gml:id="n0003">
-							<aixm:purpose>REMARK</aixm:purpose>
-							<aixm:translatedNote>
-								<aixm:LinguisticNote gml:id="ln0003">
-									<aixm:note>Vertical Confidence Level is 90%.</aixm:note>
-								</aixm:LinguisticNote>
-							</aixm:translatedNote>
-						</aixm:Note>
-					</aixm:annotation>
-					<!-- Horizontal Resolution required by PANS-AIM".
-					OPEN QUESTION: 1. This is based on the AIXM mapping but shouldn't that be rather Metadata? 
-					2) If coded as Note it actually has to be coded on each part level as it is related to the horizontalAccuracy? -->
+					<!-- Horizontal Resolution required by PANS-AIM Table A6-2. -->
 					<aixm:annotation>
 						<aixm:Note gml:id="n0004">
 							<aixm:purpose>REMARK</aixm:purpose>
@@ -423,9 +396,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							</aixm:translatedNote>
 						</aixm:Note>
 					</aixm:annotation>
-					<!--  Vertical Resolution required by PANS-AIM".
-					OPEN QUESTION: 1 This is based on the AIXM mapping but shouldn't that be rather Metadata?
-					2.If coded as Note it actually has to be coded on each part level (twice!) as it is related to the verticalAccuracy and verticalExtentAccuracy? -->
+					<!--  Vertical Resolution required by PANS-AIM Table A6-2. -->
 					<aixm:annotation>
 						<aixm:Note gml:id="n0005">
 							<aixm:purpose>REMARK</aixm:purpose>
@@ -436,17 +407,29 @@ Editorial note: this license is an instance of the BSD license template as provi
 							</aixm:translatedNote>
 						</aixm:Note>
 					</aixm:annotation>
-					<!-- lightingAvailability not explicitly required by PANS-AIM" 
-						(NOTE: there is also a availability property for the LightElement of the VerticalStructurePart.) -->
-					<aixm:lightingAvailability xsi:nil="true" nilReason="inapplicable"/>
+					<!-- lightingAvailability not explicitly required by PANS-AIM. 
+					Coding of the availability meaning lighted during Night. May also be coded as annotation.
+					NOTE: There is also the availability property for the LightElement of the VerticalStructurePart. -->
+					<aixm:lightingAvailability>
+						<aixm:VerticalStructureLightingStatus gml:id="vsls02012">
+							<aixm:timeInterval>
+								<aixm:Timesheet gml:id="ts022">
+									<aixm:day>ANY</aixm:day>
+									<aixm:dayTil>ANY</aixm:dayTil>
+									<aixm:startEvent>SS</aixm:startEvent>
+									<aixm:endEvent>SR</aixm:endEvent>				
+								</aixm:Timesheet>
+							</aixm:timeInterval>
+							<aixm:specialDateAuthority xsi:nil="true" nilReason="inapplicable"/>
+							<aixm:status>NORMAL</aixm:status>
+						</aixm:VerticalStructureLightingStatus>
+					</aixm:lightingAvailability>
 					</aixm:VerticalStructureTimeSlice>
 			</aixm:timeSlice>
 		</aixm:VerticalStructure>
 	</message:hasMember>
 	<message:hasMember>
-		<!-- GROUPS OF OBSTACLES EACH OBSTACLE PUBLISHED INDIVIDUALLY (Wind turbines of a windpark).
-			Case where obstacles of similar height that are located in close proximity to one another as is published as group.
-			To indicate that the individual listed obstacles are part of a group, the obstacle type may be published commonly for the obstacle group. -->
+		<!-- GROUPS OF OBSTACLES EACH OBSTACLE PUBLISHED INDIVIDUALLY (Wind turbines of a windpark). -->
 		<aixm:VerticalStructure gml:id="uuid.6c7fac45-c24f-4e36-b196-687458d99070 ">
 			<gml:identifier codeSpace="urn:uuid:">6c7fac45-c24f-4e36-b196-687458d99070</gml:identifier>
 			<aixm:timeSlice>
@@ -466,11 +449,9 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<gml:endPosition indeterminatePosition="unknown"/>
 						</gml:TimePeriod>
 					</aixm:featureLifetime>
-					<aixm:name>WINDPARK BAUMGARTEN</aixm:name>
+					<aixm:name>WINDPARK DONLON IV</aixm:name>
 					<aixm:type>WINDMILL_FARMS</aixm:type>
 					<aixm:lighted>NO</aixm:lighted>
-					<aixm:markingICAOStandard>OTHER:NOT_MARKED</aixm:markingICAOStandard>
-					<!-- OPEN QUESTION: In case each windturbine has a horizonal extend or one is lighted and the other is not, etc. they would hav eto be coded as separate VerticalStructure Feature? -->
 					<aixm:length xsi:nil="true" nilReason="inapplicable"/>
 					<aixm:width xsi:nil="true" nilReason="inapplicable"/>
 					<aixm:radius xsi:nil="true" nilReason="inapplicable"/>
@@ -564,13 +545,25 @@ Editorial note: this license is an instance of the BSD license template as provi
 							</aixm:horizontalProjection_location>
 						</aixm:VerticalStructurePart>
 					</aixm:part>
+					<!-- That the obstacle is not marked is coded as annotation. -->
+					<aixm:annotation>
+						<aixm:Note gml:id="n04000">
+							<aixm:propertyName>markingICAOStandard</aixm:propertyName>
+							<aixm:purpose>REMARK</aixm:purpose>
+							<aixm:translatedNote>
+								<aixm:LinguisticNote gml:id="ln04000">
+									<aixm:note>marked=NO</aixm:note>
+								</aixm:LinguisticNote>
+							</aixm:translatedNote>
+						</aixm:Note>
+					</aixm:annotation>
 				</aixm:VerticalStructureTimeSlice>
 			</aixm:timeSlice>
 		</aixm:VerticalStructure>
 	</message:hasMember>
 	<message:hasMember>
 		<!-- GROUPS OF OBSTACLES GROUPED WITH AN AREA (POLYGON) (Windfarm area).
-			Case where a large number of obstacles with similar elevation are grouped, an area encompassing the grouped obstacles may be published instead of publishing each individual object.-->
+			Case where a large number of obstacles with similar elevation are grouped, an area (polygon) encompassing the grouped obstacles may be published instead of publishing each individual object.-->
 		<aixm:VerticalStructure gml:id="uuid.47db48e9-d46a-4100-a266-25a3968b6a98">
 			<gml:identifier codeSpace="urn:uuid:">47db48e9-d46a-4100-a266-25a3968b6a98</gml:identifier>
 			<aixm:timeSlice>
@@ -593,7 +586,6 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:name>RODSAND II</aixm:name>
 					<aixm:type>WINDMILL_FARMS</aixm:type>
 					<aixm:lighted>YES</aixm:lighted>
-					<aixm:markingICAOStandard>NO</aixm:markingICAOStandard>
 					<!-- aixm:group is not required by PANS-AIM. 
 						However, in AIXM it is coded with 'YES' in case a single part obstacle is actually a group of several obstacles. -->
 					<aixm:group>YES</aixm:group>
@@ -606,7 +598,6 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
 							<aixm:type>WINDMILL_FARMS</aixm:type>
 							<aixm:markingFirstColour>GREEN</aixm:markingFirstColour>
-							<aixm:designator>OBS-0002</aixm:designator>
 							<aixm:horizontalProjection_surfaceExtent>
 								<aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0002-1">
 									<gml:patches>
@@ -645,6 +636,17 @@ Editorial note: this license is an instance of the BSD license template as provi
 							</aixm:lighting>
 						</aixm:VerticalStructurePart>
 					</aixm:part>
+					<aixm:annotation>
+						<aixm:Note gml:id="n0020">
+							<aixm:propertyName>markingICAOStandard</aixm:propertyName>
+							<aixm:purpose>REMARK</aixm:purpose>
+							<aixm:translatedNote>
+								<aixm:LinguisticNote gml:id="ln000110">
+									<aixm:note>marked=YES</aixm:note>
+								</aixm:LinguisticNote>
+							</aixm:translatedNote>
+						</aixm:Note>
+					</aixm:annotation>
 					<!-- The number of obstcales forming the group is coded as annotation. -->
 					<aixm:annotation>
 						<aixm:Note gml:id="n12-12">
@@ -673,8 +675,8 @@ Editorial note: this license is an instance of the BSD license template as provi
 		</aixm:VerticalStructure>
 	</message:hasMember>
 	<message:hasMember>
-		<!-- LINE OBSTACLE (Cableway) 
-			OPTION A: 1x VerticalStructure with several VerticalStructurePart.
+		<!-- LINE OBSTACLE (Cableway) OPTION A: 
+			1x VerticalStructure with several VerticalStructurePart.
 			Example also used to shows coding of partially in construction. -->
 		<aixm:VerticalStructure gml:id="uuid.87a585b3-0597-4f5c-974f-cddfc604dc93">
 			<gml:identifier codeSpace="urn:uuid:">87a585b3-0597-4f5c-974f-cddfc604dc93</gml:identifier>
@@ -698,14 +700,14 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:name>LANGTALERECKHUETTE - HOCHWILDEHAUS</aixm:name>
 					<aixm:type>CABLE_CAR</aixm:type>
 					<aixm:lighted>NO</aixm:lighted>
-					<aixm:markingICAOStandard>OTHER:NOT_MARKED</aixm:markingICAOStandard>
 					<aixm:length xsi:nil="true" nilReason="inapplicable"/>
 					<aixm:width xsi:nil="true" nilReason="inapplicable"/>
 					<aixm:radius xsi:nil="true" nilReason="inapplicable"/>
 					<!-- PART1: LANGTALERECKHUETTE (Ground Station) of Cable Way -->
 					<aixm:part>
 						<aixm:VerticalStructurePart gml:id="vsp0004-1">
-							<!-- Acc. to PANS-AIM height is optional. In this example coded as nil in order to highlight that this part has not height but only elevation. -->
+							<!-- Acc. to PANS-AIM height is optional, i.e. may also be omitted. 
+								For this part of the obstacle verticalExtent would have the meaning of height above ground as it is of point geometry. -->
 							<aixm:verticalExtent xsi:nil="true" nilReason="unknown"/>
 							<aixm:verticalExtentAccuracy xsi:nil="true" nilReason="inapplicable"/>
 							<aixm:type>BUILDING</aixm:type>
@@ -727,8 +729,20 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<!-- PART2: Line (rope) between Ground Station and Top Station -->
 					<aixm:part>
 						<aixm:VerticalStructurePart gml:id="vsp0004-2">
-							<aixm:verticalExtent uom="M">280</aixm:verticalExtent>
-							<aixm:verticalExtentAccuracy uom="M">1</aixm:verticalExtentAccuracy>
+							<!-- The maximum height above ground has to be coded as a Note! 
+								For this part it cannot be coded as verticalExtent, as this part (rope) is not fixed on the ground. The meaning of verticalExtent is the height of the obstacle part from its bottom, i.e. it would be the height of the rope itself.  -->
+							<aixm:annotation>
+								<aixm:Note gml:id="eqwe">
+									<aixm:purpose>REMARK</aixm:purpose>
+									<aixm:translatedNote>
+										<aixm:LinguisticNote gml:id="weqw">
+											<aixm:note>Maximum height above ground level is 280 Meter</aixm:note>
+										</aixm:LinguisticNote>
+									</aixm:translatedNote>
+								</aixm:Note>
+							</aixm:annotation>
+							<aixm:verticalExtent xsi:nil="true" nilReason="unknown"/>
+							<aixm:verticalExtentAccuracy xsi:nil="true" nilReason="inapplicable"/>
 							<aixm:type>CATENARY</aixm:type>
 							<aixm:constructionStatus>COMPLETED</aixm:constructionStatus>
 							<aixm:designator>OBS-0004-2</aixm:designator>
@@ -740,7 +754,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 										</gml:GeodesicString>
 									</gml:segments>
 									<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
-									<!-- elevation is not applicable (or unknown?) as for the catenary only the max. hight above ground is known. -->
+									<!-- elevation is not applicable for the catenary as it not a constant value. -->
 									<aixm:elevation xsi:nil="true" nilReason="inapplicable"/>
 									<aixm:verticalDatum xsi:nil="true" nilReason="inapplicable"/>
 									<aixm:verticalAccuracy xsi:nil="true" nilReason="inapplicable"/>
@@ -760,7 +774,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0004-3">
 									<gml:pos>46.80555556 -27.98638889</gml:pos>
 									<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
-									<aixm:elevation uom="M">2883</aixm:elevation>
+									<aixm:elevation uom="M">2870</aixm:elevation>
 									<aixm:geoidUndulation xsi:nil="true" nilReason="inapplicable"/>
 									<aixm:verticalDatum>EGM_96</aixm:verticalDatum>
 									<aixm:verticalAccuracy uom="M">1</aixm:verticalAccuracy>
@@ -768,13 +782,24 @@ Editorial note: this license is an instance of the BSD license template as provi
 							</aixm:horizontalProjection_location>
 						</aixm:VerticalStructurePart>
 					</aixm:part>
+					<aixm:annotation>
+						<aixm:Note gml:id="n00500">
+							<aixm:propertyName>markingICAOStandard</aixm:propertyName>
+							<aixm:purpose>REMARK</aixm:purpose>
+							<aixm:translatedNote>
+								<aixm:LinguisticNote gml:id="ln00500">
+									<aixm:note>marked=NO</aixm:note>
+								</aixm:LinguisticNote>
+							</aixm:translatedNote>
+						</aixm:Note>
+					</aixm:annotation>
 				</aixm:VerticalStructureTimeSlice>
 			</aixm:timeSlice>
 		</aixm:VerticalStructure>
 	</message:hasMember>
 	<message:hasMember>
-		<!-- LINE OBSTACLE (Cableway)
-			OPTION A: 1x VerticalStructure with several VerticalStructurePart.-->
+		<!-- LINE OBSTACLE (Cableway) OPTION A: 
+			1x VerticalStructure with several VerticalStructurePart.-->
 		<aixm:VerticalStructure gml:id="uuid.9bba0abf-db41-4c78-926d-c9f35fde8efb">
 			<gml:identifier codeSpace="urn:uuid:">9bba0abf-db41-4c78-926d-c9f35fde8efb</gml:identifier>
 			<aixm:timeSlice>
@@ -797,17 +822,14 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:name>MUTTERBERGALM - DRESDNER HUETTE - EISGRAT</aixm:name>
 					<aixm:type>CABLE_CAR</aixm:type>
 					<aixm:lighted>NO</aixm:lighted>
-					<aixm:markingICAOStandard>OTHER:NOT_MARKED</aixm:markingICAOStandard>
 					<aixm:length xsi:nil="true" nilReason="inapplicable"/>
 					<aixm:width xsi:nil="true" nilReason="inapplicable"/>
 					<aixm:radius xsi:nil="true" nilReason="inapplicable"/>
 					<!-- PART1: MUTTERBERGALM (Ground Station) of Cable Way -->
 					<aixm:part>
 						<aixm:VerticalStructurePart gml:id="vsp0005-1">
-							<aixm:verticalExtent xsi:nil="true" nilReason="unknown"/>
-							<aixm:verticalExtentAccuracy xsi:nil="true" nilReason="inapplicable"/>
 							<aixm:type>BUILDING</aixm:type>
-							<aixm:designator>OBS-00005-1</aixm:designator>
+							<aixm:designator>OBS-0005-1</aixm:designator>
 							<aixm:horizontalProjection_location>
 								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0005-1">
 									<gml:pos>47.01055556 -26.15166667</gml:pos>
@@ -822,10 +844,18 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<!-- PART2: Line inbetween MUTTERBERGALM (Ground Station) and DRESDNER HUETTE (Middle Station) -->
 					<aixm:part>
 						<aixm:VerticalStructurePart gml:id="vsp0005-2">
-							<aixm:verticalExtent uom="M">95</aixm:verticalExtent>
-							<aixm:verticalExtentAccuracy uom="M">30.0</aixm:verticalExtentAccuracy>
+							<aixm:annotation>
+								<aixm:Note gml:id="eqwwe">
+									<aixm:purpose>REMARK</aixm:purpose>
+									<aixm:translatedNote>
+										<aixm:LinguisticNote gml:id="wewqw">
+											<aixm:note>Maximum height above ground level is 95 Meter</aixm:note>
+										</aixm:LinguisticNote>
+									</aixm:translatedNote>
+								</aixm:Note>
+							</aixm:annotation>
 							<aixm:type>CATENARY</aixm:type>
-							<aixm:designator>OBS-00005-2</aixm:designator>
+							<aixm:designator>OBS-0005-2</aixm:designator>
 							<aixm:horizontalProjection_linearExtent>
 								<aixm:ElevatedCurve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="crv1245">
 									<gml:segments>
@@ -844,10 +874,8 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<!-- PART 3: DRESDNER HUETTE (Middle Station) of Cable Way -->
 					<aixm:part>
 						<aixm:VerticalStructurePart gml:id="vsp0005-3">
-							<aixm:verticalExtent xsi:nil="true" nilReason="unknown"/>
-							<aixm:verticalExtentAccuracy xsi:nil="true" nilReason="inapplicable"/>
 							<aixm:type>BUILDING</aixm:type>
-							<aixm:designator>OBS-00005-3</aixm:designator>
+							<aixm:designator>OBS-0005-3</aixm:designator>
 							<aixm:horizontalProjection_location>
 								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0005-3">
 									<gml:pos>46.99666667 -26.14027778</gml:pos>
@@ -862,10 +890,18 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<!-- PART4: Line inbetween DRESDNER HUETTE (Middle Station) and EISGRAT (Top Station) -->
 					<aixm:part>
 						<aixm:VerticalStructurePart gml:id="vsp0005-4">
-							<aixm:verticalExtent uom="M">95</aixm:verticalExtent>
-							<aixm:verticalExtentAccuracy uom="M">30.0</aixm:verticalExtentAccuracy>
+							<aixm:annotation>
+								<aixm:Note gml:id="eq2wwe">
+									<aixm:purpose>REMARK</aixm:purpose>
+									<aixm:translatedNote>
+										<aixm:LinguisticNote gml:id="we2wqw">
+											<aixm:note>Maximum height above ground level is 95 Meter</aixm:note>
+										</aixm:LinguisticNote>
+									</aixm:translatedNote>
+								</aixm:Note>
+							</aixm:annotation>
 							<aixm:type>CATENARY</aixm:type>
-							<aixm:designator>OBS-00005-4</aixm:designator>
+							<aixm:designator>OBS-0005-4</aixm:designator>
 							<aixm:horizontalProjection_linearExtent>
 								<aixm:ElevatedCurve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="crv12454">
 									<gml:segments>
@@ -884,10 +920,8 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<!-- PART 5: EISGRAT (Top Station) of Cable Way -->
 					<aixm:part>
 						<aixm:VerticalStructurePart gml:id="vsp0005-5">
-							<aixm:verticalExtent xsi:nil="true" nilReason="unknown"/>
-							<aixm:verticalExtentAccuracy xsi:nil="true" nilReason="inapplicable"/>
 							<aixm:type>BUILDING</aixm:type>
-							<aixm:designator>OBS-00005-5</aixm:designator>
+							<aixm:designator>OBS-0005-5</aixm:designator>
 							<aixm:horizontalProjection_location>
 								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0005-5">
 									<gml:pos>46.98694444 -26.11638889</gml:pos>
@@ -904,9 +938,9 @@ Editorial note: this license is an instance of the BSD license template as provi
 		</aixm:VerticalStructure>
 	</message:hasMember>
 	<message:hasMember>
-		<!-- LINE OBSTACLE (Windfarm) 
-			OPTION B: 1x VerticalStructure with 1 x VerticalStructurePart as linearExtent 
-			(Can only be used in case all verticalStructure elements have same values for all "parts" of the obstacle..-->
+		<!-- LINE OBSTACLE (Windfarm) OPTION B: 
+			1x VerticalStructure with 1 x VerticalStructurePart as linearExtent. 
+			Note: Can only be used in case all VerticalStructure elements have same values for all "parts" of the obstacle.)-->
 		<aixm:VerticalStructure gml:id="uuid.718c2782-a624-405e-86b6-144b40b680b0">
 			<gml:identifier codeSpace="urn:uuid:">718c2782-a624-405e-86b6-144b40b680b0</gml:identifier>
 			<aixm:timeSlice>
@@ -929,7 +963,6 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:name>TUBORG IIB</aixm:name>
 					<aixm:type>WINDMILL_FARMS</aixm:type>
 					<aixm:lighted>YES</aixm:lighted>
-					<aixm:markingICAOStandard>NO</aixm:markingICAOStandard>
 					<aixm:group>YES</aixm:group>
 					<aixm:length xsi:nil="true" nilReason="inapplicable"/>
 					<aixm:width xsi:nil="true" nilReason="inapplicable"/>
@@ -940,7 +973,6 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
 							<aixm:type>WINDMILL_FARMS</aixm:type>
 							<aixm:markingFirstColour>GREEN</aixm:markingFirstColour>
-							<aixm:designator>OBS-00006</aixm:designator>
 							<aixm:horizontalProjection_linearExtent>
 								<aixm:ElevatedCurve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="crv12456">
 									<gml:segments>
@@ -960,11 +992,21 @@ Editorial note: this license is an instance of the BSD license template as provi
 									<aixm:intensityLevel xsi:nil="true" nilReason="unknown"/>
 									<aixm:intensity xsi:nil="true" nilReason="unknown"/>
 									<aixm:type>OTHER:FLASHING</aixm:type>
-									<aixm:availability xsi:nil="true" nilReason="unknown"/>
 								</aixm:LightElement>
 							</aixm:lighting>
 						</aixm:VerticalStructurePart>
 					</aixm:part>
+					<aixm:annotation>
+						<aixm:Note gml:id="n000s0">
+							<aixm:propertyName>markingICAOStandard</aixm:propertyName>
+							<aixm:purpose>REMARK</aixm:purpose>
+							<aixm:translatedNote>
+								<aixm:LinguisticNote gml:id="ln00ss00">
+									<aixm:note>marked=YES</aixm:note>
+								</aixm:LinguisticNote>
+							</aixm:translatedNote>
+						</aixm:Note>
+					</aixm:annotation>
 				</aixm:VerticalStructureTimeSlice>
 			</aixm:timeSlice>
 		</aixm:VerticalStructure>
@@ -990,18 +1032,20 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<gml:endPosition indeterminatePosition="unknown"/>
 						</gml:TimePeriod>
 					</aixm:featureLifetime>
+					<aixm:name>OBS-0007</aixm:name>
 					<aixm:type>BUILDING</aixm:type>
 					<aixm:lighted>YES</aixm:lighted>
 					<aixm:markingICAOStandard>YES</aixm:markingICAOStandard>
 					<aixm:length xsi:nil="true" nilReason="inapplicable"/>
 					<aixm:width xsi:nil="true" nilReason="inapplicable"/>
 					<aixm:radius xsi:nil="true" nilReason="inapplicable"/>
+					<!-- Part 1: BULDING -->
 					<aixm:part>
 						<aixm:VerticalStructurePart gml:id="vsp0007-1">
 							<aixm:verticalExtent uom="M">110</aixm:verticalExtent>
 							<aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
 							<aixm:type>BUILDING</aixm:type>
-							<aixm:designator>OBS-00007-1</aixm:designator>
+							<aixm:designator xsi:nil="true" nilReason="inapplicable"/>
 							<aixm:horizontalProjection_surfaceExtent>
 								<aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep0007-1">
 									<gml:patches>
@@ -1039,16 +1083,17 @@ Editorial note: this license is an instance of the BSD license template as provi
 							</aixm:lighting>
 						</aixm:VerticalStructurePart>
 					</aixm:part>
+					<!-- Part 2: ANTENNA -->
 					<aixm:part>
 						<aixm:VerticalStructurePart gml:id="vsp0007-2">
-							<!-- OPEN QUESTION: Shall the height be above Ground or above underlying part?  Acc. TOD-M B.2.2. it shall be above ground. -->
-							<aixm:verticalExtent uom="M">118</aixm:verticalExtent>
+							<!-- Note: the verticalExtent represents the height of the obstacle part from its bottom (i.e. the roof top of the buidling)! -->
+							<aixm:verticalExtent uom="M">12</aixm:verticalExtent>
 							<aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
 							<aixm:type>ANTENNA</aixm:type>
 							<aixm:markingPattern>HBANDS</aixm:markingPattern>
 							<aixm:markingFirstColour>RED</aixm:markingFirstColour>
 							<aixm:markingSecondColour>WHITE</aixm:markingSecondColour>
-							<aixm:designator>OBS-00007-2</aixm:designator>
+							<aixm:designator xsi:nil="true" nilReason="inapplicable"/>
 							<aixm:horizontalProjection_location>
 								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="VID000005">
 									<gml:pos>55.52416667 -24.63888889</gml:pos>
@@ -1091,10 +1136,9 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<gml:endPosition indeterminatePosition="unknown"/>
 						</gml:TimePeriod>
 					</aixm:featureLifetime>
+					<aixm:name>OBS-0008</aixm:name>
 					<aixm:type>OTHER:CHIMNEY</aixm:type>
 					<aixm:lighted>NO</aixm:lighted>
-					<!-- OPEN QUESTION: How to code if it is unkown if the obstacle is marked? -->
-					<aixm:markingICAOStandard>OTHER:MARKED_UNKOWN</aixm:markingICAOStandard>
 					<aixm:length xsi:nil="true" nilReason="inapplicable"/>
 					<aixm:width xsi:nil="true" nilReason="inapplicable"/>
 					<aixm:radius xsi:nil="true" nilReason="inapplicable"/>
@@ -1103,7 +1147,6 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:verticalExtent uom="M">120</aixm:verticalExtent>
 							<aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
 							<aixm:type>OTHER:CHIMNEY</aixm:type>
-							<aixm:designator>OBS-0008</aixm:designator>
 							<aixm:horizontalProjection_location>
 								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="VID000008">
 									<gml:pos>55.5185166666667 -25.63186944444445</gml:pos>
@@ -1116,6 +1159,18 @@ Editorial note: this license is an instance of the BSD license template as provi
 							</aixm:horizontalProjection_location>
 						</aixm:VerticalStructurePart>
 					</aixm:part>
+					<!-- That it is snot known if the obstacle is marked is coded as annotation. -->
+					<aixm:annotation>
+						<aixm:Note gml:id="n50000">
+							<aixm:propertyName>markingICAOStandard</aixm:propertyName>
+							<aixm:purpose>REMARK</aixm:purpose>
+							<aixm:translatedNote>
+								<aixm:LinguisticNote gml:id="ln50000">
+									<aixm:note>marked=UNKNOWN</aixm:note>
+								</aixm:LinguisticNote>
+							</aixm:translatedNote>
+						</aixm:Note>
+					</aixm:annotation>
 				</aixm:VerticalStructureTimeSlice>
 			</aixm:timeSlice>
 		</aixm:VerticalStructure>
@@ -1141,11 +1196,9 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<gml:endPosition indeterminatePosition="unknown"/>
 						</gml:TimePeriod>
 					</aixm:featureLifetime>
-					<aixm:name xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:name>OBS-0009 (DONLON ARENA)</aixm:name>
 					<aixm:type>STADIUM</aixm:type>
 					<aixm:lighted>YES</aixm:lighted>
-					<aixm:markingICAOStandard>OTHER:NOT_MARKED</aixm:markingICAOStandard>
-					<aixm:group>NO</aixm:group>
 					<aixm:length xsi:nil="true" nilReason="inapplicable"/>
 					<aixm:width xsi:nil="true" nilReason="inapplicable"/>
 					<aixm:radius uom="M">300</aixm:radius>
@@ -1154,7 +1207,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:verticalExtent uom="M">133</aixm:verticalExtent>
 							<aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
 							<aixm:type>STADIUM</aixm:type>
-							<aixm:designator>OBS-0009</aixm:designator>
+							<aixm:designator xsi:nil="true" nilReason="inapplicable"/>
 							<aixm:horizontalProjection_location>
 								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="p1129">
 									<gml:pos>52.36171388888889 -23.03756666666666</gml:pos>
@@ -1187,12 +1240,23 @@ Editorial note: this license is an instance of the BSD license template as provi
 							</aixm:translatedNote>
 						</aixm:Note>
 					</aixm:annotation>
+					<aixm:annotation>
+						<aixm:Note gml:id="n040050">
+							<aixm:propertyName>markingICAOStandard</aixm:propertyName>
+							<aixm:purpose>REMARK</aixm:purpose>
+							<aixm:translatedNote>
+								<aixm:LinguisticNote gml:id="ln040500">
+									<aixm:note>marked=NO</aixm:note>
+								</aixm:LinguisticNote>
+							</aixm:translatedNote>
+						</aixm:Note>
+					</aixm:annotation>
 				</aixm:VerticalStructureTimeSlice>
 			</aixm:timeSlice>
 		</aixm:VerticalStructure>
 	</message:hasMember>
 	<message:hasMember>
-		<!-- POINT OBSTACLE (with horizontal Extenstion) -->
+		<!-- POINT OBSTACLE with Horizontal Extension (guy wires) -->
 		<aixm:VerticalStructure gml:id="uuid.56ef6d9c-4951-4a0b-83d8-95e4836c63c8">
 			<gml:identifier codeSpace="urn:uuid:">56ef6d9c-4951-4a0b-83d8-95e4836c63c8</gml:identifier>
 			<aixm:timeSlice>
@@ -1212,19 +1276,18 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<gml:endPosition indeterminatePosition="unknown"/>
 						</gml:TimePeriod>
 					</aixm:featureLifetime>
-					<aixm:name xsi:nil="true" nilReason="inapplicable"/>
+					<aixm:name>OBS-0010</aixm:name>
 					<aixm:type>POLE</aixm:type>
 					<aixm:lighted>NO</aixm:lighted>
-					<aixm:markingICAOStandard>OTHER:NOT_MARKED</aixm:markingICAOStandard>
 					<aixm:length xsi:nil="true" nilReason="inapplicable"/>
 					<aixm:width xsi:nil="true" nilReason="inapplicable"/>
+					<!-- radius covering the guy wires -->
 					<aixm:radius uom="M">36</aixm:radius>
 					<aixm:part>
 						<aixm:VerticalStructurePart gml:id="vsp0010">
 							<aixm:verticalExtent uom="M">120</aixm:verticalExtent>
 							<aixm:verticalExtentAccuracy uom="M">30</aixm:verticalExtentAccuracy>
 							<aixm:type>POLE</aixm:type>
-							<aixm:designator>OBS-0010</aixm:designator>
 							<aixm:horizontalProjection_location>
 								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="VID000010">
 									<gml:pos>55.5185166666667 -24.62186944444445</gml:pos>
@@ -1236,12 +1299,23 @@ Editorial note: this license is an instance of the BSD license template as provi
 							</aixm:horizontalProjection_location>
 						</aixm:VerticalStructurePart>
 					</aixm:part>
+					<aixm:annotation>
+						<aixm:Note gml:id="n000650">
+							<aixm:propertyName>markingICAOStandard</aixm:propertyName>
+							<aixm:purpose>REMARK</aixm:purpose>
+							<aixm:translatedNote>
+								<aixm:LinguisticNote gml:id="ln000560">
+									<aixm:note>marked=YES</aixm:note>
+								</aixm:LinguisticNote>
+							</aixm:translatedNote>
+						</aixm:Note>
+					</aixm:annotation>
 				</aixm:VerticalStructureTimeSlice>
 			</aixm:timeSlice>
 		</aixm:VerticalStructure>
 	</message:hasMember>
 	<message:hasMember>
-		<!-- WINDPARK LOCATED IN AREA 1 AND AREA 2d.-->
+		<!-- WINDPARK LOCATED IN AREA 1 AND AREA 2d (POLYGON). Contained in 2 Data Sets. -->
 		<aixm:VerticalStructure gml:id="uuid.499c5bb4-de1e-49fc-8db1-11ffa84406d6">
 			<gml:identifier codeSpace="urn:uuid:">499c5bb4-de1e-49fc-8db1-11ffa84406d6</gml:identifier>
 			<aixm:timeSlice>
@@ -1273,12 +1347,11 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:synchronisedLighting>YES</aixm:synchronisedLighting>
 					<aixm:part>
 						<aixm:VerticalStructurePart gml:id="OBS-EADD-0012-1">
-							<aixm:verticalExtent uom="M">119</aixm:verticalExtent>
+							<aixm:verticalExtent uom="M">119.0</aixm:verticalExtent>
 							<aixm:verticalExtentAccuracy uom="M">3</aixm:verticalExtentAccuracy>
 							<aixm:markingPattern>HBANDS</aixm:markingPattern>
 							<aixm:markingFirstColour>RED</aixm:markingFirstColour>
 							<aixm:markingSecondColour>WHITE</aixm:markingSecondColour>
-							<aixm:designator>OBS-0012</aixm:designator>
 							<aixm:horizontalProjection_surfaceExtent>
 								<aixm:ElevatedSurface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep00023-1">
 									<gml:patches>
@@ -1303,7 +1376,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 										</gml:PolygonPatch>
 									</gml:patches>
 									<aixm:horizontalAccuracy uom="M">5</aixm:horizontalAccuracy>
-									<aixm:elevation uom="M">215</aixm:elevation>
+									<aixm:elevation uom="M">215.0</aixm:elevation>
 									<aixm:verticalDatum>EGM_96</aixm:verticalDatum>
 									<aixm:verticalAccuracy uom="M">3</aixm:verticalAccuracy>
 								</aixm:ElevatedSurface>
@@ -1343,10 +1416,40 @@ Editorial note: this license is an instance of the BSD license template as provi
 						</gml:TimePeriod>
 					</aixm:featureLifetime>
 					<aixm:type>AREA1</aixm:type>
-					<!-- <aixm:obstructionIdSurfaceCondition/> shall not be used. Will be depreated with AIXM 5.2 -->
+					<!-- <aixm:obstructionIdSurfaceCondition/> shall not be used. Deleted in AIXM 5.2 -->
 					<aixm:reference_ownerOrganisation xlink:href="urn:uuid:6384a4e0-8497-4f83-8eaa-d73ef549d90e" xlink:title="REPUBLIC OF DONLON"/>
+					<aixm:surfaceExtent>
+						<aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326"
+							gml:id="AREA1_DONLON">
+							<gml:patches>
+								<gml:PolygonPatch>
+									<gml:exterior>
+										<gml:Ring>
+											<gml:curveMember>
+												<gml:Curve gml:id="CFIRAMSWELL">
+													<gml:segments>
+														<gml:GeodesicString>
+															<gml:posList>57.0833333333333 -40.0 52.85
+																-41.7833333333333 48.4666666666667
+																-41.3333333333333 44.0333333333333 -40.0 42.6
+																-37.0 40.7333333333333 -37.1833333333333 41.4
+																-30.05 43.5166666666667 -21.1333333333333
+																56.6666666666667 -21.1333333333333
+																57.0833333333333 -40.0</gml:posList>
+														</gml:GeodesicString>
+													</gml:segments>
+												</gml:Curve>
+											</gml:curveMember>
+										</gml:Ring>
+									</gml:exterior>
+								</gml:PolygonPatch>
+							</gml:patches>
+							<aixm:horizontalAccuracy uom="KM"
+								>2.0</aixm:horizontalAccuracy>
+						</aixm:Surface>
+					</aixm:surfaceExtent>
 					<aixm:obstacle xlink:href="urn:uuid:5f68d835-828c-4ccd-91b7-791058d9dd4d" xlink:title="OBS-0001"/>
-					<aixm:obstacle xlink:href="urn:uuid:6c7fac45-c24f-4e36-b196-687458d99070" xlink:title="WINDPARK BAUMGARTEN"/>
+					<aixm:obstacle xlink:href="urn:uuid:6c7fac45-c24f-4e36-b196-687458d99070" xlink:title="WINDPARK DONLON IV"/>
 					<aixm:obstacle xlink:href="urn:uuid:47db48e9-d46a-4100-a266-25a3968b6a98" xlink:title="RODSAND II"/>
 					<aixm:obstacle xlink:href="urn:uuid:87a585b3-0597-4f5c-974f-cddfc604dc93" xlink:title="LANGTALERECKHUETTE - HOCHWILDEHAUS"/>
 					<aixm:obstacle xlink:href="urn:uuid:9bba0abf-db41-4c78-926d-c9f35fde8efb" xlink:title="MUTTERBERGALM - DRESDNER HUETTE - EISGRAT"/>
@@ -1355,7 +1458,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:obstacle xlink:href="urn:uuid:359c8b02-8be7-4e2c-aa6d-d990dbb6b057" xlink:title="OBS-0008"/>
 					<aixm:obstacle xlink:href="urn:uuid:7f89403f-a680-41e0-8274-ee498e86ff77" xlink:title="OBS-0009"/>
 					<aixm:obstacle xlink:href="urn:uuid:56ef6d9c-4951-4a0b-83d8-95e4836c63c8" xlink:title="OBS-0010"/>
-					<aixm:obstacle xlink:href="urn:uuid:499c5bb4-de1e-49fc-8db1-11ffa84406d6" xlink:title="OBS-EADD-0012"/>
+					<aixm:obstacle xlink:href="urn:uuid:499c5bb4-de1e-49fc-8db1-11ffa84406d6" xlink:title="DONLON NORTHEAST I"/>
 				</aixm:ObstacleAreaTimeSlice>
 			</aixm:timeSlice>
 		</aixm:ObstacleArea>
