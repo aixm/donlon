@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example created by Andreea PERCA, ASBU For Future GMBH -->
+<!-- Copyright (c) 2018, EUROCONTROL & FAA
+    
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+   
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+    xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+    xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
+    http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
+    gml:id="M00001">
+    
+    <!-- This is a DN for a route segment closure with schedule-->
+    
+    <message:hasMember>
+        <event:Event gml:id="uuid.cffe5a3a-05d0-4fa5-afe3-8dace0cdef16">
+            <gml:identifier codeSpace="urn:uuid:">cffe5a3a-05d0-4fa5-afe3-8dace0cdef16</gml:identifier>
+            <event:timeSlice>
+                <event:EventTimeSlice gml:id="ID_704evr">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="ID_705ebb">
+                            <gml:beginPosition>2018-09-15T09:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-09-15T11:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="ID_706bbf">
+                            <gml:beginPosition>2018-09-15T09:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-09-15T11:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <event:name>RTESG_CLS_20180915</event:name>
+                    <event:encoding>DIGITAL</event:encoding>
+                    <event:scenario>RTE.CLS</event:scenario>
+                    <event:version>2.0</event:version>
+                    <event:revision>2018-09-14T22:41:51Z</event:revision>
+                    <event:textNOTAM>
+                        <event:NOTAM gml:id="ID_707bg">
+                            <event:series>A</event:series>
+                            <event:number>1298</event:number>
+                            <event:year>2018</event:year>
+                            <event:type>N</event:type>
+                            <event:issued>2018-09-14T22:41:51Z</event:issued>
+                            <event:affectedFIR>EAAD</event:affectedFIR>
+                            <event:selectionCode>QARCA</event:selectionCode>
+                            <event:traffic>IV</event:traffic>
+                            <event:purpose>BO</event:purpose>
+                            <event:scope>E</event:scope>
+                            <event:minimumFL>100</event:minimumFL>
+                            <event:maximumFL>125</event:maximumFL>
+                            <event:coordinates>4147N03501W</event:coordinates> <!--fictional, exact values to be determined-->
+                            <event:radius>14</event:radius>
+                            <event:location>EAAD</event:location>
+                            <event:effectiveStart>1809150900</event:effectiveStart>
+                            <event:effectiveEnd>1809151100</event:effectiveEnd>
+                            <event:schedule>Daily 09:00-11:00</event:schedule>
+                            <event:text>
+                                ATS route segments closed:
+                                UA4 BOR-ROB FL100 to FL125 forward and backward.
+                                UA4 BOR-ROB 1350M AGL to FL100 forward and backward, FL125 to FL195 forward and backward remain open.
+                            </event:text>
+                        </event:NOTAM>
+                    </event:textNOTAM>
+                </event:EventTimeSlice>
+            </event:timeSlice>
+        </event:Event>
+    </message:hasMember>
+    
+    
+    <message:hasMember>
+        <aixm:RouteSegment gml:id="uuid.0a7bf1a1-241b-40ae-bd51-1fda7633cb71">
+            <gml:identifier codeSpace="urn:uuid:">0a7bf1a1-241b-40ae-bd51-1fda7633cb71</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:RouteSegmentTimeSlice gml:id="RSG_A6_dd">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="vt21ev">
+                            <gml:beginPosition>2018-09-15T09:00:00Z</gml:beginPosition>
+                            <gml:endPosition>2018-09-15T11:00:00Z</gml:endPosition>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>TEMPDELTA</aixm:interpretation>
+                    <aixm:sequenceNumber>4</aixm:sequenceNumber>
+                    <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <aixm:availability>
+                        <aixm:RouteAvailability gml:id="ra11ev21">
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="tmer23122">
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>09:00</aixm:startTime>
+                                    <aixm:endTime>11:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:direction>FORWARD</aixm:direction>
+                            <aixm:status>CLSD</aixm:status>
+                            <aixm:levels>
+                                <aixm:AirspaceLayer gml:id="al1eev3">
+                                    <aixm:upperLimit uom="FL">125</aixm:upperLimit>
+                                    <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                                    <aixm:lowerLimit uom="FL">100</aixm:lowerLimit>
+                                    <aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
+                                </aixm:AirspaceLayer>
+                            </aixm:levels>
+                        </aixm:RouteAvailability>
+                    </aixm:availability>
+                    <aixm:availability>
+                        <aixm:RouteAvailability gml:id="ra11ev">
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="tmer231vf">
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>09:00</aixm:startTime>
+                                    <aixm:endTime>11:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:direction>BACKWARD</aixm:direction>
+                            <aixm:status>CLSD</aixm:status>
+                            <aixm:levels>
+                                <aixm:AirspaceLayer gml:id="al1eevbb">
+                                    <aixm:upperLimit uom="FL">125</aixm:upperLimit>
+                                    <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                                    <aixm:lowerLimit uom="FL">100</aixm:lowerLimit>
+                                    <aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
+                                </aixm:AirspaceLayer>
+                            </aixm:levels>
+                        </aixm:RouteAvailability>
+                    </aixm:availability>
+                    <aixm:availability> <!--baseline calculation-->
+                        <aixm:RouteAvailability gml:id="rvfr32b321">
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="tmer231331">
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>09:00</aixm:startTime>
+                                    <aixm:endTime>11:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="tmer231bf">
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>09:00</aixm:startTime>
+                                    <aixm:endTime>11:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:annotation>
+                                <aixm:Note gml:id="dd342sbbd">
+                                    <aixm:purpose>REMARK</aixm:purpose>
+                                    <aixm:translatedNote>
+                                        <aixm:LinguisticNote gml:id="der3241bb">
+                                            <aixm:note>Baseline data copy</aixm:note>
+                                        </aixm:LinguisticNote>
+                                    </aixm:translatedNote>
+                                </aixm:Note>
+                            </aixm:annotation>
+                            <aixm:direction>FORWARD</aixm:direction>
+                            <aixm:status>OPEN</aixm:status>
+                            <aixm:levels>
+                                <aixm:AirspaceLayer gml:id="ngr432">
+                                    <aixm:upperLimit uom="FL">100</aixm:upperLimit>
+                                    <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                                    <aixm:lowerLimit uom="M">1350</aixm:lowerLimit>
+                                    <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
+                                </aixm:AirspaceLayer>
+                            </aixm:levels>
+                        </aixm:RouteAvailability>
+                    </aixm:availability>
+                    <aixm:availability> <!--baseline calculation-->
+                        <aixm:RouteAvailability gml:id="rvfr32b321b">
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="tmer231331b">
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>09:00</aixm:startTime>
+                                    <aixm:endTime>11:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="tmer231bfb">
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>09:00</aixm:startTime>
+                                    <aixm:endTime>11:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:annotation>
+                                <aixm:Note gml:id="dd342sbbdb">
+                                    <aixm:purpose>REMARK</aixm:purpose>
+                                    <aixm:translatedNote>
+                                        <aixm:LinguisticNote gml:id="der3241bbw">
+                                            <aixm:note>Baseline data copy</aixm:note>
+                                        </aixm:LinguisticNote>
+                                    </aixm:translatedNote>
+                                </aixm:Note>
+                            </aixm:annotation>
+                            <aixm:direction>BACKWARD</aixm:direction>
+                            <aixm:status>OPEN</aixm:status>
+                            <aixm:levels>
+                                <aixm:AirspaceLayer gml:id="ngr432bw">
+                                    <aixm:upperLimit uom="FL">100</aixm:upperLimit>
+                                    <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                                    <aixm:lowerLimit uom="M">1350</aixm:lowerLimit>
+                                    <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
+                                </aixm:AirspaceLayer>
+                            </aixm:levels>
+                        </aixm:RouteAvailability>
+                    </aixm:availability>
+                    <aixm:availability> <!--baseline calculation-->
+                        <aixm:RouteAvailability gml:id="rvfr32b321s">
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="tmer231331s">
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>09:00</aixm:startTime>
+                                    <aixm:endTime>11:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="tmer231bfs">
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>09:00</aixm:startTime>
+                                    <aixm:endTime>11:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:annotation>
+                                <aixm:Note gml:id="dd342sbbds">
+                                    <aixm:purpose>REMARK</aixm:purpose>
+                                    <aixm:translatedNote>
+                                        <aixm:LinguisticNote gml:id="der3241bbs">
+                                            <aixm:note>Baseline data copy</aixm:note>
+                                        </aixm:LinguisticNote>
+                                    </aixm:translatedNote>
+                                </aixm:Note>
+                            </aixm:annotation>
+                            <aixm:direction>FORWARD</aixm:direction>
+                            <aixm:status>OPEN</aixm:status>
+                            <aixm:levels>
+                                <aixm:AirspaceLayer gml:id="ngr432s">
+                                    <aixm:upperLimit uom="FL">195</aixm:upperLimit>
+                                    <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                                    <aixm:lowerLimit uom="FL">125</aixm:lowerLimit>
+                                    <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
+                                </aixm:AirspaceLayer>
+                            </aixm:levels>
+                        </aixm:RouteAvailability>
+                    </aixm:availability>
+                    <aixm:availability> <!--baseline calculation-->
+                        <aixm:RouteAvailability gml:id="rvfr32b321bf">
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="tmer231331bf">
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>09:00</aixm:startTime>
+                                    <aixm:endTime>11:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="tmer231bfbf">
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>09:00</aixm:startTime>
+                                    <aixm:endTime>11:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:annotation>
+                                <aixm:Note gml:id="dd342sbbdbf">
+                                    <aixm:purpose>REMARK</aixm:purpose>
+                                    <aixm:translatedNote>
+                                        <aixm:LinguisticNote gml:id="der3241bbf">
+                                            <aixm:note>Baseline data copy</aixm:note>
+                                        </aixm:LinguisticNote>
+                                    </aixm:translatedNote>
+                                </aixm:Note>
+                            </aixm:annotation>
+                            <aixm:direction>BACKWARD</aixm:direction>
+                            <aixm:status>OPEN</aixm:status>
+                            <aixm:levels>
+                                <aixm:AirspaceLayer gml:id="ngr432bf">
+                                    <aixm:upperLimit uom="FL">195</aixm:upperLimit>
+                                    <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                                    <aixm:lowerLimit uom="FL">195</aixm:lowerLimit>
+                                    <aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
+                                </aixm:AirspaceLayer>
+                            </aixm:levels>
+                        </aixm:RouteAvailability>
+                    </aixm:availability>
+                    <aixm:availability> <!--baseline calculation-->
+                        <aixm:RouteAvailability gml:id="rvfr32b32">
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="tmer23133">
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:dayTil>ANY</aixm:dayTil>
+                                    <aixm:startTime>00:00</aixm:startTime>
+                                    <aixm:endTime>00:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="tmer231bfw">
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>09:00</aixm:startTime>
+                                    <aixm:endTime>11:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>YES</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:annotation>
+                                <aixm:Note gml:id="dd342sbbdw">
+                                    <aixm:purpose>REMARK</aixm:purpose>
+                                    <aixm:translatedNote>
+                                        <aixm:LinguisticNote gml:id="der3241bbw1">
+                                            <aixm:note>Baseline data copy</aixm:note>
+                                        </aixm:LinguisticNote>
+                                    </aixm:translatedNote>
+                                </aixm:Note>
+                            </aixm:annotation>
+                            <aixm:direction>FORWARD</aixm:direction>
+                            <aixm:status>OPEN</aixm:status>
+                            <aixm:levels>
+                                <aixm:AirspaceLayer gml:id="ngr432w">
+                                    <aixm:upperLimit uom="FL">125</aixm:upperLimit>
+                                    <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                                    <aixm:lowerLimit uom="M">1350</aixm:lowerLimit>
+                                    <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
+                                </aixm:AirspaceLayer>
+                            </aixm:levels>
+                        </aixm:RouteAvailability>
+                    </aixm:availability>
+                    <aixm:availability> <!--baseline calculation-->
+                        <aixm:RouteAvailability gml:id="rvfr32b3211">
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="tmer2313311">
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:dayTil>ANY</aixm:dayTil>
+                                    <aixm:startTime>00:00</aixm:startTime>
+                                    <aixm:endTime>00:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:timeInterval>
+                                <aixm:Timesheet gml:id="tmer231bf11">
+                                    <aixm:day>ANY</aixm:day>
+                                    <aixm:startTime>09:00</aixm:startTime>
+                                    <aixm:endTime>11:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>YES</aixm:excluded>
+                                </aixm:Timesheet>
+                            </aixm:timeInterval>
+                            <aixm:annotation>
+                                <aixm:Note gml:id="dd342sbbd11">
+                                    <aixm:purpose>REMARK</aixm:purpose>
+                                    <aixm:translatedNote>
+                                        <aixm:LinguisticNote gml:id="der3241bb11">
+                                            <aixm:note>Baseline data copy</aixm:note>
+                                        </aixm:LinguisticNote>
+                                    </aixm:translatedNote>
+                                </aixm:Note>
+                            </aixm:annotation>
+                            <aixm:direction>BACKWARD</aixm:direction>
+                            <aixm:status>OPEN</aixm:status>
+                            <aixm:levels>
+                                <aixm:AirspaceLayer gml:id="ngr4322">
+                                    <aixm:upperLimit uom="FL">125</aixm:upperLimit>
+                                    <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                                    <aixm:lowerLimit uom="M">1350</aixm:lowerLimit>
+                                    <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
+                                </aixm:AirspaceLayer>
+                            </aixm:levels>
+                        </aixm:RouteAvailability>
+                    </aixm:availability>
+                    <aixm:extension>
+                        <event:RouteSegmentExtension gml:id="ID_ext">
+                            <event:theEvent xlink:href="urn:uuid:cffe5a3a-05d0-4fa5-afe3-8dace0cdef16"/>
+                        </event:RouteSegmentExtension>
+                    </aixm:extension>
+                </aixm:RouteSegmentTimeSlice>
+            </aixm:timeSlice>
+        </aixm:RouteSegment>
+    </message:hasMember>
+    
+ 
+    
+    <!--BASELINE data fictive route segment 
+        
+    <message:hasMember>
+        <aixm:RouteSegment gml:id="uuid.0a7bf1a1-241b-40ae-bd51-1fda7633cb71">
+            <gml:identifier codeSpace="urn:uuid:">0a7bf1a1-241b-40ae-bd51-1fda7633cb71</gml:identifier>
+            <aixm:timeSlice>
+                <aixm:RouteSegmentTimeSlice gml:id="RSG_A6_d">
+                    <gml:validTime>
+                        <gml:TimePeriod gml:id="vt21tt">
+                            <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+                            <gml:endPosition indeterminatePosition="unknown"/>
+                        </gml:TimePeriod>
+                    </gml:validTime>
+                    <aixm:interpretation>BASELINE</aixm:interpretation>
+                    <aixm:sequenceNumber>1</aixm:sequenceNumber>
+                    <aixm:featureLifetime>
+                        <gml:TimePeriod gml:id="lt21tt">
+                            <gml:beginPosition>2017-07-01T00:00:00Z</gml:beginPosition>
+                            <gml:endPosition indeterminatePosition="unknown"/>
+                        </gml:TimePeriod>
+                    </aixm:featureLifetime>
+                    <aixm:level>LOWER</aixm:level>
+                    <aixm:upperLimit uom="FL">195</aixm:upperLimit>
+                    <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                    <aixm:lowerLimit uom="M">1350</aixm:lowerLimit>
+                    <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
+                    <aixm:pathType>GDS</aixm:pathType>
+                    <aixm:magneticTrack>195.0</aixm:magneticTrack>
+                    <aixm:reverseMagneticTrack>015.0</aixm:reverseMagneticTrack>
+                    <aixm:length uom="KM">57.1</aixm:length>
+                    <aixm:widthLeft uom="KM">9</aixm:widthLeft>
+                    <aixm:widthRight uom="KM">9</aixm:widthRight>
+                    <aixm:minimumEnrouteAltitude uom="M">1700</aixm:minimumEnrouteAltitude>
+                    <aixm:navigationType>OTHER:RNP4</aixm:navigationType>
+                    <aixm:start>
+                        <aixm:EnRouteSegmentPoint gml:id="E-c5tt">
+                            <aixm:reportingATC>COMPULSORY</aixm:reportingATC>
+                            <aixm:pointChoice_navaidSystem
+                                xlink:href="urn:uuid:08a1bbd5-ea70-4fe3-836a-ea9686349495"
+                                xlink:title="NAV_BOR"/>
+                        </aixm:EnRouteSegmentPoint>
+                    </aixm:start>
+                    <aixm:routeFormed xlink:href="urn:uuid:a14a8751-5428-46bc-a2d1-32ef84d37b5c"
+                        xlink:title="A6"/>
+                    <aixm:end>
+                        <aixm:EnRouteSegmentPoint gml:id="E-c2att">
+                            <aixm:reportingATC>COMPULSORY</aixm:reportingATC>
+                            <aixm:pointChoice_navaidSystem
+                                xlink:href="urn:uuid:2d2c95dc-cfec-4eae-96ca-dc95fff03756"
+                                xlink:title="NAV_ROB"/>
+                        </aixm:EnRouteSegmentPoint>
+                    </aixm:end>
+                    <aixm:availability>
+                        <aixm:RouteAvailability gml:id="ra11tt">
+                            <aixm:direction>FORWARD</aixm:direction>
+                            <aixm:status>OPEN</aixm:status>
+                            <aixm:levels>
+                                <aixm:AirspaceLayer gml:id="al1tt">
+                                    <aixm:upperLimit uom="FL">195</aixm:upperLimit>
+                                    <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                                    <aixm:lowerLimit uom="M">1350</aixm:lowerLimit>
+                                    <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
+                                </aixm:AirspaceLayer>
+                            </aixm:levels>
+                        </aixm:RouteAvailability>
+                    </aixm:availability>
+                    <aixm:availability>
+                        <aixm:RouteAvailability gml:id="ra11tt4">
+                            <aixm:direction>BACKWARD</aixm:direction>
+                            <aixm:status>OPEN</aixm:status>
+                            <aixm:levels>
+                                <aixm:AirspaceLayer gml:id="al1tt4">
+                                    <aixm:upperLimit uom="FL">195</aixm:upperLimit>
+                                    <aixm:upperLimitReference>STD</aixm:upperLimitReference>
+                                    <aixm:lowerLimit uom="M">1350</aixm:lowerLimit>
+                                    <aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
+                                </aixm:AirspaceLayer>
+                            </aixm:levels>
+                        </aixm:RouteAvailability>
+                    </aixm:availability>
+                    <aixm:annotation>
+                        <aixm:Note gml:id="n0311tt">
+                            <aixm:propertyName>length</aixm:propertyName>
+                            <aixm:purpose>REMARK</aixm:purpose>
+                            <aixm:translatedNote>
+                                <aixm:LinguisticNote gml:id="ln0311tt">
+                                    <aixm:note lang="eng">Accuracy 1/10 km</aixm:note>
+                                </aixm:LinguisticNote>
+                            </aixm:translatedNote>
+                        </aixm:Note>
+                    </aixm:annotation>
+                    <aixm:annotation>
+                        <aixm:Note gml:id="n031tt">
+                            <aixm:propertyName>minimumEnrouteAltitude</aixm:propertyName>
+                            <aixm:purpose>REMARK</aixm:purpose>
+                            <aixm:translatedNote>
+                                <aixm:LinguisticNote gml:id="ln03111tt">
+                                    <aixm:note lang="eng">Accuracy 50M</aixm:note>
+                                </aixm:LinguisticNote>
+                            </aixm:translatedNote>
+                        </aixm:Note>
+                    </aixm:annotation>
+                </aixm:RouteSegmentTimeSlice>
+            </aixm:timeSlice>
+        </aixm:RouteSegment>
+    </message:hasMember> -->
+</message:AIXMBasicMessage>
+
+
+
