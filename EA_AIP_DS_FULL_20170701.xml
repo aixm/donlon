@@ -32,7 +32,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
-	http://www.aixm.aero/schema/5.1.1/event http://www.aixm.aero/schema/5.1.1/event/Event_Features.xsd"	
+	http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1/event/Event_Features.xsd"	
 	gml:id="M0000001">
 	<gml:boundedBy>
 		<gml:Envelope srsName="urn:ogc:def:crs:EPSG::4326">
@@ -7279,7 +7279,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:navaidEquipment>
 						<aixm:NavaidComponent gml:id="N-OXS2">
 							<aixm:theNavaidEquipment
-								xlink:href="urn:uuid:bf334bb1-0ab1-4c17-9ef5-1a386f4da50d"
+								xlink:href="urn:uuid:4c46c5be-b033-4673-ac70-48a5d72793d2"
 								xlink:title="GPT_OXS"/>
 						</aixm:NavaidComponent>
 					</aixm:navaidEquipment>
@@ -7287,7 +7287,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 						<aixm:NavaidComponent gml:id="N-OXS3">
 							<aixm:collocationGroup>1</aixm:collocationGroup>
 							<aixm:theNavaidEquipment
-								xlink:href="urn:uuid:bf334bb1-0ab1-4c17-9ef5-1a386f4da50d"
+								xlink:href="urn:uuid:04e56175-c5f3-492d-a453-f4cfdad94e6e"
 								xlink:title="NDB_KL"/>
 						</aixm:NavaidComponent>
 					</aixm:navaidEquipment>
@@ -7296,7 +7296,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:collocationGroup>1</aixm:collocationGroup>
 							<aixm:markerPosition>OUTER</aixm:markerPosition>
 							<aixm:theNavaidEquipment
-								xlink:href="urn:uuid:bf334bb1-0ab1-4c17-9ef5-1a386f4da50d"
+								xlink:href="urn:uuid:8e3a801a-0637-42c7-a8b4-d85eda57c6cd"
 								xlink:title="MKR_EADD_OM27R"/>
 						</aixm:NavaidComponent>
 					</aixm:navaidEquipment>
@@ -7304,7 +7304,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 						<aixm:NavaidComponent gml:id="N-OXS5">
 							<aixm:markerPosition>MIDDLE</aixm:markerPosition>
 							<aixm:theNavaidEquipment
-								xlink:href="urn:uuid:bf334bb1-0ab1-4c17-9ef5-1a386f4da50d"
+								xlink:href="urn:uuid:2dfdd04a-7e1e-4754-adc5-9ff46591779c"
 								xlink:title="MKR_EADD_MM27R"/>
 						</aixm:NavaidComponent>
 					</aixm:navaidEquipment>
