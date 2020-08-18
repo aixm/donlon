@@ -2410,7 +2410,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:pathType>GDS</aixm:pathType>
 					<aixm:magneticTrack>74.0</aixm:magneticTrack>
 					<aixm:reverseMagneticTrack>254.0</aixm:reverseMagneticTrack>
-					<aixm:length uom="KM">69.3</aixm:length>
+					<aixm:length uom="KM">70.7</aixm:length>
 					<aixm:widthLeft uom="KM">6</aixm:widthLeft>
 					<aixm:widthRight uom="KM">6</aixm:widthRight>
 					<aixm:navigationType>OTHER:RNP4</aixm:navigationType>
@@ -2484,7 +2484,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:lowerLimit uom="FL">195</aixm:lowerLimit>
 					<aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
 					<aixm:pathType>GDS</aixm:pathType>
-					<aixm:length uom="KM">771.5999755859375</aixm:length>
+					<aixm:length uom="KM">771.6</aixm:length>
 					<aixm:start>
 						<aixm:EnRouteSegmentPoint gml:id="E-eef835dd">
 							<aixm:reportingATC>COMPULSORY</aixm:reportingATC>
@@ -2522,7 +2522,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 			<gml:identifier codeSpace="urn:uuid:"
 				>bfca2bc3-5562-4ec4-b199-f0377c93c04e</gml:identifier>
 			<aixm:timeSlice>
-				<aixm:RouteSegmentTimeSlice gml:id="rsts208">
+				<aixm:RouteSegmentTimeSlice gml:id="RSG_UA4_EKO_LMD">
 					<gml:validTime>
 						<gml:TimePeriod gml:id="vt21180">
 							<gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
@@ -2581,7 +2581,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 			<gml:identifier codeSpace="urn:uuid:"
 				>122f61c4-2704-494f-8ad7-45e2f8adc603</gml:identifier>
 			<aixm:timeSlice>
-				<aixm:RouteSegmentTimeSlice gml:id="rsts209">
+				<aixm:RouteSegmentTimeSlice gml:id="RSG_UA4_LMD_VEGAT">
 					<gml:validTime>
 						<gml:TimePeriod gml:id="vt21181">
 							<gml:beginPosition>2009-01-01T00:00:00Z</gml:beginPosition>
@@ -2602,7 +2602,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:lowerLimit uom="FL">195</aixm:lowerLimit>
 					<aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
 					<aixm:pathType>GDS</aixm:pathType>
-					<aixm:length uom="KM">163.1999969482422</aixm:length>
+					<aixm:length uom="KM">163.2</aixm:length>
 					<aixm:start>
 						<aixm:EnRouteSegmentPoint gml:id="E-db90c74a">
 							<aixm:reportingATC>COMPULSORY</aixm:reportingATC>
@@ -2628,7 +2628,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:reportingATC>COMPULSORY</aixm:reportingATC>
 							<aixm:pointChoice_fixDesignatedPoint
 								xlink:href="urn:uuid:26009f76-2e05-418d-a631-bec02f84ac5b"
-								xlink:title="LMD VOR"/>
+								xlink:title="VEGAT"/>
 						</aixm:EnRouteSegmentPoint>
 					</aixm:end>
 				</aixm:RouteSegmentTimeSlice>
@@ -5824,9 +5824,8 @@ Editorial note: this license is an instance of the BSD license template as provi
 		</aixm:Airspace>
 	</message:hasMember>
 	<message:hasMember>
-		<aixm:AirTrafficControlService gml:id="uuid.902369de-20fd-493e-8b73-01e240efc176">
-			<gml:identifier codeSpace="urn:uuid:"
-				>902369de-20fd-493e-8b73-01e240efc176</gml:identifier>
+		<aixm:AirTrafficControlService gml:id="uuid.cbaa3d19-fcb6-4ead-8b3b-d5f6907ca419">
+			<gml:identifier codeSpace="urn:uuid:">cbaa3d19-fcb6-4ead-8b3b-d5f6907ca419</gml:identifier>
 			<aixm:timeSlice>
 				<aixm:AirTrafficControlServiceTimeSlice gml:id="ATC_AMSWELL_ACC">
 					<gml:validTime>
@@ -6302,6 +6301,16 @@ Editorial note: this license is an instance of the BSD license template as provi
 					</aixm:start>
 					<aixm:routeFormed xlink:href="urn:uuid:40cc05ef-3ca8-47f8-ab1f-65d05ee3d836"
 						xlink:title="RTE_UL123"/>
+					<aixm:curveExtent>
+						<!-- Not required by PANS-AIM for minimum AIP data set -->
+						<aixm:Curve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="crv21101">
+							<gml:segments>
+								<gml:GeodesicString>
+									<gml:posList>45.71 -35.169999999999995 50.019999999999996 -41.61333333333334</gml:posList>
+								</gml:GeodesicString>
+							</gml:segments>
+						</aixm:Curve>
+					</aixm:curveExtent>				
 					<aixm:end>
 						<aixm:EnRouteSegmentPoint gml:id="E-c2a1229">
 							<aixm:reportingATC>COMPULSORY</aixm:reportingATC>
@@ -6542,8 +6551,17 @@ Editorial note: this license is an instance of the BSD license template as provi
 								xlink:title="NAV_BOR"/>
 						</aixm:EnRouteSegmentPoint>
 					</aixm:start>
-					<aixm:routeFormed xlink:href="urn:uuid:a14a8751-5428-46bc-a2d1-32ef84d37b5c"
+					<aixm:routeFormed xlink:href="urn:uuid:3b31528e-4c89-436f-85a5-dce41f298f20"
 						xlink:title="A6"/>
+					<aixm:curveExtent>
+						<aixm:Curve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="crv3133">
+							<gml:segments>
+								<gml:GeodesicString interpolation="geodesic">
+									<gml:posList>52.368389 -32.375222 51.983333 -32.55</gml:posList>
+								</gml:GeodesicString>
+							</gml:segments>
+						</aixm:Curve>
+					</aixm:curveExtent>
 					<aixm:end>
 						<aixm:EnRouteSegmentPoint gml:id="E-c2a122821">
 							<aixm:reportingATC>COMPULSORY</aixm:reportingATC>
@@ -6558,7 +6576,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:levels>
 								<aixm:AirspaceLayer gml:id="al1111">
 									<aixm:discreteLevelSeries
-										xlink:href="uuid.0942496b-7ce7-0b22-e053-0b751dc2499f"
+										xlink:href="urn:uuid:0942496b-7ce7-0b22-e053-0b751dc2499f"
 										xlink:title="EVEN_FL_RVSM_IFR"/>
 								</aixm:AirspaceLayer>
 							</aixm:levels>
@@ -6570,7 +6588,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:levels>
 								<aixm:AirspaceLayer gml:id="al1112">
 									<aixm:discreteLevelSeries
-										xlink:href="uuid.0942496b-7ce1-0b22-e053-0b751dc2499f"
+										xlink:href="urn:uuid:0942496b-7ce1-0b22-e053-0b751dc2499f"
 										xlink:title="ODD_FL_RVSM_IFR"/>
 								</aixm:AirspaceLayer>
 							</aixm:levels>
@@ -6624,10 +6642,11 @@ Editorial note: this license is an instance of the BSD license template as provi
 					</aixm:featureLifetime>
 					<aixm:level>LOWER</aixm:level>
 					<!-- level is not required by PANS-AIM for minimum AIP data set -->
-					<aixm:upperLimit xsi:nil="true" nilReason="missing"/>
-					<aixm:lowerLimit xsi:nil="true" nilReason="missing"/>
-					<aixm:minimumObstacleClearanceAltitude uom="FT"
-						>4000</aixm:minimumObstacleClearanceAltitude>
+					<aixm:upperLimit uom="FL">195</aixm:upperLimit>
+					<aixm:upperLimitReference>STD</aixm:upperLimitReference>
+					<aixm:lowerLimit uom="M">1350</aixm:lowerLimit>
+					<aixm:lowerLimitReference>SFC</aixm:lowerLimitReference>
+					<aixm:minimumObstacleClearanceAltitude uom="FT">4000</aixm:minimumObstacleClearanceAltitude>
 					<aixm:pathType>GDS</aixm:pathType>
 					<aixm:magneticTrack>199.0</aixm:magneticTrack>
 					<aixm:reverseMagneticTrack>017.0</aixm:reverseMagneticTrack>
@@ -6638,19 +6657,28 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:start>
 						<aixm:EnRouteSegmentPoint gml:id="E-c5f43ddc12">
 							<aixm:reportingATC>COMPULSORY</aixm:reportingATC>
-							<aixm:pointChoice_navaidSystem
-								xlink:href="urn:uuid:08a1bbd5-ea70-4fe3-836a-ea9686349495"
-								xlink:title="NAV_BOR"/>
+							<aixm:pointChoice_navaidSystem 
+								xlink:href="urn:uuid:2d2c95dc-cfec-4eae-96ca-dc95fff03756" 
+								xlink:title="NAV_ROB"/>
 						</aixm:EnRouteSegmentPoint>
 					</aixm:start>
-					<aixm:routeFormed xlink:href="urn:uuid:a14a8751-5428-46bc-a2d1-32ef84d37b5c"
+					<aixm:routeFormed xlink:href="urn:uuid:3b31528e-4c89-436f-85a5-dce41f298f20"
 						xlink:title="A6"/>
+					<aixm:curveExtent>
+						<aixm:Curve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="crv4133">
+							<gml:segments>
+								<gml:GeodesicString interpolation="geodesic">
+									<gml:posList>51.983333 -32.55 47.583333 -34.495</gml:posList>
+								</gml:GeodesicString>
+							</gml:segments>
+						</aixm:Curve>
+					</aixm:curveExtent>
 					<aixm:end>
 						<aixm:EnRouteSegmentPoint gml:id="E-c2a1228212">
 							<aixm:reportingATC>COMPULSORY</aixm:reportingATC>
 							<aixm:pointChoice_navaidSystem 
-								xlink:href="urn:uuid:2d2c95dc-cfec-4eae-96ca-dc95fff03756" 
-								xlink:title="NAV_ROB"/>
+								xlink:href="urn:uuid:2d2c95dc-cfec-4eae-96ca-dc95fff03757" 
+								xlink:title="NAV_ROK"/>
 						</aixm:EnRouteSegmentPoint>
 					</aixm:end>
 					<aixm:availability>
@@ -6659,7 +6687,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:levels>
 								<aixm:AirspaceLayer gml:id="al11112">
 									<aixm:discreteLevelSeries
-										xlink:href="uuid.0942496b-7ce7-0b22-e053-0b751dc2499f"
+										xlink:href="urn:uuid:0942496b-7ce7-0b22-e053-0b751dc2499f"
 										xlink:title="EVEN_FL_RVSM_IFR"/>
 								</aixm:AirspaceLayer>
 							</aixm:levels>
@@ -6671,7 +6699,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:levels>
 								<aixm:AirspaceLayer gml:id="al11122">
 									<aixm:discreteLevelSeries
-										xlink:href="uuid.0942496b-7ce1-0b22-e053-0b751dc2499f"
+										xlink:href="urn:uuid:0942496b-7ce1-0b22-e053-0b751dc2499f"
 										xlink:title="ODD_FL_RVSM_IFR"/>
 								</aixm:AirspaceLayer>
 							</aixm:levels>
@@ -6799,7 +6827,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:magneticVariationAccuracy xsi:nil="true" nilReason="unknown"/>
 					<aixm:dateMagneticVariation xsi:nil="true" nilReason="unknown"/>
 					<aixm:location>
-						<aixm:ElevatedPoint gml:id="epndbdon01">
+						<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="epndbdon01">
 							<gml:pos>53.038333 -32.151667</gml:pos>
 							<aixm:horizontalAccuracy xsi:nil="true" nilReason="unknown"/>
 						</aixm:ElevatedPoint>
@@ -6987,7 +7015,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:magneticVariationAccuracy xsi:nil="true" nilReason="unknown"/>
 					<aixm:dateMagneticVariation xsi:nil="true" nilReason="unknown"/>
 					<aixm:location>
-						<aixm:ElevatedPoint gml:id="epndbdkl0">
+						<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="epndbdkl0">
 							<gml:pos>52.383667 -31.850639</gml:pos>
 							<aixm:horizontalAccuracy xsi:nil="true" nilReason="unknown"/>
 						</aixm:ElevatedPoint>
@@ -7140,7 +7168,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:magneticVariationAccuracy xsi:nil="true" nilReason="unknown"/>
 					<aixm:dateMagneticVariation xsi:nil="true" nilReason="unknown"/>
 					<aixm:location>
-						<aixm:ElevatedPoint gml:id="epndbdSCN0">
+						<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="epndbdSCN0">
 							<gml:pos>52.371667 -32.028333</gml:pos>
 							<aixm:horizontalAccuracy xsi:nil="true" nilReason="unknown"/>
 						</aixm:ElevatedPoint>
@@ -7206,7 +7234,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:magneticVariationAccuracy xsi:nil="true" nilReason="unknown"/>
 					<aixm:dateMagneticVariation xsi:nil="true" nilReason="unknown"/>
 					<aixm:location>
-						<aixm:ElevatedPoint gml:id="epndbdMKR0">
+						<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="epndbdMKR0">
 							<gml:pos>52.371667 -32.028333</gml:pos>
 							<aixm:horizontalAccuracy xsi:nil="true" nilReason="unknown"/>
 						</aixm:ElevatedPoint>
@@ -7347,7 +7375,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:magneticVariationAccuracy xsi:nil="true" nilReason="unknown"/>
 					<aixm:dateMagneticVariation xsi:nil="true" nilReason="unknown"/>
 					<aixm:location>
-						<aixm:ElevatedPoint gml:id="epLLZ_OXS">
+						<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="epLLZ_OXS">
 							<gml:pos>52.375583 -31.965222</gml:pos>
 							<aixm:horizontalAccuracy xsi:nil="true" nilReason="unknown"/>
 						</aixm:ElevatedPoint>
@@ -7416,7 +7444,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:magneticVariationAccuracy xsi:nil="true" nilReason="unknown"/>
 					<aixm:dateMagneticVariation xsi:nil="true" nilReason="unknown"/>
 					<aixm:location>
-						<aixm:ElevatedPoint gml:id="epGPT_OXS">
+						<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="epGPT_OXS">
 							<gml:pos>52.378444 -31.926778</gml:pos>
 							<aixm:horizontalAccuracy xsi:nil="true" nilReason="unknown"/>
 						</aixm:ElevatedPoint>
@@ -7484,7 +7512,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:magneticVariationAccuracy xsi:nil="true" nilReason="unknown"/>
 					<aixm:dateMagneticVariation xsi:nil="true" nilReason="unknown"/>
 					<aixm:location>
-						<aixm:ElevatedPoint gml:id="epndbdMKR_EADD_OM27R">
+						<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="epndbdMKR_EADD_OM27R">
 							<gml:pos>52.383667 -31.850639</gml:pos>
 							<aixm:horizontalAccuracy xsi:nil="true" nilReason="unknown"/>
 						</aixm:ElevatedPoint>
@@ -7744,9 +7772,8 @@ Editorial note: this license is an instance of the BSD license template as provi
 		</aixm:Unit>
 	</message:hasMember>
 	<message:hasMember>
-		<aixm:AirTrafficControlService gml:id="uuid.902369de-20fd-493e-8b73-01e240efc177">
-			<gml:identifier codeSpace="urn:uuid:"
-				>902369de-20fd-493e-8b73-01e240efc176</gml:identifier>
+		<aixm:AirTrafficControlService gml:id="uuid.9ebc23fb-27da-45d7-9ce5-d8b11c5e6b37">
+			<gml:identifier codeSpace="urn:uuid:">9ebc23fb-27da-45d7-9ce5-d8b11c5e6b37</gml:identifier>
 			<aixm:timeSlice>
 				<aixm:AirTrafficControlServiceTimeSlice gml:id="ATC_DONLON_TWR">
 					<gml:validTime>
@@ -8071,7 +8098,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 									<aixm:lowerLimit uom="FL">30</aixm:lowerLimit>
 									<aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
 									<aixm:horizontalProjection>
-										<aixm:Surface gml:id="S001">
+										<aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="S001">
 											<gml:patches>
 												<gml:PolygonPatch>
 												<gml:exterior>
@@ -8111,7 +8138,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 									<aixm:lowerLimit uom="FL">50</aixm:lowerLimit>
 									<aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
 									<aixm:horizontalProjection>
-										<aixm:Surface gml:id="S002">
+										<aixm:Surface srsName="urn:ogc:def:crs:EPSG::4326" gml:id="S002">
 											<gml:patches>
 												<gml:PolygonPatch>
 												<gml:exterior>
@@ -8644,7 +8671,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:magneticVariationAccuracy xsi:nil="true" nilReason="unknown"/>
 					<aixm:dateMagneticVariation xsi:nil="true" nilReason="unknown"/>
 					<aixm:location>
-						<aixm:ElevatedPoint gml:id="epndbdkl01">
+						<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="epndbdkl01">
 							<gml:pos>51.983333 -32.55</gml:pos>
 							<aixm:horizontalAccuracy uom="M">100</aixm:horizontalAccuracy>
 						</aixm:ElevatedPoint>
@@ -8695,7 +8722,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					</aixm:navaidEquipment>
 					<aixm:location>
 						<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="navelKL11">
-							<gml:pos>51.983333 -32.55</gml:pos>
+							<gml:pos>47.583333 -34.495</gml:pos>
 							<aixm:horizontalAccuracy uom="M">100</aixm:horizontalAccuracy>
 						</aixm:ElevatedPoint>
 					</aixm:location>
@@ -8729,7 +8756,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 					<aixm:magneticVariationAccuracy xsi:nil="true" nilReason="unknown"/>
 					<aixm:dateMagneticVariation xsi:nil="true" nilReason="unknown"/>
 					<aixm:location>
-						<aixm:ElevatedPoint gml:id="epndbdkl011">
+						<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="epndbdkl011">
 							<gml:pos>47.583333 -34.495</gml:pos>
 							<aixm:horizontalAccuracy uom="M">100</aixm:horizontalAccuracy>
 						</aixm:ElevatedPoint>
