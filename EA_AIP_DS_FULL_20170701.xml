@@ -622,7 +622,9 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<gml:endPosition indeterminatePosition="unknown"/>
 						</gml:TimePeriod>
 					</aixm:featureLifetime>
+					<aixm:type>AIS</aixm:type>
 					<aixm:responsibleOrganisation xlink:href="urn:uuid:c225ae5c-540f-4a48-8867-809b393b2407" xlink:title="CIVIL AVIATION ADMINISTRATION"/>
+					<aixm:assignedAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="AMSWELL FIR"/>
 				</aixm:AuthorityForAirspaceTimeSlice>
 			</aixm:timeSlice>
 		</aixm:AuthorityForAirspace>
@@ -1034,8 +1036,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 	</message:hasMember>
 	<message:hasMember>
 		<aixm:AirportHeliport gml:id="uuid.1b54b2d6-a5ff-4e57-94c2-f4047a381c64">
-			<gml:identifier codeSpace="urn:uuid:"
-				>1b54b2d6-a5ff-4e57-94c2-f4047a381c64</gml:identifier>
+			<gml:identifier codeSpace="urn:uuid:">1b54b2d6-a5ff-4e57-94c2-f4047a381c64</gml:identifier>
 			<aixm:timeSlice>
 				<aixm:AirportHeliportTimeSlice gml:id="AHP_EADD">
 					<gml:validTime>
@@ -5415,8 +5416,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 	</message:hasMember>
 	<message:hasMember>
 		<aixm:AeronauticalGroundLight gml:id="uuid.a552aba9-aed1-452f-a50e-347281817f96">
-			<gml:identifier codeSpace="urn:uuid:"
-				>a552aba9-aed1-452f-a50e-347281817f96</gml:identifier>
+			<gml:identifier codeSpace="urn:uuid:">a552aba9-aed1-452f-a50e-347281817f96</gml:identifier>
 			<aixm:timeSlice>
 				<aixm:AeronauticalGroundLightTimeSlice gml:id="AGL_SIBY">
 					<gml:validTime>
@@ -5449,6 +5449,49 @@ Editorial note: this license is an instance of the BSD license template as provi
 									<aixm:note>Intensity: W 1600/R 240 tsd Candelas;
 										Characteristics: GP FLG (2) W/R EV 10 SEC; Operating hours:
 										HN</aixm:note>
+								</aixm:LinguisticNote>
+							</aixm:translatedNote>
+						</aixm:Note>
+					</aixm:annotation>
+				</aixm:AeronauticalGroundLightTimeSlice>
+			</aixm:timeSlice>
+		</aixm:AeronauticalGroundLight>
+	</message:hasMember>
+	<message:hasMember>
+		<aixm:AeronauticalGroundLight gml:id="uuid.987fd5a4-420d-41f3-a3e8-75ea717bcc01">
+			<gml:identifier codeSpace="urn:uuid:">987fd5a4-420d-41f3-a3e8-75ea717bcc01</gml:identifier>
+			<aixm:timeSlice>
+				<aixm:AeronauticalGroundLightTimeSlice gml:id="AGL_ABN">
+					<gml:validTime>
+						<gml:TimePeriod gml:id="ID_3455">
+							<gml:beginPosition>2017-07-01T12:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</gml:validTime>
+					<aixm:interpretation>BASELINE</aixm:interpretation>
+					<aixm:sequenceNumber>1</aixm:sequenceNumber>
+					<aixm:featureLifetime>
+						<gml:TimePeriod gml:id="lt_3455">
+							<gml:beginPosition>2013-04-23T12:00:00Z</gml:beginPosition>
+							<gml:endPosition indeterminatePosition="unknown"/>
+						</gml:TimePeriod>
+					</aixm:featureLifetime>
+					<aixm:name>DONLON</aixm:name>
+					<aixm:type>ABN</aixm:type>
+					<aixm:colour>WHITE</aixm:colour>
+					<aixm:flashing>YES</aixm:flashing>
+					<aixm:aerodromeBeacon xlink:href="urn:uuid:1b54b2d6-a5ff-4e57-94c2-f4047a381c64" xlink:title="DONLON EADD"/>
+					<aixm:location>
+						<aixm:ElevatedPoint gml:id="point_101" srsName="urn:ogc:def:crs:EPSG::4326">
+							<gml:pos>52.37416667 -031.93111111</gml:pos>
+						</aixm:ElevatedPoint>
+					</aixm:location>
+					<aixm:annotation>
+						<aixm:Note gml:id="note_101">
+							<aixm:purpose>DESCRIPTION</aixm:purpose>
+							<aixm:translatedNote>
+								<aixm:LinguisticNote gml:id="note_102">
+									<aixm:note>At Tower Building, FLG W EV 2 SEC</aixm:note>
 								</aixm:LinguisticNote>
 							</aixm:translatedNote>
 						</aixm:Note>
@@ -5528,8 +5571,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 												</gml:exterior>
 												</gml:PolygonPatch>
 											</gml:patches>
-											<aixm:horizontalAccuracy uom="KM"
-												>2</aixm:horizontalAccuracy>
+											<aixm:horizontalAccuracy uom="KM">2</aixm:horizontalAccuracy>
 										</aixm:Surface>
 									</aixm:horizontalProjection>
 								</aixm:AirspaceVolume>
@@ -5681,16 +5723,13 @@ Editorial note: this license is an instance of the BSD license template as provi
 									<aixm:lowerLimit uom="FL">210</aixm:lowerLimit>
 									<aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
 									<aixm:horizontalProjection>
-										<aixm:Surface xsi:type="aixm:ElevatedSurfaceType"
-											gml:id="uuid.d635cbc1-83ff-490d-8451-7aca0ef6a842">
+										<aixm:Surface gml:id="uuid.d635cbc1-83ff-490d-8451-7aca0ef6a842">
 											<gml:patches>
 												<gml:PolygonPatch>
 												<gml:exterior>
 												<gml:Ring>
 												<gml:curveMember>
-												<gml:Curve xsi:type="aixm:CurveType"
-												srsName="urn:ogc:def:crs:EPSG::4326"
-												gml:id="uuid.258c16e0-5f2c-4101-aabb-536f58c38eb5">
+												<gml:Curve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="uuid.258c16e0-5f2c-4101-aabb-536f58c38eb5">
 												<gml:segments>
 												<gml:GeodesicString>
 												<gml:posList>51.99333333333333 -36.0005
@@ -5771,16 +5810,13 @@ Editorial note: this license is an instance of the BSD license template as provi
 									<aixm:lowerLimit uom="FL">210</aixm:lowerLimit>
 									<aixm:lowerLimitReference>STD</aixm:lowerLimitReference>
 									<aixm:horizontalProjection>
-										<aixm:Surface xsi:type="aixm:ElevatedSurfaceType"
-											gml:id="uuid.b2444276-e335-4106-9a4a-fd5eeb75b41c">
+										<aixm:Surface gml:id="uuid.b2444276-e335-4106-9a4a-fd5eeb75b41c">
 											<gml:patches>
 												<gml:PolygonPatch>
 												<gml:exterior>
 												<gml:Ring>
 												<gml:curveMember>
-												<gml:Curve xsi:type="aixm:CurveType"
-												srsName="urn:ogc:def:crs:EPSG::4326"
-												gml:id="uuid.84fe3774-a519-4b16-9344-cb311b2c92b5">
+												<gml:Curve srsName="urn:ogc:def:crs:EPSG::4326" gml:id="uuid.84fe3774-a519-4b16-9344-cb311b2c92b5">
 												<gml:segments>
 												<gml:GeodesicString>
 												<gml:posList>53.876666666666665 -35.863333333333333
@@ -5875,6 +5911,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:operationalStatus>NORMAL</aixm:operationalStatus>
 						</aixm:ServiceOperationalStatus>
 					</aixm:availability>
+					<aixm:type>ACS</aixm:type>
 					<aixm:clientAirspace xlink:href="urn:uuid:f4d5e4d4-d84a-481f-b9e3-b359e42c0dff" xlink:title="ASE_AMSWELL_FIR"/>
 					<aixm:clientRoute>
 						<aixm:RoutePortion gml:id="rp001">
