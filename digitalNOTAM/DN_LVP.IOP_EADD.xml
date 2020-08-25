@@ -81,7 +81,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <aixm:correctionNumber>0</aixm:correctionNumber>
                     <aixm:annotation>
                         <aixm:Note gml:id="DN_LVP_0130">
-                            <aixm:purpose>OTHER:LPV_PHASE</aixm:purpose>
+                            <aixm:purpose>OTHER:LVP_PHASE</aixm:purpose>
                             <aixm:translatedNote>
                                 <aixm:LinguisticNote gml:id="DN_LVP_0140">
                                     <aixm:note>Preparation Phase</aixm:note>
@@ -91,7 +91,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     </aixm:annotation>
                     <aixm:annotation>
                         <aixm:Note gml:id="DN_LVP_0131">
-                            <aixm:purpose>OTHER:LPV_WARNING</aixm:purpose>
+                            <aixm:purpose>OTHER:LVP_WARNING</aixm:purpose>
                             <aixm:translatedNote>
                                 <aixm:LinguisticNote gml:id="DN_LVP_0141">
                                     <aixm:note>Follow Me car assistance not available.</aixm:note> 
