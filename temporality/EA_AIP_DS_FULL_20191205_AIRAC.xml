@@ -65,7 +65,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 				</gmd:CI_ResponsibleParty>
 			</gmd:contact>
 			<gmd:dateStamp>
-				<gco:DateTime>2018-11-07T14:00:00Z</gco:DateTime>
+				<gco:DateTime>2019-10-20T16:00:00Z</gco:DateTime>
 			</gmd:dateStamp>
 			<gmd:identificationInfo>
 				<gmd:MD_DataIdentification>
@@ -77,7 +77,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<gmd:date>
 								<gmd:CI_Date>
 									<gmd:date>
-										<gco:DateTime>2018-11-07T14:00:00Z</gco:DateTime>
+										<gco:DateTime>2019-10-20T16:00:00Z</gco:DateTime>
 									</gmd:date>
 									<gmd:dateType>
 										<gmd:CI_DateTypeCode
@@ -8935,33 +8935,35 @@ Editorial note: this license is an instance of the BSD license template as provi
 			</aixm:timeSlice>
 		</aixm:RunwayCentrelinePoint>
 	</message:hasMember>
-	<!-- new designated point GITUB -->
+	<!-- updated designated point GITUB -->
 	<message:hasMember>
 		<aixm:DesignatedPoint gml:id="uuid.008591e1-3173-42f3-bd7e-68be78c7d1cf">
 			<gml:identifier codeSpace="urn:uuid:">008591e1-3173-42f3-bd7e-68be78c7d1cf</gml:identifier>
+			<!-- the correction TimeSlice ending the lifetime of the last BASELINE -->
 			<aixm:timeSlice>
-				<aixm:DesignatedPointTimeSlice gml:id="DPN_GITUB">
+				<aixm:DesignatedPointTimeSlice gml:id="DPN_GITUB_3">
 					<gml:validTime>
-						<gml:TimePeriod gml:id="vtGITUB92">
-							<gml:beginPosition>2018-12-06T00:00:00Z</gml:beginPosition>
-							<gml:endPosition indeterminatePosition="unknown"/>
+						<gml:TimePeriod gml:id="vtGITUB92_3">
+							<gml:beginPosition>2019-01-31T00:00:00Z</gml:beginPosition>
+							<gml:endPosition>2019-12-05T00:00:00Z</gml:endPosition>
 						</gml:TimePeriod>
 					</gml:validTime>
 					<aixm:interpretation>BASELINE</aixm:interpretation>
-					<aixm:sequenceNumber>1</aixm:sequenceNumber>
+					<aixm:sequenceNumber>2</aixm:sequenceNumber>
+					<aixm:correctionNumber>1</aixm:correctionNumber>
 					<aixm:featureLifetime>
-						<gml:TimePeriod gml:id="ltGITUB92">
+						<gml:TimePeriod gml:id="ltGITUB92_3">
 							<gml:beginPosition>2018-12-06T00:00:00Z</gml:beginPosition>
-							<gml:endPosition indeterminatePosition="unknown"/>
+							<gml:endPosition>2019-12-05T00:00:00Z</gml:endPosition>
 						</gml:TimePeriod>
 					</aixm:featureLifetime>
 					<aixm:designator>GITUB</aixm:designator>
 					<aixm:type>ICAO</aixm:type>
 					<aixm:name>GITUB</aixm:name>
 					<aixm:location>
-						<aixm:Point srsName="urn:ogc:def:crs:EPSG::4326" gml:id="pGITUB">
-							<gml:pos>50.14152118 -41.62091308</gml:pos>
-							<aixm:horizontalAccuracy uom="M">100</aixm:horizontalAccuracy>
+						<aixm:Point srsName="urn:ogc:def:crs:EPSG::4326" gml:id="pGITUB_3">
+							<gml:pos>50.12542310 -41.43331881</gml:pos>
+							<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
 						</aixm:Point>
 					</aixm:location>
 				</aixm:DesignatedPointTimeSlice>

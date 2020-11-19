@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file includes contributions from Solitec Software Solutions, Luciad, EUROCONTROL, Comsoft -->
+<!-- Copyright (c) 2018, EUROCONTROL & FAA
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+    Neither the names of EUROCONTROL or FAA nor the names of their contributors may be used to endorse or promote products derived from this specification without specific prior written permission.
+
+THIS FICTITIOUS DATA SET IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR 
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://www.opensource.org/licenses/bsd-license.php-->
+
+<message:AIXMBasicMessage xmlns:message="http://www.aixm.aero/schema/5.1.1/message"
+	xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
+	xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd"	gml:id="M0000001">
+	<gml:boundedBy>
+		<gml:Envelope srsName="urn:ogc:def:crs:EPSG::4326">
+			<gml:lowerCorner>-32.0886111111111 -47.0</gml:lowerCorner>
+			<gml:upperCorner>57.690815969999996 52.4283333333333</gml:upperCorner>
+		</gml:Envelope>
+	</gml:boundedBy>
+	<aixm:messageMetadata>
+		<gmd:MD_Metadata id="MD_DONLON_MESSAGE">
+			<gmd:characterSet>
+				<gmd:MD_CharacterSetCode
+					codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode"
+					codeListValue="utf8">utf8</gmd:MD_CharacterSetCode>
+			</gmd:characterSet>
+			<gmd:contact>
+				<gmd:CI_ResponsibleParty>
+					<gmd:organisationName>
+						<gco:CharacterString>EUROCONTROL</gco:CharacterString>
+					</gmd:organisationName>
+					<gmd:contactInfo>
+						<gmd:CI_Contact>
+							<gmd:onlineResource>
+								<gmd:CI_OnlineResource>
+									<gmd:linkage>
+										<gmd:URL>http://www.eurocontrol.int</gmd:URL>
+									</gmd:linkage>
+								</gmd:CI_OnlineResource>
+							</gmd:onlineResource>
+						</gmd:CI_Contact>
+					</gmd:contactInfo>
+					<gmd:role>
+						<gmd:CI_RoleCode
+							codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#CI_RoleCode"
+							codeListValue="publisher">publisher</gmd:CI_RoleCode>
+					</gmd:role>
+				</gmd:CI_ResponsibleParty>
+			</gmd:contact>
+			<gmd:dateStamp>
+				<gco:DateTime>2018-12-15T14:00:00Z</gco:DateTime>
+			</gmd:dateStamp>
+			<gmd:identificationInfo>
+				<gmd:MD_DataIdentification>
+					<gmd:citation>
+						<gmd:CI_Citation>
+							<gmd:title>
+								<gco:CharacterString>DONLON AIP data set - first AIRAC cycle update - difference file (as PERDMELTA)</gco:CharacterString>
+							</gmd:title>
+							<gmd:date>
+								<gmd:CI_Date>
+									<gmd:date>
+										<gco:DateTime>2018-12-15T14:00:00Z</gco:DateTime>
+									</gmd:date>
+									<gmd:dateType>
+										<gmd:CI_DateTypeCode
+											codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode"
+											codeListValue="publication"
+											>publication</gmd:CI_DateTypeCode>
+									</gmd:dateType>
+								</gmd:CI_Date>
+							</gmd:date>
+						</gmd:CI_Citation>
+					</gmd:citation>
+					<gmd:abstract>
+						<gco:CharacterString>Demonstrating simple changes such as a new feature, an updated feature and a withdrawn feature</gco:CharacterString>
+					</gmd:abstract>
+					<gmd:pointOfContact>
+						<gmd:CI_ResponsibleParty>
+							<gmd:individualName>
+								<gco:CharacterString>Eduard Porosnicu</gco:CharacterString>
+							</gmd:individualName>
+							<gmd:organisationName>
+								<gco:CharacterString>Eurocontrol</gco:CharacterString>
+							</gmd:organisationName>
+							<gmd:contactInfo>
+								<gmd:CI_Contact>
+									<gmd:onlineResource>
+										<gmd:CI_OnlineResource>
+											<gmd:linkage>
+												<gmd:URL>www.aixm.aero</gmd:URL>
+											</gmd:linkage>
+											<gmd:name>
+												<gco:CharacterString>AIXM 5.1 website</gco:CharacterString>
+											</gmd:name>
+										</gmd:CI_OnlineResource>
+									</gmd:onlineResource>
+								</gmd:CI_Contact>
+							</gmd:contactInfo>
+							<gmd:role>
+								<gmd:CI_RoleCode
+									codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#CI_RoleCode"
+									codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+							</gmd:role>
+						</gmd:CI_ResponsibleParty>
+					</gmd:pointOfContact>
+					<gmd:resourceConstraints>
+						<gmd:MD_Constraints>
+							<gmd:useLimitation>
+								<gco:CharacterString>To be used for demonstration purposes only! Any operational usage is prohibited!</gco:CharacterString>
+							</gmd:useLimitation>
+						</gmd:MD_Constraints>
+					</gmd:resourceConstraints>
+					<gmd:language>
+						<gco:CharacterString>eng</gco:CharacterString>
+					</gmd:language>
+					<gmd:topicCategory>
+						<gmd:MD_TopicCategoryCode>transportation</gmd:MD_TopicCategoryCode>
+					</gmd:topicCategory>
+					<gmd:extent>
+						<gmd:EX_Extent>
+							<gmd:geographicElement>
+								<gmd:EX_GeographicBoundingBox>
+									<gmd:westBoundLongitude>
+										<gco:Decimal>-47.0</gco:Decimal>
+									</gmd:westBoundLongitude>
+									<gmd:eastBoundLongitude>
+										<gco:Decimal>52.4283333333333</gco:Decimal>
+									</gmd:eastBoundLongitude>
+									<gmd:southBoundLatitude>
+										<gco:Decimal>57.690815969999996</gco:Decimal>
+									</gmd:southBoundLatitude>
+									<gmd:northBoundLatitude>
+										<gco:Decimal>-32.0886111111111</gco:Decimal>
+									</gmd:northBoundLatitude>
+								</gmd:EX_GeographicBoundingBox>
+							</gmd:geographicElement>
+						</gmd:EX_Extent>
+					</gmd:extent>
+				</gmd:MD_DataIdentification>
+			</gmd:identificationInfo>
+		</gmd:MD_Metadata>
+	</aixm:messageMetadata>
+	<!-- new designated point GITUB -->
+	<message:hasMember>
+		<aixm:DesignatedPoint gml:id="uuid.008591e1-3173-42f3-bd7e-68be78c7d1cf">
+			<gml:identifier codeSpace="urn:uuid:">008591e1-3173-42f3-bd7e-68be78c7d1cf</gml:identifier>
+			<aixm:timeSlice>
+				<aixm:DesignatedPointTimeSlice gml:id="DPN_GITUB_PD_2">
+					<gml:validTime>
+						<gml:TimeInstant gml:id="vtGITUB92PD_2">
+							<gml:timePosition>2019-01-31T00:00:00Z</gml:timePosition>
+						</gml:TimeInstant>
+					</gml:validTime>
+					<aixm:interpretation>PERMDELTA</aixm:interpretation>
+					<aixm:sequenceNumber>2</aixm:sequenceNumber>
+					<aixm:location>
+						<aixm:Point srsName="urn:ogc:def:crs:EPSG::4326" gml:id="pGITUBPD_2">
+							<gml:pos>50.12542310 -41.43331881</gml:pos>
+							<aixm:horizontalAccuracy uom="M">50</aixm:horizontalAccuracy>
+						</aixm:Point>
+					</aixm:location>
+				</aixm:DesignatedPointTimeSlice>
+			</aixm:timeSlice>
+		</aixm:DesignatedPoint>
+	</message:hasMember>
+</message:AIXMBasicMessage>
