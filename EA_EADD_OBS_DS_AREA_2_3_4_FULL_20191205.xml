@@ -241,6 +241,27 @@ Editorial note: this license is an instance of the BSD license template as provi
 					</gmd:extent>
 				</gmd:MD_DataIdentification>
 			</gmd:identificationInfo>
+			<!-- MD_Metadata > DQ_DataQuality > LI_Lineage.statement (general explanation of the data producer’s knowledge about the lineage of a dataset). 
+				Required by PANS-AIM: Table A6-2  "Integrity". -->
+			<gmd:dataQualityInfo>
+				<gmd:DQ_DataQuality>
+					<gmd:scope>
+						<!-- MD_Metadata > DQ_DataQuality > DQ_scope.level. mandatory by ISO 19115 (2003). -->
+						<gmd:DQ_Scope>
+							<gmd:level>
+								<gmd:MD_ScopeCode codeList="https://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset">dataset</gmd:MD_ScopeCode>
+							</gmd:level>
+						</gmd:DQ_Scope>
+					</gmd:scope>
+					<gmd:lineage>
+						<gmd:LI_Lineage>
+							<gmd:statement>
+								<gco:CharacterString>Data integrity level essential is assured.</gco:CharacterString>
+							</gmd:statement>
+						</gmd:LI_Lineage>
+					</gmd:lineage>
+				</gmd:DQ_DataQuality>
+			</gmd:dataQualityInfo>
 		</gmd:MD_Metadata>
 	</aixm:messageMetadata>
 	<!-- SINGLE PART OBSTACLE (Windsock) Area 3. 
@@ -614,6 +635,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 							<aixm:verticalExtent uom="M">5.0</aixm:verticalExtent>
 							<aixm:verticalExtentAccuracy uom="M">0.5</aixm:verticalExtentAccuracy>
 							<aixm:type>NAVAID</aixm:type>
+							<aixm:frangible>YES</aixm:frangible>
 							<aixm:horizontalProjection_location>
 								<aixm:ElevatedPoint srsName="urn:ogc:def:crs:EPSG::4326" gml:id="ep00013-1">
 									<gml:pos>52.378444 -31.926778</gml:pos>
