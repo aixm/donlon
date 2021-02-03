@@ -28,11 +28,9 @@ Editorial note: this license is an instance of the BSD license template as provi
 	xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
 	xmlns:gsr="http://www.isotc211.org/2005/gsr" 
 	xmlns:gmd="http://www.isotc211.org/2005/gmd"
-	xmlns:event="http://www.aixm.aero/schema/5.1.1/event" 
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
-	http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1/event/Event_Features.xsd"	
+	xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd"	
 	gml:id="M0000001">
 	<gml:boundedBy>
 		<gml:Envelope srsName="urn:ogc:def:crs:EPSG::4326">
