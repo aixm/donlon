@@ -1264,7 +1264,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 						<aixm:NavaidComponent gml:id="N-df8103a4">
 							<aixm:collocationGroup>1</aixm:collocationGroup>
 							<aixm:theNavaidEquipment
-								xlink:href="urn:uuid:7692166e-60e6-467d-b5f0-c728aeae85d6"
+								xlink:href="urn:uuid:0a45a38f-0f96-4ace-b09e-310ac0415693"
 								xlink:title="VOR_BOR"/>
 						</aixm:NavaidComponent>
 					</aixm:navaidEquipment>
@@ -1272,7 +1272,7 @@ Editorial note: this license is an instance of the BSD license template as provi
 						<aixm:NavaidComponent gml:id="N-df8103a5">
 							<aixm:collocationGroup>1</aixm:collocationGroup>
 							<aixm:theNavaidEquipment
-								xlink:href="urn:uuid:0a45a38f-0f96-4ace-b09e-310ac0415693"
+								xlink:href="urn:uuid:7692166e-60e6-467d-b5f0-c728aeae85d6"
 								xlink:title="DME_BOR"/>
 						</aixm:NavaidComponent>
 					</aixm:navaidEquipment>
