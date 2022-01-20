@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Example created by Andreea PERCA, ASBU For Future GMBH -->
-<!-- Copyright (c) 2018, EUROCONTROL & FAA
+<!-- Copyright (c) 2022, EUROCONTROL & FAA
     
 All rights reserved.
 
@@ -46,23 +46,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <aixm:interpretation>TEMPDELTA</aixm:interpretation>
                     <aixm:sequenceNumber>1</aixm:sequenceNumber>
                     <aixm:correctionNumber>0</aixm:correctionNumber>
-                    <!--The time when the airport is closed-->      
-                    <aixm:availability>
-                        <aixm:AirportHeliportAvailability gml:id="ID_ACT_57">
-                            <aixm:timeInterval>
-                                <aixm:Timesheet gml:id="ID_ACT_58">
-                                    <aixm:timeReference>UTC</aixm:timeReference>
-                                    <aixm:day>ANY</aixm:day>
-                                    <aixm:startTime>11:00</aixm:startTime>
-                                    <aixm:endTime>13:00</aixm:endTime>
-                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
-                                    <aixm:excluded>NO</aixm:excluded> 
-                                </aixm:Timesheet>
-                            </aixm:timeInterval>
-                            <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
-                        </aixm:AirportHeliportAvailability>
-                    </aixm:availability>
-                    <!--time calculated from the Baseline information for the status of the airport outside the time affected by NOTAM-->
+                    <!-- the baseline status of the airport -->
                     <aixm:availability>
                         <aixm:AirportHeliportAvailability gml:id="ID_ACT_59">
                             <aixm:timeInterval>
@@ -71,7 +55,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                                     <aixm:day>WORK_DAY</aixm:day>
                                     <aixm:startTime>06:00</aixm:startTime>
                                     <aixm:endTime>20:00</aixm:endTime>
-                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust> <!--the BASELINE data has the value 'yes'. It has been modified here to comply with TSH.EVT-02. The assumption is that the conversion will be done automatically by the system. -->
+                                    <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust> 
                                     <aixm:excluded>NO</aixm:excluded>
                                 </aixm:Timesheet>
                             </aixm:timeInterval>
@@ -81,7 +65,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                                     <aixm:day>SAT</aixm:day>
                                     <aixm:startTime>07:00</aixm:startTime>
                                     <aixm:endTime>20:00</aixm:endTime>
-                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust> <!--the BASELINE data has the value 'yes'. It has been modified here to comply with TSH.EVT-02. The assumption is that the conversion will be done automatically by the system.-->
+                                    <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust> 
                                     <aixm:excluded>NO</aixm:excluded>
                                 </aixm:Timesheet>
                             </aixm:timeInterval>
@@ -91,32 +75,21 @@ Editorial note: this license is an instance of the BSD license template as provi
                                     <aixm:day>SUN</aixm:day>
                                     <aixm:startTime>07:00</aixm:startTime>
                                     <aixm:endTime>20:00</aixm:endTime>
-                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust> <!--the BASELINE data has the value 'yes'. It has been modified here to comply with TSH.EVT-02. The assumption is that the conversion will be done automatically by the system.-->
+                                    <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust> 
                                     <aixm:excluded>NO</aixm:excluded>
                                 </aixm:Timesheet>
                             </aixm:timeInterval>
-                            <!--The BASELINE data contained a schedule also for HOL. The HOL value is not allowed in a Digital NOTAM. 
-                                It is assume no Holiday is contained within the closure schedule -->
                             <aixm:timeInterval>
-                                <aixm:Timesheet gml:id="ID_ACT_66">
+                                <aixm:Timesheet gml:id="ID_ACT_64">
                                     <aixm:timeReference>UTC</aixm:timeReference>
-                                    <aixm:day>ANY</aixm:day>
-                                    <aixm:startTime>11:00</aixm:startTime>
-                                    <aixm:endTime>13:00</aixm:endTime>
-                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
-                                    <aixm:excluded>YES</aixm:excluded> 
+                                    <aixm:day>HOL</aixm:day>
+                                    <aixm:startTime>07:00</aixm:startTime>
+                                    <aixm:endTime>20:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust> 
+                                    <aixm:excluded>NO</aixm:excluded>
                                 </aixm:Timesheet>
                             </aixm:timeInterval>
-                            <aixm:annotation>
-                                <aixm:Note gml:id="ID_ACT_60">
-                                    <aixm:purpose>REMARK</aixm:purpose>
-                                    <aixm:translatedNote>
-                                        <aixm:LinguisticNote gml:id="ID_ACT_61">
-                                            <aixm:note>Baseline data copy. Not included in the NOTAM text generation</aixm:note>
-                                        </aixm:LinguisticNote>
-                                    </aixm:translatedNote>
-                                </aixm:Note>
-                            </aixm:annotation>
+                            <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
                             <aixm:usage>
                                 <aixm:AirportHeliportUsage gml:id="AHU_EADD_PERMIT">
                                     <aixm:type>PERMIT</aixm:type>
@@ -139,64 +112,20 @@ Editorial note: this license is an instance of the BSD license template as provi
                             </aixm:usage>
                         </aixm:AirportHeliportAvailability>
                     </aixm:availability>
+                    <!--The time when the airport is closed-->      
                     <aixm:availability>
-                        <aixm:AirportHeliportAvailability gml:id="AHY_EADD_FORBID_DN">
+                        <aixm:AirportHeliportAvailability gml:id="ID_ACT_57">
                             <aixm:timeInterval>
-                                <aixm:Timesheet gml:id="T-e921a1ce">
+                                <aixm:Timesheet gml:id="ID_ACT_58">
                                     <aixm:timeReference>UTC</aixm:timeReference>
                                     <aixm:day>ANY</aixm:day>
-                                    <aixm:dayTil>ANY</aixm:dayTil> <!--added to comply with updated rule for end of day-->
-                                    <aixm:startTime>20:00</aixm:startTime>
-                                    <aixm:endTime>00:00</aixm:endTime>
-                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust> <!--the BASELINE data has the value 'yes'. It has been modified here to comply with TSH.EVT-02. The assumption is that the conversion will be done automatically by the system.-->
+                                    <aixm:startTime>11:00</aixm:startTime>
+                                    <aixm:endTime>13:00</aixm:endTime>
+                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust>
+                                    <aixm:excluded>NO</aixm:excluded> 
                                 </aixm:Timesheet>
                             </aixm:timeInterval>
-                            <aixm:timeInterval>
-                                <aixm:Timesheet gml:id="T-d9e420be">
-                                    <aixm:timeReference>UTC</aixm:timeReference>
-                                    <aixm:day>ANY</aixm:day>
-                                    <aixm:startTime>00:00</aixm:startTime>
-                                    <aixm:endTime>06:00</aixm:endTime>
-                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust> <!--the BASELINE data has the value 'yes'. It has been modified here to comply with TSH.EVT-02. The assumption is that the conversion will be done automatically by the system.-->
-                                </aixm:Timesheet>
-                            </aixm:timeInterval>
-                            <aixm:timeInterval>
-                                <aixm:Timesheet gml:id="T-d9e420sfsdbe">
-                                    <aixm:timeReference>UTC</aixm:timeReference>
-                                    <aixm:day>SAT</aixm:day>
-                                    <aixm:startTime>06:00</aixm:startTime>
-                                    <aixm:endTime>07:00</aixm:endTime>
-                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust> <!--the BASELINE data has the value 'yes'. It has been modified here to comply with TSH.EVT-02. The assumption is that the conversion will be done automatically by the system.-->
-                                </aixm:Timesheet>
-                            </aixm:timeInterval>
-                            <aixm:timeInterval>
-                                <aixm:Timesheet gml:id="T-d9e420sfsdsfsbe">
-                                    <aixm:timeReference>UTC</aixm:timeReference>
-                                    <aixm:day>SUN</aixm:day>
-                                    <aixm:startTime>06:00</aixm:startTime>
-                                    <aixm:endTime>07:00</aixm:endTime>
-                                    <aixm:daylightSavingAdjust>NO</aixm:daylightSavingAdjust> <!--the BASELINE data has the value 'yes'. It has been modified here to comply with TSH.EVT-02. The assumption is that the conversion will be done automatically by the system.-->
-                                </aixm:Timesheet>
-                            </aixm:timeInterval>
-                            <!--The BASELINE data contained a schedule also for HOL. The HOL value is not allowed in a Digital NOTAM. 
-                                It is assume no Holiday is contained within the closure schedule -->
-                            <aixm:annotation>
-                                <aixm:Note gml:id="ID_ACT_602">
-                                    <aixm:purpose>REMARK</aixm:purpose>
-                                    <aixm:translatedNote>
-                                        <aixm:LinguisticNote gml:id="ID_ACT_613">
-                                            <aixm:note>Baseline data copy. Not included in the NOTAM text generation</aixm:note>
-                                        </aixm:LinguisticNote>
-                                    </aixm:translatedNote>
-                                </aixm:Note>
-                            </aixm:annotation>
-                            <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
-                            <aixm:usage>
-                                <aixm:AirportHeliportUsage gml:id="A-d38f0d0f">
-                                    <aixm:type>FORBID</aixm:type>
-                                    <aixm:operation>ALL</aixm:operation>
-                                </aixm:AirportHeliportUsage>
-                            </aixm:usage>
+                            <aixm:operationalStatus>CLOSED</aixm:operationalStatus>
                         </aixm:AirportHeliportAvailability>
                     </aixm:availability>
                     <aixm:extension>
