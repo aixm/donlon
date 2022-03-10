@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Example created by Andreea PERCA, ASBU For Future GMBH -->
+<!-- Example initially created by Andreea PERCA, ASBU For Future GMBH -->
 <!-- Copyright (c) 2022, EUROCONTROL & FAA
     
 All rights reserved.
@@ -80,7 +80,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                                 </aixm:Timesheet>
                             </aixm:timeInterval>
                             <aixm:timeInterval>
-                                <aixm:Timesheet gml:id="ID_ACT_64">
+                                <aixm:Timesheet gml:id="ID_ACT_65">
                                     <aixm:timeReference>UTC</aixm:timeReference>
                                     <aixm:day>HOL</aixm:day>
                                     <aixm:startTime>07:00</aixm:startTime>
@@ -181,9 +181,7 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:effectiveStart>1802011100</event:effectiveStart>
                             <event:effectiveEnd>1802101300</event:effectiveEnd>
                             <event:schedule>Daily 11:00-13:00</event:schedule>
-                            <event:text>
-                                AD closed.
-                            </event:text>
+                            <event:text>AD closed.</event:text>
                         </event:NOTAM>
                     </event:textNOTAM>
                 </event:EventTimeSlice>
