@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Example created by Andreea PERCA, ASBU For Future GMBH -->
+<!-- Example initially created by Andreea PERCA, ASBU For Future GMBH -->
 <!-- Copyright (c) 2018, EUROCONTROL & FAA
     
 All rights reserved.
@@ -88,7 +88,7 @@ Editorial note: this license is an instance of the BSD license template as provi
     
     <message:hasMember>
         <aixm:AirportHeliport gml:id="uuid.dd062d88-3e64-4a5d-bebd-89476db9ebea">
-            <gml:identifier codeSpace="urn:uuid:">uuid.dd062d88-3e64-4a5d-bebd-89476db9ebea</gml:identifier>
+            <gml:identifier codeSpace="urn:uuid:">dd062d88-3e64-4a5d-bebd-89476db9ebea</gml:identifier>
             <aixm:timeSlice>
                 <aixm:AirportHeliportTimeSlice gml:id="ID_ADL_11">
                     <gml:validTime>
@@ -100,19 +100,41 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <aixm:interpretation>TEMPDELTA</aixm:interpretation>
                     <aixm:sequenceNumber>1</aixm:sequenceNumber>
                     <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <!-- copy of the Normal availability, as probvided in the AIP data set-->
+                    <aixm:availability>                      
+                        <aixm:AirportHeliportAvailability gml:id="AHY_EADH_PERMIT">
+                            <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+                            <aixm:usage>
+                                <aixm:AirportHeliportUsage gml:id="AHU_EADH_PERMIT">
+                                    <aixm:type>PERMIT</aixm:type>
+                                    <aixm:selection>
+                                        <aixm:ConditionCombination gml:id="agtayyat">
+                                            <aixm:logicalOperator>NONE</aixm:logicalOperator>
+                                            <aixm:flight>
+                                                <aixm:FlightCharacteristic gml:id="F_yastadyt">
+                                                    <aixm:rule>VFR</aixm:rule>
+                                                </aixm:FlightCharacteristic>
+                                            </aixm:flight>
+                                        </aixm:ConditionCombination>
+                                    </aixm:selection>
+                                </aixm:AirportHeliportUsage>
+                            </aixm:usage>
+                        </aixm:AirportHeliportAvailability>
+                    </aixm:availability>
+                    <!-- temporary usage restriction - limited weight -->
                     <aixm:availability>
                         <aixm:AirportHeliportAvailability gml:id="ID_ADL_13">
                             <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
                             <aixm:usage>
                                 <aixm:AirportHeliportUsage gml:id="ID_ADL_14">
-                                    <aixm:type>PERMIT</aixm:type>
+                                    <aixm:type>FORBID</aixm:type>
                                     <aixm:selection>
                                         <aixm:ConditionCombination gml:id="ID_ADL_15">
                                             <aixm:logicalOperator>NONE</aixm:logicalOperator>
                                             <aixm:aircraft>
                                                 <aixm:AircraftCharacteristic gml:id="ID_ADL_16">
                                                     <aixm:weight uom="LB">25000</aixm:weight>
-                                                    <aixm:weightInterpretation>AT_OR_BELOW</aixm:weightInterpretation>
+                                                    <aixm:weightInterpretation>ABOVE</aixm:weightInterpretation>
                                                 </aixm:AircraftCharacteristic>
                                             </aixm:aircraft>
                                         </aixm:ConditionCombination>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Example created by Andreea PERCA, ASBU For Future GMBH -->
+<!-- Example initially created by Andreea PERCA, ASBU For Future GMBH -->
 <!-- Copyright (c) 2018, EUROCONTROL & FAA
 
 All rights reserved.
@@ -27,10 +27,10 @@ Editorial note: this license is an instance of the BSD license template as provi
     xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:aixm="http://www.aixm.aero/schema/5.1.1"
     xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gmd="http://www.isotc211.org/2005/gmd"
-    xmlns:event="http://www.aixm.aero/schema/5.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:event="http://www.aixm.aero/schema/5.1.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
-    http://www.aixm.aero/schema/5.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1-e/Event_Features.xsd"
+    http://www.aixm.aero/schema/5.1.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1.1-h/Event_Features.xsd"
     gml:id="M00001">
     
     <!-- This is a DN for EADD airport prohibited for touch and go-->
@@ -56,17 +56,14 @@ Editorial note: this license is an instance of the BSD license template as provi
                         </gml:TimePeriod>
                     </aixm:featureLifetime>
                     <event:name>EADD_ADLIM_20190122</event:name>
-                    <event:encoding>DIGITAL</event:encoding>
                     <event:scenario>AD.LIM</event:scenario>
                     <event:version>2.0</event:version>
-                    <event:revision>2019-01-20T13:56:21Z</event:revision>
-                    <event:textNOTAM>
+                    <event:notification>
                         <event:NOTAM gml:id="ID_ADLM_C4">
                             <event:series>A</event:series>
                             <event:number>0023</event:number>
                             <event:year>2019</event:year>
                             <event:type>N</event:type>
-                            <event:issued>2019-01-20T13:56:21Z</event:issued>
                             <event:affectedFIR>EAAD</event:affectedFIR>
                             <event:selectionCode>QFALT</event:selectionCode>
                             <event:traffic>IV</event:traffic>
@@ -79,9 +76,9 @@ Editorial note: this license is an instance of the BSD license template as provi
                             <event:location>EADD</event:location>
                             <event:effectiveStart>1901221400</event:effectiveStart>
                             <event:effectiveEnd>1901271400</event:effectiveEnd>
-                            <event:text>AD prohibited for tgl</event:text>
+                            <event:text>AD prohibited for touch and go training</event:text>
                         </event:NOTAM>
-                    </event:textNOTAM>
+                    </event:notification>
                 </event:EventTimeSlice>
             </event:timeSlice>
         </event:Event>
@@ -101,67 +98,49 @@ Editorial note: this license is an instance of the BSD license template as provi
                     <aixm:interpretation>TEMPDELTA</aixm:interpretation>
                     <aixm:sequenceNumber>11</aixm:sequenceNumber>
                     <aixm:correctionNumber>0</aixm:correctionNumber>
+                    <!-- the baseline status of the airport -->
                     <aixm:availability>
-                        <aixm:AirportHeliportAvailability gml:id="ID_ADLM_003">
-                            <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
-                            <aixm:usage>
-                                <aixm:AirportHeliportUsage gml:id="ID_ADLM_004">
-                                    <aixm:type>FORBID</aixm:type>
-                                    <aixm:operation>TOUCHGO</aixm:operation>
-                                </aixm:AirportHeliportUsage>
-                            </aixm:usage>
-                        </aixm:AirportHeliportAvailability>
-                    </aixm:availability>
-                    <aixm:availability>
-                        <aixm:AirportHeliportAvailability gml:id="AHY_EADD_PERMIT">
+                        <aixm:AirportHeliportAvailability gml:id="ID_ACT_59">
                             <aixm:timeInterval>
-                                <aixm:Timesheet gml:id="T-c5fdb917">
+                                <aixm:Timesheet gml:id="ID_ACT_62">
                                     <aixm:timeReference>UTC</aixm:timeReference>
                                     <aixm:day>WORK_DAY</aixm:day>
                                     <aixm:startTime>06:00</aixm:startTime>
                                     <aixm:endTime>20:00</aixm:endTime>
-                                    <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                                    <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust> 
+                                    <aixm:excluded>NO</aixm:excluded>
                                 </aixm:Timesheet>
                             </aixm:timeInterval>
                             <aixm:timeInterval>
-                                <aixm:Timesheet gml:id="T-c5fhgfrb917">
+                                <aixm:Timesheet gml:id="ID_ACT_63">
                                     <aixm:timeReference>UTC</aixm:timeReference>
                                     <aixm:day>SAT</aixm:day>
                                     <aixm:startTime>07:00</aixm:startTime>
                                     <aixm:endTime>20:00</aixm:endTime>
-                                    <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                                    <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust> 
+                                    <aixm:excluded>NO</aixm:excluded>
                                 </aixm:Timesheet>
                             </aixm:timeInterval>
                             <aixm:timeInterval>
-                                <aixm:Timesheet gml:id="T-c57i67fhgfrb917">
+                                <aixm:Timesheet gml:id="ID_ACT_64">
                                     <aixm:timeReference>UTC</aixm:timeReference>
                                     <aixm:day>SUN</aixm:day>
                                     <aixm:startTime>07:00</aixm:startTime>
                                     <aixm:endTime>20:00</aixm:endTime>
-                                    <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                                    <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust> 
+                                    <aixm:excluded>NO</aixm:excluded>
                                 </aixm:Timesheet>
                             </aixm:timeInterval>
                             <aixm:timeInterval>
-                                <aixm:Timesheet gml:id="T-c5fhgfrb91hjkdh7">
+                                <aixm:Timesheet gml:id="ID_ACT_65">
                                     <aixm:timeReference>UTC</aixm:timeReference>
                                     <aixm:day>HOL</aixm:day>
                                     <aixm:startTime>07:00</aixm:startTime>
                                     <aixm:endTime>20:00</aixm:endTime>
-                                    <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
+                                    <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust> 
+                                    <aixm:excluded>NO</aixm:excluded>
                                 </aixm:Timesheet>
                             </aixm:timeInterval>
-                            <aixm:annotation>
-                                <aixm:Note gml:id="ID_ann_01">
-                                    <aixm:purpose>REMARK</aixm:purpose>
-                                    <aixm:translatedNote>
-                                        <aixm:LinguisticNote gml:id="ID_ann_02">
-                                            <aixm:note>Baseline data copy. Not included in the NOTAM text generation</aixm:note>
-                                        </aixm:LinguisticNote>
-                                    </aixm:translatedNote>
-                                </aixm:Note>
-                            </aixm:annotation>
-                            <aixm:specialDateAuthority
-                                xlink:href="urn:uuid:6384a4e0-8497-4f83-8eaa-d73ef549d90e"/>
                             <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
                             <aixm:usage>
                                 <aixm:AirportHeliportUsage gml:id="AHU_EADD_PERMIT">
@@ -185,68 +164,14 @@ Editorial note: this license is an instance of the BSD license template as provi
                             </aixm:usage>
                         </aixm:AirportHeliportAvailability>
                     </aixm:availability>
+                    <!--The additional usage limitation - no touch and go operations -->  
                     <aixm:availability>
-                        <aixm:AirportHeliportAvailability gml:id="AHY_EADD_FORBID">
-                            <aixm:timeInterval>
-                                <aixm:Timesheet gml:id="T-e921a1ce">
-                                    <aixm:timeReference>UTC</aixm:timeReference>
-                                    <aixm:day>ANY</aixm:day>
-                                    <aixm:startTime>20:00</aixm:startTime>
-                                    <aixm:endTime>00:00</aixm:endTime>
-                                    <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
-                                </aixm:Timesheet>
-                            </aixm:timeInterval>
-                            <aixm:timeInterval>
-                                <aixm:Timesheet gml:id="T-d9e420be">
-                                    <aixm:timeReference>UTC</aixm:timeReference>
-                                    <aixm:day>ANY</aixm:day>
-                                    <aixm:startTime>00:00</aixm:startTime>
-                                    <aixm:endTime>06:00</aixm:endTime>
-                                    <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
-                                </aixm:Timesheet>
-                            </aixm:timeInterval>
-                            <aixm:timeInterval>
-                                <aixm:Timesheet gml:id="T-d9e420sfsdbe">
-                                    <aixm:timeReference>UTC</aixm:timeReference>
-                                    <aixm:day>SAT</aixm:day>
-                                    <aixm:startTime>06:00</aixm:startTime>
-                                    <aixm:endTime>07:00</aixm:endTime>
-                                    <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
-                                </aixm:Timesheet>
-                            </aixm:timeInterval>
-                            <aixm:timeInterval>
-                                <aixm:Timesheet gml:id="T-d9e420sfsdsfsbe">
-                                    <aixm:timeReference>UTC</aixm:timeReference>
-                                    <aixm:day>SUN</aixm:day>
-                                    <aixm:startTime>06:00</aixm:startTime>
-                                    <aixm:endTime>07:00</aixm:endTime>
-                                    <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
-                                </aixm:Timesheet>
-                            </aixm:timeInterval>
-                            <aixm:timeInterval>
-                                <aixm:Timesheet gml:id="T-d9e420sfsdasdfsbe">
-                                    <aixm:timeReference>UTC</aixm:timeReference>
-                                    <aixm:day>HOL</aixm:day>
-                                    <aixm:startTime>06:00</aixm:startTime>
-                                    <aixm:endTime>07:00</aixm:endTime>
-                                    <aixm:daylightSavingAdjust>YES</aixm:daylightSavingAdjust>
-                                </aixm:Timesheet>
-                            </aixm:timeInterval>
-                            <aixm:annotation>
-                                <aixm:Note gml:id="ID_ann_03">
-                                    <aixm:purpose>REMARK</aixm:purpose>
-                                    <aixm:translatedNote>
-                                        <aixm:LinguisticNote gml:id="ID_ann_04">
-                                            <aixm:note>Baseline data copy. Not included in the NOTAM text generation</aixm:note>
-                                        </aixm:LinguisticNote>
-                                    </aixm:translatedNote>
-                                </aixm:Note>
-                            </aixm:annotation>
-                            <aixm:operationalStatus>NORMAL</aixm:operationalStatus>
+                        <aixm:AirportHeliportAvailability gml:id="ID_ADLM_003">
+                            <aixm:operationalStatus>LIMITED</aixm:operationalStatus>
                             <aixm:usage>
-                                <aixm:AirportHeliportUsage gml:id="A-d38f0d0f">
+                                <aixm:AirportHeliportUsage gml:id="ID_ADLM_004">
                                     <aixm:type>FORBID</aixm:type>
-                                    <aixm:operation>ALL</aixm:operation>
+                                    <aixm:operation>TOUCHGO</aixm:operation>
                                 </aixm:AirportHeliportUsage>
                             </aixm:usage>
                         </aixm:AirportHeliportAvailability>
