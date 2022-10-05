@@ -27,7 +27,7 @@ Editorial note: this license is an instance of the BSD license template as provi
     xmlns:event="http://www.aixm.aero/schema/5.1.1/event" xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.aixm.aero/schema/5.1.1/message http://www.aixm.aero/schema/5.1.1/message/AIXM_BasicMessage.xsd 
-    http://www.aixm.aero/schema/5.1.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1.1-h/Event_Features.xsd"
+    http://www.aixm.aero/schema/5.1.1/event http://www.aixm.aero/schema/5.1.1/event/version_5.1.1-i/Event_Features.xsd"
     gml:id="M00001">
     
     <!--This is a Digital NOTAM for Aerodrome closure with schedule. The BASELINE data of the airport is also with schedule. -->
