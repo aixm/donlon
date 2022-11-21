@@ -1,4 +1,13 @@
-# DONLON
+# DONLON (AIP Data Set, Obstacle Data Set - archived in November 2022)
+-------------
+
+Archiving reason = the separate DS files have now been merged into a complete Donlon.xml file. See the Donolon_2022 repository. This will facilitate the long term maintenance, as some feature (such as AirportHeliport) appear in many data sets. The separate AIP DS, Obstacle DS, etc. will be available for extraction using XSLT scripts.
+
+-------------
+
+
+
+
 A fictitious set of digital AIS data sets complying with the ICAO Annex 15, 16th edition and the new PANS-AIM provisions, in AIXM 5.1.1 format
 
 This data is entirely fictitious, located somewhere in the middle of the Atlantic Ocean. It shall NEVER BE USED AS OPERATIONAL DATA. There is no Donlon airport in the middle of the Atlantic!!!
